@@ -34,3 +34,6 @@ PRODUCT_COPY_FILES += \
 
 # Versionning
 -include vendor/custom/config/version.mk
+
+# Add our overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/custom/overlay/common
