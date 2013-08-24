@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="config_locationProviderPackageNames" translatable="false">
+        <!-- The standard AOSP fused location provider -->
+        <item>com.android.location.fused</item>
+        <!-- The Google provider -->
+        <item>com.google.android.location</item>
+    </string-array>
+
+    <!-- Package name for default keyguard appwidget [DO NOT TRANSLATE] -->
+    <string name="widget_default_package_name">com.google.android.apps.dashclock</string>
+
+    <!-- Class name for default keyguard appwidget [DO NOT TRANSLATE] -->
+    <string name="widget_default_class_name">com.google.android.apps.dashclock.WidgetProvider</string>
+
+    <bool name="config_cellBroadcastAppLinks">true</bool>
+
+</resources>
+

@@ -7,6 +7,10 @@ PRODUCT_PACKAGES += \
 	SoundRecorder \
 	Basic
 
+# Additional apps
+PRODUCT_PACKAGES += \
+	DashClock
+
 PRODUCT_PACKAGES += \
 	CellBroadcastReceiver
 
