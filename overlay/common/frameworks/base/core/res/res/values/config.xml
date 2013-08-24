@@ -8,7 +8,7 @@
     </string-array>
 
     <!-- Package name for default keyguard appwidget [DO NOT TRANSLATE] -->
-    <string name="widget_default_package_name">com.google.android.apps.dashclock</string>
+    <string name="widget_default_package_name">net.nurik.roman.dashclock</string>
 
     <!-- Class name for default keyguard appwidget [DO NOT TRANSLATE] -->
     <string name="widget_default_class_name">com.google.android.apps.dashclock.WidgetProvider</string>
