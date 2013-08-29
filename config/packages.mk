@@ -11,7 +11,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	Apollo \
 	DashClock \
-        DSPManager
+	DSPManager \
+	MonthCalendarWidget
 
 PRODUCT_PACKAGES += \
 	CellBroadcastReceiver
