@@ -24,7 +24,7 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/custom/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/custom/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/custom/prebuilt/bin/50-example.sh:system/addon.d/50-example.sh \
+    vendor/custom/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
     vendor/custom/prebuilt/bin/blacklist:system/addon.d/blacklist
 
 # init.d support
