@@ -25,6 +25,14 @@ PRODUCT_COPY_FILES += \
 	vendor/custom/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
 	vendor/custom/prebuilt/bin/sysinit:system/bin/sysinit
 
+# userinit support
+PRODUCT_COPY_FILES += \
+    vendor/custom/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
+
+# Init script file with custom extras
+PRODUCT_COPY_FILES += \
+    vendor/custom/prebuilt/etc/init.local.rc:root/init.custom.rc
+
 # Enable SIP and VoIP on all targets
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
