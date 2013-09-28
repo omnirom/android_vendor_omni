@@ -20,6 +20,13 @@ ifneq ($(TARGET_BUILD_VARIANT),eng)
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/custom/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/custom/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/custom/prebuilt/bin/50-example.sh:system/addon.d/50-example.sh \
+    vendor/custom/prebuilt/bin/blacklist:system/addon.d/blacklist
+
 # init.d support
 PRODUCT_COPY_FILES += \
 	vendor/custom/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
