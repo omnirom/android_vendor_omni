@@ -89,6 +89,10 @@ on boot
     write /sys/kernel/mm/ksm/sleep_millisecs 1500
     write /sys/kernel/mm/ksm/pages_to_scan 256
 
+    # set permission to notify_on_migrate node (used by power hal)
+    chown system system /dev/cpuctl/apps/cpu.notify_on_migrate
+    chmod 0644 /dev/cpuctl/apps/cpu.notify_on_migrate
+
 # sysinit (/system/etc/init.d)
 service sysinit /system/bin/sysinit
     user root
