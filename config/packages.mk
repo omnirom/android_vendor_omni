@@ -14,8 +14,7 @@ PRODUCT_PACKAGES += \
 	DSPManager \
 	libcyanogen-dsp \
 	audio_effects.conf \
-	MonthCalendarWidget \
-	OmniTorch
+	MonthCalendarWidget
 
 PRODUCT_PACKAGES += \
 	CellBroadcastReceiver
