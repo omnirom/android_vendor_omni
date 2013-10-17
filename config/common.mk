@@ -1,8 +1,8 @@
-PRODUCT_BRAND ?= custom
+PRODUCT_BRAND ?= omni
 
 # bootanimation
 PRODUCT_COPY_FILES += \
-	vendor/custom/bootanimation.zip:system/media/bootanimation.zip
+	vendor/omni/bootanimation.zip:system/media/bootanimation.zip
 
 # general properties
 PRODUCT_PROPERTIES_OVERRIDE += \
@@ -22,33 +22,33 @@ endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/custom/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/custom/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/custom/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
-    vendor/custom/prebuilt/bin/blacklist:system/addon.d/blacklist
+    vendor/omni/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/omni/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/omni/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
+    vendor/omni/prebuilt/bin/blacklist:system/addon.d/blacklist
 
 # init.d support
 PRODUCT_COPY_FILES += \
-	vendor/custom/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
-	vendor/custom/prebuilt/bin/sysinit:system/bin/sysinit
+	vendor/omni/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
+	vendor/omni/prebuilt/bin/sysinit:system/bin/sysinit
 
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/custom/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/omni/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
 
-# Init script file with custom extras
+# Init script file with omni extras
 PRODUCT_COPY_FILES += \
-    vendor/custom/prebuilt/etc/init.local.rc:root/init.custom.rc
+    vendor/omni/prebuilt/etc/init.local.rc:root/init.omni.rc
 
 # Enable SIP and VoIP on all targets
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 # Additional packages
--include vendor/custom/config/packages.mk
+-include vendor/omni/config/packages.mk
 
 # Versionning
--include vendor/custom/config/version.mk
+-include vendor/omni/config/version.mk
 
 # Add our overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/custom/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
