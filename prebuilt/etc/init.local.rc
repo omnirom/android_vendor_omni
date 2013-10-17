@@ -1,4 +1,4 @@
-# Custom Extras
+# Omni Extras
 
 on init
     export TERMINFO /system/etc/terminfo
