@@ -1,0 +1,22 @@
+[
+    {
+        "remote":       "<remote>",
+        "account":      "<username>",
+        "repository":   "<repo>",
+        "target_path":  "<path>",
+        "revision":     "<branch>"
+    },
+    {
+        "account":      "<username>",
+        "repository":   "<repo>",
+        "target_path":  "<path>",
+        "revision":     "<branch>"
+    },
+    {
+        "remote":       "<remote>",
+        "account":      "<username>",
+        "repository":   "<repo>",
+        "target_path":  "<path>",
+        "revision":     "<branch>"
+    }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "account":      "omnirom",
+    "repository":   "android_device_samsung_n7100",
+    "target_path":  "device/samsung/n7100",
+    "revision":     "adnroid-4.3"
+  },
+  {
+    "account":      "omnirom",
+    "repository":   "android_device_samsung_smdk4412-common",
+    "target_path":  "device/samsung/smdk4412-common",
+    "revision":     "adnroid-4.3"
+  },
+  {
+    "account":      "omnirom",
+    "repository":   "android_hardware_samsung",
+    "target_path":  "hardware/samsung",
+    "revision":     "adnroid-4.3"
+  },
+  {
+    "account":      "omnirom",
+    "repository":   "android_kernel_samsung_smdk4412",
+    "target_path":  "kernel/samsung/smdk4412",
+    "revision":     "adnroid-4.3"
+  },
+  {
+    "account":      "TheMuppets",
+    "repository":   "proprietary_vendor_samsung",
+    "target_path":  "vendor/samsung",
+    "revision":     "adnroid-4.3"
+  }
+]
