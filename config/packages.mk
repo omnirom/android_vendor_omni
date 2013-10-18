@@ -32,3 +32,12 @@ PRODUCT_PACKAGES += \
 	powertop \
 	lsof
 
+# Openssh
+PRODUCT_PACKAGES += \
+    scp \
+    sftp \
+    ssh \
+    sshd \
+    sshd_config \
+    ssh-keygen \
+    start-ssh
