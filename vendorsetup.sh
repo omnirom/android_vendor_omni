@@ -1,0 +1,17 @@
+add_lunch_combo omni_mint-userdebug
+add_lunch_combo omni_tf300t-userdebug
+add_lunch_combo omni_i9300-userdebug
+add_lunch_combo omni_i605-userdebug
+add_lunch_combo omni_l900-userdebug
+add_lunch_combo omni_m7ul-userdebug
+add_lunch_combo omni_find5-userdebug
+add_lunch_combo omni_p880-userdebug
+add_lunch_combo omni_galaxysmtd-userdebug
+add_lunch_combo omni_manta-userdebug
+add_lunch_combo omni_mako-userdebug
+add_lunch_combo omni_grouper-userdebug
+add_lunch_combo omni_tilapia-userdebug
+add_lunch_combo omni_flo-userdebug
+add_lunch_combo omni_n7100-userdebug
+add_lunch_combo omni_maguro-userdebug
+add_lunch_combo omni_r819-userdebug
