@@ -47,7 +47,7 @@ PRODUCT_COPY_FILES += \
 # Additional packages
 -include vendor/omni/config/packages.mk
 
-# Versionning
+# Versioning
 -include vendor/omni/config/version.mk
 
 # Add our overlays
