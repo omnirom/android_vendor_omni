@@ -3,8 +3,10 @@
     <string-array name="config_locationProviderPackageNames" translatable="false">
         <!-- The standard AOSP fused location provider -->
         <item>com.android.location.fused</item>
-        <!-- The Google provider -->
+        <!-- Legacy Google provider - consider removing -->
         <item>com.google.android.location</item>
+        <!-- GMS (gapps) provider for 4.4 and above-->
+        <item>com.google.android.gms</item>
     </string-array>
 
     <!-- Package name for default keyguard appwidget [DO NOT TRANSLATE] -->
