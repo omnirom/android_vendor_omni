@@ -2,7 +2,7 @@ PRODUCT_BRAND ?= omni
 
 # bootanimation
 PRODUCT_COPY_FILES += \
-	vendor/omni/bootanimation.zip:system/media/bootanimation.zip
+	vendor/omni/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 # general properties
 PRODUCT_PROPERTY_OVERRIDES += \
