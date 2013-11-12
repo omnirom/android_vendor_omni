@@ -7,5 +7,6 @@ BOARD_SEPOLICY_DIRS += \
     vendor/omni/sepolicy
 
 BOARD_SEPOLICY_UNION += \
+    file.te \
     mac_permissions.xml \
 	vold.te
