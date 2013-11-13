@@ -9,5 +9,6 @@ BOARD_SEPOLICY_DIRS += \
 BOARD_SEPOLICY_UNION += \
     file.te \
     genfs_contexts \
+    installd.te \
     mac_permissions.xml \
 	vold.te
