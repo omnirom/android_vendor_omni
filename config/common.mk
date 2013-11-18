@@ -15,6 +15,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.com.android.dataroaming=false \
 	persist.sys.root_access=1
 
+# Installer
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/bin/persist.sh:install/bin/persist.sh \
+    vendor/omni/prebuilt/etc/persist.conf:system/etc/persist.conf
+
 # enable ADB authentication if not on eng build
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
