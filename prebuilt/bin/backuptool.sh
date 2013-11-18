@@ -7,6 +7,22 @@ export C=/tmp/backupdir
 export S=/system
 export V=4.4
 
+# Persist Xposed Framework Support
+save_files()
+{
+	if [ -f S/bin/app_process.orig ]
+	then
+		mkdir -p C/system/bin
+		cp S/bin/app_process C/system/bin
+	fi
+}
+
+restore_files()
+{
+    mv S/bin/app_process S/bin/app_process.orig
+    cp C/system/bin/app_process S/bin/
+}
+
 # Preserve /system/addon.d in /tmp/addon.d
 preserve_addon_d() {
   mkdir -p /tmp/addon.d/
@@ -49,6 +65,7 @@ done
 case "$1" in
   backup)
     mkdir -p $C
+    save_files
     check_prereq
     check_blacklist system
     preserve_addon_d
@@ -57,6 +74,7 @@ case "$1" in
     run_stage post-backup
   ;;
   restore)
+    restore_files
     check_prereq
     check_blacklist tmp
     run_stage pre-restore
