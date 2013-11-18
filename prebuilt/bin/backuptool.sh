@@ -5,7 +5,51 @@
 
 export C=/tmp/backupdir
 export S=/system
+export persist_props="ro.sf.lcd_density"
+export persist_files="bin/app_process"
+export saveroot="/tmp/save"
 export V=4.4
+
+# Persist DPI
+save_props()
+{
+    rm -f "$C/prop"
+    for prop in $persist_props; do
+        echo "save_props: $prop"
+        grep "^$prop=" "$S/build.prop" >> "$C/prop"
+    done
+}
+
+restore_props()
+{
+    local sedargs
+
+    sedargs="-i"
+    for prop in $(cat $C/prop); do
+        echo "restore_props: $prop"
+        k=$(echo $prop | cut -d'=' -f1)
+        sedargs="$sedargs s/^$k=.*/$prop/"
+    done
+    sed $sedargs "$S/build.prop"
+}
+
+# Persist Greenify Support
+save_files()
+{
+	if [ -f S/bin/app_process.orig ]
+	then
+		rm -rf /tmp/backup/bin
+		mkdir -p /tmp/backup/bin/
+		cp /system/bin/app_process /tmp/backup/bin/
+		cp /system/bin/app_process.orig /tmp/backup/bin/
+	fi
+}
+
+restore_files()
+{
+    cp /tmp/backup/bin/app_process /system/bin/
+    cp /tmp/backup/bin/app_process.orig /system/bin/
+}
 
 # Preserve /system/addon.d in /tmp/addon.d
 preserve_addon_d() {
@@ -49,6 +93,8 @@ done
 case "$1" in
   backup)
     mkdir -p $C
+    save_props
+    save_files
     check_prereq
     check_blacklist system
     preserve_addon_d
@@ -57,6 +103,8 @@ case "$1" in
     run_stage post-backup
   ;;
   restore)
+    restore_props
+    restore_files
     check_prereq
     check_blacklist tmp
     run_stage pre-restore
