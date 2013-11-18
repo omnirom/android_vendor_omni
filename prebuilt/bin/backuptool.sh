@@ -3,9 +3,29 @@
 # Backup and restore addon /system files
 #
 
-export C=/tmp/backupdir
+export C=/tmp/backup
 export S=/system
 export V=4.4
+
+# Backup Xposed Framework (bin/app_process)
+xposed_backup()
+{
+    if [ -f /system/bin/app_process.orig ]
+    then
+        cp /system/bin/app_process /tmp/backup/
+    fi
+}
+
+# Restore Xposed Framework (bin/app_process)
+xposed_restore()
+{
+    if [ -f /tmp/backup/app_process ]
+      then
+          mv /system/bin/app_process /system/bin/app_process.orig
+          cp /tmp/backup/app_process /system/bin/
+    fi
+}
+
 
 # Preserve /system/addon.d in /tmp/addon.d
 preserve_addon_d() {
@@ -49,6 +69,7 @@ done
 case "$1" in
   backup)
     mkdir -p $C
+    xposed_backup
     check_prereq
     check_blacklist system
     preserve_addon_d
@@ -57,6 +78,7 @@ case "$1" in
     run_stage post-backup
   ;;
   restore)
+    xposed_restore
     check_prereq
     check_blacklist tmp
     run_stage pre-restore
