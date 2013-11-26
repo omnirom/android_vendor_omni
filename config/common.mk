@@ -50,5 +50,8 @@ PRODUCT_COPY_FILES += \
 # Versioning
 -include vendor/omni/config/version.mk
 
+#Theme Engine
+-include vendor/omni/config/themes_common.mk
+
 # Add our overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
