@@ -6,6 +6,30 @@
 export C=/tmp/backup
 export S=/system
 export V=4.4
+export persist_props="ro.sf.lcd_density"
+
+# Persist DPI
+save_props()
+{
+    rm -f "$C/prop"
+    for prop in $persist_props; do
+        echo "save_props: $prop"
+        grep "^$prop=" "$S/build.prop" >> "$C/prop"
+    done
+}
+
+restore_props()
+{
+    local sedargs
+
+    sedargs="-i"
+    for prop in $(cat $C/prop); do
+        echo "restore_props: $prop"
+        k=$(echo $prop | cut -d'=' -f1)
+        sedargs="$sedargs s/^$k=.*/$prop/"
+    done
+    sed $sedargs "$S/build.prop"
+}
 
 # Backup Xposed Framework (bin/app_process)
 xposed_backup()
@@ -70,6 +94,7 @@ case "$1" in
   backup)
     mkdir -p $C
     xposed_backup
+    save_props
     check_prereq
     check_blacklist system
     preserve_addon_d
@@ -79,6 +104,7 @@ case "$1" in
   ;;
   restore)
     xposed_restore
+    restore_props
     check_prereq
     check_blacklist tmp
     run_stage pre-restore
