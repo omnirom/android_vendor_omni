@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+g<?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
 ** Copyright 2006, Google Inc.
@@ -1151,7 +1151,7 @@
   <apn carrier="TransAsia" mcc="466" mnc="99" apn="internet" type="default,supl" />
   <apn carrier="TransAsia MMS" mcc="466" mnc="99" apn="mms" mmsc="http://mms" mmsproxy="10.1.1.2" mmsport="80" type="mms" />
   <apn carrier="台灣大哥大(TW Mobile) (twm)" mcc="466" mnc="99" apn="twm" type="default,supl" />
-  <apn carrier="Grameenphone" mcc="470" mnc="01" apn="gpinterneth" type="default,supl" />
+  <apn carrier="Grameenphone" mcc="470" mnc="01" apn="gpinternet" type="default,supl" />
   <apn carrier="Robi MMS" mcc="470" mnc="02" apn="WAP" mmsc="http://192.168.23.4/was" mmsproxy="192.168.023.007" mmsport="9028" type="mms" />
   <apn carrier="Robi" mcc="470" mnc="02" apn="internet" port="9201" type="default,supl" />
   <apn carrier="Banglalink MMS" mcc="470" mnc="03" apn="blmms" mmsc="http://" mmsproxy="10.10.55.34" mmsport="8799" type="mms" />
