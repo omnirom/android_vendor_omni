@@ -1022,7 +1022,7 @@ g<?xml version="1.0" encoding="utf-8"?>
   <apn carrier="AL JA WAL" mcc="420" mnc="01" apn="jawalnet.com.sa" type="default,supl" />
   <apn carrier="AL JA WAL MMS" mcc="420" mnc="01" apn="mms.net.sa" mmsc="http://mms.net.sa:8002" mmsproxy="10.1.1.1" mmsport="9201" type="mms" />
   <apn carrier="Mobily MMS" mcc="420" mnc="03" apn="mms1" mmsc="http://10.3.3.133:9090/was" mmsproxy="10.3.2.133" mmsport="9201" type="mms" />
-  <apn carrier="Mobily" mcc="420" mnc="03" apn="web1" type="default,supl" />
+  <apn carrier="Mobily" mcc="420" mnc="03" apn="web2" type="default,supl" />
   <apn carrier="Zain SA" mcc="420" mnc="04" apn="zain" mmsc="http://10.122.200.12:8002" mmsproxy="10.122.200.10" mmsport="8080" type="default,supl,mms" />
   <apn carrier="Oman Mobile MMS" mcc="422" mnc="02" apn="mms" user="mms" password="mms" mmsc="http://mmsc.omanmobile.com:10021/mmsc" mmsproxy="192.168.203.35" mmsport="9201" type="mms" />
   <apn carrier="Oman Mobile" mcc="422" mnc="02" apn="wap" user="wap" password="wap" type="default,supl" />
