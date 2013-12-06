@@ -410,6 +410,7 @@
   <apn carrier="Orange IMO" apn="wap.orange.md" proxy="192.168.127.124" mmsport="3128" mcc="259" mnc="01" type="default,supl" />
   <apn carrier="GaduAIR" mcc="260" mnc="01" apn="internet.gadu-gadu.pl" type="default,supl" />
   <apn carrier="PlusGSM" mcc="260" mnc="01" apn="internet" type="default,supl" />
+  <apn carrier="Njumobile MMS" mcc="260" mnc="03" apn="mms" user="mms" password="mms" mmsc="http://mms.njumobile.pl" mmsproxy="192.168.6.104" mmsport="8080" type="mms" />
   <apn carrier="FM Group Mobile MMS" mcc="260" mnc="01" apn="mms.fmgmobile.pl" mmsc="http://mms.fmgmobile.pl:8002/" mmsproxy="212.002.096.016" mmsport="8080" type="mms" />
   <apn carrier="GaduAIR MMS" mcc="260" mnc="01" apn="mms.gadu-gadu.pl" mmsc="http://mms.gadu-gadu.pl:8002/" mmsproxy="212.002.096.016" mmsport="8080" type="mms" />
   <apn carrier="mBank mobile MMS" mcc="260" mnc="01" apn="mms.mobile.pl" user="true" password="true" mmsc="http://mms.mobile.pl:8080" mmsproxy="212.2.96.16" mmsport="8080" type="mms" />
