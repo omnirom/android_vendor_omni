@@ -1454,4 +1454,5 @@
   <apn carrier="EE MMS" mcc="234" mnc="34" apn="eezone" user="eesecure" password="secure" mmsc="http://mms/" mmsproxy="149.254.201.135" mmsport="8080" authtype="1" type="mms" />
   <apn carrier="EE Internet" mcc="234" mnc="86" apn="everywhere" user="eesecure" password="secure" authtype="1" type="default,supl,dun" />
   <apn carrier="EE MMS" mcc="234" mnc="86" apn="eezone" user="eesecure" password="secure" mmsc="http://mms/" mmsproxy="149.254.201.135" mmsport="8080" authtype="1" type="mms" />
+  <apn carrier="BT Mobile" mcc="234" mnc="15" apn="btmobile.bt.com" user="bt" password="bt" mmsc="http://mms.bt.com/servlets/mms" mmsproxy="212.183.137.12" mmsport="8799" type="default,mms" />
 </apns>
