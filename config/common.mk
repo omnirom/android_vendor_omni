@@ -52,3 +52,7 @@ PRODUCT_COPY_FILES += \
 
 # Add our overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
+
+# Add APN list
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
