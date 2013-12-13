@@ -1,0 +1,63 @@
+OmniROM
+=======
+
+Maintainers (OmniROM 4.4):
+--------------------------
+
+Nexus Devices
+-------------
+* __Google Nexus 4 (mako):__ Jiangy, xplodwild
+* __Google Nexus 5 (hammerhead):__ mithun46, xplodwild, fluxi, codeworkx
+* __Google Nexus 7 [2012 Wi-Fi] (grouper):__
+* __Google Nexus 7 [2012 3G] (tilapia):__
+* __Google Nexus 7 [2013 Wi-Fi] (flo):__
+* __Google Nexus 7 [2013 3G] (deb):__
+* __Google Nexus 10 (manta):__
+
+
+Oppo Devices
+------------
+* __Oppo Find 5__ (find5): maxwen, xplodwild
+* __Oppo N1__ (n1): maxwen, xplodwild
+
+
+Sony Mobile Devices
+-------------------
+* __Sony Xperia T (mint):__ tilal6991
+* __Sony Xperia Z (yuga):__ mithun46, Entropy512, x10forevers
+* __Sony Xperia ZL (odin):__ mithun46, Entropy512
+* __Sony Xperia Tablet Z Wifi (pollux_windy):__ mithun46, Entropy512
+
+Samsung Devices
+---------------
+* __Samsung Galaxy S (GT-I9000):__ SferaDev
+* __Samsung Galaxy S II (intl) (GT-I9100):__ Entropy512, xplodwild
+* __Samsung Galaxy S II (intl) (GT-I9100G):__ Jiangy
+* __Samsung Galaxy S III (intl) (GT-I9300):__ xplodwild, Rebellos
+* __Samsung Galaxy S III LTE (GT-I9305):__
+* __Samsung Galaxy S IV LTE (jfltexx):__ jumoog, jakew02
+* __Samsung Galaxy S IV ATT (jflteatt):__ jakew02, jumoog
+* __Samsung Galaxy S IV Canada (jfltecan):__ jakew02, jumoog
+* __Samsung Galaxy S IV Sprint (jfltespr):__ jakew02, jumoog
+* __Samsung Galaxy S IV T-Mobile US (jfltetmo):__ jakew02, jumoog
+* __Samsung Galaxy S IV Verizon (jfltevzv):__ jakew02, jumoog
+* __Samsung Galaxy Note (GT-N7000):__ Entropy512, xplodwild
+* __Samsung Galaxy Note II (GT-N7100):__ UtkarshGupta
+* __Samsung Galaxy Note II LTE (GT-N7105):__ UtkarshGupta
+* __Samsung Galaxy Note II LTE (AT&T) (SGH-I317):__ UtkarshGupta
+* __Samsung Galaxy Note II LTE (T-Mobile) (SGH-T889):__ UtkarshGupta
+* __Samsung Galaxy Note II LTE (Verizon) (SCH-I605):__ slick_rick
+* __Samsung Galaxy Note II LTE (Sprint) (SPH-L900):__ slick_rick
+
+HTC Devices
+-----------
+* __HTC One (intl) (m7ul) :__ n3ocort3x, Yuma75
+* __HTC One AT&T (m7att) :__ n3ocort3x, Yuma75
+
+Asus Devices
+------------
+* __Transformer Pad (tf300t) :__
+
+LG Devices
+----------
+* __Optimus 4X (p880) :__
