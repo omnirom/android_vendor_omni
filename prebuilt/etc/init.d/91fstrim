@@ -1,0 +1,5 @@
+#!/system/bin/sh
+# fstrim NAND to improve speed
+fstrim /system
+fstrim /data
+fstrim /cache
