@@ -1,0 +1,31 @@
+#!/system/bin/sh
+
+L="log -p i -t SELinuxLabel"
+
+# Bail out early if not on a SELinux build
+if [ ! -f /file_contexts ]; then
+  exit
+fi
+
+if [ ! -f /data/misc/SELinuxChecked ]; then
+  $L "Checking SELinux labeling...."
+  busybox mount -o remount,rw /system
+  $L "/system relabel starting..."
+  restorecon -R /system
+  $L "/system relabel complete"
+  busybox mount -o remount,ro /system
+  $L "/data relabel starting..."
+  restorecon -R /data
+  $L "/data relabel complete"
+  $L "/cache relabel starting..."
+  restorecon -R /cache
+  $L "/cache relabel complete"
+  $L "dalvik-cache relabel starting..."
+  restorecon -R /data/dalvik-cache
+  restorecon -R /cache/dalvik-cache
+  $L "dalvik-cache relabel complete"  
+  $L "SELinux labeling complete"
+  touch /data/misc/SELinuxChecked
+else
+  $L "Skipping check of SELinux labels..."
+fi
