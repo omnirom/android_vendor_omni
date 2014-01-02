@@ -31,5 +31,8 @@ PRODUCT_PACKAGES += \
 	nano \
 	htop \
 	powertop \
-	lsof
+	lsof \
+	mount.exfat \
+	fsck.exfat \
+	mkfs.exfat
 
