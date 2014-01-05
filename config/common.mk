@@ -50,5 +50,8 @@ PRODUCT_COPY_FILES += \
 # Versioning
 -include vendor/omni/config/version.mk
 
+# Common sepolicy
+-include vendor/omni/sepolicy/sepolicy.mk
+
 # Add our overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
