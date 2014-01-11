@@ -1,8 +1,8 @@
-PRODUCT_BRAND ?= omni
+PRODUCT_BRAND ?= Anime
 
 # bootanimation
 PRODUCT_COPY_FILES += \
-	vendor/omni/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+	vendor/Anime/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 # general properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -22,33 +22,33 @@ endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/omni/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/omni/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
-    vendor/omni/prebuilt/bin/blacklist:system/addon.d/blacklist
+    vendor/Anime/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/Anime/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/Anime/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
+    vendor/Anime/prebuilt/bin/blacklist:system/addon.d/blacklist
 
 # init.d support
 PRODUCT_COPY_FILES += \
-	vendor/omni/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
-	vendor/omni/prebuilt/bin/sysinit:system/bin/sysinit
+	vendor/Anime/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
+	vendor/Anime/prebuilt/bin/sysinit:system/bin/sysinit
 
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/Anime/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
 
-# Init script file with omni extras
+# Init script file with Anime extras
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/etc/init.local.rc:root/init.omni.rc
+    vendor/Anime/prebuilt/etc/init.local.rc:root/init.Anime.rc
 
 # Enable SIP and VoIP on all targets
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 # Additional packages
--include vendor/omni/config/packages.mk
+-include vendor/Anime/config/packages.mk
 
 # Versioning
--include vendor/omni/config/version.mk
+-include vendor/Anime/config/version.mk
 
 # Add our overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/Anime/overlay/common
