@@ -33,5 +33,5 @@ endif
 
 # Apply it to build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.modversion=OmniROM-$(ROM_VERSION) \
-	ro.omni.version=$(ROM_VERSION)
+	ro.modversion=AnimeROM-$(ROM_VERSION) \
+	ro.anime.version=$(ROM_VERSION)
