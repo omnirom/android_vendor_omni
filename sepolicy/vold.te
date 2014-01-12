@@ -1,0 +1,13 @@
+###########################
+# OmniROM common sepolicy
+#
+
+# Allow vold to access fuse for fuse-based fs
+allow vold fuse_device:chr_file rw_file_perms;
+
+# NTFS-3g wants to drop permission
+allow vold self:capability { setgid setuid };
+
+# Allow vold to relabel sdcard fs mounts
+allow vold unlabeled:filesystem { relabelfrom };
+allow vold sdcard_external:filesystem { relabelfrom relabelto };
