@@ -11,6 +11,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	Apollo \
 	FileManager \
+	Focal \
 	DashClock \
 	DSPManager \
 	libcyanogen-dsp \
