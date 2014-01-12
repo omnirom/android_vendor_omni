@@ -1,38 +1,37 @@
 # Additional packages
 PRODUCT_PACKAGES += \
-	Development \
-	LatinIME \
-	VideoEditor \
-	VoiceDialer \
-	SoundRecorder \
-	Basic
+    Basic \
+    Development \
+    LatinIME \
+    SoundRecorder \
+    VideoEditor \
+    VoiceDialer
 
 # Additional apps
 PRODUCT_PACKAGES += \
-	Apollo \
-	DashClock \
-	DSPManager \
-	libcyanogen-dsp \
-	audio_effects.conf \
-	MonthCalendarWidget \
-	OpenDelta
+    Apollo \
+    audio_effects.conf \
+    DashClock \
+    DSPManager \
+    libcyanogen-dsp \
+    MonthCalendarWidget \
+    OpenDelta
 
 PRODUCT_PACKAGES += \
-	CellBroadcastReceiver
+    CellBroadcastReceiver
 
 # Additional tools
 PRODUCT_PACKAGES += \
-	openvpn \
-	e2fsck \
-	mke2fs \
-	tune2fs \
-	bash \
-	vim \
-	nano \
-	htop \
-	powertop \
-	lsof \
-	mount.exfat \
-	fsck.exfat \
-	mkfs.exfat
-
+    bash \
+    e2fsck \
+    fsck.exfat \
+    htop \
+    lsof \
+    mke2fs \
+    mkfs.exfat \
+    mount.exfat \
+    nano \
+    openvpn \
+    powertop \
+    tune2fs \
+    vim
