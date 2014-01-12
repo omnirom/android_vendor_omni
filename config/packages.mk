@@ -10,7 +10,6 @@ PRODUCT_PACKAGES += \
 # Additional apps
 PRODUCT_PACKAGES += \
 	Apollo \
-	FileManager \
 	Focal \
 	DashClock \
 	DSPManager \
