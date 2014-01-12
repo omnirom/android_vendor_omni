@@ -10,12 +10,13 @@ PRODUCT_PACKAGES += \
 # Additional apps
 PRODUCT_PACKAGES += \
 	Apollo \
+	FileManager \
 	DashClock \
 	DSPManager \
 	libcyanogen-dsp \
 	audio_effects.conf \
-	MonthCalendarWidget \
-	OpenDelta
+	MonthCalendarWidget 
+
 
 PRODUCT_PACKAGES += \
 	CellBroadcastReceiver
