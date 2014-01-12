@@ -10,9 +10,9 @@ PRODUCT_PACKAGES += \
 # Additional apps
 PRODUCT_PACKAGES += \
 	Apollo \
-	Focal \
 	DashClock \
 	DSPManager \
+	Focal \
 	libcyanogen-dsp \
 	audio_effects.conf \
 	MonthCalendarWidget 
