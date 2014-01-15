@@ -1,8 +1,8 @@
 PRODUCT_BRAND ?= Anime
 
 # bootanimation
-PRODUCT_COPY_FILES += \
-	vendor/Anime/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+#PRODUCT_COPY_FILES += \
+#	vendor/Anime/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 # general properties
 PRODUCT_PROPERTY_OVERRIDES += \
