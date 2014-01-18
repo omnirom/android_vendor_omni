@@ -11,3 +11,6 @@ allow vold self:capability { setgid setuid };
 # Allow vold to relabel sdcard fs mounts
 allow vold unlabeled:filesystem { relabelfrom };
 allow vold sdcard_external:filesystem { relabelfrom relabelto };
+
+# Allow vold to manage ASEC
+allow vold sdcard_external:file create_file_perms;
