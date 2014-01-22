@@ -27,6 +27,16 @@ PRODUCT_COPY_FILES += \
     vendor/Anime/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
     vendor/Anime/prebuilt/bin/blacklist:system/addon.d/blacklist
 
+#superSU
+PRODUCT_COPY_FILES += \
+    vendor/Anime/prebuilt/bin/chattr:system/bin/chattr \
+    vendor/Anime/prebuilt/bin/su:system/bin/su \
+    vendor/Anime/prebuilt/app/Superuser.apk:system/app/Superuser.apk \
+    vendor/Anime/prebuilt/etc/install-recovery.sh:system/etc/install-recovery.sh \
+    vendor/Anime/prebuilt/etc/init.d/99SuperSUDaemon:system/etc/99SuperSUDaemon \
+    vendor/Anime/prebuilt/xbin/su:system/xbin/su 
+
+
 # init.d support
 PRODUCT_COPY_FILES += \
 	vendor/Anime/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
