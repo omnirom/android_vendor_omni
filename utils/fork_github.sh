@@ -66,7 +66,7 @@ if [ $? != 0 ]; then
 	echo "Unable to push!"
 	read -p "Try with -f? [y/n]: " forcepush
 	if [ "$forcepush" = "y" ]; then
-		git psuh -f ssh://gerrit.omnirom.org:29418/$repo_name $BRANCH
+		git push -f ssh://gerrit.omnirom.org:29418/$repo_name $BRANCH
 	fi
 fi
 
