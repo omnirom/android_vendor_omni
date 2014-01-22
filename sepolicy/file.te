@@ -1,0 +1,6 @@
+###########################
+# AnimeROM common sepolicy
+#
+
+# Support asec containers getting mounted
+allow file_type rootfs:filesystem associate;
