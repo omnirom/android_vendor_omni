@@ -35,4 +35,8 @@ PRODUCT_PACKAGES += \
     openvpn \
     powertop \
     tune2fs \
-    vim
+    vim \
+    ntfsfix \
+    ntfs-3g \
+    mkntfs
+
