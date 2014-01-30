@@ -15,7 +15,8 @@ PRODUCT_PACKAGES += \
     DSPManager \
     libcyanogen-dsp \
     MonthCalendarWidget \
-    OpenDelta
+    OpenDelta \
+    OmniSwitch
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
