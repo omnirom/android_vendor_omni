@@ -1,8 +1,13 @@
 PRODUCT_BRAND ?= omni
 
-# bootanimation
+# bootanimation (Some devices cant go over 100fps for a bootani)
+ifeq ($(BOARD_NEEDS_LOWFPS_BOOTANI),)
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/bootanimation/lowfps-bootanimation.zip:system/media/bootanimation.zip
+else
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+endif
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
