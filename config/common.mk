@@ -51,6 +51,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+# Dashclock
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/app/DashClock.apk:system/app/DashClock.apk
+
 # Additional packages
 -include vendor/omni/config/packages.mk
 
