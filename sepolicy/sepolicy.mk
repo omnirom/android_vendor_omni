@@ -7,10 +7,11 @@ BOARD_SEPOLICY_DIRS += \
     vendor/omni/sepolicy
 
 BOARD_SEPOLICY_UNION += \
-    file_contexts \
     file.te \
+    file_contexts \
     fs_use \
     genfs_contexts \
     installd.te \
-    mac_permissions.xml \
-	vold.te
+    ueventd.te \
+    vold.te \
+    mac_permissions.xml
