@@ -64,3 +64,6 @@ PRODUCT_COPY_FILES += \
 
 # Add our overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
+
+# Add tcpdump
+PRODUCT_COPY_FILES += vendor/omni/prebuilt/bin/tcpdump:system/xbin/tcpdump
