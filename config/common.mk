@@ -64,3 +64,10 @@ PRODUCT_COPY_FILES += \
 
 # Add our overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
+
+# Adds dropbear
+PRODUCT_COPY_FILES += vendor/omni/prebuilt/bin/dropbear:system/xbin/dropbear
+PRODUCT_COPY_FILES += vendor/omni/prebuilt/bin/dropbearkey:system/xbin/dropbearkey
+PRODUCT_COPY_FILES += vendor/omni/prebuilt/bin/scp:system/xbin/scp
+PRODUCT_COPY_FILES += vendor/omni/prebuilt/bin/sftp-server:system/xbin/sftp-server
+PRODUCT_COPY_FILES += vendor/omni/prebuilt/bin/ssh:system/xbin/ssh
