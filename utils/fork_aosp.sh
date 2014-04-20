@@ -9,7 +9,7 @@ BRANCH=android-4.4
 SOURCE=android-4.4.2_r1
 MANIFEST=android/default.xml
 GITHUB_ORG=TEAMP8
-USERNAME=xplodwild
+USERNAME=Flo0008
 REMOTE_MANIFEST=monster
 
 # Script
