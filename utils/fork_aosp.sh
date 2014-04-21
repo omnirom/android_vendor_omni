@@ -1,17 +1,16 @@
 #!/bin/sh
-# Copyright OmniROM Project
+# Copyright Monster Project
 # Licensed under GPLv3
 
 # Configuration
-ANDROID_ROOT=~/omni
+ANDROID_ROOT=~/monster
 PREFIX=android_
 BRANCH=android-4.4
 SOURCE=android-4.4.2_r1
 MANIFEST=android/default.xml
-GITHUB_ORG=omnirom
-USERNAME=xplodwild
-GERRIT_REMOTE=ssh://gerrit.omnirom.org:29418
-REMOTE_MANIFEST=omnirom
+GITHUB_ORG=TEAMP8
+USERNAME=Flo0008
+REMOTE_MANIFEST=monster
 
 # Script
 if [ $# -lt 1 ]; then

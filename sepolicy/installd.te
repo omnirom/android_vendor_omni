@@ -1,5 +1,5 @@
 ###########################
-# OmniROM common sepolicy
+# Monster common sepolicy
 #
 
 # Allow querying of asec size on SD card

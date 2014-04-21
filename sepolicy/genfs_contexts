@@ -1,5 +1,5 @@
 ###########################
-# OmniROM common sepolicy
+# Monster common sepolicy
 #
 
 genfscon fuseblk / u:object_r:sdcard_external:s0
