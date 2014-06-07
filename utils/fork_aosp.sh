@@ -6,7 +6,7 @@
 ANDROID_ROOT=~/omni
 PREFIX=android_
 BRANCH=android-4.4
-SOURCE=android-4.4.2_r1
+SOURCE=android-4.4.3_r1.1
 MANIFEST=android/default.xml
 GITHUB_ORG=omnirom
 USERNAME=xplodwild
