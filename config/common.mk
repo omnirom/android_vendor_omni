@@ -63,6 +63,10 @@ PRODUCT_COPY_FILES += \
 # Additional packages
 -include vendor/omni/config/packages.mk
 
+# Chromium prebuilt
+PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
+-include vendor/omni/config/chromium_prebuilt.mk
+
 # Versioning
 -include vendor/omni/config/version.mk
 
