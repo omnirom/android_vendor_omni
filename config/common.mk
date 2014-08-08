@@ -27,6 +27,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false \
     persist.sys.root_access=1
 
+# default sounds
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.config.alarm_alert=Argon.ogg \
+    ro.config.ringtone=Orion.ogg \
+    ro.config.notification_sound=pixiedust.ogg
+
 # enable ADB authentication if not on eng build
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
