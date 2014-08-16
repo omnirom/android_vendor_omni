@@ -1,0 +1,26 @@
+(getprop("ro.product.device") == "C6902" || getprop("ro.build.product") == "C6902" || 
+ getprop("ro.product.device") == "C6903" || getprop("ro.build.product") == "C6903" || 
+ getprop("ro.product.device") == "C6906" || getprop("ro.build.product") == "C6906" || 
+ getprop("ro.product.device") == "C6943" || getprop("ro.build.product") == "C6943" || 
+ getprop("ro.product.device") == "honami" || getprop("ro.build.product") == "honami") || abort("This package is for \"C6902,C6903,C6906,C6943,honami\" devices
+this is a \"" + getprop("ro.product.device") + "\".");
+show_progress(0.500000, 0);
+ui_print("#######################################");
+ui_print("# _____            __  __  ______     #");
+ui_print("#/\  __`\  /'\_/`\/\ \/\ \/\__  _\    #");
+ui_print("#\ \ \/\ \/\  ``  \ \ ` \ \/_/\ \/    #");
+ui_print("# \ \ \ \ \ \ \__\ \ \ . ` \ \ \ \    #");
+ui_print("#  \ \ \_\ \ \ \_/\ \ \ \`\ \ \_\ \__ #");
+ui_print("#   \ \_____\ \_\, \_\ \_\ \_\/\_____\#");
+ui_print("#    \/_____/\/_/ \/_/\/_/\/_/\/_____/#");
+ui_print("#                                     #");
+ui_print("#######################################");
+mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/system", "/system");
+ui_print("Extracting kernel modules to /system/lib/modules");
+package_extract_dir("system", "/system");
+show_progress(0.200000, 10);
+ui_print("Flashing boot.img");
+package_extract_file("boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
+show_progress(0.100000, 0);
+ui_print("Enjoy OMNI ROM!");
+unmount("/system");
