@@ -1,0 +1,161 @@
+#!/bin/bash
+#
+# Copyright (C) 2014 OmniROM Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+OMNI_VERSION=4.4
+MACHINE_TYPE=`uname -m`
+
+# Starting Timer
+START=$(date +%s)
+
+# Build target (device name)
+CMD="$1"
+
+# Common defines (Arch-dependent)
+case `uname -s` in
+    Darwin)
+        txtrst='\033[0m'  # Color off
+        txtred='\033[0;31m' # Red
+        txtgrn='\033[0;32m' # Green
+        txtylw='\033[0;33m' # Yellow
+        txtblu='\033[0;34m' # Blue
+        THREADS=`sysctl -an hw.logicalcpu`
+        ;;
+    *)
+        txtrst='\e[0m'  # Color off
+        txtred='\e[0;31m' # Red
+        txtgrn='\e[0;32m' # Green
+        txtylw='\e[0;33m' # Yellow
+        txtblu='\e[0;34m' # Blue
+        THREADS=`cat /proc/cpuinfo | grep processor | wc -l`
+        ;;
+esac
+
+clear
+
+echo -e "${txtblu} #####################################################################"
+echo -e "${txtblu} \r\n"
+echo -e "${txtblu}              OmniROM ${OMNI_VERSION} buildscript for bootimage"
+echo -e "${txtblu}              visit us @ http://www.omnirom.org"
+echo -e "${txtblu} \r\n"
+echo -e "${txtblu} #####################################################################"
+
+# Check for build target
+if [ -z "${CMD}" ]; then
+    echo -e "${txtred}ERROR: No build target set."
+    echo -e "${txtred}Usage: "
+    echo -e "${txtrst} \r\n"
+    echo -e "${txtylw}       vendor/omni/bootimage/build-bootimage [device name]"
+    echo -e "\r\n ${txtrst}"
+    exit
+fi
+
+# Setting up Build Environment
+echo -e "${txtrst} \r\n"
+echo -e "${txtgrn}Setting up Build Environment...${txtrst}"
+source build/envsetup.sh
+breakfast ${CMD}
+
+# Test environment
+echo -e "${txtgrn} Environment"
+echo -e "${txtgrn} \r\n"
+echo -e "${txtylw} ANDROID SOURCE    : ${ANDROID_BUILD_TOP}"
+echo -e "${txtylw} TARGET BUILD      : ${CMD}"
+echo -e "${txtylw} MACHINE TYPE      : ${MACHINE_TYPE}"
+echo -e "${txtylw} CPU THREADS       : ${THREADS}"
+echo -e "${txtylw} OMNI VERSION      : ${OMNI_VERSION}"
+echo -e "${txtrst} \r\n"
+
+# create kernel zip after successfull build
+create_kernel_zip()
+{
+    echo -e "${txtgrn}Creating kernel zip...${txtrst}"
+    if [ -e ${ANDROID_PRODUCT_OUT}/boot.img ]; then
+        echo -e "${txtgrn}Bootimage found...${txtrst}"
+        if [ -e ${ANDROID_BUILD_TOP}/device/*/${CMD}/kernel_updater-script ]; then
+
+            echo -e "${txtylw}Package KERNELUPDATE:${txtrst} out/target/product/${CMD}/kernel-omni-${OMNI_VERSION}-$(date +%Y%m%d)-${CMD}-signed.zip"
+            cd ${ANDROID_PRODUCT_OUT}
+
+            rm -rf kernel_zip
+            rm -rf kernel-omni-${OMNI_VERSION}-*
+
+            mkdir -p kernel_zip/system/lib/modules
+            mkdir -p kernel_zip/META-INF/com/google/android
+
+            echo "Copying boot.img..."
+            cp boot.img kernel_zip/
+            echo "Copying kernel modules..."
+            cp -R system/lib/modules/* kernel_zip/system/lib/modules
+            echo "Copying update-binary..."
+            cp obj/EXECUTABLES/updater_intermediates/updater kernel_zip/META-INF/com/google/android/update-binary
+            echo "Copying updater-script..."
+            cat ${ANDROID_BUILD_TOP}/device/*/${CMD}/kernel_updater-script > kernel_zip/META-INF/com/google/android/updater-script
+
+            echo "Zipping package..."
+            cd kernel_zip
+            zip -qr ../kernel-omni-${OMNI_VERSION}-$(date +%Y%m%d)-${CMD}.zip ./
+            cd ${ANDROID_PRODUCT_OUT}
+
+            echo "Signing package..."
+            java -jar ${ANDROID_HOST_OUT}/framework/signapk.jar ${ANDROID_BUILD_TOP}/build/target/product/security/testkey.x509.pem ${ANDROID_BUILD_TOP}/build/target/product/security/testkey.pk8 kernel-omni-${OMNI_VERSION}-$(date +%Y%m%d)-${CMD}.zip kernel-omni-${OMNI_VERSION}-$(date +%Y%m%d)-${CMD}-signed.zip
+            rm kernel-omni-${OMNI_VERSION}-$(date +%Y%m%d)-${CMD}.zip
+            echo -e "${txtgrn}Package complete:${txtrst} out/target/product/${CMD}/kernel-omni-${OMNI_VERSION}-$(date +%Y%m%d)-${CMD}-signed.zip"
+            md5sum kernel-omni-${OMNI_VERSION}-$(date +%Y%m%d)-${CMD}-signed.zip
+            cd ${ANDROID_BUILD_TOP}
+        else
+            echo -e "${txtred}No instructions to create out/target/product/${CMD}/kernel-omni-${OMNI_VERSION}-$(date +%Y%m%d)-${CMD}-signed.zip... skipping."
+            echo -e "\r\n ${txtrst}"
+            echo -e "${txtred} This process requires device implementation."
+            echo -e "${txtred} example: https://gerrit.omnirom.org/9175"
+            echo -e "\r\n ${txtrst}"
+        fi
+    else
+        echo -e "${txtred}Bootimage not found... skipping."
+        echo -e "\r\n ${txtrst}"
+    fi
+}
+
+rm -rf ${ANDROID_PRODUCT_OUT}/kernel_zip
+rm -rf ${ANDROID_PRODUCT_OUT}/kernel
+rm -rf ${ANDROID_PRODUCT_OUT}/boot.img
+rm -rf ${ANDROID_PRODUCT_OUT}/root
+rm -rf ${ANDROID_PRODUCT_OUT}/ramdisk*
+rm -rf ${ANDROID_PRODUCT_OUT}/combined*
+
+echo -e "${txtrst} \r\n"
+echo -e "${txtgrn}Building Kernel ...${txtrst}"
+make bootimage -j${THREADS}
+if [ ! -e ${ANDROID_PRODUCT_OUT}/obj/EXECUTABLES/updater_intermediates/updater ]; then
+    echo -e "${txtgrn}Building Updater ...${txtrst}"
+    make updater -j${THREADS}
+fi
+if [ ! -e ${ANDROID_HOST_OUT}/framework/signapk.jar ]; then
+    echo -e "${txtgrn}Building Signapk ...${txtrst}"
+    make signapk -j${THREADS}
+fi
+echo -e "${txtrst} \r\n"
+
+create_kernel_zip
+
+echo -e "${txtrst} \r\n"
+END=$(date +%s)
+ELAPSED=$((END - START))
+E_MIN=$((ELAPSED / 60))
+E_SEC=$((ELAPSED - E_MIN * 60))
+printf "${txtgrn}Elapsed: "
+[ $E_MIN != 0 ] && printf "%d min(s) " $E_MIN
+printf "%d sec(s)\n ${txtrst}" $E_SEC
