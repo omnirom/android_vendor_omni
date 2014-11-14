@@ -12,4 +12,4 @@ BOARD_SEPOLICY_UNION += \
     genfs_contexts \
     installd.te \
     mac_permissions.xml \
-	vold.te
+#	vold.te
