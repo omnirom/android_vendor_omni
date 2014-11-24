@@ -4,10 +4,6 @@ on init
     export TERMINFO /system/etc/terminfo
     export TERM linux
 
-on post-fs-data
-    # Run sysinit
-    start sysinit
-
 on boot
     # interactive governor
     chown system system /sys/devices/system/cpu/cpufreq/interactive/timer_rate
@@ -70,8 +66,13 @@ on boot
     # I/O scheduler
     chown system system /sys/block/mmcblk0/queue/scheduler
     chmod 0664 /sys/block/mmcblk0/queue/scheduler
+    chown system system /sys/block/mmcblk0/bdi/read_ahead_kb
+    chmod 0664 /sys/block/mmcblk0/bdi/read_ahead_kb
+
     chown system system /sys/block/mmcblk1/queue/scheduler
     chmod 0664 /sys/block/mmcblk1/queue/scheduler
+    chown system system /sys/block/mmcblk1/bdi/read_ahead_kb
+    chmod 0664 /sys/block/mmcblk1/bdi/read_ahead_kb
 
     # allow system to modify ksm control files
     chown root system /sys/kernel/mm/ksm/pages_to_scan
@@ -92,9 +93,9 @@ on boot
 
 # sysinit (/system/etc/init.d)
 service sysinit /system/bin/sysinit
+    class late-start
     user root
     oneshot
-    disabled
 
 # adb over network
 on property:service.adb.tcp.port=5555
