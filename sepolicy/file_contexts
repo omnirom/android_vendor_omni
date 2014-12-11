@@ -2,10 +2,8 @@
 # OmniROM common sepolicy
 #
 
-# cache
-/cache/dalvik-cache(/.*)? u:object_r:dalvikcache_data_file:s0
-
 # performance-related sysfs files
-/sys/kernel/mm/ksm(/.*)?       --          u:object_r:sysfs_writable:s0
-/sys/devices/system/cpu.*/cpufreq(/.*)? --  u:object_r:sysfs_writable:s0
-/sys/block/mmcblk0/queue/scheduler  --    u:object_r:sysfs_writable:s0
+/sys/kernel/mm/ksm(/.*)?    u:object_r:sysfs_writable:s0
+/sys/block/mmcblk(/.*)?     u:object_r:sysfs_writable:s0
+/sys/block/zram(/.*)?       u:object_r:sysfs_writable:s0
+/dev/kgsl-3d0               u:object_r:video_device:s0
