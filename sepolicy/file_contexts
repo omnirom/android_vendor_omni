@@ -3,6 +3,6 @@
 #
 
 # performance-related sysfs files
-/sys/kernel/mm/ksm(/.*)?    u:object_r:sysfs_writable:s0
-/sys/block/mmcblk(/.*)?     u:object_r:sysfs_writable:s0
-/sys/block/zram(/.*)?       u:object_r:sysfs_writable:s0
+/sys/kernel/mm/ksm(/.*)?    u:object_r:sysfs_ksm:s0
+/sys/block/mmcblk[0-2]/queue(/.*)     u:object_r:sysfs_ioscheduler:s0
+/sys/block/zram(/.*)?       u:object_r:sysfs_zram:s0
