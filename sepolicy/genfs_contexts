@@ -1,0 +1,6 @@
+###########################
+# OmniROM common sepolicy
+#
+
+# treat fuseblk as sdcard_external
+genfscon fuseblk / u:object_r:sdcard_external:s0
