@@ -10,9 +10,3 @@ BOARD_SEPOLICY_UNION += \
     file_contexts \
     system_app.te \
     system_server.te
-
-#    file.te \
-#    genfs_contexts \
-#    installd.te \
-#    mac_permissions.xml \
-#    vold.te
