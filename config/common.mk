@@ -59,8 +59,8 @@ ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 endif
 
 # Dashclock
-PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/app/DashClock.apk:system/app/DashClock.apk
+#PRODUCT_COPY_FILES += \
+#    vendor/omni/prebuilt/app/DashClock.apk:system/app/DashClock.apk
 
 # Additional packages
 -include vendor/omni/config/packages.mk
