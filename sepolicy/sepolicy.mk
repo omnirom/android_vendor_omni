@@ -6,3 +6,10 @@
 BOARD_SEPOLICY_DIRS += \
     vendor/omni/sepolicy
 
+BOARD_SEPOLICY_UNION += \
+    file_contexts \
+    file.te \
+    genfs_contexts \
+    system_app.te \
+    system_server.te \
+    vold.te
