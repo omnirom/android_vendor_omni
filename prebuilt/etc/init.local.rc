@@ -4,6 +4,10 @@ on init
     export TERMINFO /system/etc/terminfo
     export TERM linux
 
+on post-fs-data
+    # Run sysinit
+    start sysinit
+
 on boot
     # interactive governor
     chown system system /sys/devices/system/cpu/cpufreq/interactive/timer_rate
@@ -97,9 +101,9 @@ on boot
 
 # sysinit (/system/etc/init.d)
 service sysinit /system/bin/sysinit
-    class late-start
     user root
     oneshot
+    disabled
 
 # adb over network
 on property:service.adb.tcp.port=5555

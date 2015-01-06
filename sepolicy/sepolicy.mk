@@ -10,6 +10,8 @@ BOARD_SEPOLICY_UNION += \
     file_contexts \
     file.te \
     genfs_contexts \
+    installd.te \
+    sysinit.te \
     system_app.te \
     system_server.te \
     vold.te
