@@ -15,6 +15,13 @@ endif
 
 ifndef ROM_BUILDTYPE
     ROM_BUILDTYPE := HOMEMADE
+ifeq ($(ROM_BUILDTIME_LOCAL),y)
+    OMNI_POSTFIX := -$(shell date +%Y%m%d-%H%M%z)
+else
+    OMNI_POSTFIX := -$(shell date +%Y%m%d-%H%M)
+endif
+else
+    OMNI_POSTFIX := -$(shell date -u +%Y%m%d)
 endif
 
 TARGET_PRODUCT_SHORT := $(TARGET_PRODUCT)
@@ -24,11 +31,7 @@ TARGET_PRODUCT_SHORT := $(subst omni_,,$(TARGET_PRODUCT_SHORT))
 ifdef BUILDTYPE_RELEASE
     ROM_VERSION := $(PLATFORM_VERSION)-$(TARGET_PRODUCT_SHORT)
 else
-ifeq ($(ROM_BUILDTIME_LOCAL),y)
-    ROM_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d-%H%M%z)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
-else
-    ROM_VERSION := $(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
-endif
+    ROM_VERSION := $(PLATFORM_VERSION)$(OMNI_POSTFIX)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
 endif
 
 # Apply it to build.prop
