@@ -43,6 +43,8 @@ if [ -d $TARGET_DIR ]; then
     echo "Copying files..."
     cp -r $TARGET_DIR/system/app/webview $PREBUILT_DIR/app/
     cp $TARGET_DIR/system/lib/libwebviewchromium.so $PREBUILT_DIR/lib/libwebviewchromium.so
+    cp $TARGET_DIR/system/lib/libwebviewchromium_loader.so $PREBUILT_DIR/lib/libwebviewchromium_loader.so
+    cp $TARGET_DIR/system/lib/libwebviewchromium_plat_support.so $PREBUILT_DIR/lib/libwebviewchromium_plat_support.so
     cp $TARGET_DIR/../../common/obj/JAVA_LIBRARIES/android_webview_java_intermediates/javalib.jar $PREBUILT_DIR/android_webview_java.jar
 else
     echo "Please ensure that you have ran a full build prior to running this script!"
@@ -72,8 +74,10 @@ echo $HASH > $PREBUILT_DIR/hash.txt
 LOCAL_PATH := prebuilts/chromium/__DEVICE__/
 
 PRODUCT_COPY_FILES += \\
-    \$(LOCAL_PATH)/app/webview.apk:system/app/webview/webview.apk \\
-    \$(LOCAL_PATH)/lib/libwebviewchromium.so:system/lib/libwebviewchromium.so
+    \$(LOCAL_PATH)/app/webview/webview.apk:system/app/webview/webview.apk \\
+    \$(LOCAL_PATH)/lib/libwebviewchromium.so:system/lib/libwebviewchromium.so \\
+    \$(LOCAL_PATH)/lib/libwebviewchromium_loader.so:system/lib/libwebviewchromium_loader.so \\
+    \$(LOCAL_PATH)/lib/libwebviewchromium_plat_support.so:system/lib/libwebviewchromium_plat_support.so
 
 EOF
 
