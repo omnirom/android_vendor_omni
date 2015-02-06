@@ -667,6 +667,7 @@
   <apn carrier="ATT" mcc="310" mnc="410" apn="wap.cingular" user="WAP@CINGULARGPRS.COM" mmsc="http://mmsc.cingular.com" mmsproxy="wireless.cingular.com" mmsport="80" type="default,supl,mms" />
   <apn carrier="ATT Phone" mcc="310" mnc="410" apn="phone" mmsc="http://mmsc.mobile.att.net" mmsproxy="proxy.mobile.att.net" mmsport="80" type="default,supl,mms" />
   <apn carrier="ATT LTE" mcc="310" mnc="410" apn="pta" mmsc="http://mmsc.mobile.att.net" mmsproxy="proxy.mobile.att.net" mmsport="80" type="default,supl,mms" />
+  <apn carrier="ATT Next Gen Phone" mcc="310" mnc="410" apn="nxtgenphone" mmsc="http://mmsc.mobile.att.net" mmsproxy="proxy.mobile.att.net" mmsport="80" type="default,supl,mms,hipri,fota" />
   <apn carrier="ATT Broadband" mcc="310" mnc="410" apn="broadband" user="" server="" password="" mmsc="" type="default" />
   <apn carrier="ATT Activation" mcc="310" mnc="410" apn="lwaactivate" user="" server="" password="" mmsc="" protocol="IP" />
   <apn carrier="StraightTalk ATT" mcc="310" mnc="410" apn="tfdata" port="80" mmsc="http://mms-tf.net" mmsproxy="mms3.tracfone.com" mmsport="80" type="default,supl,mms" />
