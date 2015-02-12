@@ -1,4 +1,5 @@
 # Additional packages
+ifeq ($(TARGET_LOW_MEMORY_DEVICE),)
 PRODUCT_PACKAGES += \
     Basic \
     Development \
@@ -6,6 +7,7 @@ PRODUCT_PACKAGES += \
     SoundRecorder \
     VideoEditor \
     VoiceDialer
+endif
 
 # Additional apps
 PRODUCT_PACKAGES += \
