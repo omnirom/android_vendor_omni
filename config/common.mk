@@ -63,7 +63,11 @@ endif
 #    vendor/omni/prebuilt/app/DashClock.apk:system/app/DashClock.apk
 
 # Additional packages
--include vendor/omni/config/packages.mk
+ifneq ($(TARGET_LOW_MEMORY_DEVICE),)
+    -include vendor/omni/config/minimal_packages.mk
+else
+    -include vendor/omni/config/packages.mk
+endif
 
 # Versioning
 -include vendor/omni/config/version.mk
