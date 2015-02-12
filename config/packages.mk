@@ -1,7 +1,9 @@
 # Additional packages
+ifeq ($(TARGET_LOW_RAM_DEVICE),)
 PRODUCT_PACKAGES += \
     Basic \
     Development
+endif
 
 # Additional apps
 PRODUCT_PACKAGES += \
