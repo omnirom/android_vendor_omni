@@ -1,4 +1,8 @@
 # Additional packages
+ifneq ($(TARGET_LOW_MEMORY_DEVICE),)
+PRODUCT_PACKAGES += \
+    SoundRecorder
+else
 PRODUCT_PACKAGES += \
     Basic \
     Development \
@@ -6,6 +10,7 @@ PRODUCT_PACKAGES += \
     SoundRecorder \
     VideoEditor \
     VoiceDialer
+endif
 
 # Additional apps
 PRODUCT_PACKAGES += \
