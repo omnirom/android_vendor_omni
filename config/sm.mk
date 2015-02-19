@@ -209,7 +209,9 @@ ifeq ($(strip $(HOST_OS)),linux)
     libjni_filtershow_filters \
     libavformat \
     libavcodec \
-    skia_skia_library_gyp
+    skia_skia_library_gyp \
+    libSR_Core \
+    libwebviewchromium
 
   ifeq ($(strip $(O3_OPTIMIZATIONS)),true)
     OPT2 := (max)
@@ -223,7 +225,8 @@ ifeq ($(strip $(HOST_OS)),linux)
       skia_skia_library_gyp
     # Don't compile -O3 with thumb to reduce code size.
     LOCAL_DISABLE_O3_FLAGS := \
-      -mthumb
+      -mthumb \
+      -mthumb-interwork
 
     # -O3 flags and friends
     O3_FLAGS := \
