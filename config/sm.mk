@@ -235,6 +235,9 @@ ifeq ($(strip $(HOST_OS)),linux)
       -Wno-error=strict-overflow
   endif
 
+  LOCAL_DISABLE_THUMB_INTERWORK := \
+    libmincrypt
+
   GCC_OPTIMIZATION_LEVELS := $(OPT1)$(OPT2)
   ifneq ($(GCC_OPTIMIZATION_LEVELS),)
     PRODUCT_PROPERTY_OVERRIDES += \
