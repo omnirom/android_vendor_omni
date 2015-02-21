@@ -224,17 +224,26 @@ ifeq ($(strip $(HOST_OS)),linux)
       libwebviewchromium \
       skia_skia_library_gyp
 
+    LOCAL_DISABLE_PTHREAD := \
+      libc_netbsd
+
     # -O3 flags and friends
     O3_FLAGS := \
       -O3 \
       -Wno-error=array-bounds \
       -Wno-error=strict-overflow
+  else
+    OPT2:=
+
   endif
 
-  LOCAL_DISABLE_THUMB_INTERWORK := \
-    libmincrypt
+  ifeq ($(strip $(ENABLE_PTHREAD)),true)
+    OPT3 := (pthread)
+  else
+    OPT3:=
+  endif
 
-  GCC_OPTIMIZATION_LEVELS := $(OPT1)$(OPT2)
+  GCC_OPTIMIZATION_LEVELS := $(OPT1)$(OPT2)$(OPT3)
   ifneq ($(GCC_OPTIMIZATION_LEVELS),)
     PRODUCT_PROPERTY_OVERRIDES += \
       ro.sm.flags=$(GCC_OPTIMIZATION_LEVELS)
