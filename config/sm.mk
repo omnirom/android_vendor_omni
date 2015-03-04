@@ -22,7 +22,7 @@ ifndef TARGET_SM_AND
   $(warning *  TARGET_SM_AND not defined.)
   $(warning *  Defaulting to gcc 4.8 for ROM.)
   $(warning *  To change this set TARGET_SM_AND in device trees before common.mk is called.)
-  $(warning *  This is required for arm64 devices for the kernel TARGET_SM_KERNEL := 4.9)
+  $(warning *  This is required for arm64 devices for the kernel TARGET_SM_KERNEL := SM-4.9)
   $(warning ********************************************************************************)
   TARGET_SM_AND := 4.8
 endif
