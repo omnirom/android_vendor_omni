@@ -22,7 +22,7 @@ ifndef TARGET_SM_AND
   $(warning *  TARGET_SM_AND not defined.)
   $(warning *  Defaulting to gcc 4.8 for ROM.)
   $(warning *  To change this set TARGET_SM_AND in device trees before common.mk is called.)
-  $(warning *  This is required for arm64 devices TARGET_SM_AND := 4.9)
+  $(warning *  This is required for arm64 devices for the kernel TARGET_SM_KERNEL := 4.9)
   $(warning ********************************************************************************)
   TARGET_SM_AND := 4.8
 endif
@@ -211,7 +211,9 @@ ifeq ($(strip $(HOST_OS)),linux)
     libavcodec \
     skia_skia_library_gyp \
     libSR_Core \
-    libwebviewchromium
+    libwebviewchromium \
+    third_party_libvpx_libvpx_gyp \
+    ui_gl_gl_gyp
 
   ifeq ($(strip $(O3_OPTIMIZATIONS)),true)
     OPT2 := (max)
