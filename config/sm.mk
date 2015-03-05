@@ -69,6 +69,25 @@ ifeq ($(strip $(HOST_OS)),linux)
       # Write version info to build.prop
       PRODUCT_PROPERTY_OVERRIDES += \
         ro.sm.android=$(SM_AND_VERSION)
+
+      OPT1 := (graphite)
+
+      # Graphite flags and friends
+      GRAPHITE_FLAGS := \
+        -fgraphite \
+        -fgraphite-identity \
+        -floop-flatten \
+        -floop-parallelize-all \
+        -ftree-loop-linear \
+        -floop-interchange \
+        -floop-strip-mine \
+        -floop-block
+
+      # Legacy gcc doesn't understand this flag
+      ifneq ($(strip $(USE_LEGACY_GCC)),true)
+        GRAPHITE_FLAGS += \
+          -Wno-error=maybe-uninitialized
+      endif
     endif
 
     # Skip kernel bits if TARGET_SM_KERNEL is not defined.
@@ -86,37 +105,19 @@ ifeq ($(strip $(HOST_OS)),linux)
         # Write version info to build.prop
         PRODUCT_PROPERTY_OVERRIDES += \
           ro.sm.kernel=$(SM_KERNEL_VERSION)
+
+        # Graphite flags for kernel
+        export GRAPHITE_KERNEL_FLAGS := \
+                 -fgraphite \
+                 -fgraphite-identity \
+                 -floop-flatten \
+                 -floop-parallelize-all \
+                 -ftree-loop-linear \
+                 -floop-interchange \
+                 -floop-strip-mine \
+                 -floop-block
       endif
     endif
-
-    OPT1 := (graphite)
-
-    # Graphite flags and friends
-    GRAPHITE_FLAGS := \
-      -fgraphite \
-      -fgraphite-identity \
-      -floop-flatten \
-      -floop-parallelize-all \
-      -ftree-loop-linear \
-      -floop-interchange \
-      -floop-strip-mine \
-      -floop-block
-    # Legacy gcc doesn't understand this flag
-    ifneq ($(strip $(USE_LEGACY_GCC)),true)
-      GRAPHITE_FLAGS += \
-        -Wno-error=maybe-uninitialized
-    endif
-
-    # Graphite flags for kernel
-    export GRAPHITE_KERNEL_FLAGS := \
-             -fgraphite \
-             -fgraphite-identity \
-             -floop-flatten \
-             -floop-parallelize-all \
-             -ftree-loop-linear \
-             -floop-interchange \
-             -floop-strip-mine \
-             -floop-block
   endif
 
   ifeq ($(strip $(TARGET_ARCH)),arm64)
@@ -137,6 +138,25 @@ ifeq ($(strip $(HOST_OS)),linux)
       # Write version info to build.prop
       PRODUCT_PROPERTY_OVERRIDES += \
         ro.sm.android=$(SM_AND_VERSION)
+
+      OPT1 := (graphite)
+
+      # Graphite flags and friends
+      GRAPHITE_FLAGS := \
+        -fgraphite \
+        -fgraphite-identity \
+        -floop-flatten \
+        -floop-parallelize-all \
+        -ftree-loop-linear \
+        -floop-interchange \
+        -floop-strip-mine \
+        -floop-block
+
+      # Legacy gcc doesn't understand this flag
+      ifneq ($(strip $(USE_LEGACY_GCC)),true)
+        GRAPHITE_FLAGS += \
+          -Wno-error=maybe-uninitialized
+      endif
     endif
 
     # Skip kernel bits if TARGET_SM_KERNEL is not defined.
@@ -155,37 +175,19 @@ ifeq ($(strip $(HOST_OS)),linux)
         # Write version info to build.prop
         PRODUCT_PROPERTY_OVERRIDES += \
           ro.sm.kernel=$(SM_KERNEL_VERSION)
+
+        # Graphite flags for kernel
+        export GRAPHITE_KERNEL_FLAGS := \
+                 -fgraphite \
+                 -fgraphite-identity \
+                 -floop-flatten \
+                 -floop-parallelize-all \
+                 -ftree-loop-linear \
+                 -floop-interchange \
+                 -floop-strip-mine \
+                 -floop-block
       endif
     endif
-
-    OPT1 := (graphite)
-
-    # Graphite flags and friends for ROM
-    GRAPHITE_FLAGS := \
-      -fgraphite \
-      -fgraphite-identity \
-      -floop-flatten \
-      -floop-parallelize-all \
-      -ftree-loop-linear \
-      -floop-interchange \
-      -floop-strip-mine \
-      -floop-block
-    # Legacy gcc doesn't understand this flag
-    ifneq ($(strip $(USE_LEGACY_GCC)),true)
-      GRAPHITE_FLAGS += \
-        -Wno-error=maybe-uninitialized
-    endif
-
-    # Graphite flags for kernel
-    export GRAPHITE_KERNEL_FLAGS := \
-             -fgraphite \
-             -fgraphite-identity \
-             -floop-flatten \
-             -floop-parallelize-all \
-             -ftree-loop-linear \
-             -floop-interchange \
-             -floop-strip-mine \
-             -floop-block
   endif
 
   # Add extra libs for the compilers to use
