@@ -215,7 +215,31 @@ ifeq ($(strip $(HOST_OS)),linux)
     libSR_Core \
     libwebviewchromium \
     third_party_libvpx_libvpx_gyp \
-    ui_gl_gl_gyp
+    ui_gl_gl_gyp \
+    libdomx \
+    libOMX_Core \
+    libOMX.TI.DUCATI1.VIDEO.H264E \
+    libOMX.TI.DUCATI1.VIDEO.H264SVCE \
+    libOMX.TI.DUCATI1.VIDEO.VC1E \
+    libOMX.TI.DUCATI1.VIDEO.MPEG4E \
+    libOMX.TI.DUCATI1.VIDEO.DECODER \
+    libOMX.TI.DUCATI1.VIDEO.DECODER.secure \
+    libOMX.TI.DUCATI1.VIDEO.CAMERA \
+    libOMX.TI.DUCATI1.MISC.SAMPLE \
+    libstagefrighthw \
+    libI420colorconvert \
+    libtiutils \
+    libion_ti \
+    smc_pa_ctrl \
+    tf_daemon \
+    libtf_crypto_sst \
+    hwcomposer.omap4 \
+    libion.so \
+    pvrsrvinit \
+    libPVRScopeServices.so \
+    libcorkscrew \
+    libtee_client_api_driver \
+    libFraunhoferAAC
 
   ifeq ($(strip $(O3_OPTIMIZATIONS)),true)
     OPT2 := (max)
@@ -226,7 +250,31 @@ ifeq ($(strip $(HOST_OS)),linux)
     LOCAL_DISABLE_O3 := \
       libaudioflinger \
       libwebviewchromium \
-      skia_skia_library_gyp
+      skia_skia_library_gyp \
+    libdomx \
+    libOMX_Core \
+    libOMX.TI.DUCATI1.VIDEO.H264E \
+    libOMX.TI.DUCATI1.VIDEO.H264SVCE \
+    libOMX.TI.DUCATI1.VIDEO.VC1E \
+    libOMX.TI.DUCATI1.VIDEO.MPEG4E \
+    libOMX.TI.DUCATI1.VIDEO.DECODER \
+    libOMX.TI.DUCATI1.VIDEO.DECODER.secure \
+    libOMX.TI.DUCATI1.VIDEO.CAMERA \
+    libOMX.TI.DUCATI1.MISC.SAMPLE \
+    libstagefrighthw \
+    libI420colorconvert \
+    libtiutils \
+    libion_ti \
+    smc_pa_ctrl \
+    tf_daemon \
+    libtf_crypto_sst \
+    hwcomposer.omap4 \
+    libion.so \
+    pvrsrvinit \
+    libPVRScopeServices.so \
+    libcorkscrew \
+    libtee_client_api_driver \
+    libFraunhoferAAC
 
     LOCAL_DISABLE_PTHREAD := \
       libc_netbsd
