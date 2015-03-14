@@ -239,7 +239,10 @@ ifeq ($(strip $(HOST_OS)),linux)
     libPVRScopeServices.so \
     libcorkscrew \
     libtee_client_api_driver \
-    libFraunhoferAAC
+    libFraunhoferAAC \
+    libopus \
+    fio \
+    libstagefright_amrwbenc
 
   ifeq ($(strip $(O3_OPTIMIZATIONS)),true)
     OPT2 := (max)
@@ -274,7 +277,10 @@ ifeq ($(strip $(HOST_OS)),linux)
     libPVRScopeServices.so \
     libcorkscrew \
     libtee_client_api_driver \
-    libFraunhoferAAC
+    libFraunhoferAAC \
+    libopus \
+    fio \
+    libstagefright_amrwbenc
 
     LOCAL_DISABLE_PTHREAD := \
       libc_netbsd
