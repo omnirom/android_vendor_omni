@@ -48,6 +48,9 @@ p 0 0 Part1
 EOF
 }
 
+# image quality
+quality=50;
+
 # reading images
 for i in ${RESOLUTIONS}; do
 
@@ -67,17 +70,6 @@ for i in ${RESOLUTIONS}; do
 
     echo "Rewriting desc.txt...";
     rewrite_desc "${i}"
-
-#   set image quality
-#   add an aggressive value for low resolutions
-    case "${i}" in
-        "360x240"|"420x280"|"480x320")
-            quality=80;
-        ;;
-        *)
-            quality=90;
-        ;;
-    esac
 
     echo "Resizing images...";
     for j in Part*/*.jpg; do
