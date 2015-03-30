@@ -1,0 +1,6 @@
+###########################
+# OmniROM common sepolicy
+#
+
+service.adb.tcp. u:object_r:adbtcp_prop:s0
+omni.userinit.active u:object_r:userinit_prop:s0
