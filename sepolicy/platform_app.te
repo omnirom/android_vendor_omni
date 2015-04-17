@@ -1,0 +1,10 @@
+###########################
+# OmniROM common sepolicy
+#
+
+# CPU info overlay temp
+allow platform_app sysfs_thermal:file r_file_perms;
+allow platform_app sysfs_thermal:dir search;
+allow platform_app sysfs_thermal:lnk_file r_file_perms;
+
+

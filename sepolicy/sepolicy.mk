@@ -14,6 +14,7 @@ BOARD_SEPOLICY_UNION += \
     healthd.te \
     property_contexts \
     installd.te \
+    platform_app.te \
     property.te \
     shell.te \
     sysinit.te \
