@@ -16,6 +16,24 @@
       "revId": "636cb112bcd51b9a8f50af056af7bcddd7d4092b",
       "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2b1c0951_c6b8c4e4",
+        "filename": "sepolicy/file_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000032
+      },
+      "writtenOn": "2015-04-18T15:11:08Z",
+      "side": 1,
+      "message": "Got denials for these paths on i9100g, so probably at least OMAP devices.",
+      "parentUuid": "2b1c0951_86d5ec22",
+      "revId": "636cb112bcd51b9a8f50af056af7bcddd7d4092b",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
     }
   ]
 }
