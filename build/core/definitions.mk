@@ -55,7 +55,15 @@ endef
 
 ifeq ($(USE_PREBUILT_CACHE),1)
 PREBUILT_CACHE_DIR ?= $(ANDROID_BUILD_TOP)/.cache
-endif
+LIBWEBVIEWCHROMIUM_CACHE_LIB := $(PREBUILT_CACHE_DIR)/target/$(TARGET_DEVICE)/SHARED_LIBRARIES/$(TARGET_$(LOCAL_2ND_ARCH_VAR_PREFIX)ARCH)/libwebviewchromium/lib.so
+ifneq ("$(wildcard $(LIBWEBVIEWCHROMIUM_CACHE_LIB))","")
+TARGET_HAVE_PREBUILT_WEBVIEWCHROMIUM:=yes
+$(info Using Prebuilt libwebviewchromium)
+else
+TARGET_HAVE_PREBUILT_WEBVIEWCHROMIUM:=no
+$(info Not using Prebuilt libwebviewchromium)
+endif # PRODUCT_PREBUILT_WEBVIEWCHROMIUM
+endif # USE_PREBUILT_CACHE
 
 define shell-escape
 $(subst ",,$(subst \",,$1))
