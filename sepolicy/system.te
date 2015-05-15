@@ -1,0 +1,9 @@
+###########################
+## OmniROM common sepolicy
+##
+
+# allow adb related properties to be set
+allow system_server adbtcp_prop:property_service set;
+
+# System server dynamically loads some dexfiles
+allow system_server dex2oat_exec:file rx_file_perms;
