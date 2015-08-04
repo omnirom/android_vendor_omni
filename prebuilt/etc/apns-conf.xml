@@ -777,6 +777,10 @@
   <apn carrier="Mensajas Multimedia" mcc="334" mnc="02" apn="mms.itelcel.com" user="mmsgprs" password="mmsgprs2003" mmsc="http://mms.itelcel.com/servlets/mms" mmsproxy="148.233.151.240" mmsport="8080" type="mms" />
   <apn carrier="Movistar MX" mcc="334" mnc="03" apn="internet.movistar.mx" user="movistar" password="movistar" type="default,supl" />
   <apn carrier="Movistar MX MMS" mcc="334" mnc="03" apn="mms.movistar.mx" user="movistar" password="movistar" mmsc="http://mms.movistar.mx" mmsproxy="10.2.20.1" mmsport="9201" type="mms" />
+  <apn carrier="Nextel Navegation" mcc="334" mnc="90" apn="wap.nexteldata.com.mx" type="default,supl" />
+  <apn carrier="Nextel Internet" mcc="334" mnc="90" apn="modem.nexteldata.com.mx" type="supl" />
+  <apn carrier="Nextel Localizacion" mcc="334" mnc="90" apn="location.nexteldata.com.mx" proxy="supl.nexteldata.com.mx" port="7275" type="supl" />
+  <apn carrier="Nextel MMS" mcc="334" mnc="90" apn="mms.nexteldata.com.mx" mmsc="http://3gmms.nexteldata.com.mx" mmsproxy="129.192.129.104" mmsport="8080" type="mms" />
   <apn carrier="Digicel JM" mcc="338" mnc="50" apn="wap.digiceljamaica.com" type="default,supl" />
   <apn carrier="Digicel JM MMS" mcc="338" mnc="50" apn="wap.digiceljamaica.com" user="wapuser" password="wap03jam" mmsc="http://mms.digicelgroup.com" mmsproxy="172.016.007.012" mmsport="8080" type="mms" />
   <apn carrier="Digicel BM" mcc="338" mnc="50" apn="web.digicelbermuda.com" type="default,supl" />
