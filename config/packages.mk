@@ -9,8 +9,6 @@ endif
 PRODUCT_PACKAGES += \
     Apollo \
     audio_effects.conf \
-    DSPManager \
-    libcyanogen-dsp \
     MonthCalendarWidget \
     OpenDelta \
     OmniSwitch
