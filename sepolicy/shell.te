@@ -3,4 +3,4 @@
 ##
 
 allow shell adbtcp_prop:property_service set;
-allow shell dalvikcache_data_file:file write;
+# allow shell dalvikcache_data_file:file write;
