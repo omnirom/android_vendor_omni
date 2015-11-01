@@ -8,12 +8,16 @@ endif
 # Additional apps
 PRODUCT_PACKAGES += \
     Apollo \
-    audio_effects.conf \
-    DSPManager \
-    libcyanogen-dsp \
     MonthCalendarWidget \
     OpenDelta \
     OmniSwitch
+
+ifneq ($(TARGET_NO_DSPMANAGER), true)
+PRODUCT_PACKAGES += \
+    audio_effects.conf \
+    DSPManager \
+    libcyanogen-dsp
+endif
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
