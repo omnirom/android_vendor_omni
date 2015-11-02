@@ -15,6 +15,14 @@ PRODUCT_PACKAGES += \
     OpenDelta \
     OmniSwitch
 
+ifeq ($(TARGET_USES_SNAPCAMERA), true)
+PRODUCT_PACKAGES += \
+    SnapCamera
+else
+PRODUCT_PACKAGES += \
+    Camera2
+endif
+
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
 
