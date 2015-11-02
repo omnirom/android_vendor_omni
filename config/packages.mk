@@ -17,6 +17,10 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     DSPManager \
     libcyanogen-dsp
+
+ifeq ($(TARGET_USES_SNAPDRAGONCAMERA), true)
+PRODUCT_PACKAGES += \
+    SnapdragonCamera
 endif
 
 PRODUCT_PACKAGES += \
