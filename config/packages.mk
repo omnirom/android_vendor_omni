@@ -19,6 +19,11 @@ PRODUCT_PACKAGES += \
     libcyanogen-dsp
 endif
 
+ifeq ($(TARGET_USES_SNAPDRAGONCAMERA), true)
+PRODUCT_PACKAGES += \
+    SnapdragonCamera
+endif
+
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
 
