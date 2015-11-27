@@ -9,6 +9,12 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 endif
 
+# default wallpaper
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/default_wallpaper.jpg:system/media/default_wallpaper.jpg
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.wallpaper=/system/media/default_wallpaper.jpg
+
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-google
