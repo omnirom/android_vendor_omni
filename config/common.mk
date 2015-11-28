@@ -1,5 +1,8 @@
 PRODUCT_BRAND ?= omni
 
+# We are using a prebuilt Chromium and do not want to built the AOSP browser 
+USE_PREBUILT_CHROMIUM := true
+
 # use specific resolution for bootanimation
 ifneq ($(TARGET_BOOTANIMATION_SIZE),)
 PRODUCT_COPY_FILES += \

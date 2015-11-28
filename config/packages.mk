@@ -10,7 +10,8 @@ PRODUCT_PACKAGES += \
     Apollo \
     MonthCalendarWidget \
     OpenDelta \
-    OmniSwitch
+    OmniSwitch \
+    Chromium
 
 ifneq ($(TARGET_NO_DSPMANAGER), true)
 PRODUCT_PACKAGES += \
