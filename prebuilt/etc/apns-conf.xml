@@ -1664,4 +1664,7 @@
   <apn carrier="Movistar PA" apn="internet.movistar.pa" user="movistarpa" password="movistarpa" type="default,supl"/>
   <apn carrier="Claro PA" apn="web.claro.com.pa" user="CLAROWEB" pass="CLAROWEB" type="default,supl" />
   <apn carrier="Digicel PA" apn="web.digicelpanama.com" type="default,supl"/>
+  <apn carrier="LG uplus IMS" mcc="450" mnc="06" apn="IMS" type="ims" mmsc="http://omammsc.uplus.co.kr:9084" protocol="IPV4V6" roaming_protocol="IPV4V6" />
+  <apn carrier="LG uplus" mcc="450" mnc="06" apn="internet.lguplus.co.kr" type="default,mms,supl,fota,cbs" mmsc="http://omammsc.uplus.co.kr:9084" protocol="IPV4V6" roaming_protocol="IPV4V6" />
+  <apn carrier="LG uplus IA" mcc="450" mnc="06" apn="" type="ia" protocol="IPV4V6" roaming_protocol="IPV4V6" />
 </apns>
