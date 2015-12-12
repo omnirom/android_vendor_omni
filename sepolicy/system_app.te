@@ -12,3 +12,6 @@ allow system_app sysfs_ksm:file rw_file_perms;
 # Read /sys/kernel/debug/wakeup_sources.
 allow system_app debugfs:file r_file_perms;
 
+# battery
+allow system_app sysfs_battery:dir r_dir_perms;
+allow system_app sysfs_battery:file r_file_perms;
