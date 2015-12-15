@@ -7,4 +7,4 @@
 /sys/block/[^/]+/queue/scheduler                  u:object_r:sysfs_block_scheduler:s0
 
 /system/bin/fsck\.ntfs                            u:object_r:fsck_exec:s0
-/system/bin/mkfs\.exfat                           u:object_r:fsck_exec:s0
+/system/bin/mkfs\.exfat                           u:object_r:mkfs_exec:s0
