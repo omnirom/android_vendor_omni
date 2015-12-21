@@ -14,42 +14,37 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+# original is 1080x608
+#
 # cleanup screen
 clear;
 
 # resolutions
-# based on stock 600x400px Omni bootanimation (30fps)
 RESOLUTIONS="\
-    360x240 \
-    420x280 \
-    480x320 \
-    720x480 \
-    840x560 \
-    960x640 \
-    1080x720 \
-    1440x960 \
-    2560x1440 \
+    640x362 \
+    720x407 \
+    1440x814 \
     ";
 
 # resize image and set quality
 convert_image() {
-    convert "${1}" -resize "${2}" -quality ${3} tmp.jpg;
-    mv tmp.jpg "${1}";
+    convert "${1}" -resize "${2}" -quality ${3} tmp.png;
+    mv tmp.png "${1}";
 }
 
 # rewrite desc.txt
 rewrite_desc() {
 res=$(echo "${1}" | sed s/x/\ /)
 cat > desc.txt << EOF
-${res} 30
-p 1 0 Part0
-p 0 0 Part1
+${res} 60
+c 0 0 Part0
+c 1 60 Part1
+c 1 0 Part2
 EOF
 }
 
 # image quality
-quality=50;
+quality=95;
 
 # reading images
 for i in ${RESOLUTIONS}; do
@@ -72,7 +67,7 @@ for i in ${RESOLUTIONS}; do
     rewrite_desc "${i}"
 
     echo "Resizing images...";
-    for j in Part*/*.jpg; do
+    for j in Part*/*.png; do
         convert_image "${j}" "${i}" $quality;
         echo -ne " ==> please wait...\r";
     done
