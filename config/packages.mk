@@ -11,7 +11,8 @@ PRODUCT_PACKAGES += \
     MonthCalendarWidget \
     OpenDelta \
     OmniSwitch \
-    Chromium
+    Chromium \
+    OmniJaws
 
 ifneq ($(TARGET_NO_DSPMANAGER), true)
 PRODUCT_PACKAGES += \
