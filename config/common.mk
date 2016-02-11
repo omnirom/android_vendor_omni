@@ -10,8 +10,14 @@ PRODUCT_COPY_FILES += \
 endif
 
 # default wallpaper
+ifneq ($(TARGET_WALLPAPER_SIZE),)
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/default_wallpaper.jpg:system/media/default_wallpaper.jpg
+    vendor/omni/prebuilt/wallpaper/res/$(TARGET_WALLPAPER_SIZE).jpg:system/media/default_wallpaper.jpg
+else
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/wallpaper/default_wallpaper.jpg:system/media/default_wallpaper.jpg
+endif
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.wallpaper=/system/media/default_wallpaper.jpg
 
