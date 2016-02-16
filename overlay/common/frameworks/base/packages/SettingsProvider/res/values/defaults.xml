@@ -18,5 +18,6 @@
 -->
 <resources>
     <!-- Use the Google propriatery backup transport service-->
-    <string name="def_backup_transport">com.google.android.backup/.BackupTransportService</string>
+    <string 
+name="def_backup_transport">com.google.android.gms/.backup.BackupTransportService</string>
 </resources>
