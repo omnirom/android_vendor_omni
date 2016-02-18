@@ -3207,4 +3207,9 @@
   <apn carrier="Orange MG MMS" mcc="646" mnc="02" apn="orangemms" user="mms" password="orange" mmsc="http://10.152.10.70.38090" mmsproxy="10.150.0.115" mmsport="8080" type="mms" />
   <apn carrier="Orange World MG" mcc="646" mnc="02" apn="orangeworld" user="world" password="orange" proxy="10.150.0.115" port="8080" type="default" />
   <apn carrier="Telco" mcc="262" mnc="07" apn="internet" server="82.113.100.38" port="8080" mmsc="http://10.81.0.7:8002" mmsport="8080"  protocol="IPV4" roaming_protocol="IPV4" />
+
+  <!-- Omni Additions -->
+  <apn carrier="o2 DE" mcc="262" mnc="07" apn="surfo2" mmsc="http://10.81.0.7:8002" mmsproxy="82.113.100.5" mmsport="8080" type="default,supl,mms" />
+  <apn carrier="Drillisch o2" mcc="262" mnc="07" apn="internet" mmsc="http://10.81.0.7:8002" mmsproxy="82.113.100.5" mmsport="8080" type="default,supl,mms" mvno_match_data="2620740" mvno_type="imsi" />
+  <!-- End Omni Additions -->
 </apns>
