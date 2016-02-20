@@ -74,5 +74,5 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
 
 # Enable dexpreopt for all nightlies
 ifeq ($(ROM_BUILDTYPE),NIGHTLY)
-    WITH_DEXPREOPT := TRUE
+    WITH_DEXPREOPT := true
 endif
