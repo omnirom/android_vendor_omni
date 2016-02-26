@@ -41,6 +41,7 @@ PRODUCT_PACKAGES += \
     tune2fs \
     vim \
     ntfsfix \
-    ntfs-3g \
-    mkntfs
+    mkfs.ntfs \
+    mount.ntfs \
+    fsck.ntfs
 
