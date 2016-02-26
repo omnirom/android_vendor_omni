@@ -35,12 +35,14 @@ PRODUCT_PACKAGES += \
     mke2fs \
     mkfs.exfat \
     mount.exfat \
+    fsck.exfat \
     nano \
     openvpn \
     powertop \
     tune2fs \
     vim \
     ntfsfix \
-    ntfs-3g \
-    mkntfs
+    mkfs.ntfs \
+    mount.ntfs \
+    fsck.ntfs
 
