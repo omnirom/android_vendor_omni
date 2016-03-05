@@ -30,7 +30,7 @@ else
 ifeq ($(ROM_BUILDTIME_LOCAL),y)
     ROM_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d-%H%M%z)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
 else
-    ROM_VERSION := $(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
+    ROM_VERSION := $(PLATFORM_VERSION)-$(shell date -u +%Y%m%d-%H%M)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
 endif
 endif
 
