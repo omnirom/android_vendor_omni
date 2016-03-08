@@ -3,14 +3,13 @@
 # Licensed under GPLv3
 
 # Configuration
-ANDROID_ROOT=~/omni
 PREFIX=android_
-BRANCH=android-4.4
-SOURCE=android-4.4.3_r1.1
+BRANCH=android-6.0
+SOURCE=android-6.0.1_<INSERT_CORRECT_TAG>
+USERNAME=<INSERT USER>
 MANIFEST=android/default.xml
 GITHUB_ORG=omnirom
-USERNAME=xplodwild
-GERRIT_REMOTE=ssh://gerrit.omnirom.org:29418
+GERRIT_REMOTE=ssh://$USERNAME@gerrit.omnirom.org:29418
 REMOTE_MANIFEST=omnirom
 
 # Script
@@ -36,7 +35,7 @@ echo "Creating $REPO_NAME on GitHub..."
 curl --user $USERNAME --data "{\"name\":\"$REPO_NAME\"}" https://api.github.com/orgs/$GITHUB_ORG/repos
 
 # Only works if you are a gerrit admin, will create the named project before pushing (gerrit then replicates to git)
-ssh -p 29418 gerrit.omnirom.org gerrit create-project --name $REPO_NAME
+ssh -p 29418 $USERNAME@gerrit.omnirom.org gerrit create-project --name $REPO_NAME
 
 echo "Creating branch $BRANCH..."
 pushd $1

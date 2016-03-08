@@ -11,8 +11,8 @@
 ##
 # Configuration
 ##
-USERNAME=xplodwild
-BRANCH=android-4.4
+USERNAME=<INSERT USER>
+BRANCH=android-6.0
 GERRIT=gerrit.omnirom.org
 GITHUB_ORG=omnirom
 
@@ -40,7 +40,7 @@ curl --user $USERNAME --data "{\"name\":\"$repo_name\"}" https://api.github.com/
 # Create the repository on Gerrit
 echo Creating $repo_name on Gerrit
 
-ssh -p 29418 $GERRIT gerrit create-project --name $repo_name
+ssh -p 29418 $USERNAME@$GERRIT gerrit create-project --name $repo_name
 
 # Push the repository
 cd $original_repo_name
@@ -58,7 +58,7 @@ if [ $? != 0 ]; then
 	git branch $BRANCH
 fi
 
-git push ssh://gerrit.omnirom.org:29418/$repo_name $BRANCH
+git push ssh://$USERNAME@gerrit.omnirom.org:29418/$repo_name $BRANCH
 
 # If pushing failed, we might want to forcepush the repository
 # to overwite what was previously there.
