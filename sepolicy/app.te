@@ -2,4 +2,5 @@
 # File write access allowed for FDs returned through Storage Access Framework
 allow appdomain sdcard_posix:dir r_dir_perms;
 allow appdomain sdcard_posix:file rw_file_perms;
+allow appdomain usbaccessory_device:chr_file { ioctl };
 
