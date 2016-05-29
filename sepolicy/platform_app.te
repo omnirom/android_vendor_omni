@@ -2,3 +2,6 @@
 # This is a performance optimization that allows platform apps to bypass the FUSE layer
 allow platform_app sdcard_posix:dir create_dir_perms;
 allow platform_app sdcard_posix:file create_file_perms;
+
+# e.g. renderscript in Gallery2 wants execute perms
+allow platform_app app_data_file:file execute;
