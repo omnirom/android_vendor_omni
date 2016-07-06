@@ -5,64 +5,6 @@ on init
     export TERM linux
 
 on boot
-    # interactive governor
-    chown system system /sys/devices/system/cpu/cpufreq/interactive/timer_rate
-    chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/timer_rate
-    chown system system /sys/devices/system/cpu/cpufreq/interactive/timer_slack
-    chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/timer_slack
-    chown system system /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
-    chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
-    chown system system /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
-    chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
-    chown system system /sys/devices/system/cpu/cpufreq/interactive/target_loads
-    chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/target_loads
-    chown system system /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
-    chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
-    chown system system /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
-    chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
-    chown system system /sys/devices/system/cpu/cpufreq/interactive/boost
-    chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/boost
-    chown system system /sys/devices/system/cpu/cpufreq/interactive/boostpulse
-    chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/boostpulse
-    chown system system /sys/devices/system/cpu/cpufreq/interactive/input_boost
-    chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/input_boost
-    chown system system /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration
-    chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration
-    chown system system /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
-    chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
-
-    # ondemand governor
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/boostfreq
-    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/boostfreq
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/boostpulse
-    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/boostpulse
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/boosttime
-    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/boosttime
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
-    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/down_differential
-    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/down_differential
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
-    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/powersave_bias
-    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/powersave_bias
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
-    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
-    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/input_boost
-    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/input_boost
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_multi_core
-    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_multi_core
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/down_differential_multi_core
-    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/down_differential_multi_core
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/optimal_freq
-    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/optimal_freq
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
-    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_any_cpu_load
-    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_any_cpu_load
-
     # I/O scheduler
     chown system system /sys/block/mmcblk0/queue/scheduler
     chmod 0664 /sys/block/mmcblk0/queue/scheduler
@@ -77,6 +19,13 @@ on boot
     chown system system /sys/block/mmcblk1/queue/read_ahead_kb
     chmod 0664 /sys/block/mmcblk1/queue/read_ahead_kb
     restorecon /sys/block/mmcblk1/queue/read_ahead_kb
+
+    chown system system /sys/block/sda/queue/scheduler
+    chmod 0664 /sys/block/sda/queue/scheduler
+    restorecon /sys/block/sda/queue/scheduler
+    chown system system /sys/block/sda/queue/read_ahead_kb
+    chmod 0664 /sys/block/sda/queue/read_ahead_kb
+    restorecon /sys/block/sda/queue/read_ahead_kb
 
     # allow system to modify ksm control files
     chown root system /sys/kernel/mm/ksm/pages_to_scan
