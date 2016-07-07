@@ -45,7 +45,7 @@ while read path;
         git remote add aosp https://android.googlesource.com/platform/$path > /dev/null
     fi
 
-    git fetch aosp
+    git fetch --tags aosp
 
     #echo "====================================================================="
     #echo " Merging {$ref}"
