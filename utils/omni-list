@@ -5,6 +5,7 @@ dalvik
 development
 device/generic/mini-emulator-armv7-a-neon
 external/clang
+external/dhcpcd
 external/e2fsprogs
 external/f2fs-tools
 external/flac
