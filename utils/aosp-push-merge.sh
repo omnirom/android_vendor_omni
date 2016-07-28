@@ -42,4 +42,4 @@ while read path;
 
     cd - > /dev/null
 
-done < vendor/omni/utils/omni-list
+done < vendor/omni/utils/aosp-forked-list
