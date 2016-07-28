@@ -11,7 +11,7 @@
 ##
 # Configuration
 ##
-USERNAME=<INSERT USER>
+USERNAME=humberos
 BRANCH=android-6.0
 GERRIT=gerrit.omnirom.org
 GITHUB_ORG=omnirom
