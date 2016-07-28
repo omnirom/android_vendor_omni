@@ -62,6 +62,7 @@ packages/apps/FMRadio
 packages/apps/Gallery2
 packages/apps/InCallUI
 packages/apps/Launcher3
+packages/apps/Messaging
 packages/apps/Nfc
 packages/apps/PackageInstaller
 packages/apps/QuickSearchBox
