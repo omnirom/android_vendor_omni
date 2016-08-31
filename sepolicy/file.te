@@ -2,6 +2,6 @@
 # OmniROM common sepolicy
 #
 
-type sysfs_ioscheduler, fs_type, sysfs_type;
-type sysfs_zram, fs_type, sysfs_type;
-type sysfs_ksm, fs_type, sysfs_type;
+#type sysfs_ioscheduler, fs_type, sysfs_type;
+#type sysfs_zram, fs_type, sysfs_type;
+#type sysfs_ksm, fs_type, sysfs_type;

@@ -5,7 +5,7 @@
 domain_trans(init, rootfs, vold)
 
 # Allow vold to manage ASEC
-allow vold sdcard_external:file create_file_perms;
+#allow vold sdcard_external:file create_file_perms;
 allow vold vold_tmpfs:file create_file_perms;
 
 # Allow vold to access fuse for fuse-based fs
