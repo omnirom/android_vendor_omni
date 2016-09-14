@@ -35,11 +35,11 @@ while read path;
 
     repo sync -d .
 
-    if git branch | grep "android-6.0-merge" > /dev/null; then
-        git branch -D android-6.0-merge > /dev/null
+    if git branch | grep "android-7.0-merge" > /dev/null; then
+        git branch -D android-7.0-merge > /dev/null
     fi
 
-    repo start android-6.0-merge .
+    repo start android-7.0-merge .
 
     if ! git remote | grep "aosp" > /dev/null; then
         git remote add aosp https://android.googlesource.com/platform/$path > /dev/null
