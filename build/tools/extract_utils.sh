@@ -631,8 +631,8 @@ function oat2dex() {
     local OAT=
 
     if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
-        export BAKSMALIJAR="$CM_ROOT"/vendor/cm/build/tools/smali/baksmali.jar
-        export SMALIJAR="$CM_ROOT"/vendor/cm/build/tools/smali/smali.jar
+        export BAKSMALIJAR="$CM_ROOT"/vendor/omni/build/tools/smali/baksmali.jar
+        export SMALIJAR="$CM_ROOT"/vendor/omni/build/tools/smali/smali.jar
     fi
 
     # Extract existing boot.oats to the temp folder
