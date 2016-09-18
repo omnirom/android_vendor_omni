@@ -76,7 +76,7 @@ function setup_vendor() {
         mkdir -p "$CM_ROOT/$OUTDIR"
     fi
 
-    export PRODUCTMK="$CM_ROOT"/"$OUTDIR"/"$DEVICE"-vendor.mk
+    export PRODUCTMK="$CM_ROOT"/"$OUTDIR"/device-vendor.mk
     export ANDROIDMK="$CM_ROOT"/"$OUTDIR"/Android.mk
     export BOARDMK="$CM_ROOT"/"$OUTDIR"/BoardConfigVendor.mk
 
