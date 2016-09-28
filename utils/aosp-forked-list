@@ -75,3 +75,4 @@ system/extras
 system/media
 system/netd
 system/vold
+system/sepolicy
