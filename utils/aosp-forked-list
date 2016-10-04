@@ -3,7 +3,6 @@ bionic
 build
 dalvik
 development
-device/generic/mini-emulator-armv7-a-neon
 external/clang
 external/doclava
 external/e2fsprogs
