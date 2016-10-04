@@ -68,7 +68,6 @@ packages/providers/MediaProvider
 packages/providers/TelephonyProvider
 packages/services/Telecomm
 packages/services/Telephony
-packages/wallpapers/Basic
 packages/wallpapers/PhaseBeam
 system/core
 system/extras
