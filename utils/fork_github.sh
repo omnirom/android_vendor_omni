@@ -12,7 +12,7 @@
 # Configuration
 ##
 USERNAME=<INSERT USER>
-BRANCH=android-6.0
+BRANCH=android-7.0
 GERRIT=gerrit.omnirom.org
 GITHUB_ORG=omnirom
 
@@ -40,7 +40,7 @@ curl --user $USERNAME --data "{\"name\":\"$repo_name\"}" https://api.github.com/
 # Create the repository on Gerrit
 echo Creating $repo_name on Gerrit
 
-ssh -p 29418 $USERNAME@$GERRIT gerrit create-project --name $repo_name
+ssh -p 29418 $USERNAME@$GERRIT gerrit create-project $repo_name
 
 # Push the repository
 cd $original_repo_name
