@@ -55,7 +55,6 @@ packages/apps/Contacts
 packages/apps/ContactsCommon
 packages/apps/Dialer
 packages/apps/Email
-packages/apps/FMRadio
 packages/apps/Messaging
 packages/apps/Nfc
 packages/apps/PackageInstaller
