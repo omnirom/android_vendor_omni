@@ -3,7 +3,6 @@ bionic
 build
 dalvik
 development
-device/generic/mini-emulator-armv7-a-neon
 external/clang
 external/dhcpcd
 external/e2fsprogs
@@ -17,6 +16,7 @@ external/libpng
 external/libxml2
 external/llvm
 external/lz4
+external/lzma
 external/sepolicy
 external/skia
 external/tinyalsa
