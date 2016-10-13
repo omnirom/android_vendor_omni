@@ -58,6 +58,7 @@ packages/apps/Email
 packages/apps/Messaging
 packages/apps/Nfc
 packages/apps/PackageInstaller
+packages/apps/QuickSearchBox
 packages/apps/Settings
 packages/apps/UnifiedEmail
 packages/inputmethods/LatinIME
