@@ -55,6 +55,7 @@ packages/apps/Contacts
 packages/apps/ContactsCommon
 packages/apps/Dialer
 packages/apps/Email
+packages/apps/Launcher3
 packages/apps/Messaging
 packages/apps/Nfc
 packages/apps/PackageInstaller
