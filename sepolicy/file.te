@@ -5,3 +5,7 @@
 #type sysfs_ioscheduler, fs_type, sysfs_type;
 #type sysfs_zram, fs_type, sysfs_type;
 #type sysfs_ksm, fs_type, sysfs_type;
+# Filesystems
+type exfat, sdcard_type, fs_type, mlstrustedobject;
+#type fuse_device, sdcard_type, fs_type, mlstrustedobject;
+type ntfs, sdcard_type, fs_type, mlstrustedobject;
