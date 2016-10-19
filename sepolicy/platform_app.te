@@ -8,3 +8,8 @@
 # gallery2 crop avatar
 #allow platform_app system_app_data_file:file { create_file_perms rw_file_perms };
 
+#exfat/ntfs OTG
+allow platform_app fuse_device:dir { rw_dir_perms create_dir_perms };
+allow platform_app fuse_device:file { rw_file_perms create_file_perms };
+allow platform_app fuse_device:filesystem getattr;
+
