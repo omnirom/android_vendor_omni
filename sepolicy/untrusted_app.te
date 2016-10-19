@@ -1,0 +1,8 @@
+###########################
+# OmniROM common sepolicy
+
+# exfat OTG
+userdebug_or_eng(`allow untrusted_app mnt_media_rw_file:dir getattr;'
+`allow untrusted_app asec_apk_file:dir getattr;'
+`allow untrusted_app fuse_device:file { getattr read };')
+
