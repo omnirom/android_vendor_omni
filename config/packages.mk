@@ -14,7 +14,8 @@ PRODUCT_PACKAGES += \
     Chromium \
     OmniJaws \
     OmniStyle \
-    QuickSearchBox
+    QuickSearchBox \
+    OmniClockOSS
 
 ifneq ($(TARGET_NO_DSPMANAGER), true)
 PRODUCT_PACKAGES += \
