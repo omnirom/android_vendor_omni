@@ -59,6 +59,7 @@ packages/apps/Launcher3
 packages/apps/Messaging
 packages/apps/Nfc
 packages/apps/PackageInstaller
+packages/apps/PhoneCommon
 packages/apps/QuickSearchBox
 packages/apps/Settings
 packages/apps/UnifiedEmail
@@ -72,5 +73,5 @@ system/core
 system/extras
 system/media
 system/netd
-system/vold
 system/sepolicy
+system/vold
