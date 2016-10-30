@@ -74,3 +74,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
 ifeq ($(ROM_BUILDTYPE),NIGHTLY)
     WITH_DEXPREOPT := true
 endif
+# and weeklies
+ifeq ($(ROM_BUILDTYPE),WEEKLY)
+    WITH_DEXPREOPT := true
+endif
