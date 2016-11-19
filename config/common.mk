@@ -78,3 +78,7 @@ endif
 ifeq ($(ROM_BUILDTYPE),WEEKLY)
     WITH_DEXPREOPT := true
 endif
+# and security releases
+ifeq ($(ROM_BUILDTYPE),SECURITY_RELEASE)
+    WITH_DEXPREOPT := true
+endif
