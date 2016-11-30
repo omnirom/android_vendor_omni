@@ -9,23 +9,18 @@ on boot
     chown system system /sys/block/mmcblk0/queue/scheduler
     chmod 0664 /sys/block/mmcblk0/queue/scheduler
     restorecon /sys/block/mmcblk0/queue/scheduler
-    chown system system /sys/block/mmcblk0/queue/read_ahead_kb
-    chmod 0664 /sys/block/mmcblk0/queue/read_ahead_kb
-    restorecon /sys/block/mmcblk0/queue/read_ahead_kb
-
-    chown system system /sys/block/mmcblk1/queue/scheduler
-    chmod 0664 /sys/block/mmcblk1/queue/scheduler
-    restorecon /sys/block/mmcblk1/queue/scheduler
-    chown system system /sys/block/mmcblk1/queue/read_ahead_kb
-    chmod 0664 /sys/block/mmcblk1/queue/read_ahead_kb
-    restorecon /sys/block/mmcblk1/queue/read_ahead_kb
 
     chown system system /sys/block/sda/queue/scheduler
     chmod 0664 /sys/block/sda/queue/scheduler
     restorecon /sys/block/sda/queue/scheduler
-    chown system system /sys/block/sda/queue/read_ahead_kb
-    chmod 0664 /sys/block/sda/queue/read_ahead_kb
-    restorecon /sys/block/sda/queue/read_ahead_kb
+
+    chown system system /sys/block/sde/queue/scheduler
+    chmod 0664 /sys/block/sde/queue/scheduler
+    restorecon /sys/block/sde/queue/scheduler
+
+    chown system system /sys/block/dm-0/queue/scheduler
+    chmod 0664 /sys/block/dm-0/queue/scheduler
+    restorecon /sys/block/dm-0/queue/scheduler
 
     # allow system to modify ksm control files
     chown root system /sys/kernel/mm/ksm/pages_to_scan
@@ -60,3 +55,39 @@ on property:service.adb.tcp.port=5555
 on property:service.adb.tcp.port=-1
     stop adbd
     start adbd
+
+# Disable ril services if noril prop is set
+on property:ro.radio.noril=1
+    stop ril-daemon
+    stop qmuxd
+    stop netmgrd
+
+on property:persist.radio.noril=1
+    setprop ro.radio.noril 1
+
+# Configure IO scheduler
+on property:sys.io.scheduler=*
+    write /sys/block/mmcblk0/queue/scheduler ${sys.io.scheduler}
+    write /sys/block/mmcblk1/queue/scheduler ${sys.io.scheduler}
+    write /sys/block/sda/queue/scheduler ${sys.io.scheduler}
+    write /sys/block/sde/queue/scheduler ${sys.io.scheduler}
+    write /sys/block/dm-0/queue/scheduler ${sys.io.scheduler}
+
+on property:persist.sys.io.scheduler=*
+    setprop sys.io.scheduler ${persist.sys.io.scheduler}
+
+# Set slice_idle to 0 for CFQ
+on property:sys.io.scheduler=cfq
+    write /sys/block/mmcblk0/queue/iosched/slice_idle 0
+    write /sys/block/mmcblk1/queue/iosched/slice_idle 0
+    write /sys/block/sda/queue/iosched/slice_idle 0
+    write /sys/block/sde/queue/iosched/slice_idle 0
+    write /sys/block/dm-0/queue/iosched/slice_idle 0
+
+# Set slice_idle to 0 for BFQ
+on property:sys.io.scheduler=bfq
+    write /sys/block/mmcblk0/queue/iosched/slice_idle 0
+    write /sys/block/mmcblk1/queue/iosched/slice_idle 0
+    write /sys/block/sda/queue/iosched/slice_idle 0
+    write /sys/block/sde/queue/iosched/slice_idle 0
+    write /sys/block/dm-0/queue/iosched/slice_idle 0
