@@ -19,7 +19,7 @@ read username
 
 url="gerrit.omnirom.org"
 port="29418"
-branch="android-7.0"
+branch="android-7.1"
 
 cd ../../../
 

@@ -17,6 +17,9 @@
 echo -e "Enter the AOSP ref to merge"
 read ref
 
+branch_name=${ref}"-merge"
+# echo $branch_name
+
 cd ../../../
 
 while read path;
@@ -35,11 +38,11 @@ while read path;
 
     repo sync -d .
 
-    if git branch | grep "android-7.0-merge" > /dev/null; then
-        git branch -D android-7.0-merge > /dev/null
+    if git branch | grep ${branch_name} > /dev/null; then
+        git branch -D ${branch_name} > /dev/null
     fi
 
-    repo start android-7.0-merge .
+    repo start ${branch_name} .
 
     if ! git remote | grep "aosp" > /dev/null; then
         git remote add aosp https://android.googlesource.com/platform/$path > /dev/null

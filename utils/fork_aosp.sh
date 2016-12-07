@@ -4,8 +4,8 @@
 
 # Configuration
 PREFIX=android_
-BRANCH=android-7.0
-SOURCE=android-7.0.0_<INSERT_CORRECT_TAG>
+BRANCH=android-7.1
+SOURCE=android-7.1.1_r<INSERT_CORRECT_TAG>
 USERNAME=<INSERT USER>
 MANIFEST=android/default.xml
 GITHUB_ORG=omnirom

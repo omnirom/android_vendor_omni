@@ -12,7 +12,7 @@
 # Configuration
 ##
 USERNAME=<INSERT USER>
-BRANCH=android-7.0
+BRANCH=android-7.1
 GERRIT=gerrit.omnirom.org
 GITHUB_ORG=omnirom
 
