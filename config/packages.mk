@@ -15,14 +15,9 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     OmniStyle \
     QuickSearchBox \
-    OmniClockOSS
+    OmniClockOSS \
+    MusicFX
 
-ifneq ($(TARGET_NO_DSPMANAGER), true)
-PRODUCT_PACKAGES += \
-    audio_effects.conf \
-    DSPManager \
-    libcyanogen-dsp
-endif
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
