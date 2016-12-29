@@ -1,0 +1,2 @@
+allow isolated_app app_data_file:dir { search getattr };
+allow isolated_app shell_data_file:dir search;
