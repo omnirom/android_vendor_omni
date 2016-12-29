@@ -9,6 +9,9 @@
 # gallery2 crop avatar
 allow platform_app system_app_data_file:file { create_file_perms rw_file_perms };
 
+# gallery2 renderscript
+allow platform_app app_data_file:file { execute };
+
 #exfat/ntfs OTG
 allow platform_app fuse_device:dir { rw_dir_perms create_dir_perms };
 allow platform_app fuse_device:file { rw_file_perms create_file_perms };

@@ -1,0 +1,7 @@
+###########################
+# OmniROM common sepolicy
+
+# exfat
+allow sdcardd fuse_device:dir { remove_name add_name search create rw_file_perms };
+allow sdcardd fuse_device:file { unlink create rw_file_perms };
+allow sdcardd fuse_device:filesystem { getattr };
