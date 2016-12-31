@@ -16,8 +16,9 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     QuickSearchBox \
     OmniClockOSS \
-    MusicFX
-
+    MusicFX \
+    audio_effects.conf \
+    libcyanogen-dsp
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
