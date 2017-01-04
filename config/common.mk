@@ -82,3 +82,7 @@ endif
 ifeq ($(ROM_BUILDTYPE),SECURITY_RELEASE)
     WITH_DEXPREOPT := true
 endif
+# but not homemades
+ifeq ($(ROM_BUILDTYPE),HOMEMADE)
+    WITH_DEXPREOPT := false
+endif
