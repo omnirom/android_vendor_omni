@@ -35,12 +35,25 @@ ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES  += ro.adb.secure=1
 endif
 
+# Enforce privapp-permissions whitelist
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.control_privapp_permissions=enforce
+
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/bin/clean_cache.sh:system/bin/clean_cache.sh
+
 # Backup Tool
+ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/omni/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/omni/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+else
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/omni/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/omni/prebuilt/bin/blacklist:system/addon.d/blacklist \
-    vendor/omni/prebuilt/bin/clean_cache.sh:system/bin/clean_cache.sh
+    vendor/omni/prebuilt/bin/blacklist:system/addon.d/blacklist
+endif
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
