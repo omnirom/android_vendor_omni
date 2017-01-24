@@ -22,3 +22,6 @@
 # fsck
 /system/bin/fsck\.ntfs                          u:object_r:fsck_exec:s0
 /system/bin/mount\.exfat                         u:object_r:fsck_exec:s0
+
+# wakelocks
+/sys/kernel/debug/wakeup_source     u:object_r:debugsfs_wakelock:s0

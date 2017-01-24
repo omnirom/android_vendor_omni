@@ -9,5 +9,5 @@ allow system_app sysfs_lowmemorykiller:file rw_file_perms;
 #allow system_app sysfs_ksm:file rw_file_perms;
 
 # Read /sys/kernel/debug/wakeup_sources.
-#allow system_app debugfs:file r_file_perms;
+allow system_app debugsfs_wakelock:file r_file_perms;
 
