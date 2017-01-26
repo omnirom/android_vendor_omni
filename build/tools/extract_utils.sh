@@ -48,6 +48,7 @@ trap cleanup EXIT INT TERM ERR
 # $3: CM root directory
 # $4: is common device - optional, default to false
 # $5: cleanup - optional, default to true
+# $6: custom vendor makefile name - optional, default to false
 #
 # Must be called before any other functions can be used. This
 # sets up the internal state for a new vendor configuration.
@@ -74,6 +75,11 @@ function setup_vendor() {
     export OUTDIR=vendor/"$VENDOR"/"$DEVICE"
     if [ ! -d "$CM_ROOT/$OUTDIR" ]; then
         mkdir -p "$CM_ROOT/$OUTDIR"
+    fi
+
+    VNDNAME="$6"
+    if [ -z "$VNDNAME" ]; then
+        VNDNAME="$DEVICE"
     fi
 
     export PRODUCTMK="$CM_ROOT"/"$OUTDIR"/device-vendor.mk
@@ -249,10 +255,12 @@ function write_packages() {
                 printf 'LOCAL_MULTILIB := %s\n' "$EXTRA"
             fi
         elif [ "$CLASS" = "APPS" ]; then
-            if [ "$EXTRA" = "priv-app" ]; then
-                SRC="$SRC/priv-app"
-            else
-                SRC="$SRC/app"
+            if [ -z "$ARGS" ]; then
+                if [ "$EXTRA" = "priv-app" ]; then
+                    SRC="$SRC/priv-app"
+                else
+                    SRC="$SRC/app"
+                fi
             fi
             printf 'LOCAL_SRC_FILES := %s/%s\n' "$SRC" "$FILE"
             local CERT=platform
@@ -430,12 +438,35 @@ function write_product_packages() {
 # be executed first!
 #
 function write_header() {
+    if [ -f $1 ]; then
+        rm $1
+    fi
+
     YEAR=$(date +"%Y")
 
     [ "$COMMON" -eq 1 ] && local DEVICE="$DEVICE_COMMON"
 
-    cat << EOF > $1
-# Copyright (C) $YEAR The CyanogenMod Project
+    NUM_REGEX='^[0-9]+$'
+    if [[ $INITIAL_COPYRIGHT_YEAR =~ $NUM_REGEX ]] && [ $INITIAL_COPYRIGHT_YEAR -le $YEAR ]; then
+        if [ $INITIAL_COPYRIGHT_YEAR -lt 2016 ]; then
+            printf "# Copyright (C) $INITIAL_COPYRIGHT_YEAR-2016 The CyanogenMod Project\n" > $1
+        elif [ $INITIAL_COPYRIGHT_YEAR -eq 2016 ]; then
+            printf "# Copyright (C) 2016 The CyanogenMod Project\n" > $1
+        fi
+        if [ $YEAR -eq 2017 ]; then
+            printf "# Copyright (C) 2017 The LineageOS Project\n" >> $1
+        elif [ $INITIAL_COPYRIGHT_YEAR -eq $YEAR ]; then
+            printf "# Copyright (C) $YEAR The LineageOS Project\n" >> $1
+        elif [ $INITIAL_COPYRIGHT_YEAR -le 2017 ]; then
+            printf "# Copyright (C) 2017-$YEAR The LineageOS Project\n" >> $1
+        else
+            printf "# Copyright (C) $INITIAL_COPYRIGHT_YEAR-$YEAR The LineageOS Project\n" >> $1
+        fi
+    else
+        printf "# Copyright (C) $YEAR The LineageOS Project\n" > $1
+    fi
+
+    cat << EOF >> $1
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -458,6 +489,7 @@ EOF
 # write_headers:
 #
 # $1: devices falling under common to be added to guard - optional
+# $2: custom guard - optional
 #
 # Calls write_header for each of the makefiles and creates
 # the initial path declaration and device guard for the
@@ -465,13 +497,19 @@ EOF
 #
 function write_headers() {
     write_header "$ANDROIDMK"
+
+    GUARD="$2"
+    if [ -z "$GUARD" ]; then
+        GUARD="TARGET_DEVICE"
+    fi
+
     cat << EOF >> "$ANDROIDMK"
 LOCAL_PATH := \$(call my-dir)
 
 EOF
     if [ "$COMMON" -ne 1 ]; then
         cat << EOF >> "$ANDROIDMK"
-ifeq (\$(TARGET_DEVICE),$DEVICE)
+ifeq (\$($GUARD),$DEVICE)
 
 EOF
     else
@@ -480,7 +518,7 @@ EOF
             exit 1
         fi
         cat << EOF >> "$ANDROIDMK"
-ifneq (\$(filter $1,\$(TARGET_DEVICE)),)
+ifneq (\$(filter $1,\$($GUARD)),)
 
 EOF
     fi
@@ -504,8 +542,7 @@ EOF
 # Return success if adb is up and not in recovery
 function _adb_connected {
     {
-        if [[ "$(adb get-state)" == device &&
-              "$(adb shell test -e /sbin/recovery; echo $?)" == 0 ]]
+        if [[ "$(adb get-state)" == device ]]
         then
             return 0
         fi
@@ -616,7 +653,7 @@ function get_file() {
         return 1
     else
         # try to copy
-        cp "$SRC/$1" "$2" 2>/dev/null && return 0
+        cp -r "$SRC/$1" "$2" 2>/dev/null && return 0
 
         return 1
     fi
@@ -645,10 +682,13 @@ function oat2dex() {
 
     # Extract existing boot.oats to the temp folder
     if [ -z "$ARCHES" ]; then
-        echo "Checking if system is odexed and extracting boot.oats, if applicable. This may take a while..."
+        echo "Checking if system is odexed and locating boot.oats..."
         for ARCH in "arm64" "arm" "x86_64" "x86"; do
-            if get_file "system/framework/$ARCH/boot.oat" "$TMPDIR/boot_$ARCH.oat" "$SRC"; then
+            mkdir -p "$TMPDIR/system/framework/$ARCH"
+            if get_file "system/framework/$ARCH/" "$TMPDIR/system/framework/" "$SRC"; then
                 ARCHES+="$ARCH "
+            else
+                rmdir "$TMPDIR/system/framework/$ARCH"
             fi
         done
     fi
@@ -666,20 +706,24 @@ function oat2dex() {
     fi
 
     for ARCH in $ARCHES; do
-        BOOTOAT="$TMPDIR/boot_$ARCH.oat"
+        BOOTOAT="$TMPDIR/system/framework/$ARCH/boot.oat"
 
         local OAT="$(dirname "$OEM_TARGET")/oat/$ARCH/$(basename "$OEM_TARGET" ."${OEM_TARGET##*.}").odex"
 
         if get_file "$OAT" "$TMPDIR" "$SRC"; then
-            java -jar "$BAKSMALIJAR" -x -o "$TMPDIR/dexout" -c "$BOOTOAT" -d "$TMPDIR" "$TMPDIR/$(basename "$OAT")"
+            java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" "$TMPDIR/$(basename "$OAT")"
         elif [[ "$CM_TARGET" =~ .jar$ ]]; then
-            # try to extract classes.dex from boot.oat for framework jars
-            java -jar "$BAKSMALIJAR" -x -o "$TMPDIR/dexout" -c "$BOOTOAT" -d "$TMPDIR" -e "/$OEM_TARGET" "$BOOTOAT"
+            # try to extract classes.dex from boot.oats for framework jars
+            JAROAT="$TMPDIR/system/framework/$ARCH/boot-$(basename ${OEM_TARGET%.*}).oat"
+            if [ ! -f "$JAROAT" ]; then
+                JAROAT=$BOOTOAT;
+            fi
+            java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" "$JAROAT/$OEM_TARGET"
         else
             continue
         fi
 
-        java -jar "$SMALIJAR" "$TMPDIR/dexout" -o "$TMPDIR/classes.dex" && break
+        java -jar "$SMALIJAR" assemble "$TMPDIR/dexout" -o "$TMPDIR/classes.dex" && break
     done
 
     rm -rf "$TMPDIR/dexout"
@@ -762,7 +806,9 @@ function extract() {
         echo "Cleaning output directory ($OUTPUT_ROOT).."
         rm -rf "${OUTPUT_TMP:?}"
         mkdir -p "${OUTPUT_TMP:?}"
-        mv "${OUTPUT_ROOT:?}/"* "${OUTPUT_TMP:?}/"
+        if [ -d "$OUTPUT_ROOT" ]; then
+            mv "${OUTPUT_ROOT:?}/"* "${OUTPUT_TMP:?}/"
+        fi
         VENDOR_STATE=1
     fi
 
@@ -834,20 +880,28 @@ function extract() {
 
         # Check pinned files
         local HASH="${HASHLIST[$i-1]}"
-        if [ ! -z "$HASH" ] && [ "$HASH" != "x" ]; then
+        if [ "$DISABLE_PINNING" != "1" ] && [ ! -z "$HASH" ] && [ "$HASH" != "x" ]; then
             local KEEP=""
             local TMP="$TMP_DIR/$FROM"
             if [ -f "$TMP" ]; then
                 if [ ! -f "$DEST" ]; then
                     KEEP="1"
                 else
-                    local DEST_HASH=$(sha1sum "$DEST" | awk '{print $1}' )
+                    if [ "$(uname)" == "Darwin" ]; then
+                        local DEST_HASH=$(shasum "$DEST" | awk '{print $1}' )
+                    else
+                        local DEST_HASH=$(sha1sum "$DEST" | awk '{print $1}' )
+                    fi
                     if [ "$DEST_HASH" != "$HASH" ]; then
                         KEEP="1"
                     fi
                 fi
                 if [ "$KEEP" = "1" ]; then
-                    local TMP_HASH=$(sha1sum "$TMP" | awk '{print $1}' )
+                    if [ "$(uname)" == "Darwin" ]; then
+                        local TMP_HASH=$(shasum "$TMP" | awk '{print $1}' )
+                    else
+                        local TMP_HASH=$(sha1sum "$TMP" | awk '{print $1}' )
+                    fi
                     if [ "$TMP_HASH" = "$HASH" ]; then
                         printf '    + (keeping pinned file with hash %s)\n' "$HASH"
                         cp -p "$TMP" "$DEST"
