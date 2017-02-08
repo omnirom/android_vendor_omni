@@ -24,12 +24,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enterprise_mode=1 \
     persist.sys.root_access=1
 
-# default sounds
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=Ring_Synth_04.ogg \
-    ro.config.notification_sound=pixiedust.ogg \
-    ro.config.alarm_alert=Cesium.ogg
-
 # enable ADB authentication if not on eng build
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
@@ -63,9 +57,23 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
-# Dashclock
-#PRODUCT_COPY_FILES += \
-#    vendor/omni/prebuilt/app/DashClock.apk:system/app/DashClock.apk
+# custom omni sounds
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.ringtone=omni_ringtone1.ogg \
+    ro.config.notification_sound=omni_notification1.ogg \
+    ro.config.alarm_alert=omni_alarm1.ogg
+
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/sounds/camera_click_48k.ogg:system/media/audio/ui/camera_click.ogg \
+    vendor/omni/prebuilt/sounds/VideoRecord_48k.ogg:system/media/audio/ui/VideoRecord.ogg \
+    vendor/omni/prebuilt/sounds/VideoStop_48k.ogg:system/media/audio/ui/VideoStop.ogg \
+    vendor/omni/prebuilt/sounds/omni_ringtone1.ogg:system/media/audio/ringtones/omni_ringtone1.ogg \
+    vendor/omni/prebuilt/sounds/omni_ringtone2.ogg:system/media/audio/ringtones/omni_ringtone2.ogg \
+    vendor/omni/prebuilt/sounds/omni_ringtone3.ogg:system/media/audio/ringtones/omni_ringtone3.ogg \
+    vendor/omni/prebuilt/sounds/omni_alarm1.ogg:system/media/audio/alarms/omni_alarm1.ogg \
+    vendor/omni/prebuilt/sounds/omni_alarm2.ogg:system/media/audio/alarms/omni_alarm2.ogg \
+    vendor/omni/prebuilt/sounds/omni_notification1.ogg:system/media/audio/notifications/omni_notification1.ogg \
+    vendor/omni/prebuilt/sounds/omni_lowbattery1.ogg:system/media/audio/ui/omni_lowbattery1.ogg
 
 # Additional packages
 -include vendor/omni/config/packages.mk
