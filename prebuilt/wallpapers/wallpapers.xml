@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2017 The OmniROM Project
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<wallpapers>
+    <wallpaper filename="wall01.png" creator="PartimusPrime" name="Default" />
+    <wallpaper filename="wall02.png" />
+    <wallpaper filename="wall03.png" />
+    <wallpaper filename="wall04.png" />
+    <wallpaper filename="wall05.png" />
+    <wallpaper filename="wall06.png" />
+    <wallpaper filename="wall07.jpg" creator="JP Kenji" />
+    <wallpaper filename="wall08.jpg" creator="JP Kenji" />
+    <wallpaper filename="wall09.jpg" creator="JP Kenji" />
+    <wallpaper filename="wall10.jpg" creator="JP Kenji" />
+    <wallpaper filename="wall11.jpg" creator="JP Kenji" />
+    <wallpaper filename="wall12.jpg" creator="JP Kenji" />
+    <wallpaper filename="wall13.jpg" creator="JP Kenji" />
+    <wallpaper filename="wall14.jpg" creator="JP Kenji" />
+    <wallpaper filename="wall15.jpg" creator="JP Kenji" />
+    <wallpaper filename="wall16.jpg" creator="JP Kenji" />
+    <wallpaper filename="wall17.jpg" creator="JP Kenji" />
+    <wallpaper filename="wall18.jpg" creator="JP Kenji" />
+    <wallpaper filename="wall19.jpg" creator="JP Kenji" />
+    <wallpaper filename="wall20.jpg" creator="JP Kenji" />
+    <wallpaper filename="2.jpg" creator="Siddharth Gupta" />
+    <wallpaper filename="3.jpg" creator="Siddharth Gupta" />
+    <wallpaper filename="4.jpg" creator="Siddharth Gupta" />
+    <wallpaper filename="5.jpg" creator="Siddharth Gupta" />
+    <wallpaper filename="6.jpg" creator="Siddharth Gupta" />
+    <wallpaper filename="7.jpg" creator="Siddharth Gupta" />
+    <wallpaper filename="8.jpg" creator="Siddharth Gupta" />
+    <wallpaper filename="Omni1.jpg" creator="JayRod" />
+    <wallpaper filename="Omni2.jpg" creator="JayRod" />
+    <wallpaper filename="Omni3.jpg" creator="JayRod" />
+    <wallpaper filename="Omni4.jpg" creator="JayRod" />
+    <wallpaper filename="Omni5.jpg" creator="JayRod" />
+    <wallpaper filename="Omni12.jpg" creator="JayRod" />
+    <wallpaper filename="Omni13.jpg" creator="JayRod" />
+    <wallpaper filename="Omni_021317.jpg" creator="JayRod" />
+    <wallpaper filename="Omni_021417.jpg" creator="JayRod" />
+    <wallpaper filename="Omni_02172017_1.jpg" creator="JayRod" />
+    <wallpaper filename="Omni_021917_1.jpg" creator="JayRod" />
+    <wallpaper filename="Omni_021917_2.jpg" creator="JayRod" />
+    <wallpaper filename="Omni_021917_3.jpg" creator="JayRod" />
+    <wallpaper filename="Omni_021917_4.jpg" creator="JayRod" />
+    <wallpaper filename="Omni_021917_5.jpg" creator="JayRod" />
+    <wallpaper filename="Omni_021917_6.jpg" creator="JayRod" />
+    <wallpaper filename="Omni_021917_7.jpg" creator="JayRod" />
+    <wallpaper filename="Omni_02192017.jpg" creator="JayRod" />
+</wallpapers>
