@@ -46,4 +46,4 @@ PRODUCT_PACKAGES += telephony-ext
 PRODUCT_BOOT_JARS += telephony-ext
 
 # OMS support
-PRODUCT_PACKAGES += Masquerade
+PRODUCT_PACKAGES += masquerade
