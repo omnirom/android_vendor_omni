@@ -86,15 +86,21 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
 
 # Enable dexpreopt for all nightlies
 ifeq ($(ROM_BUILDTYPE),NIGHTLY)
-    WITH_DEXPREOPT := true
+    ifeq ($(WITH_DEXPREOPT),)
+        WITH_DEXPREOPT := true
+    endif
 endif
 # and weeklies
 ifeq ($(ROM_BUILDTYPE),WEEKLY)
-    WITH_DEXPREOPT := true
+    ifeq ($(WITH_DEXPREOPT),)
+        WITH_DEXPREOPT := true
+    endif
 endif
 # and security releases
 ifeq ($(ROM_BUILDTYPE),SECURITY_RELEASE)
-    WITH_DEXPREOPT := true
+    ifeq ($(WITH_DEXPREOPT),)
+        WITH_DEXPREOPT := true
+    endif
 endif
 # but not homemades
 ifeq ($(ROM_BUILDTYPE),HOMEMADE)
