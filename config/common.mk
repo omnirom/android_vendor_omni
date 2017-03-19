@@ -17,6 +17,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
+ifeq ($strip ($BOARD_USES_TELEPHONY_EXTENSION),)
+BOARD_USES_TELEPHONY_EXTENSION := true
+endif
+
 # general properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
