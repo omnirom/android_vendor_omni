@@ -42,10 +42,8 @@ PRODUCT_PACKAGES += \
     fsck.ntfs
 
 # Telephony extension
-ifeq ($strip ($BOARD_USES_TELEPHONY_EXTENSION),true)
 PRODUCT_PACKAGES += telephony-ext
 PRODUCT_BOOT_JARS += telephony-ext
-endif
 
 # OMS support
 PRODUCT_PACKAGES += ThemeInterfacer
