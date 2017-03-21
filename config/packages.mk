@@ -18,7 +18,8 @@ PRODUCT_PACKAGES += \
     OmniClockOSS \
     MusicFX \
     audio_effects.conf \
-    libcyanogen-dsp
+    libcyanogen-dsp \
+    Phonograph
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
