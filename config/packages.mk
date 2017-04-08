@@ -18,7 +18,8 @@ PRODUCT_PACKAGES += \
     MusicFX \
     audio_effects.conf \
     libcyanogen-dsp \
-    Phonograph
+    Phonograph \
+    Turbo
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
