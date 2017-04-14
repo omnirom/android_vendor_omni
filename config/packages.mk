@@ -47,3 +47,6 @@ PRODUCT_BOOT_JARS += telephony-ext
 
 # OMS support
 PRODUCT_PACKAGES += ThemeInterfacer
+
+# for easter fun
+PRODUCT_PACKAGES += EggGame
