@@ -63,6 +63,7 @@ packages/apps/PhoneCommon
 packages/apps/QuickSearchBox
 packages/apps/Settings
 packages/apps/UnifiedEmail
+packages/apps/WallpaperPicker
 packages/inputmethods/LatinIME
 packages/providers/DownloadProvider
 packages/providers/MediaProvider
