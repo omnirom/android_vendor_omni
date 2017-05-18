@@ -830,7 +830,7 @@
   <apn carrier="MetroPCS 160" mcc="310" mnc="160" apn="" type="ia" protocol="IPV6" roaming_protocol="IP" mvno_match_data="6D" mvno_type="gid" mtu="1440" />
   <apn carrier="MetroPCS 160" mcc="310" mnc="160" apn="fast.metropcs.com" mmsc="http://metropcs.mmsmvno.com/mms/wapenc" type="default,supl,mms,hipri" protocol="IPV6" roaming_protocol="IP" mvno_match_data="6D" mvno_type="gid" mtu="1440" />
   <apn carrier="MetroPCS 160 IMS" mcc="310" mnc="160" apn="ims" type="ims" mvno_match_data="6D" mvno_type="gid" protocol="IPV6" roaming_protocol="IPV6" mtu="1440" />
-  <apn carrier="ATT Nextgenphone" mcc="310" mnc="170" apn="nxtgenphone" mmsc="http://mmsc.mobile.att.net" mmsproxy="proxy.mobile.att.net" mmsport="80" type="default,mms,supl,fota,hipri" protocol="IPV4V6" roaming_protocol="IPV4V6" mtu="1410" />
+  <apn carrier="ATT Nextgenphone" mcc="310" mnc="170" apn="nxtgenphone" mmsc="http://mmsc.mobile.att.net" mmsproxy="proxy.mobile.att.net" mmsport="80" type="default,mms,supl,fota,hipri,ims" protocol="IPV4V6" roaming_protocol="IPV4V6" mtu="1410" />
   <apn carrier="DataConnect" mcc="310" mnc="170" apn="isp.cingular" type="default,supl" protocol="IPV4V6" roaming_protocol="IPV4V6" />
   <apn carrier="Cingular MMS" mcc="310" mnc="170" apn="wap.cingular" user="WAP@CINGULARGPRS.COM" password="CINGULAR1" mmsc="http://mmsc.cingular.com" mmsproxy="66.209.11.32" mmsport="8080" type="mms" protocol="IPV4V6" roaming_protocol="IPV4V6" />
   <apn carrier="WCW-INTERNET" mcc="310" mnc="180" apn="internet.wcc.net" user="13257630000" password="mmsc" type="default" />
