@@ -1,5 +1,9 @@
 # Omni Extras
 
+on early-init
+    mount debugfs debugfs /sys/kernel/debug
+    chmod 0755 /sys/kernel/debug
+
 on init
     export TERMINFO /system/etc/terminfo
     export TERM linux
