@@ -2588,6 +2588,8 @@
   <apn carrier="台灣大哥大(TW Mobile) (MMS)" mcc="466" mnc="99" apn="mms" mmsc="http://mms.catch.net.tw" mmsproxy="10.1.1.2" mmsport="80" type="mms" />
   <apn carrier="GP-INTERNET" mcc="470" mnc="01" apn="gpinternet" authtype="0" type="default,supl,agps,fota,dun" />
   <apn carrier="GP-MMS" mcc="470" mnc="01" apn="gpmms" authtype="0" mmsc="http://mms.gpsurf.net/servlets/mms" mmsproxy="10.128.1.2" mmsport="8080" type="mms" />
+  <apn carrier="Banglalink" mcc="470" mnc="03" apn="blweb" authtype="0" type="default,supl" />
+  <apn carrier="Banglalink MMS" apn="blmms" mcc="470" mnc="03" type="mms" mmsc="http://" mmsproxy="10.10.55.34" mmsport="8799" />
   <apn carrier="Dhiraagu" mcc="472" mnc="01" apn="default" type="default,supl" />
   <apn carrier="Wataniya" mcc="472" mnc="02" apn="default" type="default,supl" />
   <apn carrier="DiGi Internet" mcc="502" mnc="10" apn="diginet" type="default,supl" />
