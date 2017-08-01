@@ -5,3 +5,7 @@
 allow priv_app fuse_device:dir { search r_file_perms };
 allow priv_app fuse_device:file r_file_perms;
 allow priv_app fuse_device:filesystem { getattr };
+
+# MatLog calls dmesg
+allow priv_app kernel:system syslog_read;
+
