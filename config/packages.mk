@@ -24,9 +24,6 @@ PRODUCT_PACKAGES += \
     OmniTheme \
     OmniSubs
 
-PRODUCT_PACKAGES += \
-    CellBroadcastReceiver
-
 # Additional tools
 PRODUCT_PACKAGES += \
     bash \
