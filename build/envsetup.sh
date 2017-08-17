@@ -81,10 +81,10 @@ function fixup_common_out_dir() {
 function mka() {
     case `uname -s` in
         Darwin)
-            make -j `sysctl hw.ncpu|cut -d" " -f2` "$@"
+            m -j "$@"
             ;;
         *)
-            schedtool -B -n 1 -e ionice -n 1 make -j `cat /proc/cpuinfo | grep "^processor" | wc -l` "$@"
+            mk_timer schedtool -B -n 10 -e ionice -n 7 m -j "$@"
             ;;
     esac
 }
