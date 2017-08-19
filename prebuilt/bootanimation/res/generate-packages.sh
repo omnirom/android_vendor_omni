@@ -21,6 +21,7 @@ clear;
 
 # resolutions
 RESOLUTIONS="\
+    320x181 \
     640x362 \
     720x407 \
     1440x814 \
