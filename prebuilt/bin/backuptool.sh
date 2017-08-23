@@ -5,7 +5,7 @@
 
 export C=/tmp/backupdir
 export S=/system
-export V=7.1
+export V=8.0
 
 # Preserve /system/addon.d in /tmp/addon.d
 preserve_addon_d() {
