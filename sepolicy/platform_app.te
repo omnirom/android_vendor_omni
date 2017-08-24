@@ -1,7 +1,7 @@
 # Direct access to vold-mounted storage under /mnt/media_rw
 # This is a performance optimization that allows platform apps to bypass the FUSE layer
-allow platform_app sdcard_posix:dir create_dir_perms;
-allow platform_app sdcard_posix:file create_file_perms;
+#allow platform_app sdcard_posix:dir create_dir_perms;
+#allow platform_app sdcard_posix:file create_file_perms;
 
 # gallery2 crop avatar
 allow platform_app system_app_data_file:file { create_file_perms rw_file_perms };
