@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.omnirom.device"
+    android:sharedUserId="android.uid.system" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="21" />
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/advanced_settings"
+        android:theme="@android:style/Theme.DeviceDefault.Settings"
+        android:supportsRtl="true" >
+        <activity
+            android:name="org.omnirom.device.DeviceSettings"
+            android:exported="true"
+            android:label="@string/advanced_settings"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
