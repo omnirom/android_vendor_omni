@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="user_icon_1">#ff5e97f6</color>
+    <color name="user_icon_2">#ff5c6bc0</color>
+    <color name="user_icon_3">#ff26a69a</color>
+    <color name="user_icon_4">#ffec407a</color>
+    <color name="user_icon_5">#ff33ac71</color>
+    <color name="user_icon_6">#ff8bc34a</color>
+    <color name="user_icon_7">#ffff9800</color>
+    <color name="user_icon_8">#ffff7043</color>
+</resources>
