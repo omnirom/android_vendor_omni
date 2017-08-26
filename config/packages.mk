@@ -43,11 +43,11 @@ PRODUCT_PACKAGES += \
     fsck.ntfs
 
 # Telephony extension
-PRODUCT_PACKAGES += telephony-ext
-PRODUCT_BOOT_JARS += telephony-ext
+#PRODUCT_PACKAGES += telephony-ext
+#PRODUCT_BOOT_JARS += telephony-ext
 
 # OMS support
-PRODUCT_PACKAGES += ThemeInterfacer
+#PRODUCT_PACKAGES += ThemeInterfacer
 
 # for easter fun
 PRODUCT_PACKAGES += EggGame
