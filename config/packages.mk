@@ -20,9 +20,7 @@ PRODUCT_PACKAGES += \
     libcyanogen-dsp \
     Phonograph \
     Turbo \
-    MatLog \
-    OmniTheme \
-    OmniSubs
+    MatLog
 
 # Additional tools
 PRODUCT_PACKAGES += \
@@ -47,7 +45,9 @@ PRODUCT_PACKAGES += telephony-ext
 PRODUCT_BOOT_JARS += telephony-ext
 
 # OMS support
-#PRODUCT_PACKAGES += ThemeInterfacer
+#PRODUCT_PACKAGES += ThemeInterfacer \
+    OmniTheme \
+    OmniSubs
 
 # Themes
 PRODUCT_PACKAGES += \
