@@ -43,15 +43,6 @@ on boot
     chown system system /sys/module/lowmemorykiller/parameters/minfree
     chmod 0644 /sys/module/lowmemorykiller/parameters/minfree
 
-    # Run sysinit
-    start sysinit
-
-# sysinit (/system/etc/init.d)
-service sysinit /system/bin/sysinit
-    user root
-    oneshot
-    disabled
-
 # adb over network
 on property:service.adb.tcp.port=5555
     stop adbd

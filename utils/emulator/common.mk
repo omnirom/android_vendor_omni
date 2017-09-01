@@ -35,15 +35,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/etc/sysconfig/backup.xml:system/etc/sysconfig/backup.xml
 
-# init.d support
-PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/omni/prebuilt/bin/sysinit:system/bin/sysinit
-
-# userinit support
-PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
-
 # Init script file with omni extras
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/etc/init.local.rc:root/init.omni.rc
