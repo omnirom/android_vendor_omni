@@ -42,5 +42,10 @@ PRODUCT_BOOT_JARS += telephony-ext
     OmniTheme \
     OmniSubs
 
+# Themes
+PRODUCT_PACKAGES += \
+    PixelTheme \
+    Stock
+
 # for easter fun
 #PRODUCT_PACKAGES += EggGame
