@@ -1,10 +1,3 @@
-# Additional packages
-ifneq ($(TARGET_LOW_RAM_DEVICE), true)
-PRODUCT_PACKAGES += \
-    Basic \
-    Development
-endif
-
 # Additional apps
 PRODUCT_PACKAGES += \
     MonthCalendarWidget \
@@ -20,9 +13,12 @@ PRODUCT_PACKAGES += \
     libcyanogen-dsp \
     Phonograph \
     Turbo \
-    MatLog \
-    OmniTheme \
-    OmniSubs
+    MatLog
+
+# Themes
+PRODUCT_PACKAGES += \
+    PixelTheme \
+    Stock
 
 # Additional tools
 PRODUCT_PACKAGES += \
@@ -47,12 +43,9 @@ PRODUCT_PACKAGES += telephony-ext
 PRODUCT_BOOT_JARS += telephony-ext
 
 # OMS support
-#PRODUCT_PACKAGES += ThemeInterfacer
-
-# Themes
-PRODUCT_PACKAGES += \
-    PixelTheme \
-    Stock
+#PRODUCT_PACKAGES += ThemeInterfacer \
+    OmniTheme \
+    OmniSubs
 
 # for easter fun
 #PRODUCT_PACKAGES += EggGame
