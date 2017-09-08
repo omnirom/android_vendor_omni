@@ -19,7 +19,7 @@ read username
 
 url="gerrit.omnirom.org"
 port="29418"
-branch="android-7.1"
+branch="android-8.0"
 
 cd ../../../
 
@@ -27,6 +27,9 @@ while read path;
     do
 
     project=`echo android_${path} | sed -e 's/\//\_/g'`
+    if [ "${project}" == "android_build_make" ] ; then
+        project="android_build"
+    fi
 
     echo ""
     echo "====================================================================="
