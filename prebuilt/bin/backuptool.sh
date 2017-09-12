@@ -7,6 +7,8 @@ export C=/tmp/backupdir
 export S=/system
 export V=8.0
 
+DEBUG=0
+
 # Preserve /system/addon.d in /tmp/addon.d
 preserve_addon_d() {
   mkdir -p /tmp/addon.d/
@@ -42,12 +44,16 @@ check_blacklist() {
 # Execute /system/addon.d/*.sh scripts with $1 parameter
 run_stage() {
 for script in $(find /tmp/addon.d/ -name '*.sh' |sort -n); do
+  if [ $DEBUG -eq 1 ]; then 
+      echo run_stage $script $1
+  fi
   $script $1
 done
 }
 
 case "$1" in
   backup)
+    cp /system/bin/backuptool.functions /tmp
     mkdir -p $C
     check_prereq
     check_blacklist system
@@ -57,6 +63,7 @@ case "$1" in
     run_stage post-backup
   ;;
   restore)
+    cp /system/bin/backuptool.functions /tmp
     check_prereq
     check_blacklist tmp
     run_stage pre-restore
