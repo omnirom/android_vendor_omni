@@ -11,8 +11,8 @@
 ##
 # Configuration
 ##
-USERNAME=<INSERT USER>
-BRANCH=android-7.1
+USERNAME=darkobas
+BRANCH=android-8.0
 GERRIT=gerrit.omnirom.org
 GITHUB_ORG=omnirom
 
