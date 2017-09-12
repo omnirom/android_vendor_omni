@@ -48,6 +48,7 @@ done
 
 case "$1" in
   backup)
+    cp /system/bin/backuptool.functions /tmp
     mkdir -p $C
     check_prereq
     check_blacklist system
@@ -57,6 +58,7 @@ case "$1" in
     run_stage post-backup
   ;;
   restore)
+    cp /system/bin/backuptool.functions /tmp
     check_prereq
     check_blacklist tmp
     run_stage pre-restore
