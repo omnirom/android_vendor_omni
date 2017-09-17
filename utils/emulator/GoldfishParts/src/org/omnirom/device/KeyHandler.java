@@ -42,7 +42,7 @@ public class KeyHandler implements DeviceKeyHandler {
 
     @Override
     public boolean canHandleKeyEvent(KeyEvent event) {
-        return true;
+        return false;
     }
 
     @Override
