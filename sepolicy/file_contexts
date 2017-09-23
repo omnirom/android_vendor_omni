@@ -16,3 +16,6 @@
 
 # wakelocks
 /sys/kernel/debug/wakeup_sources     u:object_r:debugsfs_wakelock:s0
+
+# shell
+/system/bin/sh                 u:object_r:vendor_shell_exec:s0
