@@ -1,5 +1,5 @@
 bionic
-build/make
+build
 build/soong
 development
 external/e2fsprogs
@@ -11,6 +11,7 @@ external/toybox
 external/selinux
 frameworks/av
 frameworks/base
+frameworks/native
 frameworks/opt/telephony
 hardware/invensense
 hardware/interfaces
@@ -23,10 +24,6 @@ hardware/qcom/keymaster
 hardware/qcom/media
 hardware/qcom/power
 hardware/qcom/wlan
-packages/apps/Calendar
-packages/apps/Launcher3
-packages/apps/Gallery2
-packages/apps/MusicFX
 packages/apps/Nfc
 packages/apps/Settings
 packages/services/Telephony
@@ -35,7 +32,7 @@ system/bt
 system/core
 system/libhidl
 system/media
-system/netd
 system/nfc
+system/netd
 system/sepolicy
 system/vold
