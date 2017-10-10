@@ -47,5 +47,5 @@ PRODUCT_PACKAGES += \
     PixelTheme \
     Stock
 
-# for easter fun
-#PRODUCT_PACKAGES += EggGame
+# for fun
+PRODUCT_PACKAGES += EggGame
