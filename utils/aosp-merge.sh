@@ -28,6 +28,7 @@ while read path;
     project=`echo android_${path} | sed -e 's/\//\_/g'`
     if [ "${project}" == "android_build_make" ] ; then
         project="android_build"
+        buildpath="build"
     fi
 
     echo ""
@@ -46,9 +47,15 @@ while read path;
     fi
 
     repo start ${branch_name} .
+    if [ buildpath="build" ] ; then
+        if ! git remote | grep "aosp" > /dev/null; then
+            git remote add aosp https://android.googlesource.com/platform/$buildpath > /dev/null
+        fi
+    else
 
-    if ! git remote | grep "aosp" > /dev/null; then
-        git remote add aosp https://android.googlesource.com/platform/$path > /dev/null
+        if ! git remote | grep "aosp" > /dev/null; then
+            git remote add aosp https://android.googlesource.com/platform/$path > /dev/null
+        fi
     fi
 
     git fetch --tags aosp
@@ -56,7 +63,11 @@ while read path;
     #echo "====================================================================="
     #echo " Merging {$ref}"
     #echo "====================================================================="
-    git merge $ref;
+    if [ buildpath="build" ] ; then
+        git merge --squash $ref && git commit -m "Merge $ref";
+    else
+        git merge $ref;
+    fi
 
     cd - > /dev/null
 
