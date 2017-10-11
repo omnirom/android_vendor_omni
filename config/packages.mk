@@ -31,7 +31,11 @@ PRODUCT_PACKAGES += \
     vim \
     mkfs.ntfs \
     mount.ntfs \
-    fsck.ntfs
+    fsck.ntfs \
+    mkshrc_vendor \
+    toybox_vendor \
+    sh_vendor
+
 
 # Telephony extension
 PRODUCT_PACKAGES += telephony-ext
