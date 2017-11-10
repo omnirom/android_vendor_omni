@@ -36,3 +36,4 @@ system/nfc
 system/netd
 system/sepolicy
 system/vold
+system/hardware/interfaces
