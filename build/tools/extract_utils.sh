@@ -1078,7 +1078,7 @@ function extract() {
     fi
 
     if [ -f "$SRC" ] && [ "${SRC##*.}" == "zip" ]; then
-        DUMPDIR="$OMNI_ROOT"/system_dump
+        DUMPDIR="$TMPDIR"/system_dump
 
         # Check if we're working with the same zip that was passed last time.
         # If so, let's just use what's already extracted.
