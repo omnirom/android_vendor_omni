@@ -1,5 +1,5 @@
 allow system_server storage_stub_file:dir { getattr };
-allow system_server adbtcp_prop:property_service set;
+set_prop(system_server, shell_prop)
 
 #batterystats
 allow system_server debugsfs_wakelock:file { read open getattr };
