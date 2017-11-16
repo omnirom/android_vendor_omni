@@ -236,10 +236,10 @@ def check_manifest_problems(dependencies):
                     current_dependency = str(project.get(repository))
                     file = ES.parse('/'.join([local_manifest_dir, "roomservice.xml"]))
                     file_root = file.getroot()
-                    for current_project in file_root.findall('project'):
-                        new_dependency = str(current_project.find('revision'))
-                        if new_dependency == current_dependency:
-                            file_root.remove(current_project)
+                    #for current_project in file_root.findall('project'):
+                    #    new_dependency = str(current_project.find('revision'))
+                    #    if new_dependency == current_dependency:
+                    #        file_root.remove(current_project)
                     file.write('/'.join([local_manifest_dir, "roomservice.xml"]))
                     return
 
