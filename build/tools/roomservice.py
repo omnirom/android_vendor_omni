@@ -191,6 +191,8 @@ def parse_device_from_manifest(device):
 
 def parse_device_from_folder(device):
     search = []
+    if not os.path.isdir("device"):
+        os.mkdir("device")
     for sub_folder in os.listdir("device"):
         if os.path.isdir("device/%s/%s" % (sub_folder, device)):
             search.append("device/%s/%s" % (sub_folder, device))
