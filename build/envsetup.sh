@@ -79,7 +79,7 @@ function fixup_common_out_dir() {
 
 # Make using all available CPUs
 function mka() {
-    m -j "$@"
+    m "$@"
 }
 
 function pushboot() {
