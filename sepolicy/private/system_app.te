@@ -1,0 +1,4 @@
+#selinux status
+allow system_app selinuxfs:file r_file_perms;
+
+
