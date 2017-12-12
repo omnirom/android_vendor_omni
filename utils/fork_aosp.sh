@@ -1,13 +1,15 @@
-#!/bin/sh
+#!/bin/bash
 # Copyright OmniROM Project
 # Licensed under GPLv3
 
 # Configuration
 PREFIX=android_
-BRANCH=android-7.1
-SOURCE=android-7.1.1_r<INSERT_CORRECT_TAG>
+BRANCH=android-8.1
+SOURCE=android-8.1.0_r<INSERT_CORRECT_TAG>
 USERNAME=<INSERT USER>
 MANIFEST=android/default.xml
+REMOVE=android/remove.xml
+FORKED=android/omni-aosp.xml
 GITHUB_ORG=omnirom
 GERRIT_REMOTE=ssh://$USERNAME@gerrit.omnirom.org:29418
 REMOTE_MANIFEST=omnirom
@@ -47,16 +49,10 @@ git push gerrit $BRANCH
 
 echo "Updating manifest..."
 popd
-SRC_LINE=$(cat $MANIFEST | grep ${1%/} | head -n1)
-if [[ "$SRC_LINE" == *group="pdk"* ]]; then
-        NEW_LINE="  <project path=\"${1%/}\" name=\"$REPO_NAME\" remote=\"$REMOTE_MANIFEST\" revision=\"$BRANCH\" group=\"pdk\" />"
-else
-        NEW_LINE="  <project path=\"${1%/}\" name=\"$REPO_NAME\" remote=\"$REMOTE_MANIFEST\" revision=\"$BRANCH\" />"
-fi
-
-# Update the repo in manifest listing
-
-sed -i "s%$SRC_LINE%$NEW_LINE%g" $MANIFEST
+REMOVE_OLD="\    \<remove-project name=platform/${1} />"
+INSERT_NEW="\    \<project path=\"${1%/}\" name=\"$REPO_NAME\" remote=\"$REMOTE_MANIFEST\" revision=\"$BRANCH\" />"
+sed -i "$ i$REMOVE_OLD" $REMOVE
+sed -i "$ i$INSERT_NEW" $FORKED
 
 echo "Pushing manifest"
 pushd android
