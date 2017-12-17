@@ -3464,6 +3464,7 @@
   <apn carrier="O2 internet"
       mcc="230"
       mnc="02"
+      authtype="1"
       apn="internet"
       type="default,supl"
   />
