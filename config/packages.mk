@@ -33,6 +33,10 @@ PRODUCT_PACKAGES += \
     toybox_vendor \
     sh_vendor
 
+# busybox prebuilts
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/bin/vi:system/bin/vi \
+    vendor/omni/prebuilt/bin/strace:system/bin/strace
 
 # Telephony extension
 PRODUCT_PACKAGES += telephony-ext
