@@ -33,6 +33,8 @@ PRODUCT_PACKAGES += \
     toybox_vendor \
     sh_vendor
 
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/bin/vi:system/bin/vi
 
 # Telephony extension
 PRODUCT_PACKAGES += telephony-ext
