@@ -16,3 +16,7 @@
 
 # wakelocks
 /sys/kernel/debug/wakeup_sources     u:object_r:debugsfs_wakelock:s0
+
+#Ringtones/notifications
+/storage/emulated/0/Ringtones/*      u:object_r:ringtone_file:s0
+/storage/emulated/0/Notifications/*      u:object_r:ringtone_file:s0
