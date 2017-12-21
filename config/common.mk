@@ -64,6 +64,10 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/sounds/omni_lock_phone.ogg:system/media/audio/ui/omni_lock_phone.ogg \
     vendor/omni/prebuilt/sounds/omni_unlock_phone.ogg:system/media/audio/ui/omni_unlock_phone.ogg
 
+# mkshrc
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/etc/mkshrc:system/etc/mkshrc
+
 # Additional packages
 -include vendor/omni/config/packages.mk
 
