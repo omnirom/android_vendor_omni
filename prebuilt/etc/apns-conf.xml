@@ -7772,17 +7772,7 @@
       mmsport="9201"
       type="mms"
   />
-  <apn carrier="Planet"
-      mcc="293"
-      mnc="41"
-      apn="internet"
-      user="mobitel"
-      password="internet"
-      proxy="213.229.249.40"
-      port="8080"
-      type="default,supl"
-  />
-  <apn carrier="Mobitel MMS"
+  <apn carrier="Telekom SI"
       mcc="293"
       mnc="41"
       apn="internet"
@@ -7791,7 +7781,7 @@
       mmsc="http://mms.mobitel.si/servlets/mms"
       mmsproxy="213.229.249.40"
       mmsport="8080"
-      type="mms"
+      type="default,mms,supl"
   />
   <apn carrier="T2"
       mcc="293"
