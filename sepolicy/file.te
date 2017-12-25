@@ -10,3 +10,4 @@ type debugsfs_wakelock, fs_type, debugfs_type;
 type exfat, sdcard_type, fs_type, mlstrustedobject;
 #type fuse_device, sdcard_type, fs_type, mlstrustedobject;
 type ntfs, sdcard_type, fs_type, mlstrustedobject;
+type fuseblk, sdcard_type, fs_type, mlstrustedobject;
