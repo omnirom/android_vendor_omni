@@ -1,0 +1,5 @@
+# Allow custom build keys
+ifneq (${ROM_KEYS_PATH},)
+    PRODUCT_DEFAULT_DEV_CERTIFICATE := ${ROM_KEYS_PATH}/releasekey
+    PRODUCT_EXTRA_RECOVERY_KEYS := $(PRODUCT_DEFAULT_DEV_CERTIFICATE)
+endif
