@@ -25,6 +25,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1 \
     persist.sys.disable_rescue=true
 
+# enable ADB authentication if not on eng build
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES  += ro.adb.secure=1
+endif
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
