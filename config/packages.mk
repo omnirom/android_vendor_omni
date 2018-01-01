@@ -29,6 +29,9 @@ PRODUCT_PACKAGES += \
     powertop \
     tune2fs \
     vim \
+    mkfs.ntfs \
+    mount.ntfs \
+    fsck.ntfs \
     mkshrc_vendor \
     toybox_vendor \
     sh_vendor
