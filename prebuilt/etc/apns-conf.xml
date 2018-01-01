@@ -23065,6 +23065,15 @@
   authtype="1"
  />
 
+  <apn carrier="IMS"
+     mcc="404"
+     mnc="61"
+     apn="ims"
+     type="ims"
+     protocol="IPV4V6"
+     roaming_protocol="IPV4V6"
+     />
+
 <apn carrier="BSNL"
   apn="bsnlnet"
   mcc="404"
