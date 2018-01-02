@@ -7,4 +7,5 @@ allow fsck_untrusted mnt_media_rw_file:dir rw_dir_perms;
 allow fsck_untrusted mnt_media_rw_file:file rw_file_perms;
 allow fsck_untrusted fuse_device:chr_file { read write open getattr };
 allow fsck_untrusted fuse_device:filesystem mount;
+allow fsck_untrusted block_device:dir getattr;
 
