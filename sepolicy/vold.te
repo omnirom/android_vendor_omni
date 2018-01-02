@@ -21,3 +21,5 @@ allow vold mkfs_exec:file { execute read open getattr execute_no_trans };
 allow vold fuse_device:dir getattr;
 allow vold fuse_device:filesystem unmount;
 
+allow vold fsck_exec:lnk_file { read };
+

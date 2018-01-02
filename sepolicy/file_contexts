@@ -7,12 +7,15 @@
 
 # mkfs
 /system/bin/mkfs\.exfat   u:object_r:mkfs_exec:s0
-/system/bin/mkfs\.f2fs    u:object_r:mkfs_exec:s0
 /system/bin/mkfs\.ntfs    u:object_r:mkfs_exec:s0
 
 # fsck
 /system/bin/fsck\.ntfs                          u:object_r:fsck_exec:s0
+/system/bin/fsck\.exfat                          u:object_r:fsck_exec:s0
+
+# mount
 /system/bin/mount\.exfat                         u:object_r:fsck_exec:s0
+/system/bin/mount\.ntfs                         u:object_r:fsck_exec:s0
 
 # wakelocks
 /sys/kernel/debug/wakeup_sources     u:object_r:debugsfs_wakelock:s0
