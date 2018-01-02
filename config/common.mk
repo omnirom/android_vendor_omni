@@ -35,7 +35,8 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/omni/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/omni/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
-    vendor/omni/prebuilt/bin/blacklist:system/addon.d/blacklist
+    vendor/omni/prebuilt/bin/blacklist:system/addon.d/blacklist \
+    vendor/omni/prebuilt/bin/99-cache.sh:system/addon.d/99-cache.sh
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
