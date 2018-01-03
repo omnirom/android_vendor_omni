@@ -1,19 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-** Copyright 2006, The Android Open Source Project
-**
-** Licensed under the Apache License, Version 2.0 (the "License");
-** you may not use this file except in compliance with the License.
-** You may obtain a copy of the License at
-**
-**     http://www.apache.org/licenses/LICENSE-2.0
-**
-** Unless required by applicable law or agreed to in writing, software
-** distributed under the License is distributed on an "AS IS" BASIS,
-** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-** See the License for the specific language governing permissions and
-** limitations under the License.
+ * Copyright (c) 2013-2016 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
 */
 -->
 
@@ -4216,6 +4206,8 @@
       type="dun"
       read_only="true"
   />
+
+  <!-- VENDOR_EDIT start Patch#0507 -->
   <apn carrier="iD internet"
       mcc="234"
       mnc="20"
@@ -4224,12 +4216,13 @@
       mmsproxy="mms.idmobile.co.uk"
       mmsport="8799"
       authtype="1"
-      protocol="IPV4"
+      protocol="IPV4V6"
       roaming_protocol="IPV4"
       type="default,supl,mms"
       mvno_match_data="0305"
       mvno_type="gid"
   />
+  <!-- VENDOR_EDIT end Patch#0507 -->
 
   <apn carrier="Truphone"
       mcc="234"
@@ -4865,14 +4858,14 @@
  />
 
   <!-- VENDOR_EDIT start Patch#0505 -->
-  <apn carrier="TDC-DK Internet"
+  <apn carrier="Internet"
       mcc="238"
       mnc="01"
       apn="internet"
       authtype="0"
       type="default,supl,agps,fota,dun"
   />
-  <apn carrier="TDC-DK MMS"
+  <apn carrier="MMS"
       mcc="238"
       mnc="01"
       apn="mms"
@@ -4882,7 +4875,7 @@
       mmsport="8080"
       type="mms"
   />
-  <apn carrier="TDC-DK Internet"
+  <apn carrier="Internet"
       mcc="238"
       mnc="01"
       mvno_match_data="2380101xxxxxxxx"
@@ -4891,7 +4884,7 @@
       authtype="1"
       type="default,supl"
   />
-  <apn carrier="TDC-DK MMS"
+  <apn carrier="MMS"
       mcc="238"
       mnc="01"
       mvno_match_data="2380101xxxxxxxx"
@@ -4906,7 +4899,7 @@
   <!-- VENDOR_EDIT end Patch#0505 -->
 
   <!-- VENDOR_EDIT start Patch#0506 -->
-  <apn carrier="TDC-N Internet"
+  <apn carrier="Internet"
       mcc="238"
       mnc="01"
       mvno_match_data="2380171xxxxxxxx"
@@ -4914,7 +4907,7 @@
       apn="Internet.no"
       type="default,supl"
   />
-  <apn carrier="TDC-N MMS"
+  <apn carrier="MMS"
       mcc="238"
       mnc="01"
       mvno_match_data="2380171xxxxxxxx"
@@ -5559,13 +5552,13 @@
   />
 
   <!-- VENDOR_EDIT start Patch#0506 -->
-  <apn carrier="TDC-N Internet"
+  <apn carrier="Internet"
       mcc="242"
       mnc="08"
       apn="Internet.no"
       type="default,supl"
   />
-  <apn carrier="TDC-N MMS"
+  <apn carrier="MMS"
       mcc="242"
       mnc="08"
       apn="mms"
@@ -7133,15 +7126,13 @@
   type="default,supl"
  />
 
-
+  <!-- VENDOR_EDIT start Patch#0508 -->
   <apn carrier="Vodafone Net2"
       mcc="268"
       mnc="01"
       apn="net2.vodafone.pt"
       user="vodafone"
       password="vodafone"
-      proxy="iproxy.vodafone.pt"
-      port="80"
       mmsc="http://mms.vodafone.pt/servlets/mms"
       mmsproxy="iproxy.vodafone.pt"
       mmsport="80"
@@ -7154,6 +7145,8 @@
       authtype="0"
       type="dun"
   />
+  <!-- VENDOR_EDIT end Patch#0508 -->
+
   <apn carrier="Optimus Internet"
       mcc="268"
       mnc="03"
@@ -11872,20 +11865,10 @@
       mcc="310"
       mnc="410"
       apn="nxtgenphone"
-      type="default,mms,supl,fota,hipri,ims"
+      type="default,mms,supl,fota,hipri"
       mmsc="http://mmsc.mobile.att.net"
       mmsproxy="proxy.mobile.att.net"
       mmsport="80"
-  />
-
-  <apn carrier="ATT Nextgenphone"
-      mcc="310"
-      mnc="170"
-      apn="nxtgenphone"
-      mmsc="http://mmsc.mobile.att.net"
-      mmsproxy="proxy.mobile.att.net"
-      mmsport="80" type="default,mms,supl,fota,hipri,ims"
-      protocol="IPV4V6" roaming_protocol="IPV4V6" mtu="1410"
   />
 
 <apn carrier="H2O"
@@ -23082,6 +23065,15 @@
   authtype="1"
  />
 
+  <apn carrier="IMS"
+     mcc="404"
+     mnc="61"
+     apn="ims"
+     type="ims"
+     protocol="IPV4V6"
+     roaming_protocol="IPV4V6"
+     />
+
 <apn carrier="BSNL"
   apn="bsnlnet"
   mcc="404"
@@ -24151,23 +24143,34 @@
       roaming_protocol="IPV4V6"
   />
 
-<apn carrier="Vodafone Connect"
-  apn="www"
-  mcc="404"
-  mnc="206"
-  type="default,supl"
- />
+  <apn carrier="Vodafone MMS"
+      mcc="404"
+      mnc="206"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="Vodafone"
+      mcc="404"
+      mnc="206"
+      apn="www"
+      type="default,supl"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
 
-<apn carrier="VodafoneLive!"
-  apn="portalnmms"
-  mcc="404"
-  mnc="206"
-  proxy="10.10.1.100"
-  port="9401"
-  mmsproxy="10.10.1.100"
-  mmsc="http://mms1.live.vodafone.in/mms/"
-  type="default,supl,mms"
- />
+  <apn carrier="IMS"
+      mcc="404"
+      mnc="206"
+      apn="ims"
+      type="ims"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
 
   <!-- VENDOR_EDIT start Patch#0504 -->
   <apn carrier="Reliance"
@@ -25693,14 +25696,6 @@
       roaming_protocol="IPV4V6"
   />
 
-   <apn carrier="Vodafone live"
-      mcc="405"
-      mnc="750"
-      apn="vodafonelivejk"
-      proxy="10.10.1.100"
-      port="9401"
-      type="default,supl"
-  />
   <apn carrier="Vodafone MMS"
       mcc="405"
       mnc="751"
@@ -30973,6 +30968,15 @@
       max_conns_time="300"
       read_only="true"
   />
+  <apn carrier="China Unicom"
+      apn=""
+      mcc="460"
+      mnc="01"
+      type="ia"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+      read_only="true"
+  />
   <apn carrier="APN_NAME_CUNET"
       apn="3gnet"
       mcc="460"
@@ -31286,7 +31290,15 @@
       max_conns_time="300"
       read_only="true"
   />
-
+  <apn carrier="China Unicom"
+      apn=""
+      mcc="460"
+      mnc="09"
+      type="ia"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+      read_only="true"
+  />
   <apn carrier="APN_NAME_CUNET"
       apn="3gnet"
       mcc="460"
