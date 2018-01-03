@@ -3,7 +3,6 @@ build
 build/soong
 development
 external/e2fsprogs
-external/fuse
 external/mksh
 external/tinycompress
 external/toybox
@@ -25,14 +24,15 @@ hardware/qcom/media
 hardware/qcom/msm8998
 hardware/qcom/power
 hardware/qcom/wlan
-packages/apps/Calendar
 packages/apps/Contacts
 packages/apps/CellBroadcastReceiver
+packages/apps/Dialer
 packages/apps/EmergencyInfo
 packages/apps/Messaging
 packages/apps/Nfc
 packages/apps/PhoneCommon
 packages/apps/Settings
+packages/providers/DownloadProvider
 packages/services/Telephony
 packages/services/Telecomm
 packages/inputmethods/LatinIME
