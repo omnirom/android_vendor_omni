@@ -742,14 +742,26 @@ function oat2dex() {
     local OEM_TARGET="$2"
     local SRC="$3"
     local TARGET=
-    local DEXBASE=
-    local ODEX=
-    local VDEX=
+    local OAT=
+    local HOST="$(uname)"
 
-    if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
-        export BAKSMALIJAR="$CM_ROOT"/vendor/omni/build/tools/smali/baksmali.jar
-        export SMALIJAR="$CM_ROOT"/vendor/omni/build/tools/smali/smali.jar
+    if [ -z "$ANDROID_HOST_OUT" ]; then
+        echo "ERROR: ANDROID_HOST_OUT not found!"
+        echo "ERROR: Please lunch a device before running this script."
+        exit 1
     fi
+
+    if [ -z "$OATDUMP" ] || [ -z "$VDEXEXTRACTOR" ]; then
+        if [ ! -f "$ANDROID_HOST_OUT/bin/oatdump" ]; then
+            echo "ERROR: oatdump utility not found!"
+            echo "ERROR: Please run 'make oatdump'"
+            echo "ERROR: from the top of the android tree before running this script."
+            exit 1
+        else
+           export OATDUMP="$ANDROID_HOST_OUT/bin/oatdump"
+        fi
+        export VDEXEXTRACTOR="$CM_ROOT"/vendor/omni/build/tools/"$HOST"/vdexExtractor
+   fi
 
     # Extract existing boot.oats to the temp folder
     if [ -z "$ARCHES" ]; then
@@ -784,29 +796,39 @@ function oat2dex() {
     for ARCH in $ARCHES; do
         BOOTOAT="$TMPDIR/system/framework/$ARCH/boot.oat"
 
-        local DEXBASE="$(dirname "$OEM_TARGET")/oat/$ARCH/$(basename "$OEM_TARGET" ."${OEM_TARGET##*.}")"
-        local ODEX="${DEXBASE}.odex"
-        local VDEX="${DEXBASE}.vdex"
+        local OAT="$(dirname "$OEM_TARGET")/oat/$ARCH/$(basename "$OEM_TARGET" ."${OEM_TARGET##*.}").odex"
+        local VDEX="$(dirname "$OEM_TARGET")/oat/$ARCH/$(basename "$OEM_TARGET" ."${OEM_TARGET##*.}").vdex"
 
-        if get_file "$ODEX" "$TMPDIR" "$SRC"; then
-            # If there was an odex, also look for a vdex.
-            get_file "$VDEX" "$TMPDIR" "$SRC"
-            java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" "$TMPDIR/$(basename "$ODEX")"
+
+        if get_file "$OAT" "$TMPDIR" "$SRC"; then
+            if get_file "$VDEX" "$TMPDIR" "$SRC"; then
+                "$VDEXEXTRACTOR" -o "$TMPDIR/" -i "$TMPDIR/$(basename "$VDEX")" > /dev/null
+                mv "$TMPDIR/$(basename "${OEM_TARGET%.*}").apk_classes.dex" "$TMPDIR/classes.dex"
+            else
+                "$OATDUMP" --oat-file="$TMPDIR/$(basename "$OAT")" --export-dex-to="$TMPDIR" > /dev/null
+                mv "$(find "$TMPDIR" -maxdepth 1 -type f -name "*_export.dex" | wc -l | tr -d ' ')" "$TMPDIR/classes.dex"
+            fi
         elif [[ "$CM_TARGET" =~ .jar$ ]]; then
-            # try to extract classes.dex from boot.oats for framework jars
             JAROAT="$TMPDIR/system/framework/$ARCH/boot-$(basename ${OEM_TARGET%.*}).oat"
+            JARVDEX="$TMPDIR/system/framework/$ARCH/boot-$(basename ${OEM_TARGET%.*}).vdex"
             if [ ! -f "$JAROAT" ]; then
                 JAROAT=$BOOTOAT;
             fi
-            java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" "$JAROAT/$OEM_TARGET"
+
+            # try to extract classes.dex from boot.vdex for frameworks jars
+            # fallback to boot.oat if vdex is not available
+            if [ -f "$JARVDEX" ]; then
+                "$VDEXEXTRACTOR" -o "$TMPDIR/" -i "$JARVDEX" > /dev/null
+                mv "$TMPDIR/boot-$(basename "${OEM_TARGET%.*}").apk_classes.dex" "$TMPDIR/classes.dex"
+            else
+                "$OATDUMP" --oat-file="$JAROAT" --export-dex-to="$TMPDIR" > /dev/null
+                mv "$(find "$TMPDIR" -maxdepth 1 -type f -name "*_export.dex" | wc -l | tr -d ' ')" "$TMPDIR/classes.dex"
+            fi
         else
             continue
         fi
 
-        java -jar "$SMALIJAR" assemble "$TMPDIR/dexout" -o "$TMPDIR/classes.dex" && break
     done
-
-    rm -rf "$TMPDIR/dexout"
 }
 
 #
