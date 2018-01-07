@@ -86,21 +86,25 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
 ifeq ($(ROM_BUILDTYPE),NIGHTLY)
     ifeq ($(WITH_DEXPREOPT),)
         WITH_DEXPREOPT := true
+        WITH_DEXPREOPT_PIC := true
     endif
 endif
 # and weeklies
 ifeq ($(ROM_BUILDTYPE),WEEKLY)
     ifeq ($(WITH_DEXPREOPT),)
         WITH_DEXPREOPT := true
+        WITH_DEXPREOPT_PIC := true
     endif
 endif
 # and security releases
 ifeq ($(ROM_BUILDTYPE),SECURITY_RELEASE)
     ifeq ($(WITH_DEXPREOPT),)
         WITH_DEXPREOPT := true
+        WITH_DEXPREOPT_PIC := true
     endif
 endif
 # but not homemades
 ifeq ($(ROM_BUILDTYPE),HOMEMADE)
     WITH_DEXPREOPT := false
+    WITH_DEXPREOPT_PIC := false
 endif
