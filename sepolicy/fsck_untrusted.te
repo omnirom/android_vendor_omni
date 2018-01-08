@@ -11,3 +11,9 @@ allow fsck_untrusted block_device:dir getattr;
 allow fsck_untrusted media_rw_data_file:dir { search getattr };
 allow fsck_untrusted tmpfs:dir { search };
 
+allow fsck_untrusted toolbox_exec:file entrypoint;
+allow fsck_untrusted toolbox_exec:file r_file_perms;
+allow fsck_untrusted exfat:filesystem mount;
+allow fsck_untrusted self:capability sys_rawio;
+allow fsck_untrusted ntfs:filesystem mount;
+
