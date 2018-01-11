@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="user_icon_1">#ff5e97f6</color>
+    <color name="user_icon_2">#ff5c6bc0</color>
+    <color name="user_icon_3">#ff26a69a</color>
+    <color name="user_icon_4">#ffec407a</color>
+    <color name="user_icon_5">#ff33ac71</color>
+    <color name="user_icon_6">#ff8bc34a</color>
+    <color name="user_icon_7">#ffff9800</color>
+    <color name="user_icon_8">#ffff7043</color>
+    <color name="system_error">#ffea4335</color>
+
+    <color name="pink_secondary_dark">#ffff206e</color>
+    <color name="pink_secondary_light">#ffff205a</color>
+    <color name="pink_primary">#ffff005a</color>
+    <color name="dark_blue_dark">#ff0d2029</color>
+    <color name="dark_blue_light">#ff182a33</color>
+    <color name="dark_blue_violet">#ff263288</color>
+
+    <!-- dark_blue_light -->
+    <color name="primary_device_default_settings_light">#ff182a33</color>
+    <color name="primary_device_default_settings">#ff182a33</color>
+    <color name="primary_dark_device_default_light">#ff182a33</color>
+    <color name="primary_dark_device_default_dark">#b3182a33</color>
+    <color name="primary_dark_material_settings_light">#ff182a33</color>
+    <color name="primary_dark_material_settings">#ff182a33</color>
+    <color name="suggestion_condition_background">#ff182a33</color>
+
+    <!-- dark_blue_dark -->
+    <color name="primary_dark_device_default_settings_light">#ff0d2029</color>
+    <color name="primary_dark_device_default_settings_dark">#b30d2029</color>
+    <color name="background_material_dark">#ff0d2029</color>
+    <color name="material_grey_900">#ff0d2029</color>  <!-- QS COLOR -->
+    <color name="primary_dark_device_default_settings">#ff0d2029</color>
+    <color name="secondary_device_default_settings">#ff0d2029</color> <!-- Edit Quick Settings bottom -->
+    <color name="secondary_device_default_settings_light">#ff0d2029</color> <!-- Edit Quick Settings bottom -->
+    <color name="primary_device_default_dark">#b30d2029</color>
+    <color name="primary_device_default_light">#ff0d2029</color>
+    <color name="primary_material_settings">#ff0d2029</color>
+    <color name="condition_card_background">#ff0d2029</color>
+
+    <color name="dialog_background_material">#ff0d2029</color>
+
+    <!-- accents -->
+    <color name="accent_device_default_light">#ffff206e</color>
+    <color name="accent_device_default_dark">#ffff205a</color>
+    <color name="colorAccent">#ffff005a</color>
+
+    <!-- specials -->
+    <color name="btn_colored_text_material">#fff8f8f8</color><!-- example: Uninstall button in app manager -->
+
+    <color name="primary_text_material_light">#ffffffff</color> <!-- Dialog - display/theme -->
+    <color name="primary_text_inverse_when_activated_material">#ff99ffc5</color>
+    <color name="primary_text_disable_only_material_dark">#ff00ffc5</color>
+
+    <color name="background_floating_material_dark">#ff182a33</color>
+    <color name="background_floating_material_light">#ff0d2029</color>
+
+    <!-- list radio button  -->
+<!--    <color name="foreground_material_light">#ff242424</color> -->
+<!--    <color name="foreground_material_dark">#ffffffff</color> -->
+</resources>
