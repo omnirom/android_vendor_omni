@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.Material.Widget.DropDownItem" parent="@*android:style/TextAppearance.Material.Menu.Inverse" >
+    </style>
+
+</resources>
