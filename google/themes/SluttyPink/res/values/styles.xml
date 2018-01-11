@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.DeviceDefault.Settings" parent="@*android:style/Theme.Material">
+        <item name="android:actionBarTheme">@*android:style/ThemeOverlay.DeviceDefault.ActionBar.Accent</item>
+        <item name="android:colorPrimary">@*android:color/primary_device_default_settings_light</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings_light</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
+        <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
+        <item name="android:navigationBarColor">@*android:color/primary_device_default_dark</item>
+        <item name="android:colorEdgeEffect">#ffffffff</item>
+        <item name="android:colorControlNormal">@*android:color/accent_device_default_dark</item>
+    </style>
+    <style name="Theme.DeviceDefault.SearchBar" parent="@*android:style/Theme.Material.SearchBar">
+        <item name="android:colorPrimary">@*android:color/primary_device_default_settings_light</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings_light</item>
+        <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
+    </style>
+
+    <style name="Theme.DeviceDefault.Settings.Dialog.NoActionBar" parent="@*android:style/Theme.Material.Dialog.NoActionBar">
+        <item name="android:colorPrimary">@*android:color/primary_device_default_settings_light</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings_light</item>
+        <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
+    </style>
+
+    <style name="Theme.DeviceDefault.Light.Dialog.Alert" parent="@*android:style/Theme.Material.Dialog.Alert">
+        <item name="android:colorPrimary">@*android:color/primary_device_default_settings_light</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings_light</item>
+        <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
+    </style>
+    <style name="Theme.DeviceDefault.Light.Voice" parent="@*android:style/Theme.Material.Dialog.Alert">
+        <item name="android:colorPrimary">@*android:color/primary_device_default_settings_light</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings_light</item>
+        <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
+    </style>
+
+    <style name="TextAppearance.Material.Body2" parent="@*android:style/TextAppearance.Material.Body2">
+        <item name="android:textSize">@*android:dimen/text_size_body_2_material</item>
+        <item name="android:fontFamily">@*android:string/font_family_body_2_material</item>
+        <item name="android:textColorSecondary">#ffffffff</item>
+    </style>
+
+    <style name="TextAppearance.Material.Body1" parent="@*android:style/TextAppearance.Material.Body1">
+        <item name="android:textSize">@*android:dimen/text_size_body_1_material</item>
+        <item name="android:fontFamily">@*android:string/font_family_body_1_material</item>
+        <item name="android:textColorSecondary">#ffffffff</item>
+    </style>
+
+    <style name="TextAppearance.Material.Display1" parent="@*android:style/TextAppearance.Material.Display1">
+        <item name="android:textSize">@*android:dimen/text_size_display_1_material</item>
+        <item name="android:fontFamily">@*android:string/font_family_display_1_material</item>
+        <item name="android:textColor">#ffffffff</item> <!-- Batttery level -->
+    </style>
+<!--
+    <style name="TextAppearance.Material.Headline" parent="@*android:style/TextAppearance.Material.Headline">
+        <item name="android:textSize">@*android:dimen/text_size_headline_material</item>
+        <item name="android:fontFamily">@*android:string/font_family_headline_material</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+-->
+    <style name="TextAppearance.Material.Title" parent="@*android:style/TextAppearance.Material.Title">
+        <item name="android:textSize">@*android:dimen/text_size_title_material</item>
+        <item name="android:fontFamily">@*android:string/font_family_title_material</item>
+        <item name="android:textColor">#ffffffff</item> <!-- Dialog title -->
+    </style>
+
+    <!-- Settings main -->
+<!--
+    <style name="TextAppearance.Material.Subhead" parent="@*android:style/TextAppearance.Material.Subhead">
+        <item name="android:textSize">@*android:dimen/text_size_subhead_material</item>
+        <item name="android:fontFamily">@*android:string/font_family_subhead_material</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+-->
+<!--
+    <style name="TextAppearance.Material.ListItem" parent="@*android:style/TextAppearance.Material.Subhead">
+        <item name="android:textSize">@*android:dimen/text_size_subhead_material</item>
+        <item name="android:fontFamily">@*android:string/font_family_subhead_material</item>
+        <item name="android:textColor">#ff0000ff</item>
+    </style>
+-->
+    <style name="TextAppearance.Material.Caption" parent="@*android:style/TextAppearance.Material.Caption">
+        <item name="android:textSize">@*android:dimen/text_size_caption_material</item>
+        <item name="android:fontFamily">@*android:string/font_family_caption_material</item>
+        <item name="android:textColor">#b3ffffff</item>
+    </style>
+
+    <style name="TextAppearance.Material.Large" parent="@*android:style/TextAppearance.Material.Large">
+        <item name="android:textSize">@*android:dimen/text_size_large_material</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="TextAppearance.Material.Medium" parent="@*android:style/TextAppearance.Material.Medium">
+        <item name="android:textSize">@*android:dimen/text_size_medium_material</item>
+        <item name="android:textColor">#b3ffffff</item>
+    </style>
+
+    <style name="TextAppearance.Material.Small" parent="@*android:style/TextAppearance.Material.Small">
+        <item name="android:textSize">@*android:dimen/text_size_small_material</item>
+        <item name="android:textColor">#b3ffffff</item>
+    </style>
+
+    <style name="TextAppearance.Material.Widget.TextView.SpinnerItem" parent="@*android:style/TextAppearance.Material.Menu.Inverse" />
+    <style name="TextAppearance.Material.Widget.TextView.PopupMenu" parent="@*android:style/TextAppearance.Material.Menu.Inverse" />
+    <style name="TextAppearance.Material.Widget.TextView.PopupMenu.Large" parent="@*android:style/TextAppearance.Material.Menu.Inverse" />
+    <style name="TextAppearance.Material.Widget.TextView.PopupMenu.Small" parent="@*android:style/TextAppearance.Material.Menu.Inverse" />
+    <style name="TextAppearance.Material.Widget.DropDownItem" parent="@*android:style/TextAppearance.Material.Menu.Inverse" >
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="Widget.Material.CheckedTextView" parent="@*android:style/Widget.CheckedTextView" >
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+</resources>
