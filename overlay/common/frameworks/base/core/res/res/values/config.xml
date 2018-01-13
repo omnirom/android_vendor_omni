@@ -43,4 +43,5 @@
     <!--  Define Google play service package for FRP-->
     <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
+    <bool name="config_dozeAlwaysOnDisplayEnabledDefault">false</bool>
 </resources>
