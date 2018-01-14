@@ -1,19 +1,15 @@
 # Additional apps
 PRODUCT_PACKAGES += \
-    MonthCalendarWidget \
     OpenDelta \
-    OmniSwitch \
     Chromium \
     OmniJaws \
     OmniStyle \
     QuickSearchBox \
-    OmniClockOSS \
     MusicFX \
     audio_effects.conf \
     libcyanogen-dsp \
     Phonograph \
-    Turbo \
-    MatLog
+    Turbo
 
 # Additional tools
 PRODUCT_PACKAGES += \
