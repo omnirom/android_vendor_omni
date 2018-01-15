@@ -52,8 +52,8 @@ PRODUCT_COPY_FILES += \
 # custom omni sounds
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=The_big_adventure.ogg \
-    ro.config.notification_sound=Ariel.ogg \
-    ro.config.alarm_alert=Argon.ogg
+    ro.config.notification_sound=Beginning.ogg \
+    ro.config.alarm_alert=Bright_morning.ogg
 
 # mkshrc
 PRODUCT_COPY_FILES += \
