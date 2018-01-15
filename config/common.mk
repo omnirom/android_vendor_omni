@@ -51,9 +51,9 @@ PRODUCT_COPY_FILES += \
 
 # custom omni sounds
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=omni_ringtone1.ogg \
-    ro.config.notification_sound=omni_notification1.ogg \
-    ro.config.alarm_alert=omni_alarm1.ogg
+    ro.config.ringtone=The_big_adventure.ogg \
+    ro.config.notification_sound=Ariel.ogg \
+    ro.config.alarm_alert=Argon.ogg
 
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/sounds/camera_click_48k.ogg:system/media/audio/ui/camera_click.ogg \
