@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="all_apps_background_color">@*android:color/primary_material_dark</color>
+    <color name="all_apps_icon_text_color">#FFF</color>
+    <color name="reveal_background_color">@*android:color/primary_material_dark</color>
+    <color name="widgets_view_text_color">#FFF</color>
+    <color name="widgets_view_background_color">@*android:color/background_material_dark</color>
+    <color name="widgets_view_background_color_cell">@*android:color/primary_material_dark</color>
+    <color name="popup_background_color">@*android:color/primary_material_dark</color>
+    <color name="popup_header_background_color">@*android:color/background_material_dark</color>
+    <color name="popup_text_color">#fff</color>
+    <color name="popup_text_color_secondary">@*android:color/material_grey_200</color>
+</resources>
