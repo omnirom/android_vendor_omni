@@ -48,5 +48,8 @@ PRODUCT_PACKAGES += \
     PixelTheme \
     Stock
 
+PRODUCT_PACKAGES += \
+    Launcher3Dark
+
 # for fun
 PRODUCT_PACKAGES += EggGame
