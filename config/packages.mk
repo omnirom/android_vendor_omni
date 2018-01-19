@@ -45,7 +45,7 @@ PRODUCT_BOOT_JARS += telephony-ext
 # Themes
 PRODUCT_PACKAGES += \
     PixelTheme \
-    Stock
+    Stock \
     SluttyPinkTheme \
     DarknessMeisterTheme \
     SmokedGreenTheme
