@@ -2,7 +2,6 @@
 PRODUCT_PACKAGES += \
     Chromium \
     OmniJaws \
-    OmniStyle \
     QuickSearchBox \
     MusicFX \
     audio_effects.conf \
