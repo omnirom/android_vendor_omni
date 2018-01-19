@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="user_icon_1">#ffeeeeee</color>
+    <color name="user_icon_2">#ffdddddd</color>
+    <color name="user_icon_3">#ffcccccc</color>
+    <color name="user_icon_4">#ffbbbbbb</color>
+    <color name="system_error">#ffaaaaaa</color>
+
+    <color name="pink_secondary_dark">#ff5fabff</color>
+    <color name="pink_secondary_light">#ff78b8ff</color>
+    <color name="pink_primary">#ffabd3ff</color>
+    <color name="dark_blue_dark">#ff111519</color>
+    <color name="dark_blue_light">#ff222a33</color>
+    <color name="dark_blue_violet">#ff263288</color>
+
+    <!-- dark_blue_light -->
+    <color name="primary_device_default_settings">#ff222a33</color> <!-- QS -->
+    <color name="primary_dark_device_default_dark">#ff222a33</color> <!-- original black -->
+    <color name="primary_dark_material_settings">#ff222a33</color> <!-- settings grey 950 -->
+    <color name="suggestion_condition_background">#ff222a33</color>
+    <color name="secondary_device_default_settings_light">#ff222a33</color>  <!-- settings entity, ie battery top view background -->
+    <color name="primary_dark_device_default_light">#ff222a33</color>
+
+    <!-- dark_blue_dark -->
+    <color name="primary_dark_material_settings_light">#ff111519</color> <!-- settings statusbar -->
+    <color name="background_material_dark">#ff111519</color> <!-- bg material grey 850 -->
+    <color name="primary_dark_device_default_settings">#ff111519</color> <!-- parent of primary_dark_material_settings -->
+    <color name="secondary_device_default_settings">#ff111519</color> <!-- Edit Quick Settings bottom parent of secondary_material_settings -->
+    <color name="primary_device_default_dark">#ff111519</color> <!-- parent of primary_material_dark -->
+    <color name="primary_device_default_light">#ff111519</color> <!-- parent of primary_material_light -->
+    <color name="primary_material_settings">#ff111519</color>
+    <color name="primary_material_settings_light">#ff111519</color>
+    <color name="condition_card_background">#ff111519</color>
+
+    <color name="dialog_background_material">#ff111519</color>
+
+    <!-- accents -->
+    <color name="accent_device_default_light">#ff5fabff</color>
+    <color name="accent_device_default_dark">#ff78b8ff</color>
+    <color name="colorAccent">#ffabd3ff</color>
+
+    <!-- specials -->
+    <color name="btn_colored_text_material">#fff8f8f8</color><!-- example: Uninstall button in app manager -->
+    <color name="global_wifi_details_icon_color">#a0ffffff</color> <!-- settings/wifi/details iconsy -->
+
+    <color name="chooser_service_row_background_color">#ff111519</color> <!-- resolver -->
+    <color name="primary_text_inverse_when_activated_material">#a0989898</color> <!-- very rare -->
+
+    <!-- qs -->
+    <color name="material_grey_900">#ff111519</color>  <!-- find a better way to do this -->
+
+    <!-- Dialogs -->
+    <color name="background_floating_material_dark">#ff222a33</color> <!-- dialogs like sime settins -->
+    <!-- Restricted, or settings lib dialogs Moved to: Theme.DeviceDefault.Settings.Dialog  -->
+<!--    <color name="background_floating_material_light">#ff222a33</color> --> 
+</resources>

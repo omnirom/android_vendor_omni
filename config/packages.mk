@@ -46,6 +46,10 @@ PRODUCT_BOOT_JARS += telephony-ext
 PRODUCT_PACKAGES += \
     PixelTheme \
     Stock
+    SluttyPinkTheme \
+    DarknessMeisterTheme \
+    SmokedGreenTheme
+
 
 # for fun
 PRODUCT_PACKAGES += EggGame
