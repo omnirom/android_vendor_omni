@@ -51,7 +51,8 @@ PRODUCT_BOOT_JARS += telephony-ext
 # Themes
 PRODUCT_PACKAGES += \
     PixelTheme \
-    SluttyPinkTheme
+    SluttyPinkTheme \
+    DarknessMeister
 
 PRODUCT_PACKAGES += \
     Launcher3Dark
