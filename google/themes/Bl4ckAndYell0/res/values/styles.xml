@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.Material.Widget.DropDownItem" parent="@*android:style/TextAppearance.Material.Menu.Inverse" />
+    <style name="Widget.Material.DropDownItem.Spinner" parent="@*android:style/Theme.Material" >
+        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+
+        <item name="android:textColorPrimary">#ffFFFF8D</item>
+        <item name="android:textColorSecondary">#b3FFFF8D</item>
+        <item name="android:textColorTertiary">#b3FDD835</item>
+        <item name="android:textColorHint">#ffF57F17</item>
+        <item name="android:textColorAlertDialogListItem">#ffFFFF8D</item>
+    </style>
+
+</resources>

@@ -110,6 +110,6 @@ ifeq ($(ROM_BUILDTYPE),SECURITY_RELEASE)
 endif
 # but not homemades
 ifeq ($(ROM_BUILDTYPE),HOMEMADE)
-    WITH_DEXPREOPT := false
-    WITH_DEXPREOPT_PIC := false
+    WITH_DEXPREOPT := true
+    WITH_DEXPREOPT_PIC := true
 endif
