@@ -3,15 +3,15 @@
     <style name="Theme.DeviceDefault.Settings" parent="@*android:style/Theme.Material">
         <item name="android:actionBarTheme">@*android:style/ThemeOverlay.DeviceDefault.ActionBar.Accent</item>
         <item name="android:popupTheme">@*android:style/ThemeOverlay.DeviceDefault.Popup.Light</item>
-        <item name="android:colorPrimary">@*android:color/primary_device_default_settings_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
         <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
         <item name="android:colorControlNormal">@*android:color/accent_device_default_dark</item>
         <item name="android:colorControlHighlight">@*android:color/accent_device_default_dark</item>
         <item name="android:colorEdgeEffect">@*android:color/accent_device_default_dark</item>
         <item name="android:navigationBarDividerColor">#00000000</item>
-        <item name="android:navigationBarColor">@*android:color/primary_device_default_dark</item>
+        <item name="android:navigationBarColor">@*android:color/primary_dark_device_default_settings</item>
         <item name="android:windowLightNavigationBar">false</item>
     </style>
 </resources>

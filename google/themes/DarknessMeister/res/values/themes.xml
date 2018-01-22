@@ -4,8 +4,9 @@
     inverse color profile. -->
     <style name="Theme.DeviceDefault.Light.DarkActionBar" parent="@*android:style/Theme.Material.Light.DarkActionBar">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_dark</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_dark</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -18,8 +19,9 @@
     <!-- Variant of {@link #Theme_DeviceDefault_Light} with no action bar -->
     <style name="Theme.DeviceDefault.Light.NoActionBar" parent="@*android:style/Theme.Material.NoActionBar">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <!-- package installer acitivity example -->
@@ -36,8 +38,9 @@
          This theme sets {@link android.R.attr#windowFullscreen} to true.  -->
     <style name="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" parent="@*android:style/Theme.Material.NoActionBar.Fullscreen">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -54,8 +57,9 @@
     to true. -->
     <style name="Theme.DeviceDefault.Light.NoActionBar.Overscan" parent="@*android:style/Theme.Material.NoActionBar.Overscan">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -71,8 +75,9 @@
          {@link android.R.attr#windowTranslucentNavigation} to true. -->
     <style name="Theme.DeviceDefault.Light.NoActionBar.TranslucentDecor" parent="@*android:style/Theme.Material.NoActionBar.TranslucentDecor">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -100,8 +105,9 @@
         <item name="android:textColorAlertDialogListItem">#ffffffff</item>
 
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
     </style>
 
@@ -109,8 +115,9 @@
     regular dialog. -->
     <style name="Theme.DeviceDefault.Light.Dialog.MinWidth" parent="@*android:style/Theme.Material.Dialog.MinWidth">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -124,8 +131,9 @@
      <!-- Variant of {@link #Theme_DeviceDefault_Light_Dialog} without an action bar -->
     <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar" parent="@*android:style/Theme.Material.Dialog.NoActionBar">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -140,8 +148,9 @@
     width for a regular dialog. -->
     <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar.MinWidth" parent="@*android:style/Theme.Material.Dialog.NoActionBar.MinWidth">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -160,8 +169,9 @@
         <item name="*android:windowFixedHeightMinor">@*android:dimen/dialog_fixed_height_minor</item>
 
         <!-- Color pandroid:alette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -179,8 +189,9 @@
         <item name="*android:windowFixedHeightMinor">@*android:dimen/dialog_fixed_height_minor</item>
 
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -196,8 +207,9 @@
     screens (small, normal) or as a dialog on larger screens (large, xlarge). -->
     <style name="Theme.DeviceDefault.Light.DialogWhenLarge" parent="@*android:style/Theme.Material.DialogWhenLarge">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -213,8 +225,9 @@
     xlarge). -->
     <style name="Theme.DeviceDefault.Light.DialogWhenLarge.NoActionBar" parent="@*android:style/Theme.Material.DialogWhenLarge.NoActionBar">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -227,8 +240,9 @@
     <!-- DeviceDefault light theme for a presentation window on a secondary display. -->
     <style name="Theme.DeviceDefault.Light.Dialog.Presentation" parent="@*android:style/Theme.Material.Dialog.Presentation">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -244,8 +258,9 @@
     the window floating, with a transparent background, and turns off dimming behind the window. -->
     <style name="Theme.DeviceDefault.Light.Panel" parent="@*android:style/Theme.Material.Panel">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -260,8 +275,9 @@
         <item name="android:windowTitleStyle">@*android:style/DialogWindowTitle.DeviceDefault</item>
 
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -274,8 +290,9 @@
 
     <style name="Theme.DeviceDefault.Light.SearchBar" parent="@*android:style/Theme.Material.SearchBar">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -288,8 +305,9 @@
 
     <style name="Theme.DeviceDefault.Light.Voice" parent="@*android:style/Theme.Material.Voice">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -329,9 +347,9 @@
     <!-- Variant of {@link #Theme_DeviceDefault_Settings_Dark} with no action bar -->
     <style name="Theme.DeviceDefault.Settings.Dark.NoActionBar" parent="@*android:style/Theme.Material.NoActionBar">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_settings</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings</item>
-        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -344,9 +362,9 @@
 
     <style name="Theme.DeviceDefault.Settings.Dialog" parent="@*android:style/Theme.Material.Settings.Dialog">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_settings</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings</item>
-        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
         <item name="android:colorBackground">@*android:color/primary_device_default_settings</item>
 
@@ -360,9 +378,9 @@
 
     <style name="Theme.DeviceDefault.Settings.DialogWhenLarge" parent="@*android:style/Theme.Material.Settings.DialogWhenLarge">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_settings</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings</item>
-        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -376,9 +394,9 @@
 
     <style name="Theme.DeviceDefault.Settings.Dialog.Alert" parent="@*android:style/Theme.Material.Settings.Dialog.Alert">
         <!-- Color palette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_settings</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings</item>
-        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
@@ -409,8 +427,9 @@
         <item name="android:listPreferredItemPaddingEnd">?*android:attr/dialogPreferredPadding</item>
 
         <!-- Color pandroid:alette -->
-        <item name="android:colorPrimary">@*android:color/primary_device_default_light</item>
-        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
 
         <item name="android:textColorPrimary">#ffffffff</item>
