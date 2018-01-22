@@ -14,29 +14,24 @@
     <color name="dark_blue_violet">#ff263288</color>
 
     <!-- dark_blue_light -->
-    <color name="primary_device_default_settings">#ff373c37</color> <!-- QS -->
-    <color name="primary_dark_device_default_dark">#ff373c37</color> <!-- original black -->
-    <color name="primary_dark_material_settings">#ff373c37</color> <!-- settings grey 950 -->
-    <color name="suggestion_condition_background">#ff373c37</color>
-    <color name="secondary_device_default_settings_light">#ff373c37</color>  <!-- settings entity, ie battery top view background -->
+    <color name="primary_dark_device_default_settings">#ff373c37</color> <!-- Main BG settings -->
+    <color name="background_material_dark">#ff373c37</color> <!-- some kind of overlay of the main bg -->
     <color name="primary_dark_device_default_light">#ff373c37</color>
+    <color name="secondary_device_default_settings">#ff373c37</color> <!-- Edit Quick Settings bottom parent of secondary_material_settings -->
+    <color name="condition_card_background">#ff373c37</color>
 
     <!-- dark_blue_dark -->
     <color name="primary_dark_material_settings_light">#ff212721</color> <!-- settings statusbar -->
-    <color name="background_material_dark">#ff212721</color> <!-- bg material grey 850 -->
-    <color name="primary_dark_device_default_settings">#ff212721</color> <!-- parent of primary_dark_material_settings -->
-    <color name="secondary_device_default_settings">#ff212721</color> <!-- Edit Quick Settings bottom parent of secondary_material_settings -->
-    <color name="primary_device_default_dark">#ff212721</color> <!-- parent of primary_material_dark -->
-    <color name="primary_device_default_light">#ff212721</color> <!-- parent of primary_material_light -->
-    <color name="primary_material_settings">#ff212721</color>
-    <color name="primary_material_settings_light">#ff212721</color>
-    <color name="condition_card_background">#ff212721</color>
+
+    <color name="suggestion_condition_background">#ff212721</color>
+    <color name="secondary_device_default_settings_light">#ff212721</color>  <!-- settings entity, ie battery top view background -->
+    <color name="primary_device_default_settings">#ff212721</color> <!-- QS -->
 
     <color name="dialog_background_material">#ff212721</color>
 
     <!-- accents -->
-    <color name="accent_device_default_light">#ff00C853</color>
-    <color name="accent_device_default_dark">#ff69F0AE</color>
+    <color name="accent_device_default_light">#ff69F0AE</color>
+    <color name="accent_device_default_dark">#ff00C853</color>
     <color name="colorAccent">#ff00E676</color>
 
     <!-- specials -->
@@ -44,7 +39,8 @@
     <color name="global_wifi_details_icon_color">#a0ffffff</color> <!-- settings/wifi/details iconsy -->
 
     <color name="chooser_service_row_background_color">#ff212721</color> <!-- resolver -->
-    <color name="primary_text_inverse_when_activated_material">#a0989898</color> <!-- very rare -->
+<!--    <color name="primary_text_inverse_when_activated_material">#a0989898</color> --> <!-- very rare -->
+    <color name="primary_text_disable_only_material_dark">#ffffE676</color> <!-- display/font or bt details -->
 
     <!-- qs -->
     <color name="material_grey_900">#ff212721</color>  <!-- find a better way to do this -->
