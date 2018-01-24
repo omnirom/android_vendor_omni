@@ -8,5 +8,5 @@
 
 
     <application android:hasCode="false"
-                 android:label="SmokedGreen" />
+                 android:label="Smoked Green" />
 </manifest>
