@@ -54,7 +54,8 @@ PRODUCT_PACKAGES += \
     SluttyPinkTheme \
     DarknessMeisterTheme \
     SmokedGreenTheme \
-    Bl4ckAndYell0Theme
+    Bl4ckAndYell0Theme \
+    OmniTheme
 
 PRODUCT_PACKAGES += \
     Launcher3Dark
