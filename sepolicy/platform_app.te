@@ -22,3 +22,5 @@ allow platform_app exfat:dir { rw_dir_perms create_dir_perms };
 allow platform_app exfat:file { rw_file_perms create_file_perms };
 allow platform_app ntfs:dir { rw_dir_perms create_dir_perms };
 allow platform_app ntfs:file { rw_file_perms create_file_perms };
+allow platform_app sdcard_posix:dir create_dir_perms;
+allow platform_app sdcard_posix:file create_file_perms;

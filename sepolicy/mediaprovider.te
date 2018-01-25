@@ -1,0 +1,6 @@
+###########################
+# OmniROM common sepolicy
+
+# non-fuse sdcard mediaprovider access
+allow mediaprovider sdcard_posix:dir r_dir_perms;
+allow mediaprovider sdcard_posix:file r_file_perms;
