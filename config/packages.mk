@@ -55,7 +55,8 @@ PRODUCT_PACKAGES += \
     DarknessMeisterTheme \
     SmokedGreenTheme \
     Bl4ckAndYell0Theme \
-    OmniTheme
+    OmniTheme \
+    GboardDarkTheme
 
 PRODUCT_PACKAGES += \
     Launcher3Dark
