@@ -50,7 +50,7 @@ PRODUCT_PACKAGES += \
     SmokedGreenTheme \
     Bl4ckAndYell0Theme \
     OmniTheme \
-    GboardDarkTheme
+    GboardOmniTheme
 
 
 # for fun
