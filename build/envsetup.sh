@@ -4,7 +4,7 @@ Additional OmniROM functions:
 - breakfast:       Setup the build environment, but only list
                    devices we support.
 - brunch:          Sets up build environment using breakfast(),
-                   and then comiles using mka() against bacon target.
+                   and then comiles using mka() against cookies target.
 - mka:             Builds using SCHED_BATCH on all processors.
 - pushboot:        Push a file from your OUT dir to your phone and
                    reboots it, using absolute path.
@@ -16,7 +16,7 @@ function brunch()
 {
     breakfast $*
     if [ $? -eq 0 ]; then
-        time mka bacon
+        time mka cookies
     else
         echo "No such item in brunch menu. Try 'breakfast'"
         return 1
