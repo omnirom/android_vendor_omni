@@ -49,7 +49,8 @@ PRODUCT_PACKAGES += \
     SluttyPinkTheme \
     DarknessMeisterTheme \
     SmokedGreenTheme \
-    Bl4ckAndYell0Theme
+    Bl4ckAndYell0Theme \
+    OmniTheme
 
 
 # for fun
