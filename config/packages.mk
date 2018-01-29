@@ -59,6 +59,20 @@ PRODUCT_PACKAGES += \
     OmniTheme \
     GboardOmniTheme
 
+# Textclassifiers
+PRODUCT_PACKAGES += \
+    textclassifier.langid.model \
+    textclassifier.smartselection.bundle1 \
+    textclassifier.smartselection.ar.model \
+    textclassifier.smartselection.it.model \
+    textclassifier.smartselection.nl.model \
+    textclassifier.smartselection.pl.model \
+    textclassifier.smartselection.pt.model \
+    textclassifier.smartselection.ru.model \
+    textclassifier.smartselection.tr.model \
+    textclassifier.smartselection.zh.model \
+    textclassifier.smartselection.zh-Hant.model
+
 PRODUCT_PACKAGES += \
     Launcher3Dark
 
