@@ -50,6 +50,7 @@
 
     <!-- qs -->
     <color name="material_grey_900">@*android:color/omni_color1</color>  <!-- find a better way to do this -->
+    <color name="zen_introduction">@*android:color/omni_color1</color>
 
     <!-- Dialogs -->
     <color name="background_floating_material_dark">@*android:color/omni_color7</color> <!-- dialogs like sime settins -->
