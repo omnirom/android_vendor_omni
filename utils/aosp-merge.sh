@@ -26,8 +26,10 @@ while read path;
     do
 
     project=`echo android_${path} | sed -e 's/\//\_/g'`
+    aosp_project=${path}
     if [ "${project}" == "android_build_make" ] ; then
         project="android_build"
+        aosp_project="build"
     fi
 
     echo ""
@@ -35,28 +37,29 @@ while read path;
     echo " PROJECT: ${project} -> [ ${path}/ ]"
     echo ""
 
+    echo "Syncing local ..."
+    rm -fr $path;
+    ret=$(repo sync -d -f --force-sync ${path} 2>&1);
     cd $path;
 
-    git merge --abort;
-
-    repo sync -d .
+    # make sure that environment is clean
+    ret=$(git merge --abort 2>&1);
 
     if git branch | grep ${branch_name} > /dev/null; then
-        git branch -D ${branch_name} > /dev/null
+        ret=$(git branch -D ${branch_name} > /dev/null 2>&1)
     fi
 
+    echo "Merge with remote: https://android.googlesource.com/platform/${aosp_project} ${ref} ..."
     repo start ${branch_name} .
+    ret=$(git pull https://android.googlesource.com/platform/$aosp_project ${ref} 2>&1)
 
-    if ! git remote | grep "aosp" > /dev/null; then
-        git remote add aosp https://android.googlesource.com/platform/$path > /dev/null
+    if echo $ret | grep "CONFLICT" > /dev/null ; then
+        echo "------@@@@@@@@@@@@@@@@@@@@";
+        echo $ret;
+        echo "------@@@@@@@@@@@@@@@@@@@@";
+    else
+        echo "* ${ref} merged!"
     fi
-
-    git fetch --tags aosp
-
-    #echo "====================================================================="
-    #echo " Merging {$ref}"
-    #echo "====================================================================="
-    git merge $ref;
 
     cd - > /dev/null
 
