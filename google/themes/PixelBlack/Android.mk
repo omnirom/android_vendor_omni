@@ -1,8 +1,8 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_PACKAGE_NAME := TreskBlackTheme
-LOCAL_RRO_THEME := TreskBlackTheme
+LOCAL_PACKAGE_NAME := PixelBlackTheme
+LOCAL_RRO_THEME := PixelBlackTheme
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := $(call all-subdir-java-files)

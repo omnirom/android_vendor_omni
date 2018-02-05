@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.omnirom.theme.treskblack"
+    package="org.omnirom.theme.pixelblack"
     platformBuildVersionCode="26"
     platformBuildVersionName="8.0.0">
 
@@ -8,5 +8,5 @@
 
 
     <application android:hasCode="false"
-                 android:label="Tresk Black" />
+                 android:label="Pixel Black" />
 </manifest>
