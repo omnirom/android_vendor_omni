@@ -2,6 +2,8 @@ bionic
 build
 build/soong
 development
+external/aac
+external/chromium-webview
 external/e2fsprogs
 external/mksh
 external/tinycompress
@@ -38,6 +40,7 @@ packages/services/Telecomm
 packages/inputmethods/LatinIME
 system/bt
 system/core
+system/extras
 system/libhidl
 system/media
 system/nfc
