@@ -51,7 +51,9 @@ PRODUCT_PACKAGES += \
     Bl4ckAndYell0Theme \
     OmniTheme \
     GboardOmniTheme \
-    PixelBlackTheme
+    PixelBlackTheme \
+    FromHellTheme \
+    GboardOmniTheme
 
 
 # for fun
