@@ -7,8 +7,8 @@
     <color name="system_error">#ffaaaaaa</color>
 
     <color name="omni_text1">#ffffffff</color> <!-- text primary -->
-    <color name="omni_text2">#ffffffff</color>  <!-- text secondary -->
-    <color name="omni_text3">#ffffffff</color>  <!-- text tertiary -->
+    <color name="omni_text2">#ffF7F7F7</color>  <!-- text secondary -->
+    <color name="omni_text3">#ffF0F0F0</color>  <!-- text tertiary -->
     <color name="omni_color1">#ff000000</color> <!-- PRIMARY DARK -->
     <color name="omni_color2">#ff000000</color> <!-- PRIMARY LIGHT -->
     <color name="omni_color3">#ff4285f4</color> <!-- ACCENT  LIGHT -->
