@@ -8,7 +8,7 @@
 
     <color name="omni_text1">#ffe5ecff</color> <!-- text primary -->
     <color name="omni_text2">#B3e5ecff</color>  <!-- text secondary -->
-    <color name="omni_text3">#ff505ded</color>  <!-- text tertiary -->
+    <color name="omni_text3">#ff5e97f6</color>  <!-- text tertiary -->
     <color name="omni_color1">#ff05050A</color> <!-- PRIMARY DARK -->
     <color name="omni_color2">#ff121115</color> <!-- PRIMARY LIGHT -->
     <color name="omni_color3">#ff4285f4</color> <!-- ACCENT  LIGHT -->
