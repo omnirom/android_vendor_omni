@@ -59,7 +59,8 @@ PRODUCT_PACKAGES += \
     OmniTheme \
     FromHellTheme \
     PixelDarkTheme \
-    GboardOmniTheme
+    GboardOmniTheme \
+    ZeroZeroTheme
 
 PRODUCT_PACKAGES += \
     Launcher3Dark
