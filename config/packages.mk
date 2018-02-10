@@ -50,9 +50,10 @@ PRODUCT_PACKAGES += \
     SmokedGreenTheme \
     Bl4ckAndYell0Theme \
     OmniTheme \
-    GboardOmniTheme \
     PixelBlackTheme \
-    FromHellTheme
+    FromHellTheme \
+    GboardOmniTheme
+
 
 
 # for fun
