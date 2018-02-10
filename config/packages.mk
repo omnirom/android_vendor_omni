@@ -1,6 +1,7 @@
 # Additional apps
 PRODUCT_PACKAGES += \
     Chromium \
+    OmniStyle \
     OmniJaws \
     QuickSearchBox \
     MusicFX \
