@@ -18,7 +18,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
     ro.build.selinux=1 \
-    persist.sys.disable_rescue=true
+    persist.sys.disable_rescue=true \
+    ro.config.calibration_cad=/system/etc/calibration_cad.xml
+
 
 # Tethering - allow without requiring a provisioning app
 # (for devices that check this)
@@ -58,6 +60,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # mkshrc
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/etc/mkshrc:system/etc/mkshrc
+
+# AR
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/common/etc/calibration_cad.xml:system/etc/calibration_cad.xml
 
 # Set Pixel blue light theme on Gboard
 PRODUCT_PROPERTY_OVERRIDES += \
