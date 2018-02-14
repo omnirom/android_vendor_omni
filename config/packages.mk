@@ -53,7 +53,8 @@ PRODUCT_PACKAGES += \
     OmniTheme \
     PixelBlackTheme \
     FromHellTheme \
-    GboardOmniTheme
+    GboardOmniTheme \
+    ZeroZeroTheme
 
 
 
