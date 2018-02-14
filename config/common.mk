@@ -62,6 +62,9 @@ PRODUCT_COPY_FILES += \
 # Additional packages
 -include vendor/omni/config/packages.mk
 
+# GApps
+-include vendor/gapps/config.mk
+
 # Versioning
 -include vendor/omni/config/version.mk
 
