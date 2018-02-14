@@ -1,5 +1,7 @@
 PRODUCT_BRAND ?= omni
 
+IS_PHONE := true
+
 # bootanimation
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
