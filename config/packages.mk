@@ -8,6 +8,7 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     libcyanogen-dsp \
     Phonograph \
+    WallpaperPickerGooglePrebuilt \
     Turbo
 
 # Additional tools

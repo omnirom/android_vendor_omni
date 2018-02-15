@@ -61,6 +61,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/etc/mkshrc:system/etc/mkshrc
 
+# Set Pixel blue light theme on Gboard
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.ime.theme_id=5
+
+# Pixel sysconfig
+PRODUCT_COPY_FILES += \
+    vendor/omni/etc/sysconfig/pixel_2017.xml:system/etc/sysconfig/pixel_2017.xml \
+    vendor/omni/etc/sysconfig/pixel_2017_exclusive.xml:system/etc/sysconfig/pixel_2017_exclusive.xml        
+
 # Additional packages
 -include vendor/omni/config/packages.mk
 
