@@ -11,7 +11,6 @@
     <color name="omni_text3">#ff5e97f6</color>  <!-- text tertiary -->
     <color name="omni_text4">#deFFF59D</color>  <!-- text with "de" alpha -->
     <color name="omni_color1">#ff05050A</color> <!-- PRIMARY DARK -->
-    <color name="omni_color1">#ff05050A</color> <!-- PRIMARY DARK -->
     <color name="omni_color2">#ff121115</color> <!-- PRIMARY LIGHT -->
     <color name="omni_color3">#ff4285f4</color> <!-- ACCENT  LIGHT -->
     <color name="omni_color4">#ff5e97f6</color> <!-- ACCENT  DARK -->
