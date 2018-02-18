@@ -16,7 +16,7 @@
     <color name="omni_color4">#ff5e97f6</color> <!-- ACCENT  DARK -->
     <color name="omni_color5">#ff3367d6</color> <!-- ACCENT -->
     <color name="omni_color6">#ff4285f4</color> <!-- WIFI ICON IN DETAILS -->
-    <color name="omni_color7">#ff29282c</color> <!-- FLOATING DIALOG COLOR ON VERY DARK THEMES MAKE THIS A BIT LIGHTER -->
+    <color name="omni_color7">#ff101010</color> <!-- FLOATING DIALOG COLOR ON VERY DARK THEMES MAKE THIS A BIT LIGHTER -->
     <color name="omni_color8">#ff29282c</color> <!-- SPECIAL (CHECK WHERE THIS IS ASSIGNED) -->
     <color name="omni_color9">#e6101010</color> <!-- TOAST (NEEDS SOME ALPHA) -->
 
