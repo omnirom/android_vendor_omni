@@ -55,6 +55,7 @@ PRODUCT_PACKAGES += \
     PixelBlackTheme \
     PixelDarkTheme \
     FromHellTheme \
+    FromDeepHellTheme \
     GboardOmniTheme \
     ZeroZeroTheme
 
