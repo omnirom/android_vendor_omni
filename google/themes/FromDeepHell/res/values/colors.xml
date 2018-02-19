@@ -6,15 +6,15 @@
     <color name="user_icon_4">#ffec407a</color>
     <color name="system_error">#ffff4120</color>
 
-    <color name="omni_text1">#FFFFFDE7</color> <!-- text primary -->
-    <color name="omni_text2">#B3FFFDE7</color>  <!-- text secondary -->
-    <color name="omni_text3">#ffec4f4f</color>  <!-- text tertiary -->
-    <color name="omni_text4">#deec4f4f</color>  <!-- text with "de" alpha -->
+    <color name="omni_text1">#FFffffff</color> <!-- text primary -->
+    <color name="omni_text2">#B3ffffff</color>  <!-- text secondary -->
+    <color name="omni_text3">#ffe82626</color>  <!-- text tertiary -->
+    <color name="omni_text4">#dee21818</color>  <!-- text with "de" alpha -->
     <color name="omni_color1">#ff000000</color> <!-- PRIMARY DARK -->
     <color name="omni_color2">#ff050505</color> <!-- PRIMARY LIGHT -->
-    <color name="omni_color3">#ffe60000</color> <!-- ACCENT  LIGHT -->
-    <color name="omni_color4">#ffff3729</color> <!-- ACCENT  DARK -->
-    <color name="omni_color5">#ffe22222</color> <!-- ACCENT -->
+    <color name="omni_color3">#ffd60000</color> <!-- ACCENT  LIGHT -->
+    <color name="omni_color4">#ffd60000</color> <!-- ACCENT  DARK -->
+    <color name="omni_color5">#ffd60000</color> <!-- ACCENT -->
     <color name="omni_color6">#ffe60000</color> <!-- WIFI ICON IN DETAILS -->
     <color name="omni_color7">#ff101010</color> <!-- FLOATING DIALOG COLOR ON VERY DARK THEMES MAKE THIS A BIT LIGHTER -->
     <color name="omni_color8">#ff29282c</color> <!-- SPECIAL (CHECK WHERE THIS IS ASSIGNED) -->
