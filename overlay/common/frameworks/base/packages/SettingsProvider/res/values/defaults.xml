@@ -20,8 +20,4 @@
     <!-- Use the Google propriatery backup transport service-->
     <string name="def_backup_transport">com.google.android.gms/.backup.BackupTransportService</string>
 
-    <!-- user interface sound effects -->
-    <string name="def_low_battery_sound" translatable="false">/system/media/audio/ui/omni_lowbattery1.ogg</string>
-    <string name="def_unlock_sound" translatable="false">/system/media/audio/ui/omni_unlock_phone.ogg</string>
-    <string name="def_lock_sound" translatable="false">/system/media/audio/ui/omni_lock_phone.ogg</string>
 </resources>
