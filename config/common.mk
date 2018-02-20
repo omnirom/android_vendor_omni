@@ -63,16 +63,7 @@ PRODUCT_COPY_FILES += \
 
 # AR
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/common/etc/calibration_cad.xml:system/etc/calibration_cad.xml
-
-# Set Pixel blue light theme on Gboard
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.ime.theme_id=5
-
-# Pixel sysconfig
-PRODUCT_COPY_FILES += \
-    vendor/omni/etc/sysconfig/pixel_2017.xml:system/etc/sysconfig/pixel_2017.xml \
-    vendor/omni/etc/sysconfig/pixel_2017_exclusive.xml:system/etc/sysconfig/pixel_2017_exclusive.xml        
+    vendor/omni/prebuilt/common/etc/calibration_cad.xml:system/etc/calibration_cad.xml      
 
 # Additional packages
 -include vendor/omni/config/packages.mk
