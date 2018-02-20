@@ -80,6 +80,9 @@ PRODUCT_COPY_FILES += \
 # GApps
 -include vendor/gapps/config.mk
 
+# Tresk
+-include vendor/tresk/config.mk
+
 # Versioning
 -include vendor/omni/config/version.mk
 
