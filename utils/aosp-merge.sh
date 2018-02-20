@@ -14,50 +14,42 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-echo -e "Enter the AOSP ref to merge"
-read ref
-
-branch_name=${ref}"-merge"
-# echo $branch_name
+echo -e "Enter the AOSP ref to merge";
+read ref;
 
 cd ../../../
 
 while read path;
     do
 
-    project=`echo android_${path} | sed -e 's/\//\_/g'`
-    if [ "${project}" == "android_build_make" ] ; then
-        project="android_build"
+    project=`echo android_${path} | sed -e 's/\//\_/g'`;
+    aosp_project=${path};
+    if [ "${path}" == "build" ] ; then
+        path="build/make";
     fi
 
-    echo ""
-    echo "====================================================================="
-    echo " PROJECT: ${project} -> [ ${path}/ ]"
-    echo ""
+    echo "";
+    echo "=====================================================================";
+    echo " PROJECT: ${project} -> [ ${path}/ ]";
+    echo "";
 
+    rm -fr $path;
+    echo " -> repo sync ${path}";
+    ret=$(repo sync -d -f --force-sync ${path} 2>&1);
     cd $path;
 
-    git merge --abort;
+    # make sure that environment is clean
+    ret=$(git merge --abort 2>&1);
 
-    repo sync -d .
+    echo " -> Merging remote: https://android.googlesource.com/platform/$aosp_project ${ref}";
+    ret=$(git pull https://android.googlesource.com/platform/$aosp_project ${ref} 2>&1);
 
-    if git branch | grep ${branch_name} > /dev/null; then
-        git branch -D ${branch_name} > /dev/null
+    if echo $ret | grep "CONFLICT (content)" > /dev/null ; then
+        echo " -> WARNING!: MERGE CONFLICT";
+    else
+        echo " -> DONE!";
     fi
 
-    repo start ${branch_name} .
+    cd - > /dev/null;
 
-    if ! git remote | grep "aosp" > /dev/null; then
-        git remote add aosp https://android.googlesource.com/platform/$path > /dev/null
-    fi
-
-    git fetch --tags aosp
-
-    #echo "====================================================================="
-    #echo " Merging {$ref}"
-    #echo "====================================================================="
-    git merge $ref;
-
-    cd - > /dev/null
-
-done < vendor/omni/utils/aosp-forked-list
+done < vendor/omni/utils/aosp-forked-list;

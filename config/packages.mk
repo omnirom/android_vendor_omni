@@ -1,12 +1,14 @@
 # Additional apps
 PRODUCT_PACKAGES += \
     Chromium \
+    OmniStyle \
     OmniJaws \
     QuickSearchBox \
     MusicFX \
     audio_effects.conf \
     libcyanogen-dsp \
     Phonograph \
+    WallpaperPickerGooglePrebuilt \
     Turbo
 
 # Additional tools
@@ -52,7 +54,11 @@ PRODUCT_PACKAGES += \
     OmniTheme \
     GboardOmniTheme \
     PixelBlackTheme \
-    FromHellTheme
+    PixelDarkTheme \
+    FromHellTheme \
+    FromDeepHellTheme \
+    GboardOmniTheme \
+    ZeroZeroTheme
 
 
 # for fun

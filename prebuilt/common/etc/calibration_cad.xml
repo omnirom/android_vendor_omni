@@ -1,0 +1,59 @@
+<!-- This calibration file was created by fidning an average of the factory
+    calibration for 12 different marlin devices -->
+<rig>
+    <device_id>0</device_id>
+    <camera>
+        <camera_model name="" index="3" type="calibu_fu_fv_u0_v0_k1_k2_k3">
+            <width>320</width>
+            <height>180</height>
+            <params> [260.215;  260.277;  157.511;  86.24160000000001;  0.23834;  -0.688656;  0.664354] </params>
+        </camera_model>
+        <pose />
+    </camera>
+    <camera>
+        <camera_model name="Narrow" index="1" type="calibu_fu_fv_u0_v0_k1_k2_k3">
+            <width>1920</width>
+            <height>1080</height>
+            <params> [1436.454;  1436.235;   961.194;    544.107;  0.0226009; -0.0657141;  0.0971462] </params>
+        </camera_model>
+        <pose />
+    </camera>
+    <camera>
+        <camera_model name="MotionTracking" index="0" type="calibu_fu_fv_u0_v0_k1_k2_k3">
+            <rolling_shutter_readout_time>0.032</rolling_shutter_readout_time>
+            <rolling_shutter_direction>vertical</rolling_shutter_direction>
+            <width>640</width>
+            <height>480</height>
+            <params> [478.818;    478.745;    320.398;    241.369;  0.0226009; -0.0657141;  0.0971462] </params>
+        </camera_model>
+        <pose />
+    </camera>
+
+    <intrinsic_imu_calibration name="" imu_id="100" type="linear_imu_sg_mg_sa_ma_gqa">
+      <b_w_b_a> [-3.07369782e-04;   4.28678044e-04;   9.12135974e-05;  -1.85969238e-02; 2.03411118e-01;   5.32338456e-02] </b_w_b_a>
+      <intrinsics> [1.010190509929088; 0.99952874560230054; 0.99875073981115248; 0.00020295094237530545; -0.0010146324225753722; -0.0015288737491827727; 1.0037397346218304; 0.9998363203309959; 1.0086648122514161; -2.7183776773623861e-05; -0.011104403267733234; 0.0017284620688527564; 9.30533440e-04;   4.04378542e-03;  -2.00236441e-03;   9.99989386e-01] </intrinsics>
+        <gyro_noise_sigma>0.00053088400000000002</gyro_noise_sigma>
+        <gyro_bias_sigma>0.000141254</gyro_bias_sigma>
+        <accel_noise_sigma>0.0048836499999999998</accel_noise_sigma>
+        <accel_bias_sigma>0.012589299999999999</accel_bias_sigma>
+    </intrinsic_imu_calibration>
+
+    <extrinsic_calibration name="Device_T_OpenGl" index="0" frame_A_id="40" frame_B_id="42">
+        <A_T_B> [0, 1, 0, 0;  -1, 0, 0, 0;  0, 0, 1, 0] </A_T_B>
+    </extrinsic_calibration>
+    <extrinsic_calibration name="Imu_T_Device" index="0" frame_A_id="100" frame_B_id="40">
+        <A_T_B> [0, -1, 0, 0;  1, 0, 0, 0;  0, 0, 1, 0] </A_T_B>
+    </extrinsic_calibration>
+    <extrinsic_calibration name="Imu_T_3" index="0" frame_A_id="100" frame_B_id="3">
+      <A_q_B> [-0.99996425050397042; 0.00011372; -0.00485282; 0.00692351] </A_q_B>
+      <A_p_B> [-0.008424721099186037;  0.007710053076859457;  -0.006284916910266555] </A_p_B>
+    </extrinsic_calibration>
+    <extrinsic_calibration name="Imu_T_Narrow" index="0" frame_A_id="100" frame_B_id="1">
+      <A_q_B> [-0.99996425050397042; 0.00011372; -0.00485282; 0.00692351] </A_q_B>
+      <A_p_B> [-0.008424721099186037;  0.007710053076859457;  -0.006284916910266555] </A_p_B>
+    </extrinsic_calibration>
+    <extrinsic_calibration name="Imu_T_MotionTracking" index="0" frame_A_id="100" frame_B_id="0">
+      <A_q_B> [-0.99996425050397042; 0.00011372; -0.00485282; 0.00692351] </A_q_B>
+      <A_p_B> [-0.008424721099186037;  0.007710053076859457;  -0.006284916910266555] </A_p_B>
+    </extrinsic_calibration>
+</rig>
