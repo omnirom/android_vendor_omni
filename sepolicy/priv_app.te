@@ -6,6 +6,10 @@ allow priv_app fuse_device:dir { search r_file_perms };
 allow priv_app fuse_device:file r_file_perms;
 allow priv_app fuse_device:filesystem { getattr };
 
+# posix-type fs
+allow priv_app sdcard_posix:dir r_dir_perms;
+allow priv_app sdcard_posix:file rw_file_perms;
+
 # MatLog calls dmesg
 allow priv_app kernel:system syslog_read;
 

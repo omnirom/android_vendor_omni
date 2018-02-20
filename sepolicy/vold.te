@@ -23,3 +23,6 @@ allow vold fuse_device:filesystem unmount;
 
 allow vold fsck_exec:lnk_file { read };
 
+# Posix sdcard fs relabeling
+allow vold labeledfs:filesystem { relabelfrom relabelto };
+allow vold sdcard_posix:filesystem { relabelfrom relabelto };
