@@ -18,8 +18,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
     ro.build.selinux=1 \
-    persist.sys.disable_rescue=true \
-    ro.config.calibration_cad=/system/etc/calibration_cad.xml
+    persist.sys.disable_rescue=true 
 
 
 # Tethering - allow without requiring a provisioning app
@@ -53,11 +52,7 @@ PRODUCT_COPY_FILES += \
 
 # mkshrc
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/etc/mkshrc:system/etc/mkshrc
-
-# AR
-PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/common/etc/calibration_cad.xml:system/etc/calibration_cad.xml      
+    vendor/omni/prebuilt/etc/mkshrc:system/etc/mkshrc    
 
 # Additional packages
 -include vendor/omni/config/packages.mk
