@@ -73,7 +73,8 @@
 
     <color name="notification_material_background_color">@*android:color/omni_color7</color>
     <color name="notification_default_color">@*android:color/omni_text1</color> <!-- Gray 600 -->
-    <color name="notification_action_list">@*android:color/omni_color7</color>
+    <color name="notification_action_list">@*android:color/omni_color1</color>
+    <color name="notification_action_list_dark">@*android:color/omni_color2</color>
     <color name="notification_primary_text_color_light">@*android:color/omni_text1</color>
     <color name="notification_secondary_text_color_light">@*android:color/omni_text2</color>
     <color name="notification_progress_background_color">@*android:color/omni_text2</color>
