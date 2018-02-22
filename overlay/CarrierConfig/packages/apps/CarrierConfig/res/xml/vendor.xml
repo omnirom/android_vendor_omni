@@ -1466,9 +1466,6 @@
     <carrier_config mcc="404" mnc="27">
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
-    <carrier_config mcc="404" mnc="31">
-        <boolean name="carrier_volte_available_bool" value="true" />
-    </carrier_config>
     <carrier_config mcc="404" mnc="43">
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
@@ -1520,5 +1517,33 @@
     <carrier_config mcc="293" mnc="41">
        <boolean name="carrier_wfc_ims_available_bool" value="true" />
        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+	<carrier_config mcc="208" mnc="10">
+        	<boolean name="carrier_vt_available_bool" value="true" />
+	        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        	<boolean name="editable_wfc_mode_bool" value="true" />
+	        <boolean name="video_call_use_ext" value="false" />
+	        <boolean name="use_custom_video_ui" value="true" />
+	        <boolean name="config_hide_preview_in_vt_confcall" value="true" />
+	        <boolean name="config_carrier_specific_network_type_display" value="true" />
+	        <boolean name="remove_modify_call_capability" value="true" />
+	        <boolean name="transmit_static_image" value="true" />
+	        <boolean name="show_static_image_ui" value="true" />
+	        <boolean name="config_dds_switch_alert_dialog_supported" value="true" />
+	        <boolean name="show_video_quality_toast" value="true" />
+	        <boolean name="show_call_session_event_toast" value="false" />
+	        <boolean name="show_data_usage_toast" value="false" />
+	        <boolean name="show_video_quality_ui" value="true" />
+	        <boolean name="vowifi_call_quality" value="true" />
+	        <boolean name="carrier_volte_available_bool" value="true" />
+	        <boolean name="carrier_volte_default_enabled_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="208" mnc="01" >
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="208" mnc="20" >
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
 </carrier_config_list>
