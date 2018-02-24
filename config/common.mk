@@ -1,4 +1,4 @@
-PRODUCT_BRAND ?= pixeladdict
+PRODUCT_BRAND ?= omni
 
 # bootanimation
 PRODUCT_COPY_FILES += \

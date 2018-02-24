@@ -51,7 +51,7 @@ function breakfast()
             if [ -z "$variant" ]; then
                 variant="userdebug"
             fi
-            lunch pixeladdict_$target-$variant
+            lunch omni_$target-$variant
         fi
     fi
     return $?
