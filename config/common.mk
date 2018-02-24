@@ -83,6 +83,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/etc/mkshrc:system/etc/mkshrc
 
+# whitelist packages for location providers not in system
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.services.whitelist.packagelist=com.google.android.gms
+
 # Additional packages
 -include vendor/omni/config/packages.mk
 
