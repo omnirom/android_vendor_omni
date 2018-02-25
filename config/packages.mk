@@ -1,5 +1,6 @@
 # Additional apps
 PRODUCT_PACKAGES += \
+    OpenDelta \
     Chromium \
     OmniStyle \
     OmniJaws \
