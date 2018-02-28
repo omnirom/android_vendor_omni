@@ -9,7 +9,8 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     libcyanogen-dsp \
     Phonograph \
-    Turbo
+    Turbo \
+    OmniChange
 
 # Additional tools
 PRODUCT_PACKAGES += \
