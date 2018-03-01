@@ -44,4 +44,6 @@
     <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
     <bool name="config_dozeAlwaysOnDisplayEnabledDefault">false</bool>
+
+    <string name="def_wireless_charging_started_sound" translatable="false">/system/media/audio/ui/omni_charge_start.ogg</string>
 </resources>

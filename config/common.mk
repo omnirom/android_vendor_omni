@@ -72,7 +72,8 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/sounds/omni_notification1.ogg:system/media/audio/notifications/omni_notification1.ogg \
     vendor/omni/prebuilt/sounds/omni_lowbattery1.ogg:system/media/audio/ui/omni_lowbattery1.ogg \
     vendor/omni/prebuilt/sounds/omni_lock_phone.ogg:system/media/audio/ui/omni_lock_phone.ogg \
-    vendor/omni/prebuilt/sounds/omni_unlock_phone.ogg:system/media/audio/ui/omni_unlock_phone.ogg
+    vendor/omni/prebuilt/sounds/omni_unlock_phone.ogg:system/media/audio/ui/omni_unlock_phone.ogg \
+    vendor/omni/prebuilt/sounds/omni_charge_start.ogg:system/media/audio/ui/omni_charge_start.ogg
 
 # mkshrc
 PRODUCT_COPY_FILES += \
