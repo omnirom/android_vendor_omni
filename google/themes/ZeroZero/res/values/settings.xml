@@ -20,7 +20,7 @@
         <item name="android:textColorHint">@*android:color/omni_color3</item>
         <item name="android:textColorAlertDialogListItem">@*android:color/omni_text3</item>
         <item name="android:colorControlNormal">@*android:color/omni_color4</item>
-        <item name="android:colorControlHighlight">@*android:color/omni_color4</item>
+        <item name="android:colorControlHighlight">@*android:color/omni_color7</item>
         <item name="android:colorControlActivated">@*android:color/omni_color5</item>
 
     </style>
