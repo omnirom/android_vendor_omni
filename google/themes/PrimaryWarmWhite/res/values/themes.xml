@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Variant of the DeviceDefault (light) theme that has a solid (opaque) action bar with an
+    inverse color profile. -->
+    <style name="Theme.DeviceDefault.Light.DarkActionBar" parent="@*android:style/Theme.Material.Light.DarkActionBar">
+	<!-- Color palette -->
+	<item name="android:colorPrimary">@*android:color/omni_color2</item>
+	<item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+	<item name="android:colorSecondary">@*android:color/omni_color1</item>
+	<item name="android:colorAccent">@*android:color/omni_color5</item>
+
+	<item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+	<item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+	<item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+	<item name="android:textColorHint">@*android:color/omni_color3</item>
+	<item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+
+    </style>
+    <!-- Variant of {@link #Theme_DeviceDefault_Light} with no action bar -->
+    <style name="Theme.DeviceDefault.Light.NoActionBar" parent="@*android:style/Theme.Material.NoActionBar">
+	<!-- package installer acitivity example -->
+        <item name="android:colorBackground">@*android:color/omni_color7</item>
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+
+    <!-- Variant of {@link #Theme_DeviceDefault_Light} with no action bar and no status bar.
+	 This theme sets {@link android.R.attr#windowFullscreen} to true.  -->
+    <style name="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" parent="@*android:style/Theme.Material.NoActionBar.Fullscreen">
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <!-- Variant of {@link #Theme_DeviceDefault_Light} with no action bar and no status bar
+    and extending in to overscan region.  This theme
+    sets {@link android.R.attr#windowFullscreen} and {@link android.R.attr#windowOverscan}
+    to true. -->
+    <style name="Theme.DeviceDefault.Light.NoActionBar.Overscan" parent="@*android:style/Theme.Material.NoActionBar.Overscan">
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <!-- Variant of {@link #Theme_DeviceDefault_Light} that has no title bar and translucent
+	 system decor.  This theme sets {@link android.R.attr#windowTranslucentStatus} and
+	 {@link android.R.attr#windowTranslucentNavigation} to true. -->
+    <style name="Theme.DeviceDefault.Light.NoActionBar.TranslucentDecor" parent="@*android:style/Theme.Material.NoActionBar.TranslucentDecor">
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <!-- DeviceDefault light theme for dialog windows and activities. This changes the window to be
+    floating (not fill the entire screen), and puts a frame around its contents. You can set this
+    theme on an activity if you would like to make an activity that looks like a Dialog.-->
+    <style name="Theme.DeviceDefault.Light.Dialog" parent="@*android:style/Theme.Material.Dialog">
+	<item name="android:windowTitleStyle">@*android:style/DialogWindowTitle.DeviceDefault</item>
+	<item name="android:windowAnimationStyle">@*android:style/Animation.DeviceDefault.Dialog</item>
+
+	<item name="android:buttonBarStyle">@*android:style/DeviceDefault.ButtonBar.AlertDialog</item>
+	<item name="android:borderlessButtonStyle">@*android:style/Widget.DeviceDefault.Button.Borderless.Small</item>
+
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <!-- Variant of {@link #Theme_DeviceDefault_Light_Dialog} that has a nice minimum width for a
+    regular dialog. -->
+    <style name="Theme.DeviceDefault.Light.Dialog.MinWidth" parent="@*android:style/Theme.Material.Dialog.MinWidth">
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+
+    </style>
+
+     <!-- Variant of {@link #Theme_DeviceDefault_Light_Dialog} without an action bar -->
+    <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar" parent="@*android:style/Theme.Material.Dialog.NoActionBar">
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <!-- Variant of {@link #Theme_DeviceDefault_Light_Dialog_NoActionBar} that has a nice minimum
+    width for a regular dialog. -->
+    <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar.MinWidth" parent="@*android:style/Theme.Material.Dialog.NoActionBar.MinWidth">
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <!-- Variant of Theme.DeviceDefault.Dialog that has a fixed size. -->
+    <style name="Theme.DeviceDefault.Light.Dialog.FixedSize" parent="@*android:style/Theme.Material" >
+	<item name="*android:windowFixedWidthMajor">@*android:dimen/dialog_fixed_width_major</item>
+	<item name="*android:windowFixedWidthMinor">@*android:dimen/dialog_fixed_width_minor</item>
+	<item name="*android:windowFixedHeightMajor">@*android:dimen/dialog_fixed_height_major</item>
+	<item name="*android:windowFixedHeightMinor">@*android:dimen/dialog_fixed_height_minor</item>
+
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <!-- Variant of Theme.DeviceDefault.Dialog.NoActionBar that has a fixed size. -->
+    <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar.FixedSize" parent="@*android:style/Theme.Material" >
+	<item name="*android:windowFixedWidthMajor">@*android:dimen/dialog_fixed_width_major</item>
+	<item name="*android:windowFixedWidthMinor">@*android:dimen/dialog_fixed_width_minor</item>
+	<item name="*android:windowFixedHeightMajor">@*android:dimen/dialog_fixed_height_major</item>
+	<item name="*android:windowFixedHeightMinor">@*android:dimen/dialog_fixed_height_minor</item>
+
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+
+    </style>
+
+    <!-- DeviceDefault light theme for a window that will be displayed either full-screen on smaller
+    screens (small, normal) or as a dialog on larger screens (large, xlarge). -->
+    <style name="Theme.DeviceDefault.Light.DialogWhenLarge" parent="@*android:style/Theme.Material.DialogWhenLarge">
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <!-- DeviceDefault light theme for a window without an action bar that will be displayed either
+    full-screen on smaller screens (small, normal) or as a dialog on larger screens (large,
+    xlarge). -->
+    <style name="Theme.DeviceDefault.Light.DialogWhenLarge.NoActionBar" parent="@*android:style/Theme.Material.DialogWhenLarge.NoActionBar">
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <!-- DeviceDefault light theme for a presentation window on a secondary display. -->
+    <style name="Theme.DeviceDefault.Light.Dialog.Presentation" parent="@*android:style/Theme.Material.Dialog.Presentation">
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <!-- DeviceDefault light theme for panel windows. This removes all extraneous window
+    decorations, so you basically have an empty rectangle in which to place your content. It makes
+    the window floating, with a transparent background, and turns off dimming behind the window. -->
+    <style name="Theme.DeviceDefault.Light.Panel" parent="@*android:style/Theme.Material.Panel">
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <style name="Theme.DeviceDefault.Light.Dialog.Alert" parent="@*android:style/Theme.Material.Dialog.Alert">
+	<item name="android:windowTitleStyle">@*android:style/DialogWindowTitle.DeviceDefault</item>
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <style name="Theme.DeviceDefault.Light.SearchBar" parent="@*android:style/Theme.Material.SearchBar">
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <style name="Theme.DeviceDefault.Light.Voice" parent="@*android:style/Theme.Material.Voice">
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <!-- Variant of {@link #Theme_DeviceDefault_Settings_Dark} with no action bar -->
+    <style name="Theme.DeviceDefault.Settings.Dark.NoActionBar" parent="@*android:style/Theme.Material.NoActionBar">
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <style name="Theme.DeviceDefault.Settings.Dialog" parent="@*android:style/Theme.Material.Settings.Dialog">
+        <item name="android:colorBackground">@*android:color/omni_color7</item>
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <style name="Theme.DeviceDefault.Settings.DialogWhenLarge" parent="@*android:style/Theme.Material.Settings.DialogWhenLarge">
+        <item name="android:colorBackground">@*android:color/omni_color7</item>
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <style name="Theme.DeviceDefault.Settings.Dialog.Alert" parent="@*android:style/Theme.Material.Settings.Dialog.Alert">
+	<!-- darkobas -->
+	<item name="android:colorBackgroundFloating">@*android:color/omni_color7</item>
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <style name="Theme.DeviceDefault.Settings.Dialog.NoActionBar" parent="@*android:style/Theme.DeviceDefault.Dialog.NoActionBar"/>
+
+    <!-- Theme used for the intent picker activity. -->
+    <style name="Theme.DeviceDefault.Resolver" parent="@*android:style/Theme.Material">
+	<item name="android:windowEnterTransition">@empty</item>
+	<item name="android:windowExitTransition">@empty</item>
+	<item name="android:windowIsTranslucent">true</item>
+	<item name="android:windowNoTitle">true</item>
+	<item name="android:windowBackground">@*android:color/transparent</item>
+	<item name="android:backgroundDimEnabled">true</item>
+	<item name="android:statusBarColor">@*android:color/transparent</item>
+	<item name="android:windowContentOverlay">@null</item>
+	<item name="android:colorControlActivated">?*android:attr/colorControlHighlight</item>
+	<item name="android:listPreferredItemPaddingStart">?*android:attr/dialogPreferredPadding</item>
+	<item name="android:listPreferredItemPaddingEnd">?*android:attr/dialogPreferredPadding</item>
+
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <!-- @hide Theme overlay that inherits from material actionbar,  and use accent color for
+             primary text -->
+    <style name="ThemeOverlay.DeviceDefault.ActionBar.Accent" parent="@*android:style/ThemeOverlay.Material.ActionBar">
+        <item name="android:textColorPrimary">@*android:color/btn_colored_borderless_text_material</item>
+    </style>
+
+    <!-- @hide Theme overlay for a light popup in action bar -->
+    <style name="ThemeOverlay.DeviceDefault.Popup.Light" parent="@*android:style/ThemeOverlay.Material" />
+
+    <style name="ThemeOverlay.DeviceDefault.Accent"  parent="@*android:style/Theme.Material" >
+        <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
+    </style>
+
+    <style name="ThemeOverlay.DeviceDefault.Accent.Light" parent="@*android:style/Theme.Material" >
+        <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
+    </style>
+
+    <style name="ThemeOverlay.DeviceDefault.Dark.ActionBar.Accent" parent="*android:style/ThemeOverlay.Material.Dark.ActionBar">
+        <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
+    </style>
+
+    <style name="Widget.DeviceDefault.Light.CheckedTextView" parent="*android:style/Widget.Material.CheckedTextView" />
+
+    <style name="Widget.DeviceDefault.Light.EditText" parent="*android:style/Widget.Material.EditText" />
+</resources>

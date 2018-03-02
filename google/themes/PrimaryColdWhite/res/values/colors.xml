@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="omni_theme_color">@color/omni_color1</color>
+    <color name="user_icon_1">#ffff367c</color>
+    <color name="user_icon_2">#ffff4c8b</color>
+    <color name="user_icon_3">#ffff6299</color>
+    <color name="user_icon_4">#ffff6299</color>
+    <color name="system_error">#ffff4120</color>
+
+    <color name="omni_text1">#ff252525</color> <!-- text primary -->
+    <color name="omni_text2">#b3252525</color>  <!-- text secondary -->
+    <color name="omni_text3">#b3252525</color>  <!-- text tertiary -->
+    <color name="omni_text4">#de252525</color>  <!-- text toast -->
+    <color name="omni_color1">#ffe0e5e5</color> <!-- PRIMARY DARK -->
+    <color name="omni_color2">#fff9ffff</color> <!-- PRIMARY LIGHT -->
+    <color name="omni_color6">#b3050505</color> <!-- WIFI ICON IN DETAILS -->
+    <color name="omni_color7">#fff9ffff</color> <!-- FLOATING DIALOG COLOR ON VERY DARK THEMES MAKE THIS A BIT LIGHTER -->
+    <color name="omni_color8">#fff9fcff</color> <!-- SPECIAL (CHECK WHERE THIS IS ASSIGNED) -->
+    <color name="omni_color9">#e6f7fcff</color> <!-- TOAST (NEEDS SOME ALPHA) -->
+
+    <!-- PRIMARY LIGHT -->
+    <color name="condition_card_background">@*android:color/omni_color2</color>
+    <color name="primary_device_default_settings_light">@*android:color/omni_color2</color>
+    <color name="secondary_material_settings_light">@*android:color/omni_color2</color>
+
+    <!-- PRIMARY_DARK -->
+    <color name="primary_dark_material_settings_light">@*android:color/omni_color1</color> <!-- settings statusbar -->
+    <color name="primary_dark_device_default_settings_light">@*android:color/omni_color1</color>
+    <color name="primary_material_settings_light">@*android:color/omni_color1</color>
+
+    <color name="suggestion_condition_background">@*android:color/omni_color1</color>
+    <color name="secondary_device_default_settings_light">@*android:color/omni_color1</color>  <!-- settings entity, ie battery top view background -->
+    <color name="primary_device_default_settings">@*android:color/omni_color1</color> <!-- QS -->
+
+    <color name="dialog_background_material">@*android:color/omni_color1</color>
+
+    <!-- specials -->
+    <color name="btn_colored_text_material">@*android:color/omni_color2</color><!-- example: Uninstall button in app manager -->
+    <color name="global_wifi_details_icon_color">@*android:color/omni_color6</color> <!-- settings/wifi/details iconsy -->
+
+    <color name="chooser_service_row_background_color">@*android:color/omni_color1</color> <!-- resolver -->
+<!--    <color name="primary_text_inverse_when_activated_material">#a0989898</color> --><!-- very rare -->
+    <color name="primary_text_disable_only_material_dark">@*android:color/omni_text3</color> <!-- display/font or bt details -->
+
+    <!-- Dialogs -->
+    <color name="background_floating_material_dark">@*android:color/omni_color7</color> <!-- dialogs like sime settins -->
+
+    <color name="zen_introduction">@*android:color/omni_color1</color>
+
+</resources>
