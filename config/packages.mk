@@ -61,6 +61,12 @@ PRODUCT_PACKAGES += \
     GboardOmniTheme \
     ZeroZeroTheme
 
+PRODUCT_PACKAGES += \
+    SluttyPinkAccent \
+    SluttyPinkPrimary \
+    NotificationsDark \
+    DeepOrangeAccent
+
 # Textclassifiers
 PRODUCT_PACKAGES += \
     textclassifier.langid.model \
