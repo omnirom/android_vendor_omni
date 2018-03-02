@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Notifications -->
+    <color name="notification_legacy_background_color">@*android:color/omni_color7</color>
+    <color name="notification_material_background_dimmed_color">@*android:color/omni_color1</color>
+    <color name="notification_material_background_low_priority_color">@*android:color/omni_color2</color>
+    <color name="notification_divider_color">@*android:color/omni_color4</color>
+    <color name="notification_shade_background_color">@*android:color/omni_color1</color>
+    <color name="notification_ripple_untinted_color">@*android:color/omni_color4</color>
+    <color name="notification_ripple_color_low_priority">@*android:color/omni_color3</color>
+    <color name="notification_ripple_tinted_color">@*android:color/omni_color5</color>
+    <color name="notification_gear_color">@*android:color/omni_color6</color>
+    <color name="notification_guts_bg_color">@*android:color/omni_color7</color>
+    
+    <color name="notification_material_background_color">@*android:color/omni_color7</color>
+    <color name="notification_default_color">@*android:color/omni_text1</color> <!-- Gray 600 -->
+    <color name="notification_action_list">@*android:color/omni_color1</color>
+    <color name="notification_action_list_dark">@*android:color/omni_color2</color>
+    <color name="notification_primary_text_color_light">@*android:color/omni_text1</color>
+    <color name="notification_secondary_text_color_light">@*android:color/omni_text2</color>
+    <color name="notification_progress_background_color">@*android:color/omni_text2</color>
+    <color name="notification_snooze_text">@*android:color/omni_text1</color>
+    <color name="notification_text_color1">@*android:color/omni_text1</color>    
+</resources>
