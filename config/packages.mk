@@ -61,6 +61,27 @@ PRODUCT_PACKAGES += \
     GboardOmniTheme \
     ZeroZeroTheme
 
+PRODUCT_PACKAGES += \
+    NotificationsDark \
+    NotificationsLight
+
+PRODUCT_PACKAGES += \
+    SluttyPinkAccent \
+    PixelAccent \
+    GoldenShowerAccent \
+    DeepOrangeAccent \
+    OmniAccent \
+    WhiteAccent \
+    TealAccent
+
+PRODUCT_PACKAGES += \
+    AlmostBlackPrimary \
+    BlackPrimary \
+    OmniPrimary \
+    DarkBluePrimary \
+    DeepBlackPrimary \
+    WhitePrimary
+
 # Textclassifiers
 PRODUCT_PACKAGES += \
     textclassifier.langid.model \
