@@ -19,10 +19,10 @@ endif
 endif
 
 # Apply it to build.prop
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.modversion=OmniROM-$(ROM_VERSION) \
     ro.omni.version=$(ROM_VERSION)
 
 ROM_FINGERPRINT := OmniROM/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date +%Y%m%d.%H:%M)
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.omni.fingerprint=$(ROM_FINGERPRINT)
