@@ -20,5 +20,7 @@
     <color name="notification_secondary_text_color_light">@*android:color/omni_text2</color>
     <color name="notification_progress_background_color">@*android:color/omni_text2</color>
     <color name="notification_snooze_text">@*android:color/omni_text1</color>
-    <color name="notification_text_color1">@*android:color/omni_text1</color>    
+    <color name="notification_text_color1">@*android:color/omni_text1</color>
+
+    <color name="omni_theme_color">@*android:color/omni_color7</color>
 </resources>
