@@ -47,19 +47,33 @@ PRODUCT_BOOT_JARS += telephony-ext
 
 # Themes
 PRODUCT_PACKAGES += \
-    Stock \
-    SluttyPinkTheme \
-    DarknessMeisterTheme \
-    SmokedGreenTheme \
-    Bl4ckAndYell0Theme \
-    OmniTheme \
-    GboardOmniTheme \
-    PixelBlackTheme \
-    PixelDarkTheme \
-    FromHellTheme \
-    FromDeepHellTheme \
-    GboardOmniTheme \
-    ZeroZeroTheme
+    GboardOmniTheme
+
+PRODUCT_PACKAGES += \
+    NotificationsDark \
+    NotificationsLight \
+    NotificationsPrimary
+
+PRODUCT_PACKAGES += \
+    AccentSluttyPink \
+    AccentPixel \
+    AccentGoldenShower \
+    AccentDeepOrange \
+    AccentOmni \
+    AccentWhite \
+    AccentTeal \
+    AccentFromHell \
+    AccentBlueMonday \
+    AccentSmokingGreen
+
+PRODUCT_PACKAGES += \
+    PrimaryAlmostBlack \
+    PrimaryBlack \
+    PrimaryOmni \
+    PrimaryWhite \
+    PrimaryColdWhite \
+    PrimaryWarmWhite \
+    PrimaryDarkBlue
 
 # Textclassifiers
 PRODUCT_PACKAGES += \

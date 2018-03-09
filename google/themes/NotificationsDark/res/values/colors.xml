@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    
+    <!-- Notifications -->
+    <color name="notification_legacy_background_color">#ff29282c</color>
+    <color name="notification_material_background_dimmed_color">#ff05050A</color>
+    <color name="notification_material_background_low_priority_color">#ff121115</color>
+    <color name="notification_divider_color">#ffe0e0e0</color>
+    <color name="notification_shade_background_color">#ff05050A</color>
+    <color name="notification_ripple_untinted_color">#ffe0e0e0</color>
+    <color name="notification_ripple_color_low_priority">#fff9f9f9</color>
+    <color name="notification_ripple_tinted_color">#fffefefe</color>
+    <color name="notification_gear_color">#ffFFFF00</color>
+    <color name="notification_guts_bg_color">#ff29282c</color>
+
+    <color name="notification_material_background_color">#ff29282c</color>
+    <color name="notification_default_color">#FFFFFDE7</color> <!-- Gray 600 -->
+    <color name="notification_action_list">#ff05050A</color>
+    <color name="notification_action_list_dark">#ff121115</color>
+    <color name="notification_primary_text_color_light">#FFFFFDE7</color>
+    <color name="notification_secondary_text_color_light">#B3FFFDE7</color>
+    <color name="notification_progress_background_color">#B3FFFDE7</color>
+    <color name="notification_snooze_text">#FFFFFDE7</color>
+    <color name="notification_text_color1">#FFFFFDE7</color>
+
+    <color name="omni_theme_color">#ff29282c</color>
+</resources>
