@@ -151,3 +151,18 @@ function cafremote()
     echo "Remote 'caf' created"
 }
 
+# Enable SD-LLVM if available
+if [ -d $(gettop)/vendor/qcom/sdclang ]; then
+    case `uname -s` in
+        Darwin)
+            # Darwin is not supported yet
+            ;;
+        *)
+            export SDCLANG=true
+            export SDCLANG_PATH=$(gettop)/vendor/qcom/sdclang/4.0/bin
+            export SDCLANG_PATH_2=$(gettop)/vendor/qcom/sdclang/4.0.2/prebuilt/linux-x86_64/bin
+            export SDCLANG_LTO_DEFS=$(gettop)/vendor/omni/build/tasks/sdllvm-lto-defs.mk
+            export SDCLANG_CONFIG="vendor/omni/build/tasks/sdclang.json"
+            ;;
+    esac
+fi
