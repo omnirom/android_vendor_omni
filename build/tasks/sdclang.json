@@ -1,0 +1,114 @@
+{
+    "default": {
+        "SDCLANG": false,
+        "SDCLANG_PATH": "vendor/qcom/sdclang/llvm-arm-toolchain-ship/3.9/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/sdclang/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    },
+    "msmnile": {
+        "SDCLANG": true,
+        "SDCLANG_PATH": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/3.9/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    },
+    "msm8998": {
+        "SDCLANG": true,
+        "SDCLANG_PATH": "vendor/qcom/sdclang/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/sdclang/llvm-arm-toolchain-ship/4.0.2//prebuilt/linux-x86_64/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    },
+    "apq8098_latv": {
+        "SDCLANG": true,
+        "SDCLANG_PATH": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/3.9/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    },
+    "msm8998_32": {
+        "SDCLANG": false,
+        "SDCLANG_PATH": "vendor/qcom/sdclang/llvm-arm-toolchain-ship/3.9/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/sdclang/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    },
+    "sdm845": {
+        "SDCLANG": true,
+        "SDCLANG_PATH": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/3.9/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    },
+    "sdm660_64": {
+        "SDCLANG": true,
+        "SDCLANG_PATH": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/3.9/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    },
+    "sdm660_32": {
+        "SDCLANG": true,
+        "SDCLANG_PATH": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/3.9/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    },
+    "sdm630_64": {
+        "SDCLANG": true,
+        "SDCLANG_PATH": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/3.9/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    },
+    "sdm630_32": {
+        "SDCLANG": true,
+        "SDCLANG_PATH": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/3.9/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    },
+    "sdm670": {
+        "SDCLANG": true,
+        "SDCLANG_PATH": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/3.9/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    },
+    "msm8996": {
+        "SDCLANG": true,
+        "SDCLANG_PATH": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/3.9/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    },
+    "msm8953_64": {
+        "SDCLANG": true,
+        "SDCLANG_PATH": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/3.9/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    },
+    "msm8953_32": {
+        "SDCLANG": true,
+        "SDCLANG_PATH": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/3.9/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    },
+    "msm8937_64": {
+        "SDCLANG": true,
+        "SDCLANG_PATH": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/3.9/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    },
+    "msm8937_32": {
+        "SDCLANG": true,
+        "SDCLANG_PATH": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/3.9/bin",
+        "SDCLANG_PATH_2": "vendor/qcom/proprietary/llvm-arm-toolchain-ship/4.0/bin",
+        "SDCLANG_FLAGS": "-Wno-vectorizer-no-neon",
+        "SDCLANG_FLAGS_2": "-Wno-vectorizer-no-neon"
+    }
+}
