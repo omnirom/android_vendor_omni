@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>    
+<resources>
     <!-- Notifications -->
     <color name="notification_legacy_background_color">#ff29282c</color>
     <color name="notification_material_background_dimmed_color">#ff05050A</color>
@@ -9,7 +9,7 @@
     <color name="notification_ripple_untinted_color">#ffe0e0e0</color>
     <color name="notification_ripple_color_low_priority">#fff9f9f9</color>
     <color name="notification_ripple_tinted_color">#fffefefe</color>
-    <color name="notification_gear_color">#ffFFFF00</color>
+    <color name="notification_gear_color">#ffFFFFFF</color>
     <color name="notification_guts_bg_color">#ff29282c</color>
 
     <color name="notification_material_background_color">#ff29282c</color>
