@@ -98,3 +98,6 @@ PRODUCT_PACKAGES += \
 
 # for fun
 PRODUCT_PACKAGES += EggGame
+
+# Fonts
+PRODUCT_PACKAGES += DU-Fonts
