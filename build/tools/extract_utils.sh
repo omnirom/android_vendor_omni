@@ -813,23 +813,14 @@ function oat2dex() {
     local OAT=
     local HOST="$(uname)"
 
-    if [ -z "$ANDROID_HOST_OUT" ]; then
-        echo "ERROR: ANDROID_HOST_OUT not found!"
-        echo "ERROR: Please lunch a device before running this script."
-        exit 1
+    if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
+        export BAKSMALIJAR="$OMNI_ROOT"/vendor/omni/build/tools/smali/baksmali.jar
+        export SMALIJAR="$OMNI_ROOT"/vendor/omni/build/tools/smali/smali.jar
     fi
 
-    if [ -z "$OATDUMP" ] || [ -z "$VDEXEXTRACTOR" ]; then
-        if [ ! -f "$ANDROID_HOST_OUT/bin/oatdump" ]; then
-            echo "ERROR: oatdump utility not found!"
-            echo "ERROR: Please run 'make oatdump'"
-            echo "ERROR: from the top of the android tree before running this script."
-            exit 1
-        else
-           export OATDUMP="$ANDROID_HOST_OUT/bin/oatdump"
-        fi
+    if [ -z "$VDEXEXTRACTOR" ]; then
         export VDEXEXTRACTOR="$OMNI_ROOT"/vendor/omni/build/tools/"$HOST"/vdexExtractor
-   fi
+    fi
 
     if [ -z "$CDEXCONVERTER" ]; then
         export CDEXCONVERTER="$OMNI_ROOT"/vendor/omni/build/tools/"$HOST"/compact_dex_converter
@@ -866,20 +857,23 @@ function oat2dex() {
         local OAT="$(dirname "$OEM_TARGET")/oat/$ARCH/$(basename "$OEM_TARGET" ."${OEM_TARGET##*.}").odex"
         local VDEX="$(dirname "$OEM_TARGET")/oat/$ARCH/$(basename "$OEM_TARGET" ."${OEM_TARGET##*.}").vdex"
 
-
         if get_file "$OAT" "$TMPDIR" "$SRC"; then
             if get_file "$VDEX" "$TMPDIR" "$SRC"; then
                 "$VDEXEXTRACTOR" -o "$TMPDIR/" -i "$TMPDIR/$(basename "$VDEX")" > /dev/null
-                # Check if we have to deal with CompactDex
-                if [ -f "$TMPDIR/$(basename "${OEM_TARGET%.*}")_classes.cdex" ]; then
-                    "$CDEXCONVERTER" "$TMPDIR/$(basename "${OEM_TARGET%.*}")_classes.cdex" &> /dev/null
-                    mv "$TMPDIR/$(basename "${OEM_TARGET%.*}")_classes.cdex.new" "$TMPDIR/classes.dex"
-                else
-                    mv "$TMPDIR/$(basename "${OEM_TARGET%.*}")_classes.dex" "$TMPDIR/classes.dex"
-                fi
+                CLASSES=$(ls "$TMPDIR/$(basename "${OEM_TARGET%.*}")_classes"*)
+                for CLASS in $CLASSES; do
+                    NEWCLASS=$(echo "$CLASS" | sed 's/.*_//;s/cdex/dex/')
+                    # Check if we have to deal with CompactDex
+                    if [[ "$CLASS" == *.cdex ]]; then
+                        "$CDEXCONVERTER" "$CLASS" &>/dev/null
+                        mv "$CLASS.new" "$TMPDIR/$NEWCLASS"
+                    else
+                        mv "$CLASS" "$TMPDIR/$NEWCLASS"
+                    fi
+                done
             else
-                "$OATDUMP" --oat-file="$TMPDIR/$(basename "$OAT")" --export-dex-to="$TMPDIR" > /dev/null
-                mv "$(find "$TMPDIR" -maxdepth 1 -type f -name "*_export.dex" | wc -l | tr -d ' ')" "$TMPDIR/classes.dex"
+                java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" "$TMPDIR/$(basename "$OAT")"
+                java -jar "$SMALIJAR" assemble "$TMPDIR/dexout" -o "$TMPDIR/classes.dex"
             fi
         elif [[ "$OMNI_TARGET" =~ .jar$ ]]; then
             JAROAT="$TMPDIR/system/framework/$ARCH/boot-$(basename ${OEM_TARGET%.*}).oat"
@@ -891,22 +885,28 @@ function oat2dex() {
             # fallback to boot.oat if vdex is not available
             if get_file "$JARVDEX" "$TMPDIR" "$SRC"; then
                 "$VDEXEXTRACTOR" -o "$TMPDIR/" -i "$TMPDIR/$(basename "$JARVDEX")" > /dev/null
-                # Check if we have to deal with CompactDex
-                if [ -f "$TMPDIR/$(basename "${JARVDEX%.*}")_classes.cdex" ]; then
-                    "$CDEXCONVERTER" "$TMPDIR/$(basename "${JARVDEX%.*}")_classes.cdex" &> /dev/null
-                    mv "$TMPDIR/$(basename "${JARVDEX%.*}")_classes.cdex.new" "$TMPDIR/classes.dex"
-                else
-                    mv "$TMPDIR/$(basename "${JARVDEX%.*}")_classes.dex" "$TMPDIR/classes.dex"
-                fi
+                CLASSES=$(ls "$TMPDIR/$(basename "${JARVDEX%.*}")_classes"*)
+                for CLASS in $CLASSES; do
+                    NEWCLASS=$(echo "$CLASS" | sed 's/.*_//;s/cdex/dex/')
+                    # Check if we have to deal with CompactDex
+                    if [[ "$CLASS" == *.cdex ]]; then
+                        "$CDEXCONVERTER" "$CLASS" &>/dev/null
+                        mv "$CLASS.new" "$TMPDIR/$NEWCLASS"
+                    else
+                        mv "$CLASS" "$TMPDIR/$NEWCLASS"
+                    fi
+                done
             else
-                "$OATDUMP" --oat-file="$JAROAT" --export-dex-to="$TMPDIR" > /dev/null
-                mv "$(find "$TMPDIR" -maxdepth 1 -type f -name "*_export.dex" | wc -l | tr -d ' ')" "$TMPDIR/classes.dex"
+                java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" "$JAROAT/$OEM_TARGET"
+                java -jar "$SMALIJAR" assemble "$TMPDIR/dexout" -o "$TMPDIR/classes.dex"
             fi
         else
             continue
         fi
 
     done
+
+    rm -rf "$TMPDIR/dexout"
 }
 
 #
@@ -1211,8 +1211,8 @@ function extract() {
         if [[ "$FULLY_DEODEXED" -ne "1" && "${VENDOR_REPO_FILE}" =~ .(apk|jar)$ ]]; then
             oat2dex "${VENDOR_REPO_FILE}" "${SRC_FILE}" "$SRC"
             if [ -f "$TMPDIR/classes.dex" ]; then
-                zip -gjq "${VENDOR_REPO_FILE}" "$TMPDIR/classes.dex"
-                rm "$TMPDIR/classes.dex"
+                zip -gjq "${VENDOR_REPO_FILE}" "$TMPDIR/classes"*
+                rm "$TMPDIR/classes"*
                 printf '    (updated %s from odex files)\n' "${SRC_FILE}"
             fi
         elif [[ "${VENDOR_REPO_FILE}" =~ .xml$ ]]; then
