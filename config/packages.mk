@@ -100,3 +100,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     EggGame \
     EasterFun
+
+# Fonts
+PRODUCT_PACKAGES += DU-Fonts
