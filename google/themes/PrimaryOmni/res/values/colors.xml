@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="omni_theme_color">@color/omni_color1</color>
-    <color name="user_icon_1">#ffff367c</color>
-    <color name="user_icon_2">#ffff4c8b</color>
-    <color name="user_icon_3">#ffff6299</color>
-    <color name="user_icon_4">#ffff6299</color>
     <color name="system_error">#ffff4120</color>
 
     <color name="omni_text1">#fffefefe</color> <!-- text primary -->
@@ -15,7 +11,6 @@
     <color name="omni_color2">#ff2d2d2d</color> <!-- PRIMARY LIGHT -->
     <color name="omni_color6">#b3fefefe</color> <!-- WIFI ICON IN DETAILS -->
     <color name="omni_color7">#ff393939</color> <!-- FLOATING DIALOG COLOR ON VERY DARK THEMES MAKE THIS A BIT LIGHTER -->
-    <color name="omni_color8">#ff52c729</color> <!-- SPECIAL (CHECK WHERE THIS IS ASSIGNED) -->
     <color name="omni_color9">#e6393939</color> <!-- TOAST (NEEDS SOME ALPHA) -->
 
     <!-- PRIMARY LIGHT -->
