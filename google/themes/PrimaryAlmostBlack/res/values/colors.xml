@@ -9,9 +9,8 @@
     <color name="omni_text4">#deFFFDE7</color>  <!-- text tertiary -->
     <color name="omni_color1">#ff05050A</color> <!-- PRIMARY DARK -->
     <color name="omni_color2">#ff121115</color> <!-- PRIMARY LIGHT -->
-    <color name="omni_color6">#ffFFFF00</color> <!-- WIFI ICON IN DETAILS -->
+    <color name="omni_color6">#B3FFFDE7</color> <!-- WIFI ICON IN DETAILS -->
     <color name="omni_color7">#ff29282c</color> <!-- FLOATING DIALOG COLOR ON VERY DARK THEMES MAKE THIS A BIT LIGHTER -->
-    <color name="omni_color8">#ff29282c</color> <!-- SPECIAL (CHECK WHERE THIS IS ASSIGNED) -->
     <color name="omni_color9">#e629282c</color> <!-- TOAST (NEEDS SOME ALPHA) -->
 
     <!-- PRIMARY LIGHT -->
