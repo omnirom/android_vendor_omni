@@ -1,7 +1,9 @@
 type mkfs, domain;
 type mkfs_exec, exec_type, file_type;
 
-init_daemon_domain(mkfs)
+not_full_treble(`
+   init_daemon_domain(mkfs);
+')
 
 # Allow formatting userdata or cache partitions
 allow mkfs block_device:dir search;
