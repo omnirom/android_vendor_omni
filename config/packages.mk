@@ -59,6 +59,7 @@ PRODUCT_PACKAGES += \
     AccentPixel \
     AccentGoldenShower \
     AccentDeepOrange \
+    AccentPureOrange \
     AccentOmni \
     AccentWhite \
     AccentTeal \
