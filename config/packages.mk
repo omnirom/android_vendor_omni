@@ -68,7 +68,9 @@ PRODUCT_PACKAGES += \
     AccentTeal \
     AccentFromHell \
     AccentBlueMonday \
-    AccentSmokingGreen
+    AccentSmokingGreen \
+    AccentDeadRed \
+    AccentRottenOrange
 
 PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
