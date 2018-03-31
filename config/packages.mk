@@ -97,4 +97,6 @@ PRODUCT_PACKAGES += \
     Launcher3Dark
 
 # for fun
-PRODUCT_PACKAGES += EggGame
+PRODUCT_PACKAGES += \
+    EggGame \
+    EasterFun
