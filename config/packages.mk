@@ -59,14 +59,15 @@ PRODUCT_PACKAGES += \
     AccentPixel \
     AccentGoldenShower \
     AccentDeepOrange \
-    AccentPureOrange \
     AccentOmni \
     AccentWhite \
     AccentTeal \
     AccentFromHell \
     AccentBlueMonday \
     AccentSmokingGreen \
-    AccentFromDeepHell
+    AccentDeadRed \
+    AccentRottenOrange \
+    AccentDeepPurple
 
 PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
