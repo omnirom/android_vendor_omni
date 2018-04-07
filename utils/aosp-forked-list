@@ -32,6 +32,7 @@ packages/apps/Messaging
 packages/apps/Nfc
 packages/apps/PhoneCommon
 packages/apps/Settings
+packages/apps/Stk
 packages/providers/DownloadProvider
 packages/services/Telephony
 packages/services/Telecomm
