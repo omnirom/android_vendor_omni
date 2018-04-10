@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <permissions>
+    <privapp-permissions package="com.android.settings">
+        <permission name="android.permission.ACCESS_FONT_MANAGER"/>
+    </privapp-permissions>
+
     <privapp-permissions package="android.ext.services">
         <permission name="android.permission.PROVIDE_RESOLVER_RANKER_SERVICE"/>
     </privapp-permissions>
@@ -61,8 +65,10 @@
         <permission name="android.permission.STOP_APP_SWITCHES"/>
     </privapp-permissions>
 
-    <privapp-permissions package="org.simalliance.openmobileapi.service">
+    <privapp-permissions package="org.omnirom.omnibrain">
+        <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.REAL_GET_TASKS"/>
     </privapp-permissions>
 
 </permissions>
