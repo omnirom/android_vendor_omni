@@ -35,6 +35,10 @@ ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES  += ro.adb.secure=1
 endif
 
+# Enforce privapp-permissions whitelist
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.control_privapp_permissions=enforce
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
@@ -56,7 +60,8 @@ PRODUCT_COPY_FILES += \
 
 #permissions
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/etc/permissions/privapp-permissions-omni.xml:system/etc/permissions/privapp-permissions-omni.xml
+    vendor/omni/prebuilt/etc/permissions/privapp-permissions-omni.xml:system/etc/permissions/privapp-permissions-omni.xml \
+    vendor/omni/prebuilt/etc/permissions/privapp-permissions-google.xml:system/etc/permissions/privapp-permissions-google.xml
 
 # custom omni sounds
 PRODUCT_PROPERTY_OVERRIDES += \
