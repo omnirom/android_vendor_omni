@@ -61,8 +61,4 @@
         <permission name="android.permission.STOP_APP_SWITCHES"/>
     </privapp-permissions>
 
-    <privapp-permissions package="org.simalliance.openmobileapi.service">
-        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
-    </privapp-permissions>
-
 </permissions>
