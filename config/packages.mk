@@ -93,4 +93,8 @@ PRODUCT_PACKAGES += \
     textclassifier.smartselection.zh-Hant.model
 
 # for fun
-PRODUCT_PACKAGES += EggGame
+PRODUCT_PACKAGES += \
+    EggGame
+
+PRODUCT_PACKAGES += \
+    ExtraFonts

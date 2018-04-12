@@ -151,3 +151,11 @@ function cafremote()
     echo "Remote 'caf' created"
 }
 
+# Enable SD-LLVM if available
+if [ -d $(gettop)/vendor/qcom/sdclang ]; then
+            export SDCLANG=true
+            export SDCLANG_PATH="vendor/qcom/sdclang/4.0.2/prebuilt/linux-x86_64/bin"
+            export SDCLANG_LTO_DEFS="vendor/qcom/sdclang/sdllvm-lto-defs.mk"
+            export SDCLANG_CONFIG="vendor/qcom/sdclang/sdclang.json"
+            export SDCLANG_AE_CONFIG="vendor/qcom/sdclang/sdclangAE.json"
+fi
