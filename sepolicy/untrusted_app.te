@@ -8,3 +8,6 @@ allow untrusted_app fuse_device:file { getattr read write open };
 allow untrusted_app fuse_device:dir { search };
 allow untrusted_app sdcard_posix:dir r_dir_perms;
 allow untrusted_app sdcard_posix:file rw_file_perms;
+
+# profile picture
+allow untrusted_app system_app_data_file:file { append };
