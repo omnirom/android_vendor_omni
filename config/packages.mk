@@ -14,7 +14,8 @@ PRODUCT_PACKAGES += \
     Phonograph \
     Turbo \
     MatLog \
-    OmniChange
+    OmniChange \
+    OmniLib
 
 # Additional tools
 PRODUCT_PACKAGES += \
