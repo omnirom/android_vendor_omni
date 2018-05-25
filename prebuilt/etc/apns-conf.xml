@@ -8250,7 +8250,15 @@
       mmsc="http://mms.bell.ca/mms/wapenc"
       type="default,mms,supl"
   />
-
+  <apn carrier="PC Mobile"
+       mcc="302"
+       mnc="610"
+       apn="proxy.bell.ca"
+       mmsproxy="web.wireless.bell.ca"
+       mmsport="80"
+       mmsc="http://mms.bell.ca/mms/wapenc"
+       type="default,mms,supl"
+  />
 <apn carrier="CA - Bell Web"
   apn="pda2.bell.ca"
   mcc="302"
