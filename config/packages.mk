@@ -10,7 +10,8 @@ PRODUCT_PACKAGES += \
     libcyanogen-dsp \
     Phonograph \
     Turbo \
-    OmniChange
+    OmniChange \
+    OmniBrain
 
 # Additional tools
 PRODUCT_PACKAGES += \
