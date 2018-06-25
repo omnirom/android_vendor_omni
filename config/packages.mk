@@ -3,7 +3,6 @@ PRODUCT_PACKAGES += \
     MonthCalendarWidget \
     OpenDelta \
     OmniSwitch \
-    Chromium \
     OmniJaws \
     OmniStyle \
     QuickSearchBox \
