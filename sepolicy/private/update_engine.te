@@ -1,1 +1,13 @@
 allow update_engine self:capability { dac_override dac_read_search sys_rawio };
+
+r_dir_file(update_engine, mnt_user_file)
+r_dir_file(update_engine, storage_file)
+
+allow update_engine self:capability { chown fsetid sys_rawio };
+
+allow update_engine labeledfs:filesystem { mount unmount };
+
+allow update_engine { media_rw_data_file rootfs sdcardfs system_data_file system_file }:dir create_dir_perms;
+allow update_engine { media_rw_data_file rootfs sdcardfs system_data_file system_file }:{ file lnk_file } create_file_perms;
+allow update_engine { otapreopt_chroot_exec rootfs system_file toolbox_exec }:file rx_file_perms;
+allow update_engine { rootfs system_file }:file { relabelfrom relabelto };
