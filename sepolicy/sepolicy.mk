@@ -4,4 +4,6 @@
 #
 
 BOARD_SEPOLICY_DIRS += \
-    vendor/omni/sepolicy
+    vendor/omni/sepolicy/common
+
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += vendor/omni/sepolicy/private
