@@ -10,4 +10,4 @@ $(call inherit-product, vendor/omni/utils/emulator/common.mk)
 # Override product naming for Omni
 PRODUCT_NAME := omni_emulator
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/omni/utils/emulator/overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/omni/utils/emulator/overlay
