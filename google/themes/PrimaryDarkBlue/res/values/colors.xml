@@ -12,6 +12,7 @@
     <color name="omni_color6">#b3fefefe</color> <!-- WIFI ICON IN DETAILS -->
     <color name="omni_color7">#ff182a33</color> <!-- FLOATING DIALOG COLOR ON VERY DARK THEMES MAKE THIS A BIT LIGHTER -->
     <color name="omni_color9">#e6182a33</color> <!-- TOAST (NEEDS SOME ALPHA) -->
+    <color name="omni_color900">#ff0d2029</color> <!-- PRIMARY DARK -->
 
     <!-- PRIMARY LIGHT -->
     <color name="primary_dark_device_default_settings">@*android:color/omni_color2</color> <!-- Main BG settings -->
@@ -39,7 +40,6 @@
 
 
     <!-- qs -->
-    <color name="material_grey_900">@*android:color/omni_color1</color>  <!-- find a better way to do this -->
     <color name="zen_introduction">@*android:color/omni_color1</color>
 
     <!-- Dialogs -->
