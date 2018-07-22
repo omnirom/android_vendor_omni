@@ -341,7 +341,7 @@
     </style>
 
     <style name="qs_base" parent="@*android:style/Theme.DeviceDefault">
-        <item name="android:colorBackgroundFloating">@*android:color/omni_color7</item>
+        <item name="android:colorBackgroundFloating">@*android:color/omni_color900</item>
         <!-- Color palette -->
         <item name="android:colorPrimary">@*android:color/omni_color2</item>
         <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>

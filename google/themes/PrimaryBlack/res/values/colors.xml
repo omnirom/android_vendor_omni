@@ -39,7 +39,6 @@
 
 
     <!-- qs -->
-    <color name="material_grey_900">@*android:color/omni_color1</color>  <!-- find a better way to do this -->
     <color name="zen_introduction">@*android:color/omni_color1</color>
 
     <!-- Dialogs -->
