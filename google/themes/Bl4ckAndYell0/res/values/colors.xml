@@ -19,6 +19,7 @@
     <color name="omni_color7">#ff29282c</color> <!-- FLOATING DIALOG COLOR ON VERY DARK THEMES MAKE THIS A BIT LIGHTER -->
     <color name="omni_color8">#ff29282c</color> <!-- SPECIAL (CHECK WHERE THIS IS ASSIGNED) -->
     <color name="omni_color9">#e629282c</color> <!-- TOAST (NEEDS SOME ALPHA) -->
+    <color name="omni_color900">#ff05050A</color> <!-- PRIMARY DARK -->
 
 
     <!-- PRIMARY LIGHT -->
@@ -52,7 +53,6 @@
 
 
     <!-- qs -->
-    <color name="material_grey_900">@*android:color/omni_color1</color>  <!-- find a better way to do this -->
     <color name="zen_introduction">@*android:color/omni_color1</color>
 
     <!-- Dialogs -->
