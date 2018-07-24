@@ -56,6 +56,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 -include vendor/omni/config/version.mk
 
 # Add our overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
+DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/common
 
 WITH_DEXPREOPT := false

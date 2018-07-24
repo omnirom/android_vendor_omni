@@ -80,7 +80,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 -include vendor/omni/config/version.mk
 
 # Add our overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
+DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/common
 
 # Enable dexpreopt for all nightlies
 ifeq ($(ROM_BUILDTYPE),NIGHTLY)
