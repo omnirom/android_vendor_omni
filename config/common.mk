@@ -69,7 +69,8 @@ PRODUCT_COPY_FILES += \
 
 #permissions
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/etc/permissions/privapp-permissions-omni.xml:system/etc/permissions/privapp-permissions-omni.xml
+    vendor/omni/prebuilt/etc/permissions/privapp-permissions-omni.xml:system/etc/permissions/privapp-permissions-omni.xml \
+    vendor/omni/prebuilt/etc/permissions/privapp-permissions-elgoog.xml:system/etc/permissions/privapp-permissions-elgoog.xml
 
 # custom omni sounds
 PRODUCT_PROPERTY_OVERRIDES += \
