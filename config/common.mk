@@ -47,7 +47,8 @@ ifeq ($(AB_OTA_UPDATER),true)
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
     vendor/omni/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
-    vendor/omni/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+    vendor/omni/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh \
+    vendor/omni/prebuilt/addon.d/69-gapps.sh:system/addon.d/69-gapps.sh
 else
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
