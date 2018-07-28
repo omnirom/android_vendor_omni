@@ -45,5 +45,6 @@ system/media
 system/nfc
 system/netd
 system/sepolicy
+system/update_engine
 system/vold
 system/hardware/interfaces

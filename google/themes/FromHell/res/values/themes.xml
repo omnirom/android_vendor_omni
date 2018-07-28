@@ -341,7 +341,7 @@
     </style>
 
     <style name="qs_base" parent="@*android:style/Theme.DeviceDefault">
-        <item name="android:colorBackgroundFloating">@*android:color/omni_color7</item>
+        <item name="android:colorBackgroundFloating">@*android:color/omni_color900</item>
         <!-- Color palette -->
         <item name="android:colorPrimary">@*android:color/omni_color2</item>
         <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
@@ -453,6 +453,25 @@
 	<item name="android:listPreferredItemPaddingStart">?*android:attr/dialogPreferredPadding</item>
 	<item name="android:listPreferredItemPaddingEnd">?*android:attr/dialogPreferredPadding</item>
 
+        <!-- Color palette -->
+        <item name="android:colorPrimary">@*android:color/omni_color2</item>
+        <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
+        <item name="android:colorSecondary">@*android:color/omni_color1</item>
+        <item name="android:colorAccent">@*android:color/omni_color5</item>
+
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:textColorHint">@*android:color/omni_color3</item>
+        <item name="android:textColorAlertDialogListItem">@*android:color/omni_text_tertiary</item>
+        <item name="android:colorControlNormal">@*android:color/omni_color4</item>
+    </style>
+
+    <!-- Theme for the dialog shown when an app crashes or ANRs. -->
+    <style name="Theme.Dialog.AppError" parent="@*android:style/Theme.Material.Dialog.Alert">
+        <item name="android:windowContentTransitions">false</item>
+        <item name="android:windowActivityTransitions">false</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
         <!-- Color palette -->
         <item name="android:colorPrimary">@*android:color/omni_color2</item>
         <item name="android:colorPrimaryDark">@*android:color/omni_color1</item>
