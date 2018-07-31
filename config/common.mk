@@ -84,7 +84,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 -include vendor/omni/config/packages.mk
 
 # GApps
--include vendor/gapps/config.mk
+-include vendor/omni/config/gapps.mk
 
 # Pixelstyle
 -include vendor/pixelstyle/config.mk
