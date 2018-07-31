@@ -9,7 +9,6 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     libcyanogen-dsp \
     Phonograph \
-    Turbo \
     OmniChange \
     OmniBrain
 
