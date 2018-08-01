@@ -4,7 +4,6 @@ PRODUCT_PACKAGES += \
     Chromium \
     OmniStyle \
     OmniJaws \
-    QuickSearchBox \
     MusicFX \
     audio_effects.conf \
     libcyanogen-dsp \
