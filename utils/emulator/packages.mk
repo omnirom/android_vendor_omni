@@ -1,5 +1,5 @@
 # Additional apps
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     MonthCalendarWidget \
     OpenDelta \
     OmniSwitch \
@@ -17,7 +17,7 @@ PRODUCT_PACKAGES += \
     GoldfishParts
 
 # Themes
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     PixelTheme \
     Stock
 

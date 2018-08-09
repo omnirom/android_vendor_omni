@@ -71,5 +71,3 @@ PRODUCT_COPY_FILES += \
 
 # Add our overlays
 DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/common
-
-WITH_DEXPREOPT := false
