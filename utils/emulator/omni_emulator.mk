@@ -1,5 +1,5 @@
 PRODUCT_COPY_FILES += \
-    vendor/omni/utils/emulator/fstab.ranchu:root/fstab.ranchu
+    vendor/omni/utils/emulator/fstab.ranchu:vendor/etc/fstab.ranchu
 
 $(call inherit-product, build/target/product/sdk_x86.mk)
 
@@ -11,3 +11,5 @@ $(call inherit-product, vendor/omni/utils/emulator/common.mk)
 PRODUCT_NAME := omni_emulator
 
 DEVICE_PACKAGE_OVERLAYS += vendor/omni/utils/emulator/overlay
+
+ALLOW_MISSING_DEPENDENCIES := true 
