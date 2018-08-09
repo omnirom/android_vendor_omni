@@ -50,15 +50,15 @@ PRODUCT_BOOT_JARS += telephony-ext
     OmniSubs
 
 # Themes
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     GboardOmniTheme
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     NotificationsDark \
     NotificationsLight \
     NotificationsPrimary
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     AccentSluttyPink \
     AccentPixel \
     AccentGoldenShower \
@@ -73,7 +73,7 @@ PRODUCT_PACKAGES += \
     AccentRottenOrange \
     AccentDeepPurple
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
     PrimaryBlack \
     PrimaryOmni \
@@ -83,7 +83,7 @@ PRODUCT_PACKAGES += \
     PrimaryDarkBlue
 
 # Textclassifiers
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     textclassifier.langid.model \
     textclassifier.smartselection.bundle1 \
     textclassifier.smartselection.ar.model \
@@ -96,7 +96,7 @@ PRODUCT_PACKAGES += \
     textclassifier.smartselection.zh.model \
     textclassifier.smartselection.zh-Hant.model
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     Launcher3Dark
 
 # for fun

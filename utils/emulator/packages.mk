@@ -1,23 +1,22 @@
 # Additional apps
 PRODUCT_PACKAGES += \
     MonthCalendarWidget \
-    OpenDelta \
     OmniSwitch \
     Chromium \
     OmniJaws \
     OmniStyle \
-    QuickSearchBox \
     OmniClockOSS \
     MusicFX \
-    audio_effects.conf \
-    libcyanogen-dsp \
     Phonograph \
-    Turbo \
     MatLog \
-    GoldfishParts
+    OmniChange
+
+#PRODUCT_PACKAGES += \
+    GoldfishParts \
+    OpenDelta
 
 # Themes
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     PixelTheme \
     Stock
 
