@@ -16,7 +16,7 @@
 
 # Provides overrides to configure the HWUI memory limits
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.hwui.texture_cache_size=88 \
     ro.hwui.layer_cache_size=58 \
     ro.hwui.path_cache_size=32 \
