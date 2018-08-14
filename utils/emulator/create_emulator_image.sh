@@ -22,4 +22,4 @@ cp -r vendor/omni/utils/emulator/start_emulator_image.sh $ANDROID_PRODUCT_OUT
 cp -r vendor/omni/utils/emulator/advancedFeatures.ini $ANDROID_PRODUCT_OUT
 
 cd $ANDROID_PRODUCT_OUT/..
-zip -r /tmp/omni_emulator.zip generic_x86/skins generic_x86/system-qemu.img generic_x86/system/build.prop generic_x86/cache.img generic_x86/userdata-qemu.img generic_x86/start_emulator_image.sh generic_x86/advancedFeatures.ini generic_x86/vendor-qemu.img generic_x86/encryptionkey.img generic_x86/kernel-ranchu-64 generic_x86/ramdisk.img
+zip -r /tmp/omni_emulator.zip generic_x86/skins generic_x86/system-qemu.img generic_x86/system/build.prop generic_x86/cache.img generic_x86/userdata.img generic_x86/start_emulator_image.sh generic_x86/advancedFeatures.ini generic_x86/vendor-qemu.img generic_x86/encryptionkey.img generic_x86/kernel-ranchu-64 generic_x86/ramdisk.img

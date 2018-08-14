@@ -1,5 +1,6 @@
 PRODUCT_COPY_FILES += \
-    vendor/omni/utils/emulator/fstab.ranchu:vendor/etc/fstab.ranchu
+    vendor/omni/utils/emulator/fstab.ranchu:vendor/etc/fstab.ranchu \
+    vendor/omni/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 $(call inherit-product, build/target/product/sdk_x86.mk)
 
