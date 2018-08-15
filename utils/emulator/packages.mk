@@ -9,10 +9,10 @@ PRODUCT_PACKAGES += \
     MusicFX \
     Phonograph \
     MatLog \
-    OmniChange
+    OmniChange \
+    GoldfishParts
 
 #PRODUCT_PACKAGES += \
-    GoldfishParts \
     OpenDelta
 
 # Themes

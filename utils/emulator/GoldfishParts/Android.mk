@@ -3,7 +3,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
-LOCAL_PACKAGE_NAME := GoldfishParts.save
+LOCAL_PACKAGE_NAME := GoldfishParts
 LOCAL_CERTIFICATE := platform
 LOCAL_AAPT_FLAGS := --auto-add-overlay
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
@@ -18,7 +18,7 @@ LOCAL_RESOURCE_DIR := $(package_resource_overlays) $(LOCAL_RESOURCE_DIR)
 
 LOCAL_PROGUARD_ENABLED := disabled
 LOCAL_DEX_PREOPT := false
-LOCAL_SDK_VERSION := system_current
+LOCAL_PRIVATE_PLATFORM_APIS := true
 
 include $(BUILD_PACKAGE)
 
