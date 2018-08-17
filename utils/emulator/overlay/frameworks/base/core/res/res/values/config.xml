@@ -26,5 +26,6 @@
     <string name="config_deviceKeyHandlerClass" translatable="false">org.omnirom.device.KeyHandler</string>
     <!-- make sure you enable this only if your device supports deep slepp
     with active proximity sensor event listener -->
-    <bool name="config_proxiSensorWakupCheck">false</bool>
+    <bool name="config_proxiSensorWakupCheck">true</bool>
+    <bool name="config_showNavigationBar">true</bool>
 </resources>
