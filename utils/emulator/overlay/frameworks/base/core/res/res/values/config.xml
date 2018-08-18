@@ -28,4 +28,7 @@
     with active proximity sensor event listener -->
     <bool name="config_proxiSensorWakupCheck">true</bool>
     <bool name="config_showNavigationBar">true</bool>
+    <!-- let people decide if they want keyguard shortcuts or not -->
+    <bool name="config_keyguardShowLeftAffordance">true</bool>
+    <bool name="config_keyguardShowCameraAffordance">true</bool>
 </resources>
