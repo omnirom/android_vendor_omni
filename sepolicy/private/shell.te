@@ -1,2 +1,0 @@
-allow shell otapreopt_chroot_exec:file getattr;
-

@@ -1,1 +1,0 @@
-allow drmserver fuse_device:file r_file_perms;
