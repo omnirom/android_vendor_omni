@@ -1,6 +1,0 @@
-###########################
-# OmniROM common sepolicy
-#
-
-# damn!
-#allow init sysfs_ioscheduler:file rw_file_perms;
