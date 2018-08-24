@@ -46,21 +46,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += telephony-ext
 PRODUCT_BOOT_JARS += telephony-ext
 
-# OMS support
-#PRODUCT_PACKAGES += ThemeInterfacer \
-    OmniTheme \
-    OmniSubs
-
 # Themes
 #PRODUCT_PACKAGES += \
     GboardOmniTheme
 
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     NotificationsDark \
     NotificationsLight \
     NotificationsPrimary
 
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     AccentSluttyPink \
     AccentPixel \
     AccentGoldenShower \
@@ -75,7 +70,7 @@ PRODUCT_BOOT_JARS += telephony-ext
     AccentRottenOrange \
     AccentDeepPurple
 
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
     PrimaryBlack \
     PrimaryOmni \
