@@ -28,4 +28,5 @@
     with active proximity sensor event listener -->
     <bool name="config_proxiSensorWakupCheck">true</bool>
     <bool name="config_showNavigationBar">true</bool>
+    <bool name="config_haveHigherAspectRatioScreen">true</bool>
 </resources>
