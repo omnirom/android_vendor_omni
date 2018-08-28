@@ -11,12 +11,8 @@ PRODUCT_PACKAGES += \
     MatLog \
     OmniChange \
     GoldfishParts \
-    OpenDelta
-
-# Themes
-#PRODUCT_PACKAGES += \
-    PixelTheme \
-    Stock
+    OpenDelta \
+    Turbo
 
 # Additional tools
 PRODUCT_PACKAGES += \
