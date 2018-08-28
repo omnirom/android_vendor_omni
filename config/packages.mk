@@ -9,14 +9,12 @@ PRODUCT_PACKAGES += \
     MusicFX \
     Phonograph \
     MatLog \
-    OmniChange
+    OmniChange \
+    OpenDelta
 
 #PRODUCT_PACKAGES += \
-    OpenDelta \
-    audio_effects.conf \
-    libcyanogen-dsp \
-    Turbo \
-    OmniBrain
+    OmniBrain \
+    Turbo
 
 # Additional tools
 PRODUCT_PACKAGES += \
@@ -92,9 +90,6 @@ PRODUCT_PACKAGES += \
     textclassifier.smartselection.tr.model \
     textclassifier.smartselection.zh.model \
     textclassifier.smartselection.zh-Hant.model
-
-#PRODUCT_PACKAGES += \
-    Launcher3Dark
 
 # for fun
 PRODUCT_PACKAGES += \
