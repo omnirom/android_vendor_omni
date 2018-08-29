@@ -10,10 +10,10 @@ PRODUCT_PACKAGES += \
     Phonograph \
     MatLog \
     OmniChange \
-    OpenDelta
+    OpenDelta \
+    Turbo
 
 #PRODUCT_PACKAGES += \
-    OmniBrain \
     Turbo
 
 # Additional tools
