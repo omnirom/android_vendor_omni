@@ -49,6 +49,9 @@ PRODUCT_BOOT_JARS += telephony-ext
     GboardOmniTheme
 
 PRODUCT_PACKAGES += \
+    DocumentsUITheme
+
+PRODUCT_PACKAGES += \
     NotificationsDark \
     NotificationsLight \
     NotificationsPrimary
