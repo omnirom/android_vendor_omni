@@ -60,3 +60,6 @@ PRODUCT_PACKAGES += \
     PrimaryColdWhite \
     PrimaryWarmWhite \
     PrimaryDarkBlue
+
+PRODUCT_PACKAGES += \
+    DocumentsUITheme
