@@ -1,0 +1,3 @@
+allow otapreopt_chroot postinstall_file:lnk_file read;
+#allow otapreopt_chroot system_file:dir mounton;
+
