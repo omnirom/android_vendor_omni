@@ -13,6 +13,7 @@ app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk
 app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk
 app/GoogleExtShared/GoogleExtShared.apk
 app/GoogleTTS/GoogleTTS.apk
+app/SoundPickerPrebuilt/SoundPickerPrebuilt.apk
 etc/default-permissions/default-permissions.xml
 etc/default-permissions/opengapps-permissions.xml
 etc/g.prop
@@ -22,23 +23,24 @@ etc/permissions/com.google.android.media.effects.xml
 etc/permissions/com.google.widevine.software.drm.xml
 etc/permissions/privapp-permissions-google.xml
 etc/preferred-apps/google.xml
-etc/sysconfig/dialer_experience.xml
-etc/sysconfig/framework-sysconfig.xml
+etc/sysconfig/google-hiddenapi-package-whitelist.xml
 etc/sysconfig/google.xml
 etc/sysconfig/google_build.xml
-etc/sysconfig/whitelist_com.android.omadm.service.xml
+etc/sysconfig/google_exclusives_enable.xml
 framework/com.google.android.dialer.support.jar
 framework/com.google.android.maps.jar
 framework/com.google.android.media.effects.jar
 framework/com.google.widevine.software.drm.jar
 lib/libfilterpack_facedetect.so
 lib/libfrsdk.so
+lib64/libbarhopper.so
 lib64/libfacenet.so
 lib64/libfilterpack_facedetect.so
 lib64/libfrsdk.so
 lib64/libjni_latinimegoogle.so
+priv-app/AndroidMigratePrebuilt/AndroidMigratePrebuilt.apk
+priv-app/AndroidPlatformServices/AndroidPlatformServices.apk
 priv-app/ConfigUpdater/ConfigUpdater.apk
-priv-app/GmsCoreSetupPrebuilt/GmsCoreSetupPrebuilt.apk
 priv-app/GoogleBackupTransport/GoogleBackupTransport.apk
 priv-app/GoogleExtServices/GoogleExtServices.apk
 priv-app/GoogleFeedback/GoogleFeedback.apk
@@ -46,7 +48,7 @@ priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk
 priv-app/GooglePartnerSetup/GooglePartnerSetup.apk
 priv-app/GoogleServicesFramework/GoogleServicesFramework.apk
 priv-app/Phonesky/Phonesky.apk
-priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk
+priv-app/PrebuiltGmsCorePi/PrebuiltGmsCorePi.apk
 priv-app/SetupWizard/SetupWizard.apk
 priv-app/Turbo/Turbo.apk
 priv-app/Velvet/Velvet.apk
@@ -210,20 +212,32 @@ case "$1" in
       P="/system"
     fi
 
+    # Recreate required symlinks (from GApps Installer)
+    install -d "/system/system/app/FaceLock/lib/arm64"
+    ln -sfn "/system/system/lib64/libfacenet.so" "/system/system/app/FaceLock/lib/arm64/libfacenet.so"
+    install -d "/system/app/LatinIME/lib64/arm64"
+    ln -sfn "/system/lib64/libjni_latinimegoogle.so" "/system/app/LatinIME/lib64/arm64/libjni_latinimegoogle.so"
+    ln -sfn "/system/lib64/libjni_keyboarddecoder.so" "/system/app/LatinIME/lib64/arm64/libjni_keyboarddecoder.so"
+
+    # Apply build.prop changes (from GApps Installer)
+    sed -i "s/ro.error.receiver.system.apps=.*/ro.error.receiver.system.apps=com.google.android.gms/g" /system/system/build.prop
+
+    # Re-pre-ODEX APKs (from GApps Installer)
+
+    # Remove any empty folders we may have created during the removal process
+    for i in /system/app /system/priv-app /system/usr/srec; do
+      if [ -d $i ]; then
+        find $i -type d -exec rmdir -p '{}' \+ 2>/dev/null;
+      fi
+    done;
     for i in $(list_files); do
       chown root:root "$P/$i"
       chmod 644 "$P/$i"
       chmod 755 "$(dirname "$P/$i")"
+        if [ "$API" -ge "26" ]; then # Android 8.0+ uses 0600 for its permission on build.prop
+          chmod 600 /system/build.prop
+        fi
     done
 
-    # Recreate required symlinks (from GApps Installer)
-    install -d "/postinstall/system/app/FaceLock/lib/arm64"
-    ln -sfn "/postinstall/system/lib64/libfacenet.so" "/postinstall/system/system/app/FaceLock/lib/arm64/libfacenet.so"
-    install -d "/postinstall/system/app/LatinIME/lib64/arm64"
-    ln -sfn "/postinstall/system/lib64/libjni_latinimegoogle.so" "/postinstall/system/app/LatinIME/lib64/arm64/libjni_latinimegoogle.so"
-    ln -sfn "/postinstall/system/lib64/libjni_keyboarddecoder.so" "/postinstall/system/app/LatinIME/lib64/arm64/libjni_keyboarddecoder.so"
-
-    # Apply build.prop changes (from GApps Installer)
-    sed -i "s/ro.error.receiver.system.apps=.*/ro.error.receiver.system.apps=com.google.android.gms/g" /postinstall/system/build.prop
   ;;
 esac
