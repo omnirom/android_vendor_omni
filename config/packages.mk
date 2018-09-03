@@ -49,7 +49,9 @@ PRODUCT_BOOT_JARS += telephony-ext
     GboardOmniTheme
 
 PRODUCT_PACKAGES += \
-    DocumentsUITheme
+    DocumentsUITheme \
+    DialerTheme \
+    TelecommTheme
 
 PRODUCT_PACKAGES += \
     NotificationsDark \
