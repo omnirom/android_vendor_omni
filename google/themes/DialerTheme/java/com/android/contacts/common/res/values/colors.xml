@@ -1,0 +1,91 @@
+<!--
+  ~ Copyright (C) 2012 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License
+  -->
+
+<resources>
+  <!-- Color of ripples used for views with dark backgrounds -->
+  <color name="dialer_ripple_material_dark">#a0ffffff</color>
+
+  <!-- Color of ripples used for views with light backgrounds -->
+  <color name="dialer_ripple_material_light">#30ffffff</color>
+
+  <!-- Divider color for header separator -->
+  <color name="primary_text_color">@*android:color/omni_text1</color>
+
+  <color name="secondary_text_color">@*android:color/omni_text2</color>
+
+  <!-- Text color for section header. -->
+  <color name="section_header_text_color">@*android:color/omni_color3</color>
+
+  <!-- Color of the theme of the People app -->
+  <color name="people_app_theme_color">@*android:color/omni_color4</color>
+
+  <!-- Darker versions of letter_tile_colors, two shades darker. These colors are used
+      for settings secondary activity colors. -->
+  <array name="letter_tile_colors_dark">
+    <item>#C53929</item>
+    <item>#C2185B</item>
+    <item>#7B1FA2</item>
+    <item>#512DA8</item>
+    <item>#303F9F</item>
+    <item>#3367D6</item>
+    <item>#0277BD</item>
+    <item>#006064</item>
+    <item>#00796B</item>
+    <item>#0B8043</item>
+    <item>#33691E</item>
+    <item>#E65100</item>
+    <item>#E64A19</item>
+    <item>#424242</item>
+  </array>
+
+  <color name="tab_ripple_color">#ffffff</color>
+  <color name="tab_selected_underline_color">#ffffff</color>
+  <color name="tab_unread_count_background_color">@*android:color/omni_color2</color>
+
+  <!-- Color of action bar text. Ensure this stays in sync with packages/Telephony
+  phone_settings_actionbar_text_color-->
+  <color name="actionbar_text_color">#ffffff</color>
+  <color name="actionbar_unselected_text_color">#a6f5f5f5</color>
+
+  <!-- Text color of the search box text as entered by user  -->
+  <color name="searchbox_text_color">@*android:color/omni_text1</color>
+  <!-- Background color of the search box -->
+  <color name="searchbox_background_color">@*android:color/omni_color2</color>
+
+  <color name="searchbox_hint_text_color">@*android:color/omni_text3</color>
+  <color name="searchbox_icon_tint">@*android:color/omni_text1</color>
+
+  <color name="search_shortcut_icon_color">@*android:color/omni_text1</color>
+
+  <!-- Color of the background of the contact detail and editor pages -->
+  <color name="background_primary">@*android:color/omni_color2</color>
+  <color name="contact_all_list_background_color">@*android:color/omni_color1</color>
+
+  <!-- Text color used for character counter when the max limit has been exceeded -->
+  <color name="call_subject_limit_exceeded">#d1041c</color>
+
+  <!-- Tint color for the call subject history icon. -->
+  <color name="call_subject_history_icon">#ffffff</color>
+
+  <!-- Divider line on the call subject dialog. -->
+  <color name="call_subject_divider">#d8d8d8</color>
+
+  <!-- Text color for the SEND & CALL button on the call subject dialog. -->
+  <color name="call_subject_button">#00c853</color>
+
+  <!-- Background color for the call subject history view. -->
+  <color name="call_subject_history_background">@*android:color/omni_color1</color>
+</resources>
