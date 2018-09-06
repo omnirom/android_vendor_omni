@@ -21,4 +21,5 @@
     <color name="notification_progress_background_color">@*android:color/omni_text2</color>
     <color name="notification_snooze_text">@*android:color/omni_text1</color>
     <color name="notification_text_color1">@*android:color/omni_text1</color>    
+    <color name="notification_default_color_dark">@*android:color/omni_text1</color>
 </resources>
