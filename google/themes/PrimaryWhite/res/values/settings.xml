@@ -22,6 +22,7 @@
         <item name="android:colorControlNormal">@*android:color/omni_color4</item>
         <item name="android:colorControlHighlight">@*android:color/omni_color1</item>
         <item name="android:colorControlActivated">@*android:color/omni_color5</item>
-
+        <item name="android:dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
     </style>
 </resources>
