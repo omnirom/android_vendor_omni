@@ -131,7 +131,7 @@ case "$1" in
     done
   ;;
   pre-backup)
-    # Stub
+    rm /system/addon.d/70-gapps.sh
   ;;
   post-backup)
     # Stub
