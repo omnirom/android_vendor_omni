@@ -14,6 +14,7 @@ app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk
 app/GoogleExtShared/GoogleExtShared.apk
 app/GoogleTTS/GoogleTTS.apk
 app/SoundPickerPrebuilt/SoundPickerPrebuilt.apk
+app/MarkupGoogle/MarkupGoogle.apk
 etc/default-permissions/default-permissions.xml
 etc/default-permissions/opengapps-permissions.xml
 etc/g.prop
@@ -38,6 +39,7 @@ lib64/libfacenet.so
 lib64/libfilterpack_facedetect.so
 lib64/libfrsdk.so
 lib64/libjni_latinimegoogle.so
+lib64/libsketchology_native.so
 priv-app/AndroidMigratePrebuilt/AndroidMigratePrebuilt.apk
 priv-app/AndroidPlatformServices/AndroidPlatformServices.apk
 priv-app/ConfigUpdater/ConfigUpdater.apk
@@ -112,9 +114,6 @@ usr/srec/en-US/voice_actions.config
 usr/srec/en-US/voice_actions_compiler.config
 usr/srec/en-US/word_confidence_classifier
 usr/srec/en-US/wordlist.syms
-addon.d/69-gapps.sh
-addon.d/addond_tail
-addon.d/addond_head
 EOF
 }
 
@@ -132,7 +131,7 @@ case "$1" in
     done
   ;;
   pre-backup)
-    # Stub
+    rm /system/addon.d/70-gapps.sh
   ;;
   post-backup)
     # Stub
@@ -204,7 +203,6 @@ case "$1" in
     rm -rf /postinstall/system/lib64/libjni_latinimegoogle.so
 
     # Remove 'user requested' apps (from gapps-config)
-
     # Stub
   ;;
   post-restore)
@@ -215,11 +213,11 @@ case "$1" in
     fi
 
     # Recreate required symlinks (from GApps Installer)
-    install -d "/system/system/app/FaceLock/lib/arm64"
-    ln -sfn "/system/system/lib64/libfacenet.so" "/system/system/app/FaceLock/lib/arm64/libfacenet.so"
-    install -d "/system/app/LatinIME/lib64/arm64"
-    ln -sfn "/system/lib64/libjni_latinimegoogle.so" "/system/app/LatinIME/lib64/arm64/libjni_latinimegoogle.so"
-    ln -sfn "/system/lib64/libjni_keyboarddecoder.so" "/system/app/LatinIME/lib64/arm64/libjni_keyboarddecoder.so"
+    install -d "$P/app/FaceLock/lib/arm64"
+    ln -sfn "$P/lib64/libfacenet.so" "$P/app/FaceLock/lib/arm64/libfacenet.so"
+    install -d "$P/app/LatinIME/lib64/arm64"
+    ln -sfn "$P/lib64/libjni_latinimegoogle.so" "$P/app/LatinIME/lib64/arm64/libjni_latinimegoogle.so"
+    ln -sfn "$P/lib64/libjni_keyboarddecoder.so" "$P/app/LatinIME/lib64/arm64/libjni_keyboarddecoder.so"
 
     # Apply build.prop changes (from GApps Installer)
     sed -i "s/ro.error.receiver.system.apps=.*/ro.error.receiver.system.apps=com.google.android.gms/g" /system/system/build.prop
