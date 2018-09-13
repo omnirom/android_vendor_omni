@@ -52,6 +52,7 @@ priv-app/PrebuiltGmsCorePi/PrebuiltGmsCorePi.apk
 priv-app/SetupWizard/SetupWizard.apk
 priv-app/Turbo/Turbo.apk
 priv-app/Velvet/Velvet.apk
+priv-app/WellbeingPrebuilt/WellbeingPrebuilt.apk
 usr/srec/en-US/APP_NAME.fst
 usr/srec/en-US/APP_NAME.syms
 usr/srec/en-US/CLG.prewalk.fst
@@ -177,6 +178,7 @@ case "$1" in
     rm -rf /postinstall/system/priv-app/QuickSearchBox
     rm -rf /postinstall/system/priv-app/Velvet_update
     rm -rf /postinstall/system/priv-app/Vending
+    rm -rf /postinstall/system/priv-app/WellbeingPrebuilt
 
     # Remov/postinstalle 'priv-app' apps from 'app' (per installer.data)
     rm -rf /postinstall/system/app/CanvasPackageInstaller
