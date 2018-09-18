@@ -35,8 +35,6 @@
     black in software (to avoid aliasing or emulate a cutout that is not physically existent).
     -->
     <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
-    <bool name="config_windowIsRound">true</bool>
-    <bool name="config_smart_battery_available">true</bool>
     <bool name="config_intrusiveNotificationLed">true</bool>
     <bool name="config_intrusiveBatteryLed">true</bool>
     <bool name="config_FastChargingLedSupported">true</bool>
