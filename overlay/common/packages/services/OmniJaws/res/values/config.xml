@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <add-resource type="string" name="owm_api_key_1" />
     <add-resource type="string" name="owm_api_key_2" />
 
-    <string name="owm_api_key_1" translatable="false" >a82cbdeeb0dad6aeb9262e76402c2bcd</string>
+    <string name="owm_api_key_1" translatable="false" >f839981a9e6195410e563ef35d1e7fb4</string>
     <string name="owm_api_key_2" translatable="false" >8d593110ad8e484d4ec4805ef851f726</string>
 
 </resources>
