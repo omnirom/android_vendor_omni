@@ -65,4 +65,7 @@
     <dimen name="config_buttonCornerRadius">8.0dip</dimen> <!-- default: 2dp -->
     <dimen name="config_progressBarCornerRadius">1000.0dip</dimen> <!-- default: 0 -->
 
+    <!-- The duration in which a recent task is considered in session and should be visible. -->
+    <integer name="config_activeTaskDurationHours">12</integer>
+
 </resources>
