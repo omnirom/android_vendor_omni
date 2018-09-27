@@ -49,4 +49,10 @@
     <!-- 0dp -->
     <dimen name="qs_header_tile_margin_horizontal">13dp</dimen>
 
+    <!-- power menu + volume dialog -->
+    <!-- 8dp -->
+    <!-- ALWAYS set to same as config_dialogCornerRadius -->
+    <dimen name="corner_size">16dp</dimen>
+    <dimen name="edge_margin">16dp</dimen>
+
 </resources>

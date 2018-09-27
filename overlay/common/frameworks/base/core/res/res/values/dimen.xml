@@ -23,4 +23,10 @@
     <dimen name="quick_qs_offset_height">40dp</dimen>
     <!-- Total height of QQS (quick_qs_offset_height + 128) -->
     <dimen name="quick_qs_total_height">168dp</dimen>
+
+    <!-- Corner radius of system dialogs -->
+    <dimen name="config_dialogCornerRadius">16.0dip</dimen> <!-- default: 2dp -->
+    <dimen name="config_buttonCornerRadius">8.0dip</dimen> <!-- default: 2dp -->
+    <dimen name="config_progressBarCornerRadius">1000.0dip</dimen> <!-- default: 0 -->
+
 </resources>
