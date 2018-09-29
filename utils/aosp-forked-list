@@ -17,6 +17,7 @@ frameworks/opt/net/ims
 hardware/invensense
 hardware/interfaces
 hardware/libhardware
+hardware/nxp/nfc
 hardware/qcom/audio
 hardware/qcom/bt
 hardware/qcom/display
