@@ -4,5 +4,5 @@
 # Add tablet overlays
 DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/common_tablet
 
-PRODUCT_CHARACTERISTICS := tablet
+#PRODUCT_CHARACTERISTICS := tablet
 
