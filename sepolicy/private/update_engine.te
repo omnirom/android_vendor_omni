@@ -5,10 +5,10 @@ allow update_engine self:capability { chown fsetid };
 
 allow update_engine labeledfs:filesystem { mount unmount };
 
-allow update_engine { otapreopt_chroot_exec rootfs system_file toolbox_exec }:file rx_file_perms;
+allow update_engine { otapreopt_chroot_exec rootfs system_file toolbox_exec }:file { create write rx_file_perms unlink };
 
 allow update_engine labeledfs:filesystem mount;
-allow update_engine rootfs:dir { add_name write };
+allow update_engine rootfs:dir { create add_name write read };
 allow update_engine storage_file:lnk_file read;
 allow update_engine system_file:file execute_no_trans;
 allow update_engine toolbox_exec:file { execute getattr };
