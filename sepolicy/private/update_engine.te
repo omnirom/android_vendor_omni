@@ -5,10 +5,17 @@ allow update_engine self:capability { chown fsetid };
 
 allow update_engine labeledfs:filesystem { mount unmount };
 
-allow update_engine { otapreopt_chroot_exec rootfs system_file toolbox_exec }:file rx_file_perms;
+allow update_engine { otapreopt_chroot_exec toolbox_exec }:file rx_file_perms;
 
 allow update_engine labeledfs:filesystem mount;
-allow update_engine rootfs:dir { add_name write };
+allow update_engine rootfs:file { create setattr write rx_file_perms unlink relabelfrom rename };
+allow update_engine rootfs:dir { create write open add_name read rmdir remove_name };
+
+allow update_engine system_data_file:file { create read write open unlink };
+allow update_engine system_data_file:dir { create write add_name read remove_name unlink };
+
+allow update_engine system_file:file { create setattr write relabelto relabelfrom rx_file_perms unlink };
+allow update_engine system_file:dir { create setattr write rmdir remove_name add_name };
+
 allow update_engine storage_file:lnk_file read;
-allow update_engine system_file:file execute_no_trans;
 allow update_engine toolbox_exec:file { execute getattr };
