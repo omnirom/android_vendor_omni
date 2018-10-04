@@ -13,29 +13,42 @@ PRODUCT_PACKAGES += \
     OpenDelta \
     Turbo
 
-#PRODUCT_PACKAGES += \
-    Turbo
-
 # Additional tools
 PRODUCT_PACKAGES += \
-    bash \
     e2fsck \
     fsck.exfat \
-    htop \
     lsof \
     mke2fs \
     mount.exfat \
-    nano \
     openvpn \
-    powertop \
     tune2fs \
-    vim \
     mkfs.ntfs \
     mount.ntfs \
     fsck.ntfs \
     mkshrc_vendor \
     toybox_vendor \
     sh_vendor
+
+ifeq ($(BOARD_INCLUDE_CMDLINE_TOOLS),true)
+PRODUCT_PACKAGES += \
+    bash \
+    htop \
+    nano \
+    powertop \
+    vim \
+    rsync \
+    zip
+
+# Openssh
+PRODUCT_PACKAGES += \
+    scp \
+    sftp \
+    ssh \
+    sshd \
+    sshd_config \
+    ssh-keygen \
+    start-ssh
+endif
 
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/bin/vi:system/bin/vi
