@@ -13,9 +13,6 @@ PRODUCT_PACKAGES += \
     OpenDelta \
     Turbo
 
-#PRODUCT_PACKAGES += \
-    Turbo
-
 # Additional tools
 PRODUCT_PACKAGES += \
     bash \
@@ -35,7 +32,19 @@ PRODUCT_PACKAGES += \
     fsck.ntfs \
     mkshrc_vendor \
     toybox_vendor \
-    sh_vendor
+    rsync \
+    sh_vendor \
+    zip
+
+# Openssh
+PRODUCT_PACKAGES += \
+    scp \
+    sftp \
+    ssh \
+    sshd \
+    sshd_config \
+    ssh-keygen \
+    start-ssh
 
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/bin/vi:system/bin/vi
