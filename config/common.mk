@@ -62,7 +62,7 @@ PRODUCT_COPY_FILES += \
 
 # Init script file with omni extras
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/etc/init.local.rc:root/init.omni.rc
+    vendor/omni/prebuilt/etc/init.local.rc:system/etc/init/init.omni.rc
 
 # Enable SIP and VoIP on all targets
 PRODUCT_COPY_FILES += \
