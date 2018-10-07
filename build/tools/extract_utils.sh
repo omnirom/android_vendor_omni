@@ -848,16 +848,21 @@ function oat2dex() {
             fi
         elif [[ "$CM_TARGET" =~ .jar$ ]]; then
             JAROAT="$TMPDIR/system/framework/$ARCH/boot-$(basename ${OEM_TARGET%.*}).oat"
-            JARVDEX="$TMPDIR/system/framework/oat/$ARCH/$(basename ${OEM_TARGET%.*}).vdex"
+            JARVDEX="/system/framework/boot-$(basename ${OEM_TARGET%.*}).vdex"
             if [ ! -f "$JAROAT" ]; then
-                JAROAT=$BOOTOAT;
+                JAROAT=$BOOTOAT
             fi
-
             # try to extract classes.dex from boot.vdex for frameworks jars
             # fallback to boot.oat if vdex is not available
-            if [ -f "$JARVDEX" ]; then
-                "$VDEXEXTRACTOR" -o "$TMPDIR/" -i "$JARVDEX" > /dev/null
-                mv "$TMPDIR/$(basename "${OEM_TARGET%.*}")_classes.dex" "$TMPDIR/classes.dex"
+            if get_file "$JARVDEX" "$TMPDIR" "$SRC"; then
+                "$VDEXEXTRACTOR" -o "$TMPDIR/" -i "$TMPDIR/$(basename "$JARVDEX")"
+                # Check if we have to deal with CompactDex
+                if [ -f "$TMPDIR/$(basename "${JARVDEX%.*}")_classes.cdex" ]; then
+                    "$CDEXCONVERTER" "$TMPDIR/$(basename "${JARVDEX%.*}")_classes.cdex" &> /dev/null
+                    mv "$TMPDIR/$(basename "${JARVDEX%.*}")_classes.cdex.new" "$TMPDIR/classes.dex"
+                else
+                    mv "$TMPDIR/$(basename "${JARVDEX%.*}")_classes.dex" "$TMPDIR/classes.dex"
+                fi
             else
                 "$OATDUMP" --oat-file="$JAROAT" --export-dex-to="$TMPDIR" > /dev/null
                 mv "$(find "$TMPDIR" -maxdepth 1 -type f -name "*_export.dex" | wc -l | tr -d ' ')" "$TMPDIR/classes.dex"
