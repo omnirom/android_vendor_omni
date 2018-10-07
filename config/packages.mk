@@ -11,7 +11,8 @@ PRODUCT_PACKAGES += \
     MatLog \
     OmniChange \
     OpenDelta \
-    Turbo
+    Turbo \
+    OmniRecord
 
 # Additional tools
 PRODUCT_PACKAGES += \
