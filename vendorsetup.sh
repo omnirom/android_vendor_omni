@@ -15,3 +15,5 @@
 #
 
 add_lunch_combo omni_emulator-userdebug
+
+add_lunch_combo omni_emulator-eng
