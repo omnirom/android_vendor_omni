@@ -1093,6 +1093,7 @@ function extract() {
 
             if [ "${FOUND}" = false ]; then
                 printf '    !! %s: file not found in source\n' "${BLOB_DISPLAY_NAME}"
+                continue
             fi
         fi
 
