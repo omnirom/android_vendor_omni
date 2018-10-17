@@ -17,6 +17,7 @@ cp -f /postinstall/system/bin/backuptool_ab.functions /postinstall/tmp/backuptoo
 preserve_addon_d() {
   if [ -d /system/addon.d/ ]; then
     mkdir -p /postinstall/tmp/addon.d/
+    rm /system/addon.d/70-gapps.sh
     cp -a /system/addon.d/* /postinstall/tmp/addon.d/
 
     # Discard any scripts that aren't at least our version level
@@ -29,7 +30,6 @@ preserve_addon_d() {
         rm $f
       fi
     done
-
     chmod 755 /postinstall/tmp/addon.d/*.sh
   fi
 }
