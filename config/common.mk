@@ -32,12 +32,12 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # enable ADB authentication if not on eng build
 ifneq ($(TARGET_BUILD_VARIANT),eng)
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES  += ro.adb.secure=1
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES  += ro.adb.secure=0
 endif
 
 # Enforce privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.control_privapp_permissions=enforce
+    ro.control_privapp_permissions=log
 
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/bin/clean_cache.sh:system/bin/clean_cache.sh
