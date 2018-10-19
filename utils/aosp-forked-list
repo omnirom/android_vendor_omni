@@ -29,6 +29,7 @@ hardware/qcom/wlan
 packages/apps/Contacts
 packages/apps/CellBroadcastReceiver
 packages/apps/Dialer
+packages/apps/DocumentsUI
 packages/apps/EmergencyInfo
 packages/apps/Messaging
 packages/apps/Nfc
