@@ -12,6 +12,7 @@ function list_files($path) {
 		}
 
 		if (is_dir($path.'/'.$file)) {
+			$output[$path.'/'.$file] = list_files($path.'/'.$file);
 		} else {
 			$output[] = array("filename"=>$file, "timestamp"=>filemtime($path.'/'.$file));
 		}
