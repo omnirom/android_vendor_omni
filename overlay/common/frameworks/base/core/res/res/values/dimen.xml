@@ -29,4 +29,7 @@
     <dimen name="config_buttonCornerRadius">8.0dip</dimen> <!-- default: 2dp -->
     <dimen name="config_progressBarCornerRadius">1000.0dip</dimen> <!-- default: 0 -->
 
+    <!-- influences if we can split screen onloy by half or third -->
+    <!-- 220dp -->
+    <dimen name="default_minimal_size_resizable_task">200dp</dimen>
 </resources>
