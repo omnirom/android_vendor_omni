@@ -707,16 +707,27 @@
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="config_carrier_ims_call_deflect" value="true" />
     </carrier_config>
+    <carrier_config mcc="450" mnc="02" >
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="450" mnc="04" >
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+    </carrier_config>
     <carrier_config mcc="450" mnc="05">
+        <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="allow_video_call_in_low_battery" value="false" />
         <boolean name="config_carrier_cs_retry_available" value="true" />
     </carrier_config>
     <carrier_config mcc="450" mnc="06">
+        <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="allow_video_call_in_low_battery" value="false" />
     </carrier_config>
     <carrier_config mcc="450" mnc="08">
+        <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="allow_video_call_in_low_battery" value="false" />
         <boolean name="config_carrier_cs_retry_available" value="true" />
@@ -1560,5 +1571,21 @@
     <carrier_config mcc="293" mnc="41">
        <boolean name="carrier_wfc_ims_available_bool" value="true" />
        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="286" mnc="01">
+       <boolean name="carrier_volte_available_bool" value="true" />
+       <boolean name="carrier_vt_available_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="286" mnc="02">
+       <boolean name="carrier_volte_available_bool" value="true" />
+       <boolean name="carrier_vt_available_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="286" mnc="03">
+       <boolean name="carrier_volte_available_bool" value="true" />
+       <boolean name="carrier_vt_available_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="413" mnc="02">
+       <boolean name="carrier_volte_available_bool" value="true" />
+       <boolean name="carrier_vt_available_bool" value="true" />
     </carrier_config>
 </carrier_config_list>
