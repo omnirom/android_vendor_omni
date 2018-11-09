@@ -66,6 +66,7 @@
   <color name="omni_subheader">@*android:color/omni_text2</color>
   <color name="omni_secondary_text">@*android:color/omni_text2</color>
   <color name="omni_primary_text">@*android:color/omni_text1</color>
-  <color name="popupBackground">@*android:color/omni_color7</color>
+  <color name="popup_background_color">@*android:color/omni_color7</color>
+  <color name="popup_header_color">@*android:color/omni_text1</color>
 </resources>
 

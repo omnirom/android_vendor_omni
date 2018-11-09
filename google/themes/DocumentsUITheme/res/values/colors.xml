@@ -52,7 +52,6 @@
     <color name="item_doc_details">@*android:color/omni_text3</color>
     <color name="item_doc_background">@*android:color/omni_color7</color>
     <color name="item_doc_background_disabled">@*android:color/omni_color1</color>
-    <color name="item_doc_background_selected">@*android:color/omni_color6</color>
     <color name="item_breadcrumb_background_hovered">@*android:color/omni_color3</color>
     <color name="item_doc_droppable_background">@*android:color/omni_color7</color>
     <color name="item_doc_not_droppable_background">@*android:color/omni_color1</color>
