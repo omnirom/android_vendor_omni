@@ -15,5 +15,5 @@
 -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android" >
-    <style name="ActionBarPopupTheme" parent="@*android:style/ThemeOverlay.Material" />
+    <style name="Theme.Phonograph.Settings" parent="@android:style/Theme.DeviceDefault.Settings" />
 </resources>
