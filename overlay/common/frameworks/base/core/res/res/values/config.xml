@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="config_locationProviderPackageNames" translatable="false">
+        <!-- qcom provider -->
+        <item>com.qualcomm.location</item>
         <!-- The Google provider -->
         <item>com.google.android.gms</item>
         <!-- The standard AOSP fused location provider -->
