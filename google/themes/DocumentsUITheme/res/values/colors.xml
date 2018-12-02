@@ -71,9 +71,9 @@
     <color name="scroll_thumb">#ffbebebe</color>
     <color name="scroll_track">#fff0f0f0</color>
 
+    <color name="inspector_key">@*android:color/omni_text1</color>
     <color name="inspector_value">@*android:color/omni_text1</color>
-    <color name="inspector_link">@*android:color/omni_text3</color>
     <color name="inspector_section_title">@*android:color/omni_text1</color>
     <color name="inspector_section_divider">@*android:color/omni_color1</color>
-    <color name="inspector_title_background">@*android:color/omni_color7</color>
+    <color name="inspector_header_title">@*android:color/omni_text1</color>
 </resources>
