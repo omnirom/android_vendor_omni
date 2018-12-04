@@ -52,7 +52,7 @@ gerrit_url = "gerrit.omnirom.org"
 
 def check_repo_exists(git_data, device):
     re_match = "^android_device_.*_{device}$".format(device=device)
-    matches = filter(lambda x: re.match(re_match, x), git_data)
+    matches = list(filter(lambda x: re.match(re_match, x), git_data))
     if len(matches) != 1:
         raise Exception("{device} not found,"
                         "exiting roomservice".format(device=device))
