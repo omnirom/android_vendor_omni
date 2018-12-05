@@ -3,9 +3,6 @@
 # Functions for backuptool.sh
 #
 
-export C=/tmp/backupdir
-export S=/system
-
 DEBUG=0
 
 backup_file() {
