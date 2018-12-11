@@ -8,6 +8,21 @@ else
 charger_density := 480dpi
 endif
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := font_charger.png
+LOCAL_SRC_FILES := fonts/$(charger_density)/font_charger.png
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)/res/images
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := animation.txt
+LOCAL_SRC_FILES := anim/animation.txt
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)/res/values/charger
+include $(BUILD_PREBUILT)
 
 define _add-charger-image
 include $$(CLEAR_VARS)
