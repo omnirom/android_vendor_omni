@@ -60,6 +60,7 @@ PRODUCT_BOOT_JARS += telephony-ext
     GboardOmniTheme
 
 PRODUCT_PACKAGES += \
+    ContactsTheme \
     DocumentsUITheme \
     DialerTheme \
     TelecommTheme \
