@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="omni_color3">#fff9f9f9</color> <!-- ACCENT  LIGHT -->
-    <color name="omni_color4">#ffe0e0e0</color> <!-- ACCENT  DARK -->
-    <color name="omni_color5">#fffefefe</color> <!-- ACCENT -->
+    <color name="omni_color3">#ffc0c1c0</color> <!-- ACCENT  LIGHT -->
+    <color name="omni_color4">#ffa7a8a7</color> <!-- ACCENT  DARK -->
+    <color name="omni_color5">#FFBABBBA</color> <!-- ACCENT -->
 
     <!-- accents -->
     <color name="accent_device_default_light">@*android:color/omni_color3</color>
