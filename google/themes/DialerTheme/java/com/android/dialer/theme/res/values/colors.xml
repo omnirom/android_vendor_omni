@@ -19,7 +19,7 @@
   <color name="dialer_theme_color_dark">@*android:color/omni_color5</color>
 
   <color name="dialer_snackbar_action_text_color">@*android:color/omni_color8</color>
-  <color name="dialer_theme_color_20pct">@*android:color/omni_color3</color>
+  <color name="dialer_theme_color_20pct">@*android:color/omni_color4</color>
 
 <!--  <color name="dialpad_fab_green">@*android:color/omni_color5</color> -->
 
@@ -36,7 +36,7 @@
   <color name="dialer_secondary_text_color_hiden">@*android:color/omni_text3</color>
 
   <!-- Color of the theme of the Dialer app -->
-  <color name="dialtacts_theme_color">@*android:color/omni_color2</color>
+  <color name="dialtacts_theme_color">@*android:color/omni_color5</color>
 
   <!-- Background color of new dialer activity -->
   <color name="background_dialer_light">@*android:color/omni_color1</color>
@@ -50,7 +50,7 @@
   <color name="notification_action_answer_video">#097138</color>
 
   <!-- Background color of action bars -->
-  <color name="actionbar_background_color">@*android:color/omni_color2</color>
+  <color name="actionbar_background_color">@*android:color/omni_color5</color>
 
   <!-- Background color of title bars in recents -->
   <color name="titlebar_in_recents_background_color">@*android:color/omni_color4</color>
