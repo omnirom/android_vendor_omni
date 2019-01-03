@@ -1,0 +1,5 @@
+type backuptool, domain, coredomain;
+
+permissive backuptool;
+
+neverallow { domain -update_engine } backuptool:process transition;

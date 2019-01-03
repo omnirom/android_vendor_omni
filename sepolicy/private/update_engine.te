@@ -39,3 +39,6 @@ allow update_engine linkerconfig_file:dir { getattr };
 allow update_engine update_engine:capability { kill };
 allow update_engine otadexopt_service:service_manager find;
 binder_call(update_engine, platform_app)
+
+# Allow transition to backuptool domain
+domain_trans(update_engine, otapreopt_chroot_exec, backuptool)
