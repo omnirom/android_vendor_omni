@@ -16,7 +16,7 @@
 
 <resources>
   <color name="dialer_theme_color">@*android:color/omni_color5</color>
-  <color name="dialer_theme_color_dark">@*android:color/omni_color5</color>
+  <color name="dialer_theme_color_dark">@*android:color/omni_color4</color>
 
   <color name="dialer_snackbar_action_text_color">@*android:color/omni_color8</color>
   <color name="dialer_theme_color_20pct">@*android:color/omni_color4</color>
