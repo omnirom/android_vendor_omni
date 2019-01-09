@@ -51,6 +51,8 @@
     <item>#424242</item>
   </array>
 
+  <color name="contactscommon_actionbar_background_color">@*android:color/omni_color5</color>
+
   <color name="tab_ripple_color">#ffffff</color>
   <color name="tab_selected_underline_color">#ffffff</color>
   <color name="tab_unread_count_background_color">@*android:color/omni_color2</color>
