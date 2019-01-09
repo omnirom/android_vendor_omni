@@ -36,10 +36,10 @@
     <!-- Color of the status bar above the contextual selection bar. -->
     <color name="contextual_selection_bar_status_bar_color">@*android:color/omni_color4</color>
 
-    <color name="primary_color_dark">@*android:color/omni_color5</color>
+    <color name="primary_color_dark">@*android:color/omni_color4</color>
     <color name="primary_color">@*android:color/omni_color5</color>
 
-    <color name="group_primary_color_dark">@*android:color/omni_color5</color>
+    <color name="group_primary_color_dark">@*android:color/omni_color4</color>
     <color name="group_primary_color">@*android:color/omni_color5</color>
 
     <!-- Color of the selected tab underline -->
