@@ -21,7 +21,7 @@
     <color name="directory_background">@*android:color/omni_color1</color>
     <color name="menu_search_background">@android:color/transparent</color>
 
-    <color name="primary_dark">@*android:color/omni_color5</color>
+    <color name="primary_dark">@*android:color/omni_color4</color>
     <color name="primary">@*android:color/omni_color5</color>
     <color name="accent">@*android:color/omni_color5</color>
     <color name="accent_dark">@*android:color/omni_color4</color>
