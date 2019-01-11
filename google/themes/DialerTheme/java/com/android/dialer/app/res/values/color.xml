@@ -19,36 +19,26 @@
   <color name="setting_background_color">@*android:color/omni_color1</color>
 
   <!-- 54% black -->
-  <color name="call_log_icon_tint">#8affffff</color>
+  <color name="call_log_icon_tint">@*android:color/omni_text2</color>
   <!-- 87% black -->
-  <color name="call_log_primary_color">#deffffff</color>
+  <color name="call_log_primary_color">@*android:color/omni_text1</color>
   <!-- 54% black -->
-  <color name="call_log_detail_color">#8affffff</color>
+  <color name="call_log_detail_color">@*android:color/omni_text2</color>
   <!-- 87% black -->
-  <color name="call_log_voicemail_transcript_color">#deffffff</color>
+  <color name="call_log_voicemail_transcript_color">@*android:color/omni_text1</color>
   <!-- 54% black -->
-  <color name="call_log_voicemail_transcript_branding_color">#8affffff</color>
-  <!-- 100% blue -->
-  <color name="call_log_voicemail_transcript_rating_color">#ff2a56c6</color>
+  <color name="call_log_voicemail_transcript_branding_color">@*android:color/omni_text2</color>
   <!-- 70% black -->
-  <color name="call_log_action_color">#b3ffffff</color>
+  <color name="call_log_action_color">@*android:color/omni_text1</color>
   <!-- 54% black -->
-  <color name="call_log_day_group_heading_color">#8affffff</color>
+  <color name="call_log_day_group_heading_color">@*android:color/omni_text2</color>
   <!-- 87% black-->
-  <color name="call_log_unread_text_color">#deffffff</color>
+  <color name="call_log_unread_text_color">@*android:color/omni_text1</color>
 
-  <color name="voicemail_icon_disabled_tint">#80ffffff</color>
+  <color name="voicemail_icon_disabled_tint">@*android:color/omni_text2</color>
 
   <!-- Background color for search results and call details -->
   <color name="background_dialer_results">@*android:color/omni_color1</color>
-
-  <!-- Color of the contact name in favorite tiles -->
-  <color name="contact_tile_name_color">#ffffff</color>
-
-  <color name="remove_text_color">#ffffff</color>
-
-  <!-- Text color for the "Remove" text when a contact is dragged on top of the remove view -->
-  <color name="remove_highlighted_text_color">#FF3F3B</color>
 
   <color name="call_log_action_divider">@*android:color/omni_color7</color>
   <color name="divider_line_color">#D8D8D8</color>
