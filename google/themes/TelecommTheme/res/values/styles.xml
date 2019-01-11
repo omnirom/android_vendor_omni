@@ -15,13 +15,13 @@
 -->
 
 <resources>
-    <style name="Theme.Telecomm.Transparent" parent="@*android:style/Theme.Material">
+    <style name="Theme.Telecomm.Transparent" parent="@android:style/Theme.DeviceDefault.Settings">
     </style>
 
-    <style name="Theme.Telecom.DialerSettings" parent="@*android:style/Theme.Material">
+    <style name="Theme.Telecom.DialerSettings" parent="@android:style/Theme.DeviceDefault.Settings">
     </style>
 
-    <style name="Theme.Telecom.BlockedNumbers" parent="@*android:style/Theme.Material">
+    <style name="Theme.Telecom.BlockedNumbers" parent="@android:style/Theme.DeviceDefault.Settings">
     </style>
 
 </resources>
