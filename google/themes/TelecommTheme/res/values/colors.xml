@@ -15,18 +15,8 @@
   -->
 
 <resources>
-    <color name="theme_color">@*android:color/omni_color4</color>
 
-    <color name="dialer_settings_actionbar_text_color">#ffffff</color>
-    <color name="dialer_settings_actionbar_background_color">@*android:color/omni_color1</color>
-    <color name="dialer_settings_color_dark">@*android:color/omni_color2</color>
-
-    <color name="blocked_numbers_divider_color">#e5e5e5</color>
-    <color name="blocked_numbers_butter_bar_color">#f5f5f5</color>
-    <color name="blocked_numbers_title_text_color">#baffffff</color>
-    <color name="blocked_numbers_secondary_text_color">#89ffffff</color>
-
-    <color name="notification_action_answer">#097138</color>
-    <color name="notification_action_decline">#A52714</color>
+    <color name="theme_color">@*android:color/omni_color5</color>
+    <color name="dialer_settings_color_dark">@*android:color/omni_color4</color>
 </resources>
 
