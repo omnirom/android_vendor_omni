@@ -84,6 +84,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.SEND_SMS_NO_CONFIRMATION"/>
         <permission name="android.permission.SET_PREFERRED_APPLICATIONS"/>
         <permission name="android.permission.STATUS_BAR"/>
+        <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME"/>
         <permission name="android.permission.UPDATE_DEVICE_STATS"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
