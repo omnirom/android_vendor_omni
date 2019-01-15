@@ -1,0 +1,7 @@
+# Set disk scheduler in init.local.rc
+allow init sysfs_block_scheduler:file { open setattr write };
+
+# Mount debugfs in init.local.rc
+userdebug_or_eng(`
+  allow init debugfs:dir mounton;
+')
