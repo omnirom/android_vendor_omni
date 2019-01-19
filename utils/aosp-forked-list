@@ -9,6 +9,7 @@ external/mksh
 external/tinycompress
 external/toybox
 external/selinux
+external/skia
 frameworks/av
 frameworks/base
 frameworks/native
