@@ -5,3 +5,6 @@ allow init sysfs_block_scheduler:file { open setattr write };
 userdebug_or_eng(`
   allow init debugfs:dir mounton;
 ')
+
+# Set memory parameters in init.local.rc
+allow init sysfs_memory:file { open setattr write };
