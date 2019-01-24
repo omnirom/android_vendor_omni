@@ -365,6 +365,7 @@
 -->
         <item name="android:dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
         <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:panelColorBackground">@*android:color/omni_color1</item>
     </style>
 
     <style name="qs_base" parent="@*android:style/Theme.DeviceDefault">
