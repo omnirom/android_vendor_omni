@@ -10,7 +10,7 @@
     <color name="omni_color1">#ff0d2029</color> <!-- PRIMARY DARK -->
     <color name="omni_color2">#ff182a33</color> <!-- PRIMARY LIGHT -->
     <color name="omni_color6">#b3fefefe</color> <!-- WIFI ICON IN DETAILS -->
-    <color name="omni_color7">#ff182a33</color> <!-- FLOATING DIALOG COLOR ON VERY DARK THEMES MAKE THIS A BIT LIGHTER -->
+    <color name="omni_color7">#ff2f3f47</color> <!-- FLOATING DIALOG COLOR ON VERY DARK THEMES MAKE THIS A BIT LIGHTER -->
     <color name="omni_color9">#e6182a33</color> <!-- TOAST (NEEDS SOME ALPHA) -->
     <color name="omni_color900">#ff0d2029</color> <!-- PRIMARY DARK -->
 
