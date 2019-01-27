@@ -7241,7 +7241,17 @@
       mmsport="8080"
       type="default,supl,mms"
   />
-
+  <apn carrier="Orange LU"
+      mcc="270"
+      mnc="99"
+      apn="orange.lu"
+      server="orange.lu"
+      mmsc="http://mms.orange.lu"
+      mmsproxy="212.88.139.44"
+      mmsport="8080"
+      authtype="3"
+      type="default,supl,mms"
+  />
   <apn carrier="Vodafone IE"
       mcc="272"
       mnc="01"
