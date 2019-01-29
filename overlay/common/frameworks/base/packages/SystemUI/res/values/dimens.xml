@@ -24,9 +24,6 @@
     <!-- 56dp -->
     <dimen name="qs_footer_height">48dp</dimen>
 
-    <!-- extra height to add on qs status bar heigth if header enabled -->
-    <dimen name="qs_header_image_offset">25dp</dimen>
-
     <!-- End padding for left-aligned status bar clock -->
     <!-- 7dp -->
     <dimen name="status_bar_left_clock_end_padding">4dp</dimen>
