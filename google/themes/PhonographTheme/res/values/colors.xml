@@ -24,7 +24,6 @@
     <color name="ate_secondary_text_light">@*android:color/omni_text2</color>
     <color name="windowBackground">@*android:color/omni_color1</color>
     <color name="md_divider_black">@*android:color/omni_color2</color>
-    <color name="ripple_color">@*android:color/omni_text3</color>
     <color name="textColorPrimary">@*android:color/omni_text1</color>
     <color name="textColorSecondary">@*android:color/omni_text2</color>
     <color name="textColorTertiary">@*android:color/omni_text3</color>
