@@ -21,8 +21,8 @@
     <color name="directory_background">@*android:color/omni_color1</color>
     <color name="menu_search_background">@android:color/transparent</color>
 
-    <color name="primary_dark">@*android:color/omni_color4</color>
-    <color name="primary">@*android:color/omni_color5</color>
+    <color name="primary_dark">@*android:color/omni_color1</color>
+    <color name="primary">@*android:color/omni_color2</color>
     <color name="accent">@*android:color/omni_color5</color>
     <color name="accent_dark">@*android:color/omni_color4</color>
 
@@ -35,7 +35,7 @@
     <color name="band_select_border">#440000ff</color>
 
     <color name="root_title_color">@*android:color/omni_text2</color>
-    <color name="root_activated_color">@*android:color/omni_text1</color>
+    <color name="root_activated_color">@*android:color/omni_color5</color>
     <color name="root_details_color">@*android:color/omni_text3</color>
     <color name="root_focus_color">@*android:color/omni_color7</color>
 
@@ -43,10 +43,10 @@
 
     <color name="sort_widget_text_color">@*android:color/omni_color5</color>
 
-    <color name="root_icon_color">@*android:color/omni_color4</color>
+    <color name="root_icon_color">@*android:color/omni_text2</color>
     <item name="root_icon_disabled_alpha" format="float" type="dimen">@*android:dimen/disabled_alpha_material_light</item>
     <color name="doc_icon_color">@*android:color/omni_color6</color>
-    <color name="tool_bar_color">@*android:color/omni_color2</color>
+    <color name="tool_bar_color">@*android:color/omni_color5</color>
     <color name="item_doc_title">@*android:color/omni_text1</color>
     <color name="item_doc_title_disabled">@*android:color/omni_text2</color>
     <color name="item_doc_details">@*android:color/omni_text3</color>
@@ -60,11 +60,6 @@
     <color name="item_drag_shadow_background">@*android:color/omni_color7</color>
     <color name="item_drag_shadow_container_background">@*android:color/transparent</color>
 
-    <color name="downloads_icon_background">#ff4688f2</color>
-    <color name="app_icon_background">#ff4688f2</color>
-    <color name="shortcut_foreground">#ff3367d6</color>
-    <color name="shortcut_background">#fff5f5f5</color>
-
     <color name="dialog_title">@*android:color/omni_text1</color>
 
     <color name="scroll_thumb_pressed">#ff8c8c8c</color>
@@ -76,4 +71,6 @@
     <color name="inspector_section_title">@*android:color/omni_text1</color>
     <color name="inspector_section_divider">@*android:color/omni_color1</color>
     <color name="inspector_header_title">@*android:color/omni_text1</color>
+
+    <color name="status_bar_color">@*android:color/omni_color4</color>
 </resources>
