@@ -221,4 +221,14 @@
     <!-- Color of ripples used for views with dark backgrounds -->
     <color name="ripple_material_dark">@*android:color/omni_color3</color>
 
+    <color name="actionbar_text_color_black">@android:color/white</color>
+
+    <color name="actionbar_color_grey_solid">@android:color/white</color>
+
+    <color name="actionbar_icon_color_grey">@android:color/white</color>
+
+    <color name="actionbar_icon_color">@android:color/white</color>
+
+    <color name="actionbar_text_color">@android:color/white</color>
+
 </resources>
