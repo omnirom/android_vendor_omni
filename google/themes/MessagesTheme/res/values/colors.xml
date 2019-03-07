@@ -58,7 +58,7 @@
     <color name="background_item_pressed">@*android:color/omni_color2</color>
 
     <color name="subject_editor_bubble">@*android:color/omni_color7</color>
-    <color name="message_text_color_incoming">#ffffffff</color>
+    <color name="message_text_color_incoming">@*android:color/omni_text3</color> <!-- fix white text on white bg #ffffffff-->
     <color name="message_text_color_incoming_download_failed">#6a6a6a</color>
     <color name="message_text_color_outgoing">@*android:color/omni_text2</color>
     <color name="conversation_background">@*android:color/omni_color2</color>
