@@ -6,9 +6,13 @@ type Product_variables struct {
 	TargetNeedsHWCOnFirstRef struct {
 		Cflags []string
 	}
+	Uses_metadata_as_fde_key struct {
+		Cflags []string
+	}
 }
 
 type ProductVariables struct {
 	Healthd_use_battery_info  *bool `json:",omitempty"`
 	TargetNeedsHWCOnFirstRef  *bool `json:",omitempty"`
+	Uses_metadata_as_fde_key  *bool `json:",omitempty"`
 }
