@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <color name="primaryColor">@*android:color/omni_color5</color>
+    <color name="primaryColorDark">@*android:color/omni_color4</color>
+    <color name="accentColor">@*android:color/omni_color5</color>
+    <color name="disabled">@*android:color/omni_text4</color>
+    <color name="textColor">@*android:color/omni_text1</color> <!--black -->
+    <color name="drawer_header_text_color">@*android:color/omni_text1</color> <!-- left drawer header txt color-->
+    <color name="drawer_header_color">@*android:color/omni_color4</color> <!-- left drawer header background color-->
+    <color name="drawer_background_color">@*android:color/omni_color2</color> <!-- left drawer menu background color-->
+    <color name="drawer_text_color">@*android:color/omni_text1</color> <!-- left drawer menu txt color-->
+    <color name="drawer_menu_icon_checked_color">@*android:color/omni_color3</color> <!-- left drawer menu checked element icon color-->
+    <color name="drawer_menu_icon_normal_color">@*android:color/omni_color4</color> <!-- left drawer menu element icon color-->
+    <color name="drawer_menu_text_checked_color">@*android:color/omni_color5</color> <!-- left drawer menu checked element txt color-->
+    <color name="drawer_menu_text_normal_color">@*android:color/omni_text1</color> <!-- left drawer menu checked element txt color-->
+    <color name="spinner_bg_color">@*android:color/omni_color7</color> <!-- spinner box -->
+    <color name="spinner_txt_area_color">@*android:color/omni_color7</color> <!-- "Reverb" txt area plus a small part at right of the spinner box -->
+    <color name="gallery_bg_color">@*android:color/omni_color2</color> <!-- horizontal bar where you can scroll the eq presets (after the eq and before the knobs -->
+    <color name="disabled_gallery_text">@*android:color/omni_text3</color> <!-- eq presets text color when musicfx is disabled -->
+    <color name="highlight_gallery_text">@*android:color/omni_color5</color> <!-- eq presets text color when musicfx is on for the current selected preset -->
+    <color name="lowlight_gallery_text">@*android:color/omni_text2</color> <!-- eq presets text color when musicfx is on for other available presets -->
+    <color name="knobs_area_background">@*android:color/omni_color1</color> <!-- area around knobs also at right of the eq area -->
+    <color name="knob_disabled">@*android:color/omni_color7</color> <!-- knobs level when musicfx is off -->
+    <color name="knob_current_level">@*android:color/omni_color5</color> <!-- knobs level and percentage level inside the knob - - - inner part of the knobs is png drawable-->
+    <color name="eq_area_background">@*android:color/omni_color1</color> <!-- eq levels area -->
+    <color name="eq_textColor">@*android:color/omni_text1</color> <!--eq levels min-middle-max indicators txt -->
+    <color name="mainBackgroundColor">@*android:color/omni_color1</color> <!-- horizontal empty space between the bar showing the current active out source and the eq levels area -->
+    <color name="current_out_source">@*android:color/omni_color7</color> <!-- the bar with the current active out source icon and name -->
+    <color name="current_out_source_color">@*android:color/omni_text3</color> <!-- icon and text showing the current active out source -->
+    <color name="visualizer_highlight">#fd0000</color> <!-- equalizer active level bar top element  -->
+    <color name="visualizer_lowlight">#009d00</color> <!-- equalizer active level bar elements -->
+    <color name="visualizer_disabled">@*android:color/omni_text4</color> <!-- equalizer level bar when musicfx is off -->
+    <color name="spinner_disabled">@*android:color/omni_color7</color>
+    <color name="spinner_reverb_list">@*android:color/omni_color7</color>
+    <color name="toolbar_thumb_color">@*android:color/omni_text1</color>
+    <!--<color name="ic_launcher_background">@*android:color/omni_color5</color>-->
+</resources>
