@@ -29,6 +29,7 @@ hardware/qcom/media
 hardware/qcom/msm8998
 hardware/qcom/power
 hardware/qcom/wlan
+packages/apps/Bluetooth
 packages/apps/Contacts
 packages/apps/CellBroadcastReceiver
 packages/apps/Dialer
