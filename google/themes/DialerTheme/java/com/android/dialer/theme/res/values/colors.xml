@@ -41,7 +41,7 @@
   <!-- Background color of new dialer activity -->
   <color name="background_dialer_light">@*android:color/omni_color1</color>
   <!-- White background for dialer -->
-  <color name="background_dialer_white">@*android:color/omni_color1</color>
+  <color name="background_dialer_white">@*android:color/omni_color3</color>
   <color name="background_dialer_call_log_list_item">@*android:color/omni_color2</color>
 
   <!-- Colors for the notification actions -->
