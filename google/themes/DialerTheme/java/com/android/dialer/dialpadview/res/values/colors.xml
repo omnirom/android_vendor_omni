@@ -18,8 +18,8 @@
   <!-- Colors for the dialpad -->
   <color name="background_dialpad">@*android:color/omni_color2</color>
   <color name="dialpad_secondary_text_color">@*android:color/omni_text2</color>
-  <color name="dialpad_digits_text_color">#fff</color>
-  <color name="dialpad_icon_tint">#89ffffff</color>
+  <color name="dialpad_digits_text_color">@*android:color/omni_color3</color>
+  <color name="dialpad_icon_tint">@*android:color/omni_color3</color>
   <color name="dialpad_voicemail_tint">#919191</color>
 </resources>
 
