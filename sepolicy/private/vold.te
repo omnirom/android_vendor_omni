@@ -1,0 +1,4 @@
+#============= vold ==============
+allow vold block_device:blk_file { getattr };
+allow vold fsck_exec:lnk_file read;
+
