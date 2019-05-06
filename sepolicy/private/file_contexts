@@ -4,4 +4,8 @@
 /system/bin/backuptool_postinstall\.sh            u:object_r:otapreopt_chroot_exec:s0
 
 # Set disk scheduler via init
-/sys/block/[^/]+/queue/scheduler                   u:object_r:sysfs_block_scheduler:s0
+/sys/block/[^/]+/queue/scheduler                  u:object_r:sysfs_block_scheduler:s0
+
+/system/bin/fsck\.ntfs                            u:object_r:fsck_exec:s0
+/system/bin/fsck\.exfat                           u:object_r:fsck_exec:s0
+/system/bin/mount\.exfat                           u:object_r:fsck_exec:s0

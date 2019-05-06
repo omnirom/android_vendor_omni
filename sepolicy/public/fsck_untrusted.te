@@ -1,0 +1,5 @@
+#============= fsck_untrusted ==============
+allow fsck_untrusted block_device:dir { getattr read open };
+allow fsck_untrusted media_rw_data_file:dir { getattr read open };
+allow fsck_untrusted self:capability sys_admin;
+
