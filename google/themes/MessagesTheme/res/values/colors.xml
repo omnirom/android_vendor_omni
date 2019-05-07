@@ -153,7 +153,7 @@
     <color name="settings_list_text_primary">@*android:color/omni_text1</color>
     <color name="settings_list_text_secondary">@*android:color/omni_text2</color>
     <color name="group_mms_setting_text_color">@*android:color/omni_text2</color>
-    <color name="settings_item_title_text_primary">#ffffff</color>
+    <color name="settings_item_title_text_primary">@*android:color/omni_text2</color>
 
     <color name="contact_picker_button_text_color">@*android:color/omni_text1</color>
 
