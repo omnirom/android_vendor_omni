@@ -24,4 +24,7 @@ ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
     MSM_VIDC_TARGET_LIST := msm8974 msm8610 msm8226 apq8084 msm8916 msm8937 msm8952 msm8953 msm8994 msm8909 msm8992 msm8996 msm8998 sdm660 sdm710 sdm845
 endif
 
+ifeq ($(TARGET_NEEDS_FW_NATIVE_CAF),true)
+$(shell cd frameworks/native;git fetch omnirom;git checkout android-9.0-caf)
+endif
 
