@@ -113,6 +113,22 @@ def iterate_manifests():
                 yield project
 
 
+def iterate_manifests_remove_project():
+    files = []
+    for file in os.listdir(local_manifest_dir):
+        if file.endswith(".xml"):
+            files.append(os.path.join(local_manifest_dir, file))
+    files.append('.repo/manifest.xml')
+    for file in files:
+        try:
+            man = ES.parse(file)
+            man = man.getroot()
+        except (IOError, ES.ParseError):
+            print("WARNING: error while parsing %s" % file)
+        else:
+            for project in man.findall("remove-project"):
+                yield project
+
 def check_project_exists(url, revision, path):
     for project in iterate_manifests():
         if project.get("name") == url \
@@ -121,6 +137,12 @@ def check_project_exists(url, revision, path):
             return True
     return False
 
+
+def check_remove_project_exists(url):
+    for project in iterate_manifests_remove_project():
+        if project.get("name") == url:
+            return True
+    return False
 
 def check_target_exists(directory):
     return os.path.isdir(directory)
@@ -160,6 +182,17 @@ def create_manifest_project(url, directory,
                          })
     return project
 
+def create_remove_project(url):
+    remove_project_exists = check_remove_project_exists(url)
+
+    if remove_project_exists:
+        return None
+
+    project = ES.Element("remove-project",
+                         attrib={
+                             "name": url
+                         })
+    return project
 
 def append_to_manifest(project):
     try:
@@ -259,6 +292,15 @@ def create_dependency_manifest(dependencies):
         target_path = dependency.get("target_path")
         revision = dependency.get("revision", default_rev)
         remote = dependency.get("remote", default_rem)
+        override = dependency.get("override", None)
+        
+        if override is not None:
+            #print("found override in ", repository)
+            project = create_remove_project(repository)
+            if project is not None:
+                manifest = append_to_manifest(project)
+                #print(ES.tostring(manifest).decode())
+                write_to_manifest(manifest)
 
         # not adding an organization should default to android_team
         # only apply this to github
