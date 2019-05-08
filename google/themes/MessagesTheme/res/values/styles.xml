@@ -16,4 +16,16 @@
 
 <resources>
 
+    <style name="PopupMenuStyleAppCompat" parent="@android:style/Theme.DeviceDefault.Light.Dialog">
+        <item name="android:background">@*android:color/omni_color5</item>
+    </style>
+
+    <style name="ListViewStyle" parent="@*android:style/Widget.Material.ListView">
+        <item name="android:textColor">@*android:color/omni_text_primary</item>
+        <item name="android:textColorPrimary">@*android:color/omni_text_primary</item>
+        <item name="android:textColorSecondary">@*android:color/omni_text_secondary</item>
+        <item name="android:textColorTertiary">@*android:color/omni_text_tertiary</item>
+        <item name="android:background">@*android:color/omni_color3</item>
+    </style>
+
 </resources>
