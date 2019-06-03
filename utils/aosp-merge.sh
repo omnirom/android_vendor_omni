@@ -45,9 +45,9 @@ while read path;
     ret=$(git pull https://android.googlesource.com/platform/$aosp_project ${ref} 2>&1);
 
     if echo $ret | grep "CONFLICT (content)" > /dev/null ; then
-        echo " -> \e[33mWARNING!: \e[31mMERGE CONFLICT";
+        echo -e " -> \e[33mWARNING!: \e[31mMERGE CONFLICT\e[0m";
     else
-        echo " -> \e[32mDONE!";
+        echo -e " -> \e[32mDONE!\e[0m";
     fi
 
     cd - > /dev/null;
