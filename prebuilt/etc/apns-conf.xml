@@ -6714,12 +6714,6 @@
   mmsc="http://mmsc"
   type="mms"
  />
-  <apn carrier="YOTA Internet"
-      mcc="250"
-      mnc="11"
-      apn="yota.ru"
-      type="default,supl"
-  />
 
 <apn carrier="Beeline internet"
   apn="internet.beeline.ru"
