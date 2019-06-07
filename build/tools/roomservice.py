@@ -370,6 +370,7 @@ def check_device_exists(device):
 def fetch_device(device):
     if check_device_exists(device):
         print("WARNING: Trying to fetch a device that's already there")
+        return
     git_data = search_gerrit_for_device(device)
     if git_data is not None:
         device_url = git_data['id']
