@@ -2346,7 +2346,11 @@
         <boolean name="vendor_hide_call_forward_ui" value="true" />
     </carrier_config>
     <carrier_config mcc="293" mnc="41">
-       <boolean name="carrier_wfc_ims_available_bool" value="true" />
-       <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <int name="maxImageHeight" value="2112" />
+        <int name="maxMessageSize" value="2097152" />
+        <int name="maxImageWidth" value="4608" />
     </carrier_config>
 </carrier_config_list>
