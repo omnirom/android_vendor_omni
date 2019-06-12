@@ -15,4 +15,5 @@ type ProductVariables struct {
 	Healthd_use_battery_info  *bool `json:",omitempty"`
 	TargetNeedsHWCOnFirstRef  *bool `json:",omitempty"`
 	Uses_metadata_as_fde_key  *bool `json:",omitempty"`
+	Target_use_sdclang        *bool `json:",omitempty"`
 }
