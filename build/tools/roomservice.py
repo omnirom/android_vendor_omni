@@ -194,12 +194,35 @@ def create_remove_project(url):
                          })
     return project
 
+
+# Avoid adding already in manifests declared repositories in the roomservice.xml
+def is_in_manifest(project):
+    files = []
+    for file in os.listdir(local_manifest_dir):
+        if file.endswith(".xml") and file != "roomservice.xml":
+            files.append(os.path.join(local_manifest_dir, file))
+    files.append('.repo/manifest.xml')
+    for file in files:
+        try:
+            man = ES.parse(file)
+            man = man.getroot()
+            for project_in_manifests in man.findall("project"):
+                if project_in_manifests.get("path") == project.get("path") or project_in_manifests.get("path") == project.get("target_path"): # path -> def append_to_manifest(project) & target_path -> def check_manifest_problems(dependencies)
+                    return True
+        except (IOError, ES.ParseError):
+            print("WARNING: error while parsing %s" % file)
+    return False
+
+
 def append_to_manifest(project):
     try:
         lm = ES.parse('/'.join([local_manifest_dir, "roomservice.xml"]))
         lm = lm.getroot()
     except (IOError, ES.ParseError):
         lm = ES.Element("manifest")
+    if is_in_manifest(project):
+        print("HINT: The following repository is already defined in a manifest:", project.get("name"))
+        return lm
     lm.append(project)
     return lm
 
@@ -261,6 +284,9 @@ def parse_dependency_file(location):
 # delete the roomservice.xml file and create new
 def check_manifest_problems(dependencies):
     for dependency in dependencies:
+        if is_in_manifest(dependency):
+            continue
+
         repository = dependency.get("repository")
         target_path = dependency.get("target_path")
         revision = dependency.get("revision", default_rev)
@@ -293,7 +319,7 @@ def create_dependency_manifest(dependencies):
         revision = dependency.get("revision", default_rev)
         remote = dependency.get("remote", default_rem)
         override = dependency.get("override", None)
-        
+
         if override is not None:
             #print("found override in ", repository)
             project = create_remove_project(repository)
@@ -369,7 +395,7 @@ def check_device_exists(device):
 
 def fetch_device(device):
     if check_device_exists(device):
-        print("WARNING: Trying to fetch a device that's already there")
+        print("HINT: Avoid fetching the already checked out device repo:", device)
         return
     git_data = search_gerrit_for_device(device)
     if git_data is not None:
