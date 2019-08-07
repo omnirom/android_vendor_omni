@@ -19,3 +19,5 @@ allow update_engine system_file:dir { create setattr write rmdir remove_name add
 
 allow update_engine storage_file:lnk_file read;
 allow update_engine toolbox_exec:file { execute getattr };
+
+allow update_engine sepolicy_file:file { append };
