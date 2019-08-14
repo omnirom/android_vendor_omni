@@ -83,7 +83,7 @@ function setup_vendor() {
         VNDNAME="$DEVICE"
     fi
 
-    export PRODUCTMK="$OMNI_ROOT"/"$OUTDIR"/device-vendor.mk
+    export PRODUCTMK="$OMNI_ROOT"/"$OUTDIR"/"$VNDNAME"-vendor.mk
     export ANDROIDMK="$OMNI_ROOT"/"$OUTDIR"/Android.mk
     export BOARDMK="$OMNI_ROOT"/"$OUTDIR"/BoardConfigVendor.mk
 
