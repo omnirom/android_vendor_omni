@@ -39,9 +39,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/etc/init.local.rc:root/init.omni.rc
 
-# Enable SIP and VoIP on all targets
+# permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
+    vendor/omni/prebuilt/etc/permissions/privapp-permissions-omni.xml:system/etc/permissions/privapp-permissions-omni.xml
 
 # custom omni sounds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
