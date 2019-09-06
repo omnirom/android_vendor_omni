@@ -1,5 +1,5 @@
 # Additional apps
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     MonthCalendarWidget \
     OmniSwitch \
     Chromium \
@@ -33,12 +33,12 @@ PRODUCT_PACKAGES += \
     mount.ntfs \
     fsck.ntfs
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     NotificationsDark \
     NotificationsLight \
     NotificationsPrimary
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     AccentSluttyPink \
     AccentPixel \
     AccentGoldenShower \
@@ -53,7 +53,7 @@ PRODUCT_PACKAGES += \
     AccentRottenOrange \
     AccentDeepPurple
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
     PrimaryBlack \
     PrimaryOmni \
@@ -62,13 +62,13 @@ PRODUCT_PACKAGES += \
     PrimaryWarmWhite \
     PrimaryDarkBlue
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     DocumentsUITheme
 
 # Telephony extension
-PRODUCT_PACKAGES += telephony-ext
-PRODUCT_BOOT_JARS += telephony-ext
+#PRODUCT_PACKAGES += telephony-ext
+#PRODUCT_BOOT_JARS += telephony-ext
 
 # for fun
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     EggGame

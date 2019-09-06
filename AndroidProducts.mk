@@ -16,3 +16,5 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/utils/emulator/omni_emulator.mk
+
+COMMON_LUNCH_CHOICES := omni_emulator-userdebug
