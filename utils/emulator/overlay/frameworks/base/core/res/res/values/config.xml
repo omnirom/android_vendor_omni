@@ -18,23 +18,5 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- The list absolute paths of jar/apk files containing the device specific handlers,
-    delimited by File.pathSeparator, which defaults to ":" on Android -->
-    <string name="config_deviceKeyHandlerLib" translatable="false">/system/app/GoldfishParts/GoldfishParts.apk</string>
-    <!-- Full qualified name of the class that implements
-    com.android.internal.os.DeviceKeyHandler interface. -->
-    <string name="config_deviceKeyHandlerClass" translatable="false">org.omnirom.device.KeyHandler</string>
-    <!-- make sure you enable this only if your device supports deep slepp
-    with active proximity sensor event listener -->
-    <bool name="config_proxiSensorWakupCheck">true</bool>
-    <bool name="config_haveHigherAspectRatioScreen">true</bool>
-    <string name="config_mainBuiltInDisplayCutout">M 0,0 L -183, 0 A 24.0, 24.0, 0, 0, 1, -159.0, 22.0 A 64.0, 64.0, 0, 0, 0, -95.0, 80.0 L 95.0, 80.0 A 64.0, 64.0, 0, 0, 0, 159.0, 22.0 A 24.0, 24.0, 0, 0, 1, 183.0, 0 Z</string>
-    
-    <!-- Whether the display cutout region of the main built-in display should be forced to
-    black in software (to avoid aliasing or emulate a cutout that is not physically existent).
-    -->
-    <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
-    <bool name="config_intrusiveNotificationLed">false</bool>
-    <bool name="config_intrusiveBatteryLed">false</bool>
 
 </resources>
