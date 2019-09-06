@@ -15,10 +15,16 @@ if [ ! -f $ANDROID_PRODUCT_OUT/system.img ]; then
     exit 1
 fi
 
+
 # creates image zip in /tmp/
+cd $ANDROID_PRODUCT_OUT/..
+DIGEST=`grep "# " generic_x86/VerifiedBootParams.textproto| sed -e 's/# //'`
+
 cd $ANDROID_BUILD_TOP
 cp -r vendor/omni/utils/emulator/skins $ANDROID_PRODUCT_OUT
-cp -r vendor/omni/utils/emulator/start_emulator_image.sh $ANDROID_PRODUCT_OUT
+cp -r vendor/omni/utils/emulator/start_emulator_image.sh /tmp/
+echo -append \"$DIGEST\" >> /tmp/start_emulator_image.sh
+cp /tmp/start_emulator_image.sh $ANDROID_PRODUCT_OUT
 cp -r vendor/omni/utils/emulator/advancedFeatures.ini $ANDROID_PRODUCT_OUT
 
 cd $ANDROID_PRODUCT_OUT/..
