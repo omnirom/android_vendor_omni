@@ -100,7 +100,7 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/sounds/omni_charge_start.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/ChargingStarted.ogg
 
 # mkshrc
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/etc/mkshrc:system/etc/mkshrc
 
 # whitelist packages for location providers not in system
