@@ -52,8 +52,8 @@ PRODUCT_PACKAGES += \
 endif
 
 # Telephony extension
-PRODUCT_PACKAGES += telephony-ext
-PRODUCT_BOOT_JARS += telephony-ext
+#PRODUCT_PACKAGES += telephony-ext
+#PRODUCT_BOOT_JARS += telephony-ext
 
 # Themes
 #PRODUCT_PACKAGES += \
