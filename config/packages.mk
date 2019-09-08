@@ -60,7 +60,7 @@ PRODUCT_BOOT_JARS += telephony-ext
 #PRODUCT_PACKAGES += \
     GboardOmniTheme
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     ContactsTheme \
     DocumentsUITheme \
     DialerTheme \
@@ -69,12 +69,12 @@ PRODUCT_PACKAGES += \
     TelecommTheme \
     PhonographTheme
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     NotificationsDark \
     NotificationsLight \
     NotificationsPrimary
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     AccentSluttyPink \
     AccentPixel \
     AccentGoldenShower \
@@ -89,7 +89,7 @@ PRODUCT_PACKAGES += \
     AccentRottenOrange \
     AccentDeepPurple
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
     PrimaryBlack \
     PrimaryOmni \
