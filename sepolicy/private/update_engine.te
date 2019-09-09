@@ -8,7 +8,7 @@ allow update_engine labeledfs:filesystem { mount unmount };
 allow update_engine { otapreopt_chroot_exec toolbox_exec }:file rx_file_perms;
 
 allow update_engine labeledfs:filesystem mount;
-allow update_engine rootfs:file { create setattr write rx_file_perms unlink relabelfrom rename };
+allow update_engine rootfs:file { rx_file_perms relabelfrom };
 allow update_engine rootfs:dir { create write open add_name read rmdir remove_name };
 
 allow update_engine system_data_file:file { create read write open unlink };
