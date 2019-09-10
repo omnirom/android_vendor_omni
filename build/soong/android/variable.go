@@ -14,6 +14,7 @@ type Product_variables struct {
 		Cflags []string
 	}
         Target_init_vendor_lib struct {
+                Whole_static_libs []string
                 Cflags []string
         }
 
@@ -25,5 +26,5 @@ type ProductVariables struct {
 	TargetNeedsHWCOnFirstRef   *bool `json:",omitempty"`
 	Uses_metadata_as_fde_key   *bool `json:",omitempty"`
 	Target_use_sdclang         *bool `json:",omitempty"`
-	Target_init_vendor_lib     *bool `json:",omitempty"`
+	Target_init_vendor_lib     *string `json:",omitempty"`
 }
