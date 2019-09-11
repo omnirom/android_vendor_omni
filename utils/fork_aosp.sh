@@ -4,8 +4,8 @@
 
 # Configuration
 PREFIX=android_
-BRANCH=android-9.0
-SOURCE=android-9.0.0_r<INSERT_CORRECT_TAG>
+BRANCH=android-10
+SOURCE=android-10.0.0_r<INSERT_CORRECT_TAG>
 USERNAME=<INSERT USER>
 MANIFEST=android/default.xml
 REMOVE=android/remove.xml
