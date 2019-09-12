@@ -1,5 +1,5 @@
 type mkfs, coredomain, domain;
-type mkfs_exec, exec_type, file_type;
+type mkfs_exec, system_file_type, exec_type, file_type;
 
 init_daemon_domain(mkfs)
 
