@@ -23,6 +23,7 @@ DIGEST=`grep "# " generic_x86/VerifiedBootParams.textproto| sed -e 's/# //'`
 cd $ANDROID_BUILD_TOP
 cp -r vendor/omni/utils/emulator/skins $ANDROID_PRODUCT_OUT
 cat vendor/omni/utils/emulator/start_emulator_image.sh | sed -e "s/vbmeta/$DIGEST/" > $ANDROID_PRODUCT_OUT/start_emulator_image.sh
+chmod 755 $ANDROID_PRODUCT_OUT/start_emulator_image.sh
 cp -r vendor/omni/utils/emulator/advancedFeatures.ini $ANDROID_PRODUCT_OUT
 
 cd $ANDROID_PRODUCT_OUT/..

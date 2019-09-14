@@ -1,0 +1,8 @@
+Precondition: android SDK must be installed in ~/Android/SDK
+
+lunch omni_emulator-userdebug
+make
+vendor/omni/utils/emulator/create_emulator_image.sh
+cp /tmp/omni_emulator.zip to the device where you have installed android SDK
+unzip into /tmp
+run /tmp/generic_x86/start_emulator_image.sh
