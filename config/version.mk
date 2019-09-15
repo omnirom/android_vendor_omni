@@ -19,6 +19,6 @@ endif
 endif
 
 # Apply it to build.prop
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+OMNI_PRODUCT_PROPERTIES += \
     ro.modversion=OmniROM-$(ROM_VERSION) \
     ro.omni.version=$(ROM_VERSION)
