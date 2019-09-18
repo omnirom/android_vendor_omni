@@ -1,5 +1,5 @@
 # Additional apps
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     MonthCalendarWidget \
     OmniSwitch \
     Chromium \
