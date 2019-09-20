@@ -1,1 +1,4 @@
 allow platform_app kernel:system syslog_read;
+
+# Allow FOD HAL service to be found
+hal_client_domain(platform_app, hal_omni_fod)
