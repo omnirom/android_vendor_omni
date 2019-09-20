@@ -1,0 +1,8 @@
+# HwBinder IPC from client to server
+binder_call(hal_omni_fod_client, hal_omni_fod_server)
+
+add_hwservice(hal_omni_fod_server, hal_omni_fod_hwservice)
+allow hal_omni_fod_client hal_omni_fod_hwservice:hwservice_manager find;
+
+# Allow binder communication with platform_app
+binder_call(hal_omni_fod, platform_app)
