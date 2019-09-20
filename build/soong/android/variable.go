@@ -19,6 +19,9 @@ type Product_variables struct {
         Target_camera_needs_client_info struct {
                 Cflags []string
         }
+        Target_motorized_camera struct {
+                Cflags []string
+        }
 }
 
 type ProductVariables struct {
@@ -28,5 +31,6 @@ type ProductVariables struct {
 	Uses_metadata_as_fde_key                *bool `json:",omitempty"`
 	Target_use_sdclang                      *bool `json:",omitempty"`
 	Target_camera_needs_client_info         *bool `json:",omitempty"`
+	Target_motorized_camera                 *bool `json:",omitempty"`
 	Target_init_vendor_lib                  *string `json:",omitempty"`
 }
