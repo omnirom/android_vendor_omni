@@ -2,7 +2,9 @@
 PRODUCT_PACKAGES += \
     MonthCalendarWidget \
     OmniSwitch \
-    Chromium \
+    TrichromeLibrary \
+    TrichromeChrome \
+    TrichromeWebView \
     OmniJaws \
     OmniStyle \
     MusicFX \
@@ -13,7 +15,6 @@ PRODUCT_PACKAGES += \
     Turbo \
     OmniRecord \
     ThemePicker \
-    webview \
     ExactCalculator
 
 PRODUCT_PACKAGES += \
