@@ -12,7 +12,8 @@ PRODUCT_PACKAGES += \
     OmniChange \
     OpenDelta \
     Turbo \
-    OmniRecord
+    OmniRecord \
+    webview
 
 # Additional tools
 PRODUCT_PACKAGES += \
