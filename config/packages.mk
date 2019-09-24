@@ -2,7 +2,9 @@
 PRODUCT_PACKAGES += \
     MonthCalendarWidget \
     OmniSwitch \
-    Chromium \
+    TrichromeLibrary \
+    TrichromeChrome \
+    TrichromeWebView \
     OmniJaws \
     OmniStyle \
     OmniClockOSS \
