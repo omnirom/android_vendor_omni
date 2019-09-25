@@ -13,7 +13,8 @@ PRODUCT_PACKAGES += \
     GoldfishParts \
     OpenDelta \
     Turbo \
-    OmniRecord
+    OmniRecord \
+    WallpaperPicker2
 
 # Additional tools
 PRODUCT_PACKAGES += \
