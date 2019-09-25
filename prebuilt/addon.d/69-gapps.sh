@@ -13,17 +13,18 @@ app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk
 app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk
 app/GoogleExtShared/GoogleExtShared.apk
 app/GoogleTTS/GoogleTTS.apk
-app/SoundPickerPrebuilt/SoundPickerPrebuilt.apk
 app/MarkupGoogle/MarkupGoogle.apk
+app/SoundPickerPrebuilt/SoundPickerPrebuilt.apk
 etc/default-permissions/default-permissions.xml
 etc/default-permissions/opengapps-permissions.xml
 etc/g.prop
 etc/permissions/com.google.android.dialer.support.xml
 etc/permissions/com.google.android.maps.xml
 etc/permissions/com.google.android.media.effects.xml
-etc/permissions/com.google.widevine.software.drm.xml
 etc/permissions/privapp-permissions-google.xml
+etc/permissions/split-permissions-google.xml
 etc/preferred-apps/google.xml
+etc/sysconfig/dialer_experience.xml
 etc/sysconfig/google-hiddenapi-package-whitelist.xml
 etc/sysconfig/google.xml
 etc/sysconfig/google_build.xml
@@ -31,26 +32,27 @@ etc/sysconfig/google_exclusives_enable.xml
 framework/com.google.android.dialer.support.jar
 framework/com.google.android.maps.jar
 framework/com.google.android.media.effects.jar
-framework/com.google.widevine.software.drm.jar
 lib/libfilterpack_facedetect.so
 lib/libfrsdk.so
-lib64/libbarhopper.so
+lib/libsketchology_native.so
 lib64/libfacenet.so
 lib64/libfilterpack_facedetect.so
 lib64/libfrsdk.so
 lib64/libjni_latinimegoogle.so
 lib64/libsketchology_native.so
-priv-app/AndroidMigratePrebuilt/AndroidMigratePrebuilt.apk
-priv-app/AndroidPlatformServices/AndroidPlatformServices.apk
+priv-app/CarrierSetup/CarrierSetup.apk
 priv-app/ConfigUpdater/ConfigUpdater.apk
+priv-app/GmsCoreSetupPrebuilt/GmsCoreSetupPrebuilt.apk
 priv-app/GoogleBackupTransport/GoogleBackupTransport.apk
 priv-app/GoogleExtServices/GoogleExtServices.apk
 priv-app/GoogleFeedback/GoogleFeedback.apk
 priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk
+priv-app/GooglePackageInstaller/GooglePackageInstaller.apk
 priv-app/GooglePartnerSetup/GooglePartnerSetup.apk
+priv-app/GoogleRestore/GoogleRestore.apk
 priv-app/GoogleServicesFramework/GoogleServicesFramework.apk
 priv-app/Phonesky/Phonesky.apk
-priv-app/PrebuiltGmsCorePi/PrebuiltGmsCorePi.apk
+priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk
 priv-app/SetupWizard/SetupWizard.apk
 priv-app/Turbo/Turbo.apk
 priv-app/Velvet/Velvet.apk
@@ -136,13 +138,16 @@ case "$1" in
     # Stub
   ;;
   pre-restore)
-    # Remove Stock/AOSP apps (from GApps Installer)
+    # Remove/postinstall Stock/AOSP apps (from GApps Installer)
     rm -rf /postinstall/system/priv-app/ExtServices
     rm -rf /postinstall/system/app/ExtShared
+    rm -rf /postinstall/system/app/PackageInstaller
+    rm -rf /postinstall/system/priv-app/PackageInstaller
+    rm -rf /postinstall/system/priv-app/packageinstaller
     rm -rf /postinstall/system/app/Provision
     rm -rf /postinstall/system/priv-app/Provision
 
-    # Remov/postinstalle 'other' apps (per installer.data)
+    # Remove/postinstall 'other' apps (per installer.data)
     rm -rf /postinstall/system/app/BookmarkProvider
     rm -rf /postinstall/system/app/BooksStub
     rm -rf /postinstall/system/app/CalendarGoogle
@@ -158,9 +163,7 @@ case "$1" in
     rm -rf /postinstall/system/app/GoogleHangouts
     rm -rf /postinstall/system/app/GoogleKeep
     rm -rf /postinstall/system/app/GoogleLatinIme
-    rm -rf /postinstall/system/app/GooglePlus
     rm -rf /postinstall/system/app/Keep
-    rm -rf /postinstall/system/app/NewsWeather
     rm -rf /postinstall/system/app/NewsstandStub
     rm -rf /postinstall/system/app/PartnerBookmarksProvider
     rm -rf /postinstall/system/app/PrebuiltBugleStub
@@ -176,9 +179,8 @@ case "$1" in
     rm -rf /postinstall/system/priv-app/QuickSearchBox
     rm -rf /postinstall/system/priv-app/Velvet_update
     rm -rf /postinstall/system/priv-app/Vending
-    rm -rf /postinstall/system/priv-app/WellbeingPrebuilt
 
-    # Remov/postinstalle 'priv-app' apps from 'app' (per installer.data)
+    # Remove/postinstall 'priv-app' apps from 'app' (per installer.data)
     rm -rf /postinstall/system/app/CanvasPackageInstaller
     rm -rf /postinstall/system/app/ConfigUpdater
     rm -rf /postinstall/system/app/GoogleBackupTransport
@@ -193,7 +195,7 @@ case "$1" in
     rm -rf /postinstall/system/app/SetupWizard
     rm -rf /postinstall/system/app/Velvet
 
-    # Remov/postinstalle 'required' apps (per installer.data)
+    # Remove/postinstall 'required' apps (per installer.data)
     rm -rf /postinstall/system/app/LatinIME/lib//libjni_keyboarddecoder.so
     rm -rf /postinstall/system/app/LatinIME/lib//libjni_latinimegoogle.so
     rm -rf /postinstall/system/lib/libjni_keyboarddecoder.so
@@ -212,6 +214,8 @@ case "$1" in
     fi
 
     # Recreate required symlinks (from GApps Installer)
+    install -d "$P/app/MarkupGoogle/lib/arm64"
+    ln -sfn "$P/lib64/libsketchology_native.so" "$P/app/MarkupGoogle/lib/arm64/libsketchology_native.so"
     install -d "$P/app/FaceLock/lib/arm64"
     ln -sfn "$P/lib64/libfacenet.so" "$P/app/FaceLock/lib/arm64/libfacenet.so"
     install -d "$P/app/LatinIME/lib64/arm64"
