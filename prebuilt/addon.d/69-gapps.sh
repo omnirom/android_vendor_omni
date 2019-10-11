@@ -47,7 +47,6 @@ priv-app/GoogleBackupTransport/GoogleBackupTransport.apk
 priv-app/GoogleExtServices/GoogleExtServices.apk
 priv-app/GoogleFeedback/GoogleFeedback.apk
 priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk
-priv-app/GooglePackageInstaller/GooglePackageInstaller.apk
 priv-app/GooglePartnerSetup/GooglePartnerSetup.apk
 priv-app/GoogleRestore/GoogleRestore.apk
 priv-app/GoogleServicesFramework/GoogleServicesFramework.apk
@@ -139,11 +138,6 @@ case "$1" in
   ;;
   pre-restore)
     # Remove/postinstall Stock/AOSP apps (from GApps Installer)
-    rm -rf /postinstall/system/priv-app/ExtServices
-    rm -rf /postinstall/system/app/ExtShared
-    rm -rf /postinstall/system/app/PackageInstaller
-    rm -rf /postinstall/system/priv-app/PackageInstaller
-    rm -rf /postinstall/system/priv-app/packageinstaller
     rm -rf /postinstall/system/app/Provision
     rm -rf /postinstall/system/priv-app/Provision
 
