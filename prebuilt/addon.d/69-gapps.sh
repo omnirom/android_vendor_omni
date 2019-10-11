@@ -47,7 +47,6 @@ priv-app/GoogleBackupTransport/GoogleBackupTransport.apk
 priv-app/GoogleExtServices/GoogleExtServices.apk
 priv-app/GoogleFeedback/GoogleFeedback.apk
 priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk
-priv-app/GooglePackageInstaller/GooglePackageInstaller.apk
 priv-app/GooglePartnerSetup/GooglePartnerSetup.apk
 priv-app/GoogleRestore/GoogleRestore.apk
 priv-app/GoogleServicesFramework/GoogleServicesFramework.apk
@@ -119,8 +118,29 @@ usr/srec/en-US/wordlist.syms
 EOF
 }
 
+list_google() {
+cat <<EOF
+app/GoogleExtShared/GoogleExtShared.apk
+priv-app/GoogleExtServices/GoogleExtServices.apk
+priv-app/GooglePackageInstaller/GooglePackageInstaller.apk
+EOF
+}
+list_aosp() {
+cat <<EOF
+/postinstall/system/priv-app/ExtServices
+/postinstall/system/app/ExtShared
+/postinstall/system/priv-app/PackageInstaller
+EOF
+}
+
 case "$1" in
   backup)
+    if test -f priv-app/GooglePackageInstaller/GooglePackageInstaller.apk ;then
+        GOOGLE=1
+        list_google | while read FILE DUMMY; do
+            backup_file $S/$FILE
+        done
+    fi
     list_files | while read FILE DUMMY; do
       backup_file $S/$FILE
     done
@@ -131,6 +151,13 @@ case "$1" in
       [ -n "$REPLACEMENT" ] && R="$S/$REPLACEMENT"
       [ -f "$C/$S/$FILE" ] && restore_file $S/$FILE $R
     done
+    if [ "$GOOGLE" -eq "1" ]; then
+    list_google | while read FILE REPLACEMENT; do
+      R=""
+      [ -n "$REPLACEMENT" ] && R="$S/$REPLACEMENT"
+      [ -f "$C/$S/$FILE" ] && restore_file $S/$FILE $R
+    done
+    fi
   ;;
   pre-backup)
   ;;
@@ -138,12 +165,12 @@ case "$1" in
     # Stub
   ;;
   pre-restore)
+    if [ "$GOOGLE" -eq "1" ]; then
+        list_aosp | while read FILE DUMMY; do
+        rm -rf $FILE
+       done
+    fi
     # Remove/postinstall Stock/AOSP apps (from GApps Installer)
-    rm -rf /postinstall/system/priv-app/ExtServices
-    rm -rf /postinstall/system/app/ExtShared
-    rm -rf /postinstall/system/app/PackageInstaller
-    rm -rf /postinstall/system/priv-app/PackageInstaller
-    rm -rf /postinstall/system/priv-app/packageinstaller
     rm -rf /postinstall/system/app/Provision
     rm -rf /postinstall/system/priv-app/Provision
 
