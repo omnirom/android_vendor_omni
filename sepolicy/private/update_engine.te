@@ -8,14 +8,14 @@ allow update_engine labeledfs:filesystem { mount unmount };
 allow update_engine { otapreopt_chroot_exec toolbox_exec }:file rx_file_perms;
 
 allow update_engine labeledfs:filesystem mount;
-allow update_engine rootfs:file { rx_file_perms relabelfrom };
+allow update_engine rootfs:file { rx_file_perms relabelfrom rename setattr unlink };
 allow update_engine rootfs:dir { create write open add_name read rmdir remove_name };
 
 allow update_engine system_data_file:file { create read write open unlink };
 allow update_engine system_data_file:dir { create write add_name read remove_name unlink };
 
 allow update_engine system_file:file { create setattr write relabelto relabelfrom rx_file_perms unlink };
-allow update_engine system_file:dir { create setattr write rmdir remove_name add_name };
+allow update_engine system_file:dir { create setattr write rmdir remove_name add_name setattr };
 
 allow update_engine storage_file:lnk_file read;
 allow update_engine toolbox_exec:file { execute getattr };
@@ -24,4 +24,8 @@ allow update_engine sepolicy_file:file { append };
 
 allow update_engine gsi_metadata_file:dir search;
 allow update_engine rootfs:file { create write };
+#####
+allow update_engine proc_filesystems:file { getattr open read };
+allow update_engine system_file:lnk_file { create rename };
+allow update_engine system_lib_file:dir setattr;
 
