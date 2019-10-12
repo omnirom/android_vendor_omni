@@ -13,7 +13,7 @@ type Product_variables struct {
 		Cflags []string
 	}
         Target_init_vendor_lib struct {
-                Whole_static_libs []string
+                Static_libs []string
                 Cflags []string
         }
         Target_camera_needs_client_info struct {
