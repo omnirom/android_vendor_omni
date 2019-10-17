@@ -16,4 +16,17 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <bool name="config_gesture_settings_enabled">true</bool>
+
+    <!-- Whether or not to show the night light suggestion. -->
+    <bool name="config_night_light_suggestion_enabled">false</bool>
+
+    <!--
+        Whether or not the homepage should be powered by legacy suggestion (versus contextual cards)
+        Default to true as not all devices support contextual cards.
+    -->
+    <bool name="config_use_legacy_suggestion">false</bool>
+
+    <!-- Whether memory from app_info_settings is available or not. -->
+    <bool name="config_show_app_info_settings_memory">true</bool>
+
 </resources>
