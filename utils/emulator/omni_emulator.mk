@@ -14,3 +14,5 @@ PRODUCT_NAME := omni_emulator
 DEVICE_PACKAGE_OVERLAYS += vendor/omni/utils/emulator/overlay
 
 ALLOW_MISSING_DEPENDENCIES := true 
+
+TARGET_RECOVERY_FSTAB := vendor/omni/utils/emulator/fstab.ranchu
