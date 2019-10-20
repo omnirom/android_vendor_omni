@@ -723,65 +723,70 @@ function write_product_packages() {
     # Apps
     local APPS=( $(prefix_match "app/") )
     if [ "${#APPS[@]}" -gt "0" ]; then
-        write_blueprint_packages "APPS" "" "" "APPS" >> "$ANDROIDBP"
+        write_makefile_packages "APPS" "" "" "APPS" >> "$ANDROIDMK"
     fi
     local PRIV_APPS=( $(prefix_match "priv-app/") )
     if [ "${#PRIV_APPS[@]}" -gt "0" ]; then
-        write_blueprint_packages "APPS" "" "priv-app" "PRIV_APPS" >> "$ANDROIDBP"
+        write_makefile_packages "APPS" "" "priv-app" "PRIV_APPS" >> "$ANDROIDMK"
     fi
     local S_APPS=( $(prefix_match "system/app/") )
     if [ "${#S_APPS[@]}" -gt "0" ]; then
-        write_blueprint_packages "APPS" "system" "" "S_APPS" >> "$ANDROIDBP"
+        write_makefile_packages "APPS" "system" "" "S_APPS" >> "$ANDROIDMK"
     fi
     local S_PRIV_APPS=( $(prefix_match "system/priv-app/") )
     if [ "${#S_PRIV_APPS[@]}" -gt "0" ]; then
-        write_blueprint_packages "APPS" "system" "priv-app" "S_PRIV_APPS" >> "$ANDROIDBP"
+        write_makefile_packages "APPS" "system" "priv-app" "S_PRIV_APPS" >> "$ANDROIDMK"
     fi
     local V_APPS=( $(prefix_match "vendor/app/") )
     if [ "${#V_APPS[@]}" -gt "0" ]; then
-        write_blueprint_packages "APPS" "vendor" "" "V_APPS" >> "$ANDROIDBP"
+        write_makefile_packages "APPS" "vendor" "" "V_APPS" >> "$ANDROIDMK"
     fi
     local V_PRIV_APPS=( $(prefix_match "vendor/priv-app/") )
     if [ "${#V_PRIV_APPS[@]}" -gt "0" ]; then
-        write_blueprint_packages "APPS" "vendor" "priv-app" "V_PRIV_APPS" >> "$ANDROIDBP"
+        write_makefile_packages "APPS" "vendor" "priv-app" "V_PRIV_APPS" >> "$ANDROIDMK"
     fi
     local P_APPS=( $(prefix_match "product/app/") )
     if [ "${#P_APPS[@]}" -gt "0" ]; then
-        write_blueprint_packages "APPS" "product" "" "P_APPS" >> "$ANDROIDBP"
+        write_makefile_packages "APPS" "product" "" "P_APPS" >> "$ANDROIDMK"
     fi
     local P_PRIV_APPS=( $(prefix_match "product/priv-app/") )
     if [ "${#P_PRIV_APPS[@]}" -gt "0" ]; then
-        write_blueprint_packages "APPS" "product" "priv-app" "P_PRIV_APPS" >> "$ANDROIDBP"
+        write_makefile_packages "APPS" "product" "priv-app" "P_PRIV_APPS" >> "$ANDROIDMK"
     fi
     local O_APPS=( $(prefix_match "odm/app/") )
     if [ "${#O_APPS[@]}" -gt "0" ]; then
-        write_blueprint_packages "APPS" "odm" "" "O_APPS" >> "$ANDROIDBP"
+        write_makefile_packages "APPS" "odm" "" "O_APPS" >> "$ANDROIDMK"
     fi
     local O_PRIV_APPS=( $(prefix_match "odm/priv-app/") )
     if [ "${#O_PRIV_APPS[@]}" -gt "0" ]; then
-        write_blueprint_packages "APPS" "odm" "priv-app" "O_PRIV_APPS" >> "$ANDROIDBP"
+        write_makefile_packages "APPS" "odm" "priv-app" "O_PRIV_APPS" >> "$ANDROIDMK"
     fi
 
     # Framework
     local FRAMEWORK=( $(prefix_match "framework/") )
     if [ "${#FRAMEWORK[@]}" -gt "0" ]; then
         write_blueprint_packages "JAVA_LIBRARIES" "" "" "FRAMEWORK" >> "$ANDROIDBP"
+        write_makefile_packages "JAVA_LIBRARIES" "" "" "FRAMEWORK" >> "$ANDROIDMK"
     fi
     local S_FRAMEWORK=( $(prefix_match "system/framework/") )
     if [ "${#S_FRAMEWORK[@]}" -gt "0" ]; then
         write_blueprint_packages "JAVA_LIBRARIES" "system" "" "S_FRAMEWORK" >> "$ANDROIDBP"
+        write_makefile_packages "JAVA_LIBRARIES" "system" "" "S_FRAMEWORK" >> "$ANDROIDMK"
     fi
     local V_FRAMEWORK=( $(prefix_match "vendor/framework/") )
     if [ "${#V_FRAMEWORK[@]}" -gt "0" ]; then
         write_blueprint_packages "JAVA_LIBRARIES" "vendor" "" "V_FRAMEWORK" >> "$ANDROIDBP"
+        write_makefile_packages "JAVA_LIBRARIES" "vendor" "" "V_FRAMEWORK" >> "$ANDROIDMK"
     fi
     local P_FRAMEWORK=( $(prefix_match "product/framework/") )
     if [ "${#P_FRAMEWORK[@]}" -gt "0" ]; then
         write_blueprint_packages "JAVA_LIBRARIES" "product" "" "P_FRAMEWORK" >> "$ANDROIDBP"
+        write_makefile_packages "JAVA_LIBRARIES" "product" "" "P_FRAMEWORK" >> "$ANDROIDMK"
     fi
     local O_FRAMEWORK=( $(prefix_match "odm/framework/") )
     if [ "${#O_FRAMEWORK[@]}" -gt "0" ]; then
         write_blueprint_packages "JAVA_LIBRARIES" "odm" "" "O_FRAMEWORK" >> "$ANDROIDBP"
+        write_makefile_packages "JAVA_LIBRARIES" "odm" "" "O_FRAMEWORK" >> "$ANDROIDMK"
     fi
 
     # Etc
