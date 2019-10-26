@@ -5,7 +5,6 @@ PRODUCT_PACKAGES += \
     Chromium \
     OmniJaws \
     OmniStyle \
-    OmniClockOSS \
     MusicFX \
     Phonograph \
     MatLog \
