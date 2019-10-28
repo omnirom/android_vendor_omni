@@ -1,0 +1,62 @@
+<!--
+/**
+ * Copyright (c) 2019, The Android Open Source Project
+ *                     Bootleggers ROM
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+	<!-- DEFAULT VALUES HAHA YES, maybe switch to an actual overlay later? -->
+	<string name="theme_name_default">Default</string>
+	<string name="theme_title_default">@string/theme_name_default</string>
+	<string name="theme_overlay_color_default">android.auto_generated_rro_vendor__</string>
+	<string name="theme_overlay_font_default">android.auto_generated_rro_vendor__</string>
+	<string name="theme_wallpaper_default">@drawable/generic_bg</string>
+	<string name="theme_wallpaper_thumbnail_default">@drawable/generic_bg_prev</string>
+	<string name="theme_wallpaper_title_default">Random StatiX Wallpaper</string>
+	<string name="theme_wallpaper_attribution_default">edited by MCIJ7</string>
+
+	<!-- Values to declare accents, there aren't themes. -->
+        <string name="theme_name_electrigreen">ElectriGreen</string>
+	<string name="theme_title_electrigreen">@string/theme_name_electrigreen</string>
+	<string name="theme_overlay_color_electrigreen">com.accents.mint</string>
+	<string name="theme_overlay_font_electrigreen">com.android.theme.font.default</string>
+	<string name="theme_overlay_icon_android_electrigreen">com.android.theme.icon_pack.filled.android</string>
+	<string name="theme_overlay_icon_launcher_electrigreen">com.android.theme.icon_pack.filled.launcher</string>
+	<string name="theme_overlay_icon_settings_electrigreen">com.android.theme.icon_pack.filled.settings</string>
+	<string name="theme_overlay_icon_sysui_electrigreen">com.android.theme.icon_pack.filled.systemui</string>
+	<string name="theme_overlay_icon_themepicker_electrigreen">com.android.theme.icon_pack.filled.themepicker</string>
+	<string name="theme_overlay_shape_electrigreen">com.android.theme.icon.square</string>
+        <string name="theme_wallpaper_electrigreen">@drawable/electrigreen_bg</string>
+	<string name="theme_wallpaper_thumbnail_electrigreen">@drawable/electrigreen_bg_prev</string>
+	<string name="theme_wallpaper_title_electrigreen">Random StatiX Wallpaper</string>
+        <string name="theme_wallpaper_attribution_electrigreen">edited by MCIJ7</string>
+
+	<string name="theme_name_throwback">Throwback Orange</string>
+	<string name="theme_title_throwback">@string/theme_name_throwback</string>
+	<string name="theme_overlay_color_throwback">com.accents.orange</string>
+	<string name="theme_overlay_font_throwback">com.android.theme.font.default</string>
+	<string name="theme_overlay_icon_android_throwback">com.android.theme.icon_pack.squircle.android</string>
+	<string name="theme_overlay_icon_launcher_throwback">com.android.theme.icon_pack.squircle.launcher</string>
+	<string name="theme_overlay_icon_settings_throwback">com.android.theme.icon_pack.squircle.settings</string>
+	<string name="theme_overlay_icon_sysui_throwback">com.android.theme.icon_pack.squircle.systemui</string>
+	<string name="theme_overlay_icon_themepicker_throwback">com.android.theme.icon_pack.squircle.themepicker</string>
+	<string name="theme_overlay_shape_throwback">com.android.theme.icon.squircle</string>
+        <string name="theme_wallpaper_throwback">@drawable/throwback_bg</string>
+	<string name="theme_wallpaper_thumbnail_throwback">@drawable/throwback_bg_prev</string>
+	<string name="theme_wallpaper_title_throwback">Random StatiX Wallpaper</string>
+        <string name="theme_wallpaper_attribution_throwback">edited by MCIJ7</string>
+
+</resources>
