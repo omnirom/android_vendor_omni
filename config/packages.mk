@@ -2,7 +2,6 @@
 PRODUCT_PACKAGES += \
     MonthCalendarWidget \
     OmniSwitch \
-    Chromium \
     OmniJaws \
     OmniStyle \
     MusicFX \
@@ -13,7 +12,9 @@ PRODUCT_PACKAGES += \
     Turbo \
     OmniRecord \
     WallpaperPicker2 \
-    ThemePicker
+    ThemePicker \
+    Browser2 \
+    webview
 
 # Additional tools
 PRODUCT_PACKAGES += \
