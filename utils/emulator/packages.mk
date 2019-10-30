@@ -15,7 +15,8 @@ PRODUCT_PACKAGES += \
     Turbo \
     OmniRecord \
     WallpaperPicker2 \
-    ThemePicker
+    ThemePicker \
+    webview
 
 # Additional tools
 PRODUCT_PACKAGES += \
