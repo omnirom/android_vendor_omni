@@ -17,7 +17,7 @@ PRODUCT_PACKAGES += \
     webview
 
 PRODUCT_PACKAGES += \
-     StatixOverlayStub
+     OmniOverlayStub
 
 # Additional tools
 PRODUCT_PACKAGES += \
