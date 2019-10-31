@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="theme_wallpaper_omni">@drawable/omni_wallpaper</item>
+    <item type="drawable" name="theme_wallpaper_thumbnail_omni">@drawable/omni_wallpaper</item>
+</resources>
+
