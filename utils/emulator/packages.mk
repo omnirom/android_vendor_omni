@@ -2,7 +2,6 @@
 PRODUCT_PACKAGES += \
     MonthCalendarWidget \
     OmniSwitch \
-    Chromium \
     OmniJaws \
     OmniStyle \
     MusicFX \
@@ -16,6 +15,9 @@ PRODUCT_PACKAGES += \
     WallpaperPicker2 \
     ThemePicker \
     webview
+
+PRODUCT_PACKAGES += \
+    OmniOverlayStub
 
 # Additional tools
 PRODUCT_PACKAGES += \
@@ -34,38 +36,6 @@ PRODUCT_PACKAGES += \
     mkfs.ntfs \
     mount.ntfs \
     fsck.ntfs
-
-#PRODUCT_PACKAGES += \
-    NotificationsDark \
-    NotificationsLight \
-    NotificationsPrimary
-
-#PRODUCT_PACKAGES += \
-    AccentSluttyPink \
-    AccentPixel \
-    AccentGoldenShower \
-    AccentDeepOrange \
-    AccentOmni \
-    AccentWhite \
-    AccentTeal \
-    AccentFromHell \
-    AccentBlueMonday \
-    AccentSmokingGreen \
-    AccentDeadRed \
-    AccentRottenOrange \
-    AccentDeepPurple
-
-#PRODUCT_PACKAGES += \
-    PrimaryAlmostBlack \
-    PrimaryBlack \
-    PrimaryOmni \
-    PrimaryWhite \
-    PrimaryColdWhite \
-    PrimaryWarmWhite \
-    PrimaryDarkBlue
-
-#PRODUCT_PACKAGES += \
-    DocumentsUITheme
 
 # Telephony extension
 #PRODUCT_PACKAGES += telephony-ext
