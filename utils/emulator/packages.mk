@@ -14,7 +14,6 @@ PRODUCT_PACKAGES += \
     OmniRecord \
     WallpaperPicker2 \
     ThemePicker \
-    webview \
     ExactCalculator
 
 PRODUCT_PACKAGES += \

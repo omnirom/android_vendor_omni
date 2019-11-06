@@ -14,11 +14,10 @@ PRODUCT_PACKAGES += \
     OmniRecord \
     WallpaperPicker2 \
     ThemePicker \
-    webview \
     ExactCalculator
 
 PRODUCT_PACKAGES += \
-     OmniOverlayStub
+    OmniOverlayStub
 
 # Additional tools
 PRODUCT_PACKAGES += \
