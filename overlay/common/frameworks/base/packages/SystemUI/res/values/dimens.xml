@@ -21,15 +21,15 @@
 
     <!-- The height of the quick settings footer that holds the user switcher, settings icon,
     etc. -->
-    <!-- 56dp -->
-    <dimen name="qs_footer_height">48dp</dimen>
+    <!-- 48dp -->
+    <dimen name="qs_footer_height">40dp</dimen>
 
     <!-- End padding for left-aligned status bar clock -->
     <!-- 7dp -->
     <dimen name="status_bar_left_clock_end_padding">4dp</dimen>
 
-    <!-- 18dp -->
-    <dimen name="qs_tile_margin_top">10dp</dimen>
+    <!-- 8/12dp -->
+    <dimen name="qs_tile_margin_top">8dp</dimen>
 
     <!-- 30dp -->
     <dimen name="qs_panel_padding_top">20dp</dimen>
@@ -40,13 +40,7 @@
     <!-- 24dp -->
     <dimen name="qs_tile_margin_vertical">16dp</dimen>
 
-    <!-- 24dp -->
-    <dimen name="qs_paged_tile_layout_padding_bottom">14dp</dimen>
-
-    <!-- 48dp -->
-    <dimen name="qs_brightness_slider_height">40dp</dimen>
-
-    <!-- 0dp -->
+    <!-- 4/13dp -->
     <dimen name="qs_header_tile_margin_horizontal">13dp</dimen>
 
     <!-- power menu + volume dialog -->
