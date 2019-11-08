@@ -12,7 +12,6 @@ PRODUCT_PACKAGES += \
     OpenDelta \
     Turbo \
     OmniRecord \
-    WallpaperPicker2 \
     ThemePicker \
     webview \
     ExactCalculator
