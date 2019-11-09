@@ -19,10 +19,11 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- The height of the quick settings footer that holds the user switcher, settings icon,
-    etc. -->
-    <!-- 48dp -->
-    <dimen name="qs_footer_height">40dp</dimen>
+    <dimen name="qs_footer_bar_height">40dp</dimen>
+
+    <!-- 14dp -->
+    <!-- -8 to match the reduced qs_footer_bar_height -->
+    <dimen name="qs_footer_icon_padding">10dp</dimen>
 
     <!-- End padding for left-aligned status bar clock -->
     <!-- 7dp -->
