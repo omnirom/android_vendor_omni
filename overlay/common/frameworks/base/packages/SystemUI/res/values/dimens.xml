@@ -46,7 +46,7 @@
     <dimen name="qs_tile_margin_top">8dp</dimen>
 
     <!-- 30dp -->
-    <dimen name="qs_panel_padding_top">20dp</dimen>
+    <dimen name="qs_panel_padding_top">24dp</dimen>
 
     <!-- 106dp -->
     <dimen name="qs_tile_height">96dp</dimen>
