@@ -37,8 +37,10 @@ QSD8K_BOARD_PLATFORMS := qsd8k
 
 
 # vars for use by utils
-colon := $(empty):$(empty)
-underscore := $(empty)_$(empty)
+#empty :=
+#space := $(empty) $(empty)
+#colon := $(empty):$(empty)
+#underscore := $(empty)_$(empty)
 
 # $(call match-word,w1,w2)
 # checks if w1 == w2
