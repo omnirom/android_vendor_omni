@@ -13,8 +13,7 @@ PRODUCT_PACKAGES += \
     OpenDelta \
     Turbo \
     OmniRecord \
-    WallpaperPicker2 \
-    ThemePicker
+    WallpaperPicker2
 
 # Additional tools
 PRODUCT_PACKAGES += \
