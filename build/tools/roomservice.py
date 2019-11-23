@@ -349,7 +349,10 @@ def create_common_dependencies_manifest(dependencies):
 
 
 def fetch_dependencies(device):
-    location = parse_device_from_folder(device)
+    if device == "emulator":
+        location = "vendor/omni/utils/emulator"
+    else:
+        location = parse_device_from_folder(device)
     if location is None or not os.path.isdir(location):
         raise Exception("ERROR: could not find your device "
                         "folder location, bailing out")
