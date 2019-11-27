@@ -69,4 +69,5 @@
     <dimen name="corner_size">8dp</dimen>
     <dimen name="edge_margin">8dp</dimen>
 
+    <dimen name="burn_in_prevention_offset_x">0dp</dimen>
 </resources>
