@@ -40,7 +40,7 @@ function breakfast()
         else
             # This is probably just the omni model name
             if [ -z "$variant" ]; then
-                variant="user"
+                variant="userdebug"
             fi
             lunch omni_$target-$variant
         fi
