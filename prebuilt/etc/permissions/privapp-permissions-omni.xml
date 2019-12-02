@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <permissions>
-    <privapp-permissions package="com.android.settings">
-        <permission name="android.permission.ACCESS_FONT_MANAGER"/>
-    </privapp-permissions>
-
     <privapp-permissions package="android.ext.services">
         <permission name="android.permission.PROVIDE_RESOLVER_RANKER_SERVICE"/>
     </privapp-permissions>
