@@ -7,5 +7,6 @@
 /sys/block/[^/]+/queue/scheduler                  u:object_r:sysfs_block_scheduler:s0
 
 /system/bin/fsck\.ntfs                            u:object_r:fsck_exec:s0
-#/system/bin/fsck\.exfat                           u:object_r:fsck_exec:s0
 /system/bin/mount\.exfat                           u:object_r:fsck_exec:s0
+
+/system/bin/vncflinger                             u:object_r:vncflinger_exec:s0

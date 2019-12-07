@@ -34,7 +34,9 @@ PRODUCT_PACKAGES += \
     mkshrc_vendor \
     toybox_vendor \
     sh_vendor \
-    vim
+    vim \
+    vncflinger \
+    vncpasswd
 
 ifeq ($(BOARD_INCLUDE_CMDLINE_TOOLS),true)
 PRODUCT_PACKAGES += \
