@@ -34,11 +34,6 @@ OMNI_PRODUCT_PROPERTIES += \
 OMNI_PRODUCT_PROPERTIES += \
     net.tethering.noprovisioning=true
 
-# enable ADB authentication if not on eng build
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-OMNI_PRODUCT_PROPERTIES  += ro.adb.secure=1
-endif
-
 # Enforce privapp-permissions whitelist
 OMNI_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
