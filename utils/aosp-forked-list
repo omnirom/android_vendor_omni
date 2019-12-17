@@ -18,11 +18,6 @@ hardware/libhardware_legacy
 hardware/nxp/nfc
 hardware/qcom/audio
 hardware/qcom/bt
-hardware/qcom/display
-hardware/qcom/gps
-hardware/qcom/media
-hardware/qcom/msm8998
-hardware/qcom/power
 hardware/qcom/wlan
 packages/apps/Bluetooth
 packages/apps/Contacts
@@ -39,6 +34,7 @@ packages/services/Telephony
 packages/services/Telecomm
 packages/inputmethods/LatinIME
 system/bt
+system/extras
 system/libhidl
 system/media
 system/nfc
@@ -46,4 +42,3 @@ system/sepolicy
 system/update_engine
 system/vold
 system/hardware/interfaces
-
