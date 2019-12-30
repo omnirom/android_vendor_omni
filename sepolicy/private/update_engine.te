@@ -23,6 +23,7 @@ allow update_engine toolbox_exec:file { execute getattr };
 allow update_engine sepolicy_file:file { append };
 
 allow update_engine gsi_metadata_file:dir search;
+allow update_engine metadata_file:dir search;
 allow update_engine rootfs:file { create write };
 #####
 allow update_engine proc_filesystems:file { getattr open read };
