@@ -4,5 +4,6 @@
         <item>default</item>
         <item>omni</item>
         <item>space</item>
+        <item>red</item>
     </string-array>
 </resources>
