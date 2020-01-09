@@ -34,4 +34,16 @@
     <string name="theme_wallpaper_attribution_omni">OmniROM</string>
     <string name="theme_wallpaper_action_omni">https://www.omnirom.org/</string>
 
+    <string name="theme_name_space">Space</string>
+    <string name="theme_title_space">@string/theme_name_space</string>
+    <string name="theme_overlay_color_space">com.android.theme.color.space</string>
+    <string name="theme_overlay_primary_space">com.android.theme.color.primary.darkblue</string>
+    <string name="theme_overlay_icon_android_space">com.android.theme.icon_pack.circular.android</string>
+    <string name="theme_overlay_icon_launcher_space">com.android.theme.icon_pack.circular.launcher</string>
+    <string name="theme_overlay_icon_settings_space">com.android.theme.icon_pack.circular.settings</string>
+    <string name="theme_overlay_icon_sysui_space">com.android.theme.icon_pack.circular.systemui</string>
+    <string name="theme_overlay_shape_space">com.android.theme.icon.squircle</string>
+    <string name="theme_wallpaper_title_space">Omni</string>
+    <string name="theme_wallpaper_attribution_space">OmniROM</string>
+    <string name="theme_wallpaper_action_space">https://www.omnirom.org/</string>
 </resources>

@@ -3,5 +3,6 @@
     <string-array name="themes">
         <item>default</item>
         <item>omni</item>
+        <item>space</item>
     </string-array>
 </resources>
