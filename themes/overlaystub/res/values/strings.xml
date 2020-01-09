@@ -46,4 +46,17 @@
     <string name="theme_wallpaper_title_space">Omni</string>
     <string name="theme_wallpaper_attribution_space">OmniROM</string>
     <string name="theme_wallpaper_action_space">https://www.omnirom.org/</string>
+
+    <string name="theme_name_red">Red</string>
+    <string name="theme_title_red">@string/theme_name_red</string>
+    <string name="theme_overlay_color_red">com.android.theme.color.reddevil</string>
+    <string name="theme_overlay_primary_red">com.android.theme.color.primary.omniblack</string>
+    <string name="theme_overlay_icon_android_red">com.android.theme.icon_pack.rounded.android</string>
+    <string name="theme_overlay_icon_launcher_red">com.android.theme.icon_pack.rounded.launcher</string>
+    <string name="theme_overlay_icon_settings_red">com.android.theme.icon_pack.rounded.settings</string>
+    <string name="theme_overlay_icon_sysui_red">com.android.theme.icon_pack.rounded.systemui</string>
+    <string name="theme_overlay_shape_red">com.android.theme.icon.roundedrect</string>
+    <string name="theme_wallpaper_title_red">Omni</string>
+    <string name="theme_wallpaper_attribution_red">OmniROM</string>
+    <string name="theme_wallpaper_action_red">https://www.omnirom.org/</string>
 </resources>
