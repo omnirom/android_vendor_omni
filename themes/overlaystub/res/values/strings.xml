@@ -33,6 +33,7 @@
     <string name="theme_wallpaper_title_omni">Omni</string>
     <string name="theme_wallpaper_attribution_omni">OmniROM</string>
     <string name="theme_wallpaper_action_omni">https://www.omnirom.org/</string>
+    <string name="theme_header_omni">omni_header</string>
 
     <string name="theme_name_space">Space</string>
     <string name="theme_title_space">@string/theme_name_space</string>
@@ -46,6 +47,7 @@
     <string name="theme_wallpaper_title_space">Omni</string>
     <string name="theme_wallpaper_attribution_space">OmniROM</string>
     <string name="theme_wallpaper_action_space">https://www.omnirom.org/</string>
+    <string name="theme_header_space">space_header</string>
 
     <string name="theme_name_red">Red</string>
     <string name="theme_title_red">@string/theme_name_red</string>
@@ -59,4 +61,5 @@
     <string name="theme_wallpaper_title_red">Omni</string>
     <string name="theme_wallpaper_attribution_red">OmniROM</string>
     <string name="theme_wallpaper_action_red">https://www.omnirom.org/</string>
+    <string name="theme_header_red">red_header</string>
 </resources>
