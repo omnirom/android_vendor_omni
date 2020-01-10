@@ -21,7 +21,7 @@
     <!-- List of packages whose icons are used to preview the icon shape for a theme. -->
     <array name="icon_shape_preview_packages">
         <item>com.android.settings</item>
-        <item>com.android.launcher3</item>
+        <item>com.android.messaging</item>
         <item>com.android.dialer</item>
         <item>com.android.contacts</item>
     </array>
