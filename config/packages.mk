@@ -76,3 +76,4 @@ PRODUCT_PACKAGES_ENG += \
     su
 
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
+$(call inherit-product-if-exists, vendor/omni/prebuilt/fonts/fonts.mk)
