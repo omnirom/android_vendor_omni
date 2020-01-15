@@ -74,5 +74,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_ENG += \
     bash \
     su
-
+    
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)

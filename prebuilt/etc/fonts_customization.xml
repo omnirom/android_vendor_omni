@@ -10,4 +10,14 @@
     </family>
     <alias name="lato-semi-bold" to="lato" weight="500" />
     <alias name="lato-bold" to="lato" weight="700" />
+    <family name="rubik" customizationType="new-named-family">
+        <font weight="400" style="normal">Rubik-Regular.ttf</font>
+        <font weight="400" style="italic">Rubik-Italic.ttf</font>
+        <font weight="500" style="normal">Rubik-Medium.ttf</font>
+        <font weight="500" style="italic">Rubik-MediumItalic.ttf</font>
+        <font weight="700" style="normal">Rubik-Bold.ttf</font>
+        <font weight="700" style="italic">Rubik-BoldItalic.ttf</font>
+    </family>
+    <alias name="rubik-semi-bold" to="rubik" weight="500" />
+    <alias name="rubik-bold" to="rubik" weight="700" />
 </fonts-modification>
