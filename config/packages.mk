@@ -77,3 +77,4 @@ PRODUCT_PACKAGES_ENG += \
     
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
 $(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
+$(call inherit-product-if-exists, vendor/omni/prebuilt/fonts/fonts.mk)

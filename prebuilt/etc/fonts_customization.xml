@@ -20,4 +20,16 @@
     </family>
     <alias name="rubik-semi-bold" to="rubik" weight="500" />
     <alias name="rubik-bold" to="rubik" weight="700" />
+    <family name="muli" customizationType="new-named-family">
+        <font weight="400" style="normal">Muli-Regular.ttf</font>
+        <font weight="400" style="italic">Muli-Italic.ttf</font>
+        <font weight="500" style="normal">Muli-Medium.ttf</font>
+        <font weight="500" style="italic">Muli-MediumItalic.ttf</font>
+        <font weight="600" style="normal">Muli-SemiBold.ttf</font>
+        <font weight="600" style="italic">Muli-SemiBoldItalic.ttf</font>
+        <font weight="700" style="normal">Muli-Bold.ttf</font>
+        <font weight="700" style="italic">Muli-BoldItalic.ttf</font>
+    </family>
+    <alias name="muli-semi-bold" to="muli" weight="600" />
+    <alias name="muli-bold" to="muli" weight="700" />
 </fonts-modification>
