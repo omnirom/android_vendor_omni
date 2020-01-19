@@ -52,8 +52,7 @@ check_prereq() {
 check_blacklist() {
   if [ -f $S/addon.d/blacklist ];then
     ## Discard any known bad backup scripts
-    cd $1/addon.d/
-    for f in *sh; do
+    for f in /$1/addon.d/*sh; do
       s=$(md5sum $f | awk {'print $1'})
       grep -q $s $S/addon.d/blacklist && rm -f $f
     done
