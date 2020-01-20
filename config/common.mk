@@ -50,8 +50,8 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/addon.d/69-gapps.sh:system/addon.d/69-gapps.sh
 else
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/omni/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/omni/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/omni/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/omni/prebuilt/bin/blacklist:system/addon.d/blacklist
 endif
 
