@@ -4,7 +4,7 @@
 #
 
 export C=/tmp/backupdir
-export S=/system
+export S=$2
 export V=10
 
 export ADDOND_VERSION=1
@@ -15,7 +15,7 @@ DEBUG=0
 preserve_addon_d() {
   rm -rf /tmp/addon.d/
   mkdir -p /tmp/addon.d/
-  cp -a /system/addon.d/* /tmp/addon.d/
+  cp -a $S/addon.d/* /tmp/addon.d/
     # Discard any scripts that aren't at least our version level
     for f in /postinstall/tmp/addon.d/*sh; do
       SCRIPT_VERSION=$(grep "^# ADDOND_VERSION=" $f | cut -d= -f2)
@@ -31,7 +31,7 @@ preserve_addon_d() {
 
 # Restore /system/addon.d in /tmp/addon.d
 restore_addon_d() {
-  cp -a /tmp/addon.d/* /system/addon.d/
+  cp -a /tmp/addon.d/* $S/addon.d/
   rm -rf /tmp/addon.d/
 }
 
@@ -49,12 +49,12 @@ check_prereq() {
 }
 
 check_blacklist() {
-  if [ -f /system/addon.d/blacklist ];then
+  if [ -f $S/addon.d/blacklist ];then
     ## Discard any known bad backup scripts
-    cd /$1/addon.d/
+    cd $1/addon.d/
     for f in *sh; do
       s=$(md5sum $f | awk {'print $1'})
-      grep -q $s /system/addon.d/blacklist && rm -f $f
+      grep -q $s $S/addon.d/blacklist && rm -f $f
     done
   fi
 }
@@ -73,20 +73,20 @@ case "$1" in
   backup)
     # make sure we dont start with any leftovers
     rm -rf $C
-    cp /system/bin/backuptool.functions /tmp
-    cp /system/build.prop /tmp
+    cp $S/bin/backuptool.functions /tmp
+    cp $S/build.prop /tmp
     mkdir -p $C
     #check_prereq
-    check_blacklist system
+    check_blacklist $S
     preserve_addon_d
     run_stage pre-backup
     run_stage backup
     run_stage post-backup
   ;;
   restore)
-    cp /system/bin/backuptool.functions /tmp
+    cp $S/bin/backuptool.functions /tmp
     check_prereq
-    check_blacklist tmp
+    check_blacklist /tmp
     run_stage pre-restore
     run_stage restore
     run_stage post-restore
