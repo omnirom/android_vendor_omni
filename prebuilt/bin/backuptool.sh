@@ -5,7 +5,6 @@
 
 export C=/tmp/backupdir
 export SYSDEV="$(readlink -nf "$2")"
-export SYSFS="$3"
 export V=10
 
 export ADDOND_VERSION=1
@@ -87,7 +86,7 @@ determine_system_mount() {
 }
 
 mount_system() {
-  mount -t $SYSFS $SYSDEV $SYSMOUNT -o rw,discard
+  mount $SYSDEV $SYSMOUNT -o rw,discard
 }
 
 unmount_system() {
