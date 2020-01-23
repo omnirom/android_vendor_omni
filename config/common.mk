@@ -52,6 +52,7 @@ else
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/omni/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/omni/prebuilt/bin/backupHelper.sh:install/backupHelper.sh \
     vendor/omni/prebuilt/bin/blacklist:system/addon.d/blacklist
 endif
 
