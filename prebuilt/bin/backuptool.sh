@@ -101,7 +101,7 @@ case "$1" in
     mount_system
     # make sure we dont start with any leftovers
     rm -rf $C
-    cp $S/bin/backuptool.functions /tmp
+    cp /tmp/install/bin/backuptool.functions /tmp
     cp $S/build.prop /tmp
     mkdir -p $C
     #check_prereq
@@ -114,7 +114,7 @@ case "$1" in
   ;;
   restore)
     mount_system
-    cp $S/bin/backuptool.functions /tmp
+    cp /tmp/install/bin/backuptool.functions /tmp
     check_prereq
     check_blacklist tmp
     run_stage pre-restore
