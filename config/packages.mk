@@ -75,5 +75,11 @@ PRODUCT_PACKAGES_ENG += \
     bash \
     su
 
+# mainline network framework modules
+PRODUCT_PACKAGES += \
+    InProcessNetworkStack \
+    PlatformCaptivePortalLogin \
+    PlatformNetworkPermissionConfig
+
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
 $(call inherit-product-if-exists, vendor/omni/prebuilt/fonts/fonts.mk)
