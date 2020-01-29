@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "450bf853_1aa4ba0a",
+        "filename": "prebuilt/bin/backuptool.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1000049
+      },
+      "writtenOn": "2020-01-29T16:32:04Z",
+      "side": 1,
+      "message": "This needs to change to check_blacklist $S",
+      "revId": "35c05ff8a99f582f29ac47137cee31025eadd8b1",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": true
+    }
+  ]
+}
