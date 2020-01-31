@@ -28,6 +28,7 @@
         <boolean name="carrier_rtt_supported_on_vtcalls" value="false" />
         <boolean name="carrier_rtt_upgrade_supported" value="false" />
         <boolean name="carrier_rtt_downgrade_supported" value="false" />
+        <boolean name="hide_lte_plus_data_icon_bool" value="false"/>
         <string-array name="carrier_metered_iwlan_apn_types_strings" num="4">
             <item value="default" />
             <item value="dun" />
