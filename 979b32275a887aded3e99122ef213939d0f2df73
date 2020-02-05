@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf027f1c_4d395fb9",
+        "filename": "build/tasks/kernel.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1000026
+      },
+      "writtenOn": "2020-02-05T12:49:21Z",
+      "side": 1,
+      "message": "isnt there any variable containing the 29?\nthen you dont need to change next time",
+      "revId": "979b32275a887aded3e99122ef213939d0f2df73",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": true
+    }
+  ]
+}
