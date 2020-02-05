@@ -1682,6 +1682,7 @@
         <string name="vendor_carrier_eons_short">TMO</string>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true" />
         <string name="wcdma_default_signal_strength_measurement_string">rscp</string>
+        <boolean name="carrier_vt_available_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="310" mnc="160">
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -2091,6 +2092,12 @@
     </carrier_config>
     <carrier_config mcc="404" mnc="10">
         <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="404" mnc="11">
+        <boolean name="config_force_send_sms_over_cs" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="404" mnc="16">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -2193,10 +2200,6 @@
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="404" mnc="05">
-        <boolean name="carrier_volte_available_bool" value="true" />
-        <boolean name="config_force_send_sms_over_cs" value="true" />
-    </carrier_config>
-    <carrier_config mcc="404" mnc="11">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="config_force_send_sms_over_cs" value="true" />
     </carrier_config>
