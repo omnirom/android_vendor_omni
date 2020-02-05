@@ -56,18 +56,6 @@ echo "Not backing up files from incompatible version: $V"
 return 0
 }
 
-check_blacklist() {
-  if [ -f /system/addon.d/blacklist -a -d /$1/addon.d/ ]; then
-      ## Discard any known bad backup scripts
-      cd /$1/addon.d/
-      for f in *sh; do
-          [ -f $f ] || continue
-          s=$(md5sum $f | cut -c-32)
-          grep -q $s /system/addon.d/blacklist && rm -f $f
-      done
-  fi
-}
-
 check_whitelist() {
   found=0
   if [ -f /system/addon.d/whitelist ];then
@@ -115,7 +103,6 @@ case "$1" in
     fi
     log -t "update_engine" "backuptool_ab.sh backup"
 
-    check_blacklist postinstall/system
     preserve_addon_d
     run_stage pre-backup
     run_stage backup
@@ -129,7 +116,6 @@ case "$1" in
     fi
     log -t "update_engine" "backuptool_ab.sh restore"
 
-    check_blacklist postinstall/tmp
     run_stage pre-restore
     run_stage restore
     run_stage post-restore

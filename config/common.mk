@@ -54,8 +54,7 @@ else
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/common/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
     vendor/omni/prebuilt/common/bin/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool.sh \
-    vendor/omni/prebuilt/common/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool.functions \
-    vendor/omni/prebuilt/common/bin/blacklist:$(TARGET_COPY_OUT_SYSTEM)/addon.d/blacklist
+    vendor/omni/prebuilt/common/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool.functions
 endif
 
 # Backup Services whitelist
