@@ -37,16 +37,6 @@ check_prereq() {
   fi
 }
 
-check_blacklist() {
-  if [ -f $S/addon.d/blacklist ];then
-    ## Discard any known bad backup scripts
-    for f in /$1/addon.d/*sh; do
-      s=$(md5sum $f | awk {'print $1'})
-      grep -q $s $S/addon.d/blacklist && rm -f $f
-    done
-  fi
-}
-
 # Execute /system/addon.d/*.sh scripts with $1 parameter
 run_stage() {
   for script in $(find /tmp/addon.d/ -name '*.sh' |sort -n); do
@@ -92,7 +82,6 @@ case "$1" in
     mount_system
     mkdir -p $C
     #check_prereq
-    check_blacklist $S
     preserve_addon_d
     run_stage pre-backup
     run_stage backup
@@ -103,7 +92,6 @@ case "$1" in
     cp $S/bin/backuptool.functions /tmp
     mount_system
     check_prereq
-    check_blacklist /tmp
     run_stage pre-restore
     run_stage restore
     run_stage post-restore
