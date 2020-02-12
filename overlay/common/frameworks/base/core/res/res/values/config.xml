@@ -120,4 +120,7 @@
          See android.view.textclassifier.TextClassificationManager.
     -->
     <string name="config_defaultTextClassifierPackage">com.google.android.as</string>
+
+    <!-- Indicates that connected MAC randomization is supported on this device -->
+    <bool translatable="false" name="config_wifi_connected_mac_randomization_supported">true</bool>
 </resources>
