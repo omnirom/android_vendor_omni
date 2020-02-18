@@ -293,28 +293,37 @@ def create_dependency_manifest(dependencies):
         revision = dependency.get("revision", default_rev)
         remote = dependency.get("remote", default_rem)
         override = dependency.get("override", None)
-        
-        if override is not None:
-            #print("found override in ", repository)
-            project = create_remove_project(repository)
+        remove = dependency.get("remove", None)
+
+        if remove is not None:
+            #print("found remove in ", repository)
+            project = create_remove_project(remove)
             if project is not None:
                 manifest = append_to_manifest(project)
                 #print(ES.tostring(manifest).decode())
                 write_to_manifest(manifest)
+        else:
+            if override is not None:
+                #print("found override in ", repository)
+                project = create_remove_project(override)
+                if project is not None:
+                    manifest = append_to_manifest(project)
+                    #print(ES.tostring(manifest).decode())
+                    write_to_manifest(manifest)
 
-        # not adding an organization should default to android_team
-        # only apply this to github
-        if remote == "github":
-            if "/" not in repository:
-                repository = '/'.join([android_team, repository])
-        project = create_manifest_project(repository,
-                                          target_path,
-                                          remote=remote,
-                                          revision=revision)
-        if project is not None:
-            manifest = append_to_manifest(project)
-            write_to_manifest(manifest)
-            projects.append(target_path)
+            # not adding an organization should default to android_team
+            # only apply this to github
+            if remote == "github":
+                if "/" not in repository:
+                    repository = '/'.join([android_team, repository])
+            project = create_manifest_project(repository,
+                                            target_path,
+                                            remote=remote,
+                                            revision=revision)
+            if project is not None:
+                manifest = append_to_manifest(project)
+                write_to_manifest(manifest)
+                projects.append(target_path)
     if len(projects) > 0:
         os.system("repo sync -f --no-clone-bundle %s" % " ".join(projects))
 
