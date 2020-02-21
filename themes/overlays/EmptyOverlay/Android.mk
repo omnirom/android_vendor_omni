@@ -19,8 +19,6 @@ include $(CLEAR_VARS)
 
 LOCAL_RRO_THEME := EmptyOverlay
 
-LOCAL_PRODUCT_MODULE := true
-
 LOCAL_SRC_FILES := $(call all-subdir-java-files)
 
 LOCAL_PACKAGE_NAME := EmptyOverlay
