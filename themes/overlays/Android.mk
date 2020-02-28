@@ -24,6 +24,7 @@ LOCAL_REQUIRED_MODULES := \
 	PrimaryColorOmniBlackOverlay \
 	PrimaryColorDarkBlueOverlay \
 	PrimaryColorDeepBlueOverlay \
+	PrimaryColorDarkGreenOverlay \
 	AccentColorRedDevilOverlay \
 	FontLatoSourceOverlay \
 	FontMuliSourceOverlay \
