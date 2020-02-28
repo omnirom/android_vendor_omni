@@ -24,10 +24,12 @@ LOCAL_REQUIRED_MODULES := \
 	PrimaryColorOmniBlackOverlay \
 	PrimaryColorDarkBlueOverlay \
 	PrimaryColorDeepBlueOverlay \
+	PrimaryColorDarkGreenOverlay \
 	AccentColorRedDevilOverlay \
 	FontLatoSourceOverlay \
 	FontMuliSourceOverlay \
-	EmptyOverlay
+	EmptyOverlay \
+	EmptyProductOverlay
 
 include $(BUILD_PHONY_PACKAGE)
 include $(CLEAR_VARS)

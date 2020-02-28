@@ -6,5 +6,7 @@
     <item type="drawable" name="theme_wallpaper_thumbnail_space">@drawable/space_wallpaper</item>
     <item type="drawable" name="theme_wallpaper_red">@drawable/red_wallpaper</item>
     <item type="drawable" name="theme_wallpaper_thumbnail_red">@drawable/red_wallpaper</item>
+    <item type="drawable" name="theme_wallpaper_nature">@drawable/nature_wallpaper</item>
+    <item type="drawable" name="theme_wallpaper_thumbnail_nature">@drawable/nature_wallpaper</item>
 </resources>
 
