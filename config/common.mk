@@ -25,6 +25,9 @@ OMNI_PRODUCT_PROPERTIES += \
     ro.build.selinux=1 \
     persist.sys.disable_rescue=true
 
+OMNI_PRODUCT_PROPERTIES += \
+    persist.display.ambient_stats.disabled=true
+
 # Google assistant
 OMNI_PRODUCT_PROPERTIES += \
     ro.opa.eligible_device=true
