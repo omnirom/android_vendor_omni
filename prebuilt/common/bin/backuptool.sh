@@ -26,16 +26,16 @@ restore_addon_d() {
 
 # Restore only if backup has the expected major and minor version
 check_prereq() {
-  if [ ! -f /tmp/build.prop ]; then
-    # this will block any backups made before 8 cause file was not copied before
-    echo "Not restoring files from incompatible version: $V"
-    return 0
-  fi
-  if ( ! grep -q "^ro.build.version.release=$V.*" /tmp/build.prop ); then
-    echo "Not restoring files from incompatible version: $V"
-    return 0
-  fi
+  # If there is no build.prop file the partition is probably empty.
+if [ ! -r $S/build.prop ]; then
+  echo "Backup/restore is not possible. Partition is probably empty"
   return 1
+fi
+  if ( ! grep -q "^ro.build.version.release=$V.*" /tmp/build.prop ); then
+    echo "Backup/restore is not possible. Incompatible ROM version: $V"
+  return 2
+  fi
+  return 0
 }
 
 # Execute /system/addon.d/*.sh scripts with $1 parameter
@@ -81,30 +81,26 @@ case "$1" in
     cp $S/bin/backuptool.functions /tmp
     cp $S/build.prop /tmp
     mount_system
-    mkdir -p $C
-    if ! check_prereq; then
-      unmount_system
-      exit 127
-    end
-    preserve_addon_d
-    run_stage pre-backup
-    run_stage backup
-    run_stage post-backup
+    if check_prereq; then
+      mkdir -p $C
+      preserve_addon_d
+      run_stage pre-backup
+      run_stage backup
+      run_stage post-backup
+    fi
     unmount_system
   ;;
   restore)
     cp $S/bin/backuptool.functions /tmp
     mount_system
-    if ! check_prereq; then
-      unmount_system
-      exit 127
-    end
-    run_stage pre-restore
-    run_stage restore
-    run_stage post-restore
-    restore_addon_d
-    rm -rf $C
-    sync
+    if check_prereq; then
+      run_stage pre-restore
+      run_stage restore
+      run_stage post-restore
+      restore_addon_d
+      rm -rf $C
+      sync
+    fi
     unmount_system
   ;;
   *)
