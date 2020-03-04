@@ -50,10 +50,11 @@ if [ ! -r /system/build.prop ]; then
     return 0
 fi
 
-grep -q "^ro.omni.version=$V.*" /product/build.prop && return 1
-
-echo "Not backing up files from incompatible version: $V"
-return 0
+if ! grep -q "^ro.omni.version=$V.*" /product/build.prop; then
+    echo "Not backing up files from incompatible version: $V"
+    return 0
+fi
+return 1
 }
 
 # Execute /system/addon.d/*.sh scripts with $1 parameter
@@ -78,10 +79,8 @@ fi
 case "$1" in
   backup)
     mkdir -p $C
-    if check_prereq; then
-        if check_whitelist postinstall/system; then
-            exit 127
-        fi
+    if ! check_prereq; then
+      exit 127
     fi
     log -t "update_engine" "backuptool_ab.sh backup"
 
@@ -91,10 +90,8 @@ case "$1" in
     run_stage post-backup
   ;;
   restore)
-    if check_prereq; then
-        if check_whitelist postinstall/tmp; then
-            exit 127
-        fi
+    if ! check_prereq; then
+      exit 127
     fi
     log -t "update_engine" "backuptool_ab.sh restore"
 
