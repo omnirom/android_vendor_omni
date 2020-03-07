@@ -39550,5 +39550,19 @@
       mvno_match_data="2620740"
       mvno_type="imsi"
   />
+  <apn carrier="H2O"
+      apn="att.mvno"
+      proxy="66.209.11.33"
+      port="80"
+      mmsc="http://mmsc.cingular.com"
+      mmsproxy="66.209.11.33"
+      mmsport="80"
+      mcc="310"
+      mnc="410"
+      authtype="0"
+      type="default,supl,mms"
+      protocol="IP"
+      roaming_protocol="IP"
+  />
   <!-- End Omni Additions -->
 </apns>
