@@ -1198,11 +1198,11 @@ function oat2dex() {
     fi
 
     if [ -z "$VDEXEXTRACTOR" ]; then
-        export VDEXEXTRACTOR="$OMNI_ROOT"/vendor/omni/build/tools/"$HOST"/vdexExtractor
+        export VDEXEXTRACTOR="$OMNI_ROOT"/vendor/omni/build/tools/${HOST}/vdexExtractor
     fi
 
     if [ -z "$CDEXCONVERTER" ]; then
-        export CDEXCONVERTER="$OMNI_ROOT"/vendor/omni/build/tools/"$HOST"/compact_dex_converter
+        export CDEXCONVERTER="$OMNI_ROOT"/vendor/omni/build/tools/${HOST}/compact_dex_converter
     fi
 
     # Extract existing boot.oats to the temp folder
