@@ -12,14 +12,16 @@ ifeq ($(ROM_BUILDTYPE),GAPPS)
 include vendor/gapps/config.mk
     VENDOR_EXCEPTION_PATHS += \
     gapps
-
-    ROM_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
-else
+endif
+ifeq ($(ROM_BUILDTYPE),MICROG)
+include vendor/microg/microg.mk
+    VENDOR_EXCEPTION_PATHS += \
+    microg
+endif
 ifeq ($(ROM_BUILDTIME_UTC),y)
     ROM_VERSION := $(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
 else
     ROM_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
-endif
 endif
 
 # Apply it to build.prop
