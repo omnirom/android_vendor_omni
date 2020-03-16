@@ -28,5 +28,5 @@ allow update_engine rootfs:file { create write };
 #####
 allow update_engine proc_filesystems:file { getattr open read };
 allow update_engine system_file:lnk_file { create rename };
-allow update_engine system_lib_file:dir setattr;
+allow update_engine system_lib_file:dir { add_name setattr write };
 
