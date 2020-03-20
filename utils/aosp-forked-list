@@ -33,6 +33,7 @@ packages/providers/DownloadProvider
 packages/services/Telephony
 packages/services/Telecomm
 packages/inputmethods/LatinIME
+system/bpf
 system/bt
 system/extras
 system/libhidl
