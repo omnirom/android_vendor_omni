@@ -88,8 +88,12 @@ check_whitelist() {
 
 # Execute /system/addon.d/*.sh scripts with $1 parameter
 run_stage() {
+log -t "update_engine" $1
+
 if [ -d /postinstall/tmp/addon.d/ ]; then
   for script in $(find /postinstall/tmp/addon.d/ -name '*.sh' |sort -n); do
+    log -t "update_engine" $script
+
     # we have no /sbin/sh in android, only recovery
     # use /system/bin/sh here instead
     sed -i '0,/#!\/sbin\/sh/{s|#!/sbin/sh|#!/system/bin/sh|}' $script
@@ -109,6 +113,8 @@ case "$1" in
             exit 127
         fi
     fi
+    log -t "update_engine" "backuptool_ab.sh backup"
+
     check_blacklist postinstall/system
     preserve_addon_d
     run_stage pre-backup
@@ -121,6 +127,8 @@ case "$1" in
             exit 127
         fi
     fi
+    log -t "update_engine" "backuptool_ab.sh restore"
+
     check_blacklist postinstall/tmp
     run_stage pre-restore
     run_stage restore
