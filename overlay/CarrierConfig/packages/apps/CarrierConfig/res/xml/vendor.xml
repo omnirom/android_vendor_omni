@@ -2093,6 +2093,7 @@
     <carrier_config mcc="404" mnc="10">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="404" mnc="11">
         <boolean name="config_force_send_sms_over_cs" value="true" />
@@ -2119,12 +2120,18 @@
     </carrier_config>
     <carrier_config mcc="404" mnc="90">
         <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="404" mnc="92">
         <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="404" mnc="93">
         <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="404" mnc="94">
         <boolean name="carrier_volte_available_bool" value="true" />
