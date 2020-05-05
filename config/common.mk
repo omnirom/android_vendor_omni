@@ -77,7 +77,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/etc/permissions/privapp-permissions-omni.xml:system/etc/permissions/privapp-permissions-omni.xml \
     vendor/omni/prebuilt/etc/permissions/privapp-permissions-elgoog.xml:system/etc/permissions/privapp-permissions-elgoog.xml \
-    vendor/omni/prebuilt/etc/permissions/omni-power-whitelist.xml:system/etc/permissions/omni-power-whitelist.xml
+    vendor/omni/prebuilt/etc/permissions/omni-power-whitelist.xml:system/etc/sysconfig/omni-power-whitelist.xml
 
 # custom omni sounds
 OMNI_PRODUCT_PROPERTIES += \
