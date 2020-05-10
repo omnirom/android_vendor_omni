@@ -107,6 +107,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.services.whitelist.packagelist=com.google.android.gms
 
+# Do not include art debug targets
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+
 # Additional packages
 -include vendor/omni/config/packages.mk
 
