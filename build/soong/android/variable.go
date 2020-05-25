@@ -25,6 +25,10 @@ type Product_variables struct {
     Target_enforce_ab_ota_partition_list struct {
         Cflags []string
     }
+    Target_surfaceflinger_fod_lib struct {
+        Cflags []string
+        Whole_static_libs []string
+    }
 }
 
 type ProductVariables struct {
@@ -37,4 +41,5 @@ type ProductVariables struct {
     Target_motorized_camera                 *bool `json:",omitempty"`
     Target_init_vendor_lib                  *string `json:",omitempty"`
     Target_enforce_ab_ota_partition_list    *bool `json:",omitempty"`
+	Target_surfaceflinger_fod_lib            *string `json:",omitempty"`
 }
