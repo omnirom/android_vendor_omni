@@ -1,24 +1,27 @@
 # Additional apps
 PRODUCT_PACKAGES += \
+    Chromium \
     MonthCalendarWidget \
     OmniSwitch \
-    Chromium \
     OmniJaws \
     OmniStyle \
-    MusicFX \
-    Phonograph \
     MatLog \
     OmniChange \
     OpenDelta \
     Turbo \
-    OmniRecord \
     ThemePicker \
-    webview \
-    ExactCalculator
+    webview
 
 PRODUCT_PACKAGES += \
-     OmniOverlayStub \
-     omni-overlays
+    OmniOverlayStub \
+    omni-overlays
+
+ifneq ($(PRODUCT_EXCLUDE_EXTRA_PACKAGES),true)
+PRODUCT_PACKAGES += \
+    ExactCalculator \
+    MusicFX \
+    Phonograph
+endif
 
 # Additional tools
 PRODUCT_PACKAGES += \
