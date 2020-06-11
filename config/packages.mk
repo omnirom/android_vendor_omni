@@ -21,6 +21,9 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     MusicFX \
     Phonograph
+else
+PRODUCT_PACKAGES += \
+    OmniStoreInstaller
 endif
 
 # Additional tools
