@@ -21,6 +21,9 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     MusicFX \
     Phonograph
+else
+PRODUCT_PACKAGES += \
+    OmniStoreInstaller
 endif
 
 # Additional tools
@@ -68,7 +71,7 @@ PRODUCT_PACKAGES += telephony-ext
 PRODUCT_BOOT_JARS += telephony-ext
 
 # for fun
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     EggGame
 
 #PRODUCT_PACKAGES += \
