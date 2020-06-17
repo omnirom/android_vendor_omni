@@ -1,3 +1,4 @@
+ifeq ($(PRODUCT_NO_CHARGER),true)
 LOCAL_PATH := $(call my-dir)
 
 ifneq (,$(PRODUCT_AAPT_PREF_CONFIG))
@@ -53,3 +54,4 @@ include $(BUILD_PHONY_PACKAGE)
 
 _add-charger-image :=
 _img_modules :=
+endif
