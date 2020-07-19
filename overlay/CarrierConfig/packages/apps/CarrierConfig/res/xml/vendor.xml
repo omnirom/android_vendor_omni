@@ -2054,6 +2054,18 @@
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
     </carrier_config>
+    <carrier_config mcc="502" mnc="10">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="502" mnc="16">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="502" mnc="153">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+    </carrier_config>
     <carrier_config mcc="310" mnc="028" />
     <carrier_config mcc="311" mnc="390" />
     <carrier_config mcc="441" mnc="00" />
