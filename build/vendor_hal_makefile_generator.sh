@@ -91,7 +91,7 @@ function generate_make_files() {
         hal_package=${hal_package%?}
 
         #Check if we already executed hidl-gen for a given package
-        if ${ECHO} "${package_collection[@]}" | ${GREP} $hal_package > /dev/null; then
+        if ${ECHO} "${package_collection[@]}" | ${GREP} -w $hal_package > /dev/null; then
             continue;
         else
             package_collection+=($hal_package)
@@ -120,7 +120,7 @@ function generate_make_files() {
         ${TOUCH} $hal_path/.hidl-autogen
 
         ${ECHO} -n "Running hidl-gen on $hal_package: "
-        hidl-gen -Landroidbp $root_arguments $hal_package;
+        hidl-gen -O qcom -Landroidbp $root_arguments $hal_package;
         rc=$?; if [[ $rc != 0 ]]; then return $rc; fi
 
         if [ "$update_check" -eq 1 ]; then
@@ -149,7 +149,7 @@ function start_script_for_interfaces {
         local relative_interface=${interface#${ANDROID_BUILD_TOP}/}
         generate_make_files $relative_interface "android.hidl:system/libhidl/transport"
         if [ $? -ne 0 ] ; then
-           ${ECHO} "HIDL interfaces: FATAL !!!! Update Failed: HAL File not compatible"
+           ${ECHO} "HIDL interfaces: Update Failed"
            return 1;
         fi
     done
