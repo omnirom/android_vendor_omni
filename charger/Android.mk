@@ -1,4 +1,4 @@
-ifeq ($(PRODUCT_NO_CHARGER),true)
+ifneq ($(TARGET_NO_CHARGER),true)
 LOCAL_PATH := $(call my-dir)
 
 ifneq (,$(PRODUCT_AAPT_PREF_CONFIG))
