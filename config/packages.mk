@@ -48,11 +48,7 @@ PRODUCT_PACKAGES += \
 
 ifeq ($(BOARD_INCLUDE_CMDLINE_TOOLS),true)
 PRODUCT_PACKAGES += \
-    bash \
     htop \
-    nano \
-    powertop \
-    rsync \
     zip
 
 # Openssh
@@ -76,10 +72,6 @@ PRODUCT_BOOT_JARS += telephony-ext
 
 #PRODUCT_PACKAGES += \
     ExtraFonts
-
-PRODUCT_PACKAGES_ENG += \
-    bash \
-    su
 
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
 $(call inherit-product-if-exists, vendor/omni/prebuilt/fonts/fonts.mk)
