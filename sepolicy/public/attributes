@@ -1,1 +1,2 @@
-hal_attribute(omni_fod)
+# HALs
+hal_attribute_omni(omni_fod)
