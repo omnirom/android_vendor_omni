@@ -3,46 +3,41 @@ PRODUCT_PACKAGES += \
     MonthCalendarWidget \
     OmniSwitch \
     OmniJaws \
-    OmniStyle \
-    MusicFX \
-    Phonograph \
     MatLog \
     OmniChange \
-    GoldfishParts \
-    OpenDelta \
-    Turbo \
-    OmniRecord \
-    ThemePicker \
-    webview \
-    ExactCalculator
+    OmniStyle \
+    SystemWebView \
+    Terminal
 
+ifneq ($(PRODUCT_EXCLUDE_EXTRA_PACKAGES),true)
 PRODUCT_PACKAGES += \
-     OmniOverlayStub \
-     omni-overlays
+    ChromeModernPublic \
+    ExactCalculator \
+    MusicFX \
+    Phonograph
+else
+PRODUCT_PACKAGES += \
+    OmniStoreInstaller
+endif
+
+#PRODUCT_PACKAGES += \
+    GoldfishParts \
+    OmniOverlayStub \
+    omni-overlays \
+    OpenDelta \
+    ThemePicker \
 
 # Additional tools
 PRODUCT_PACKAGES += \
     bash \
-    e2fsck \
-    fsck.exfat \
     htop \
-    lsof \
-    mke2fs \
-    mount.exfat \
-    nano \
-    openvpn \
-    powertop \
-    tune2fs \
-    vim \
-    mkfs.ntfs \
-    mount.ntfs \
-    fsck.ntfs
+    vim
 
 # Telephony extension
-PRODUCT_PACKAGES += telephony-ext
-PRODUCT_BOOT_JARS += telephony-ext
+#PRODUCT_PACKAGES += telephony-ext
+#PRODUCT_BOOT_JARS += telephony-ext
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
