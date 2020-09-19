@@ -65,12 +65,10 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/sounds/omni_unlock_phone.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/omni_unlock_phone.ogg
 
 # Additional packages
--include vendor/omni/utils/emulator/packages.mk
+-include vendor/omni/utils/omni_emulator/packages.mk
 
 # Versioning
 -include vendor/omni/config/version.mk
 
 # Add our overlays
 DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/common
-
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
