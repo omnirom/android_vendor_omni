@@ -6,12 +6,12 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     MatLog \
     OmniChange \
-    OpenDelta \
     Turbo \
-    ThemePicker \
     SystemWebView
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
+    ThemePicker \
+    OpenDelta \
     OmniOverlayStub \
     omni-overlays
 
@@ -63,8 +63,8 @@ PRODUCT_PACKAGES += \
 endif
 
 # Telephony extension
-PRODUCT_PACKAGES += telephony-ext
-PRODUCT_BOOT_JARS += telephony-ext
+#PRODUCT_PACKAGES += telephony-ext
+#PRODUCT_BOOT_JARS += telephony-ext
 
 # for fun
 #PRODUCT_PACKAGES += \
