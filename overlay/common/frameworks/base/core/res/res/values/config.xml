@@ -123,4 +123,13 @@
 
     <!-- Indicates that connected MAC randomization is supported on this device -->
     <bool translatable="false" name="config_wifi_connected_mac_randomization_supported">true</bool>
+
+    <string-array translatable="false" name="config_globalActionsList">
+        <item>emergency</item>
+        <item>lockdown</item>
+        <item>power</item>
+        <item>restart</item>
+        <item>logout</item>
+        <item>screenshot</item>
+    </string-array>
 </resources>
