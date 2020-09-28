@@ -19,7 +19,7 @@ include $(CLEAR_VARS)
 
 LOCAL_RRO_THEME := FontLatoSource
 
-LOCAL_SRC_FILES := $(call all-subdir-java-files)
+LOCAL_PRODUCT_MODULE := true
 
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 

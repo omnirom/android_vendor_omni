@@ -6,14 +6,14 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     MatLog \
     OmniChange \
+    OmniOverlayStub \
+    omni-overlays \
+    ThemePicker \
     Turbo \
     SystemWebView
 
 #PRODUCT_PACKAGES += \
-    ThemePicker \
     OpenDelta \
-    OmniOverlayStub \
-    omni-overlays
 
 ifneq ($(PRODUCT_EXCLUDE_EXTRA_PACKAGES),true)
 PRODUCT_PACKAGES += \
