@@ -1,0 +1,18 @@
+type updater_app, domain, coredomain;
+
+app_domain(updater_app)
+
+binder_call(updater_app, update_engine)
+
+allow updater_app app_api_service:service_manager find;
+allow updater_app system_api_service:service_manager find;
+allow updater_app update_engine_service:service_manager find;
+
+allow updater_app app_data_file:dir create_dir_perms;
+allow updater_app app_data_file:{ file lnk_file } create_file_perms;
+
+allow updater_app ota_package_file:dir create_dir_perms;
+allow updater_app ota_package_file:file create_file_perms;
+
+get_prop(updater_app, default_prop)
+get_prop(updater_app, exported2_default_prop)
