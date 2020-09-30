@@ -24,6 +24,8 @@
         <item>com.android.messaging</item>
         <item>com.android.dialer</item>
         <item>com.android.contacts</item>
+        <item>com.android.documentsui</item>
+        <item>org.omnirom.logcat</item>
     </array>
 </resources>
 
