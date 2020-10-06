@@ -1,2 +1,2 @@
 allow priv_app ota_package_file:dir create_dir_perms;
-allow priv_app kernel:system syslog_read;
+#allow priv_app kernel:system syslog_read;
