@@ -69,11 +69,6 @@
         <permission name="android.permission.REAL_GET_TASKS"/>
     </privapp-permissions>
 
-    <privapp-permissions package="org.omnirom.snap">
-        <permission name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
-        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
-    </privapp-permissions>
-
     <privapp-permissions package="com.android.customization">
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.SET_WALLPAPER_COMPONENT"/>
