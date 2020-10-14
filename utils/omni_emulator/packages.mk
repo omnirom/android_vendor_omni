@@ -3,11 +3,18 @@ PRODUCT_PACKAGES += \
     MonthCalendarWidget \
     OmniSwitch \
     OmniJaws \
+    OmniStyle \
     MatLog \
     OmniChange \
-    OmniStyle \
-    SystemWebView \
-    Terminal
+    OmniOverlayStub \
+    omni-overlays \
+    ThemePicker \
+    Turbo \
+    SystemWebView
+
+#PRODUCT_PACKAGES += \
+    GoldfishParts \
+    OpenDelta \
 
 ifneq ($(PRODUCT_EXCLUDE_EXTRA_PACKAGES),true)
 PRODUCT_PACKAGES += \
@@ -20,13 +27,6 @@ PRODUCT_PACKAGES += \
     OmniStoreInstaller
 endif
 
-#PRODUCT_PACKAGES += \
-    GoldfishParts \
-    OmniOverlayStub \
-    omni-overlays \
-    OpenDelta \
-    ThemePicker \
-
 # Additional tools
 PRODUCT_PACKAGES += \
     bash \
@@ -34,10 +34,10 @@ PRODUCT_PACKAGES += \
     vim
 
 # Telephony extension
-#PRODUCT_PACKAGES += telephony-ext
-#PRODUCT_BOOT_JARS += telephony-ext
+PRODUCT_PACKAGES += telephony-ext
+PRODUCT_BOOT_JARS += telephony-ext
 
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
