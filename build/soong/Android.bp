@@ -1,3 +1,5 @@
+// Omni soong configs
+
 bootstrap_go_package {
     name: "soong-omnirom-generator",
     pkgPath: "omnirom/soong/generator",
@@ -35,4 +37,233 @@ cc_library_headers {
     export_generated_headers: ["generated_kernel_includes"],
     vendor_available: true,
     recovery_available: true,
+}
+
+soong_config_module_type {
+    name: "vendor_init",
+    module_type: "cc_defaults",
+    config_namespace: "omniGlobalVars",
+    value_variables: ["target_init_vendor_lib"],
+    properties: [
+        "whole_static_libs",
+    ],
+}
+
+vendor_init {
+    name: "vendor_init_defaults",
+    soong_config_variables: {
+        target_init_vendor_lib: {
+            whole_static_libs: ["%s"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "surfaceflinger_fod_lib",
+    module_type: "cc_defaults",
+    config_namespace: "omniGlobalVars",
+    value_variables: ["target_surfaceflinger_fod_lib"],
+    properties: [
+        "cppflags",
+        "whole_static_libs",
+    ],
+}
+
+surfaceflinger_fod_lib {
+    name: "surfaceflinger_fod_lib_defaults",
+    soong_config_variables: {
+        target_surfaceflinger_fod_lib: {
+            cppflags: ["-DTARGET_PROVIDES_FOD_LIB"],
+            whole_static_libs: ["%s"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "use_sdclang",
+    module_type: "cc_defaults",
+    config_namespace: "omniGlobalVars",
+    bool_variables: ["target_use_sdclang"],
+    properties: [
+        "cppflags",
+    ],
+}
+
+use_sdclang {
+    name: "use_sdclang_defaults",
+    soong_config_variables: {
+        target_use_sdclang: {
+            cppflags: ["-DTARGET_USE_SDCLANG"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "camera_client_info",
+    module_type: "cc_defaults",
+    config_namespace: "omniGlobalVars",
+    bool_variables: ["target_camera_needs_client_info"],
+    properties: [
+        "cppflags",
+    ],
+}
+
+camera_client_info {
+    name: "camera_client_info_defaults",
+    soong_config_variables: {
+        target_camera_needs_client_info: {
+            cppflags: ["-DTARGET_CAMERA_NEEDS_CLIENT_INFO"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "enforce_ab_ota_partition_list",
+    module_type: "cc_defaults",
+    config_namespace: "omniGlobalVars",
+    bool_variables: ["target_enforce_ab_ota_partition_list"],
+    properties: [
+        "cppflags",
+    ],
+}
+
+enforce_ab_ota_partition_list {
+    name: "enforce_ab_ota_partition_list_defaults",
+    soong_config_variables: {
+        target_enforce_ab_ota_partition_list: {
+            cppflags: ["-DTARGET_ENFORCE_AB_OTA_PARTITION_LIST"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "enable_op_fastchg",
+    module_type: "cc_defaults",
+    config_namespace: "omniGlobalVars",
+    bool_variables: ["healthd_enable_op_fastchg"],
+    properties: ["cflags"],
+}
+
+enable_op_fastchg {
+    name: "enable_op_fastchg_defaults",
+    soong_config_variables: {
+        healthd_enable_op_fastchg: {
+            cflags: ["-DHEALTHD_ENABLE_OP_FASTCHG_CHECK"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "use_battery_info",
+    module_type: "cc_defaults",
+    config_namespace: "omniGlobalVars",
+    bool_variables: ["healthd_use_battery_info"],
+    properties: ["cflags"],
+}
+
+use_battery_info {
+    name: "use_battery_info_defaults",
+    soong_config_variables: {
+        healthd_use_battery_info: {
+            cflags: ["-DHEALTHD_USE_BATTERY_INFO"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "needsHWCOnFirstRef",
+    module_type: "cc_defaults",
+    config_namespace: "omniGlobalVars",
+    bool_variables: ["targetNeedsHWCOnFirstRef"],
+    properties: ["cppflags"],
+}
+
+needsHWCOnFirstRef {
+    name: "needsHWCOnFirstRef_defaults",
+    soong_config_variables: {
+        targetNeedsHWCOnFirstRef: {
+            cppflags: ["-DTARGET_NEEDS_HWC_ONFIRSTREF"],
+        },
+    },
+}
+
+// QCOM specific config modules
+soong_config_module_type {
+    name: "metadata_fde_key",
+    module_type: "cc_defaults",
+    config_namespace: "omniQcomVars",
+    bool_variables: ["uses_metadata_as_fde_key"],
+    properties: [
+        "cppflags",
+    ],
+}
+
+metadata_fde_key {
+    name: "metadata_fde_key_defaults",
+    soong_config_variables: {
+        uses_metadata_as_fde_key: {
+            cppflags: ["-DTARGET_USES_METADATA_AS_FDE_KEY"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "enable_tricolor_led",
+    module_type: "cc_defaults",
+    config_namespace: "omniQcomVars",
+    bool_variables: ["healthd_enable_tricolor_led"],
+    properties: ["cflags"],
+}
+
+enable_tricolor_led {
+    name: "enable_tricolor_led_defaults",
+    soong_config_variables: {
+        healthd_enable_tricolor_led: {
+            cflags: ["-DHEALTHD_ENABLE_TRICOLOR_LED"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "vold_hw_fde",
+    module_type: "cc_defaults",
+    config_namespace: "omniQcomVars",
+    bool_variables: ["supports_hw_fde"],
+    properties: [
+        "cflags",
+        "header_libs",
+        "shared_libs",
+    ],
+}
+
+vold_hw_fde {
+    name: "vold_hw_fde_defaults",
+    soong_config_variables: {
+        supports_hw_fde: {
+            cflags: ["-DCONFIG_HW_DISK_ENCRYPTION"],
+            header_libs: ["libcryptfs_hw_headers"],
+            shared_libs: ["libcryptfs_hw"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "vold_hw_fde_perf",
+    module_type: "cc_defaults",
+    config_namespace: "omniQcomVars",
+    bool_variables: ["supports_hw_fde_perf"],
+    properties: [
+        "cflags",
+        "shared_libs",
+    ],
+}
+
+vold_hw_fde_perf {
+    name: "vold_hw_fde_perf_defaults",
+    soong_config_variables: {
+        supports_hw_fde_perf: {
+            cflags: ["-DCONFIG_HW_DISK_ENCRYPT_PERF"],
+            shared_libs: ["libcryptfs_hw"],
+        },
+    },
 }
