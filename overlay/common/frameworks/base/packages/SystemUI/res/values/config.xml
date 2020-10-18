@@ -31,4 +31,6 @@
     <!-- let people decide if they want keyguard shortcuts or not -->
     <bool name="config_keyguardShowLeftAffordance">true</bool>
     <bool name="config_keyguardShowCameraAffordance">true</bool>
+    <!-- Whether to show activity indicators in the status bar -->
+    <bool name="config_showActivity">false</bool>
 </resources>
