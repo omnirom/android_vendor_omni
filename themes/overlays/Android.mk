@@ -27,8 +27,7 @@ LOCAL_REQUIRED_MODULES := \
 	EmptyProductOverlay \
 	IconShapeCircleOverlay
 
-#LOCAL_REQUIRED_MODULES += \
-	EmptyOverlay \
+LOCAL_REQUIRED_MODULES += \
 	PrimaryColorOmniBlackOverlay \
 	PrimaryColorDarkBlueOverlay \
 	PrimaryColorDeepBlueOverlay \
