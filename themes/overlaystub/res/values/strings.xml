@@ -38,7 +38,7 @@
     <string name="theme_name_space">Space</string>
     <string name="theme_title_space">@string/theme_name_space</string>
     <string name="theme_overlay_color_space">com.android.theme.color.space</string>
-    <!--<string name="theme_overlay_primary_space">com.android.theme.color.primary.darkblue</string>-->
+    <string name="theme_overlay_primary_space">com.android.theme.color.primary.darkblue</string>
     <string name="theme_overlay_icon_android_space">com.android.theme.icon_pack.circular.android</string>
     <string name="theme_overlay_icon_launcher_space">com.android.theme.icon_pack.circular.launcher</string>
     <string name="theme_overlay_icon_settings_space">com.android.theme.icon_pack.circular.settings</string>
@@ -52,7 +52,7 @@
     <string name="theme_name_red">Red</string>
     <string name="theme_title_red">@string/theme_name_red</string>
     <string name="theme_overlay_color_red">com.android.theme.color.reddevil</string>
-    <!--<string name="theme_overlay_primary_red">com.android.theme.color.primary.omniblack</string>-->
+    <string name="theme_overlay_primary_red">com.android.theme.color.primary.omniblack</string>
     <string name="theme_overlay_icon_android_red">com.android.theme.icon_pack.rounded.android</string>
     <string name="theme_overlay_icon_launcher_red">com.android.theme.icon_pack.rounded.launcher</string>
     <string name="theme_overlay_icon_settings_red">com.android.theme.icon_pack.rounded.settings</string>
@@ -66,7 +66,7 @@
     <string name="theme_name_nature">Nature</string>
     <string name="theme_title_nature">@string/theme_name_nature</string>
     <string name="theme_overlay_color_nature">com.android.theme.color.green</string>
-    <!--<string name="theme_overlay_primary_nature">com.android.theme.color.primary.darkgreen</string>-->
+    <string name="theme_overlay_primary_nature">com.android.theme.color.primary.darkgreen</string>
     <string name="theme_overlay_icon_android_nature">com.android.theme.icon_pack.rounded.android</string>
     <string name="theme_overlay_icon_launcher_nature">com.android.theme.icon_pack.rounded.launcher</string>
     <string name="theme_overlay_icon_settings_nature">com.android.theme.icon_pack.rounded.settings</string>
