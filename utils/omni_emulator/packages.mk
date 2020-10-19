@@ -10,7 +10,8 @@ PRODUCT_PACKAGES += \
     omni-overlays \
     ThemePicker \
     Turbo \
-    SystemWebView
+    SystemWebView \
+    WallpaperCropper2
 
 #PRODUCT_PACKAGES += \
     GoldfishParts \
