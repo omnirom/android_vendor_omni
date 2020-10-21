@@ -29,6 +29,7 @@ ARCHES=
 FULLY_DEODEXED=-1
 
 TMPDIR=$(mktemp -d)
+HOST="$(uname | tr '[:upper:]' '[:lower:]')"
 
 #
 # cleanup
@@ -100,6 +101,10 @@ function setup_vendor() {
     else
         VENDOR_STATE=0
         VENDOR_RADIO_STATE=0
+    fi
+
+    if [ -z "$PATCHELF" ]; then
+        export PATCHELF="$OMNI_ROOT"/vendor/omni/build/tools/${HOST}/bin/patchelf
     fi
 }
 
@@ -1248,7 +1253,6 @@ function oat2dex() {
     local SRC="$3"
     local TARGET=
     local OAT=
-    local HOST="$(uname | tr '[:upper:]' '[:lower:]')"
 
     if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
         export BAKSMALIJAR="$OMNI_ROOT"/vendor/omni/build/tools/smali/baksmali.jar
