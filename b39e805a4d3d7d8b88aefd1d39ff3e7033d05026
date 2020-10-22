@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a0670269_e7dde1a8",
+        "filename": "themes/overlays/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000026
+      },
+      "writtenOn": "2020-10-22T15:01:22Z",
+      "side": 1,
+      "message": "just as a reminder -\u003e DONT add that back",
+      "revId": "b39e805a4d3d7d8b88aefd1d39ff3e7033d05026",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": true
+    }
+  ]
+}
