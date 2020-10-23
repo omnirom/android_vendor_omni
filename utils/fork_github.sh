@@ -12,6 +12,7 @@
 # Configuration
 ##
 USERNAME=<INSERT USER>
+TOKEN=<INSERT TOKEN>
 BRANCH=android-7.1
 GERRIT=gerrit.omnirom.org
 GITHUB_ORG=omnirom
@@ -35,7 +36,7 @@ git clone $github_url
 # Create the new repository on the organization
 echo Creating $repo_name on GitHub
 
-curl --user $USERNAME --data "{\"name\":\"$repo_name\"}" https://api.github.com/orgs/$GITHUB_ORG/repos
+curl -H 'Authorization: token '$TOKEN'' --data "{\"name\":\"$repo_name\"}" https://api.github.com/orgs/$GITHUB_ORG/repos
 
 # Create the repository on Gerrit
 echo Creating $repo_name on Gerrit
