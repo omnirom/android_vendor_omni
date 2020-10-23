@@ -13,7 +13,7 @@ PRODUCT_PACKAGES += \
     SystemWebView \
     WallpaperCropper2
 
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     OpenDelta \
 
 ifneq ($(PRODUCT_EXCLUDE_EXTRA_PACKAGES),true)
