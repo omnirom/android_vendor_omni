@@ -8,6 +8,7 @@ PRODUCT_PACKAGES += \
     OmniChange \
     OmniOverlayStub \
     omni-overlays \
+    OpenDelta \
     ThemePicker \
     Turbo \
     SystemWebView \
@@ -15,7 +16,6 @@ PRODUCT_PACKAGES += \
 
 #PRODUCT_PACKAGES += \
     GoldfishParts \
-    OpenDelta \
 
 ifneq ($(PRODUCT_EXCLUDE_EXTRA_PACKAGES),true)
 PRODUCT_PACKAGES += \

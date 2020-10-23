@@ -8,13 +8,11 @@ PRODUCT_PACKAGES += \
     OmniChange \
     OmniOverlayStub \
     omni-overlays \
+    OpenDelta \
     ThemePicker \
     Turbo \
     SystemWebView \
     WallpaperCropper2
-
-#PRODUCT_PACKAGES += \
-    OpenDelta \
 
 ifneq ($(PRODUCT_EXCLUDE_EXTRA_PACKAGES),true)
 PRODUCT_PACKAGES += \
