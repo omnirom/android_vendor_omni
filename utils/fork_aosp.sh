@@ -7,6 +7,7 @@ PREFIX=android_
 BRANCH=android-11
 SOURCE=android-11.0.0_r<INSERT_CORRECT_TAG>
 USERNAME=<INSERT USER>
+TOKEN=<INSERT TOKEN>
 MANIFEST=android/default.xml
 REMOVE=android/remove.xml
 FORKED=android/omni-aosp.xml
@@ -34,7 +35,7 @@ popd
 
 # Create the repo at github
 echo "Creating $REPO_NAME on GitHub..."
-curl --user $USERNAME --data "{\"name\":\"$REPO_NAME\"}" https://api.github.com/orgs/$GITHUB_ORG/repos
+curl -H 'Authorization: token '$TOKEN'' --data "{\"name\":\"$REPO_NAME\"}" https://api.github.com/orgs/$GITHUB_ORG/repos
 
 # Only works if you are a gerrit admin, will create the named project before pushing (gerrit then replicates to git)
 ssh -p 29418 $USERNAME@gerrit.omnirom.org gerrit create-project $REPO_NAME
