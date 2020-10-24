@@ -64,9 +64,6 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/sounds/omni_lock_phone.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/omni_lock_phone.ogg \
     vendor/omni/prebuilt/sounds/omni_unlock_phone.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/omni_unlock_phone.ogg
 
-OMNI_PRODUCT_PROPERTIES += \
-    ro.vendor.qti.servicetracker.disable=true
-
 # Additional packages
 -include vendor/omni/utils/omni_emulator/packages.mk
 
