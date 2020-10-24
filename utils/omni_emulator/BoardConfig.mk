@@ -13,6 +13,8 @@
 # limitations under the License.
 #
 
+DEVICE_PATH := vendor/omni/utils/omni_emulator
+
 # x86 emulator specific definitions
 TARGET_CPU_ABI := x86
 TARGET_ARCH := x86
@@ -21,7 +23,7 @@ TARGET_ARCH_VARIANT := x86
 TARGET_PRELINK_MODULE := false
 
 include build/make/target/board/BoardConfigGsiCommon.mk
-include vendor/omni/utils/omni_emulator/BoardConfigEmuCommon.mk
+include $(DEVICE_PATH)/BoardConfigEmuCommon.mk
 
 # Resize to 4G to accomodate ASAN and CTS
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 4294967296
@@ -38,3 +40,5 @@ WPA_SUPPLICANT_VERSION      := VER_0_8_X
 WIFI_DRIVER_FW_PATH_PARAM   := "/dev/null"
 WIFI_DRIVER_FW_PATH_STA     := "/dev/null"
 WIFI_DRIVER_FW_PATH_AP      := "/dev/null"
+
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
