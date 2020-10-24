@@ -5,6 +5,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 TARGET_NO_VENDOR_BOOT := true
+PRODUCT_QUOTA_PROJID := 1
+PRODUCT_PROPERTY_OVERRIDES += external_storage.projid.enabled=1
+PRODUCT_PROPERTY_OVERRIDES += external_storage.sdcardfs.enabled=0
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/sdk_x86.mk)
 
