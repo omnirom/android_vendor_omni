@@ -28,4 +28,6 @@
     <!-- 2dp -->
     <dimen name="qs_tile_margin_top">6dp</dimen>
 
+    <dimen name="global_actions_power_dialog_item_height">98dp</dimen>
+    <dimen name="global_actions_power_dialog_item_width">90dp</dimen>
 </resources>
