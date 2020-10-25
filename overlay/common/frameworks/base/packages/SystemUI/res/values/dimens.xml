@@ -73,4 +73,7 @@
     <!-- 12dp -->
     <dimen name="header_subtitle_padding">8dp</dimen>
 
+    <dimen name="global_actions_power_dialog_item_height">98dp</dimen>
+    <dimen name="global_actions_power_dialog_item_width">90dp</dimen>
+
 </resources>
