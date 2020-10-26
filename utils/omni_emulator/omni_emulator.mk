@@ -25,3 +25,4 @@ PRODUCT_DEVICE := omni_emulator
 DEVICE_PACKAGE_OVERLAYS += vendor/omni/utils/omni_emulator/overlay
 
 ALLOW_MISSING_DEPENDENCIES := true 
+PRODUCT_ENFORCE_RRO_TARGETS := framework-res
