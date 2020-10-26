@@ -18,8 +18,6 @@ ifeq ($(ROM_BUILDTYPE),GAPPS)
 PRODUCT_SOONG_NAMESPACES += vendor/gapps
 endif
 
-PRODUCT_SOONG_NAMESPACES += packages/apps/Bluetooth
-
 SOONG_CONFIG_omniromVarsPlugin :=
 
 define addVar
