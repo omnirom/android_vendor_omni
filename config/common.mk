@@ -117,6 +117,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
+# SystemUI plugins
+ifeq ($(ROM_BUILDTYPE),$(filter $(ROM_BUILDTYPE),GAPPS))
+PRODUCT_PACKAGES += \
+    QuickAccessWallet
+endif
+
 # Versioning
 -include vendor/omni/config/version.mk
 
