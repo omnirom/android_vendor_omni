@@ -36,6 +36,10 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     OmniOverlayStub \
 
+# Config
+PRODUCT_PACKAGES += \
+    SimpleDeviceConfig
+
 ifeq ($(BOARD_INCLUDE_CMDLINE_TOOLS),true)
 PRODUCT_PACKAGES += \
     htop \
