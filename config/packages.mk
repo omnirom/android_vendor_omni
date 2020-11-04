@@ -41,6 +41,10 @@ PRODUCT_PACKAGES += \
     htop \
     zip
 
+# Config
+PRODUCT_PACKAGES += \
+    SimpleDeviceConfig
+
 # Openssh
 PRODUCT_PACKAGES += \
     scp \
