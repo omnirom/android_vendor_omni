@@ -52,6 +52,10 @@ PRODUCT_PACKAGES += \
     start-ssh
 endif
 
+# Config
+PRODUCT_PACKAGES += \
+    SimpleDeviceConfig
+
 # Telephony extension
 #PRODUCT_PACKAGES += telephony-ext
 #PRODUCT_BOOT_JARS += telephony-ext
