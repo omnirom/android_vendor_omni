@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "SystemUIOmniOverlay",
+    theme: "SystemUIOmniOverlay",
+    product_specific: true,
+}

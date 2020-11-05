@@ -119,7 +119,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # SystemUI plugins
 ifeq ($(ROM_BUILDTYPE),$(filter $(ROM_BUILDTYPE),GAPPS))
 PRODUCT_PACKAGES += \
-    QuickAccessWallet
+    QuickAccessWallet \
+    SystemUIOmniOverlay
 endif
 
 # temporary
