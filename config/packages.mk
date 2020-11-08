@@ -10,7 +10,6 @@ PRODUCT_PACKAGES += \
     omni-overlays \
     OpenDelta \
     ThemePicker \
-    Turbo \
     SystemWebView \
     WallpaperCropper2
 
