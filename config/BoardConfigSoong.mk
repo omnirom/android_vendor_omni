@@ -14,8 +14,11 @@ EXPORT_TO_SOONG := \
 
 SOONG_CONFIG_NAMESPACES += omniromVarsPlugin
 
-PRODUCT_SOONG_NAMESPACES += vendor/gapps \
-    packages/apps/Bluetooth
+ifeq ($(ROM_BUILDTYPE),GAPPS)
+PRODUCT_SOONG_NAMESPACES += vendor/gapps
+endif
+
+PRODUCT_SOONG_NAMESPACES += packages/apps/Bluetooth
 
 SOONG_CONFIG_omniromVarsPlugin :=
 
