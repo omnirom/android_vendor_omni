@@ -1,4 +1,4 @@
-type vncflinger_exec, exec_type, file_type;
+type vncflinger_exec, exec_type, file_type, system_file_type;
 type vncflinger, domain;
 typeattribute vncflinger coredomain;
 
