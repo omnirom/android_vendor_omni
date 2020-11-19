@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<carrier_config>
+    <boolean name="allow_emergency_numbers_in_call_log_bool" value="true"/>
+    <boolean name="show_apn_setting_cdma_bool" value="true"/>
+    <string name="sim_country_iso_override_string">cn</string>
+</carrier_config>

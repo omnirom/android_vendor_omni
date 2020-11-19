@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<carrier_config>
+    <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="true"/>
+    <boolean name="carrier_name_override_bool" value="true"/>
+    <string name="carrier_name_string">airtel</string>
+    <int name="httpSocketTimeout" value="300000"/>
+    <string-array name="roaming_operator_string_array" num="2">
+        <item value="404"/>
+        <item value="405"/>
+    </string-array>
+</carrier_config>
