@@ -7,6 +7,7 @@ PRODUCT_PACKAGES += \
     MatLog \
     OmniChange \
     OmniOverlayStub \
+    OmniStoreInstallerPrebuilt \
     omni-overlays \
     OpenDelta \
     ThemePicker \
@@ -15,24 +16,23 @@ PRODUCT_PACKAGES += \
     WallpaperCropper2
 
 #PRODUCT_PACKAGES += \
-    GoldfishParts \
+    GoldfishParts
 
-ifneq ($(PRODUCT_EXCLUDE_EXTRA_PACKAGES),true)
+ifeq ($(BOARD_INCLUDE_CMDLINE_TOOLS),true)
 PRODUCT_PACKAGES += \
-    ChromeModernPublic \
-    ExactCalculator \
-    MusicFX \
-    Phonograph
-else
-PRODUCT_PACKAGES += \
-    OmniStoreInstaller
-endif
-
-# Additional tools
-PRODUCT_PACKAGES += \
-    bash \
     htop \
-    vim
+    zip
+
+# Openssh
+PRODUCT_PACKAGES += \
+    scp \
+    sftp \
+    ssh \
+    sshd \
+    sshd_config \
+    ssh-keygen \
+    start-ssh
+endif
 
 # Telephony extension
 PRODUCT_PACKAGES += telephony-ext

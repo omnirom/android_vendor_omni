@@ -7,22 +7,12 @@ PRODUCT_PACKAGES += \
     MatLog \
     OmniChange \
     OmniOverlayStub \
+    OmniStoreInstallerPrebuilt \
     omni-overlays \
     OpenDelta \
     ThemePicker \
     SystemWebView \
     WallpaperCropper2
-
-ifneq ($(PRODUCT_EXCLUDE_EXTRA_PACKAGES),true)
-PRODUCT_PACKAGES += \
-    ChromeModernPublic \
-    ExactCalculator \
-    MusicFX \
-    Phonograph
-else
-PRODUCT_PACKAGES += \
-    OmniStoreInstallerPrebuilt
-endif
 
 # Additional tools
 PRODUCT_PACKAGES += \
