@@ -8225,6 +8225,16 @@
       mmsport="8080"
       type="default,supl,mms"
   />
+  <apn carrier="IMS"
+      mcc="293"
+      mnc="41"
+      apn="ims"
+      protocol="IP"
+      roaming_protocol="IP"
+      type="ims"
+      user_visible="false"
+      user_editable="0"
+  />
   <apn carrier="T2"
       mcc="293"
       mnc="64"
