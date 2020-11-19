@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<carrier_config>
+    <boolean name="show_4g_for_lte_data_icon_bool" value="true"/>
+    <int name="maxImageHeight" value="1944"/>
+    <int name="maxMessageSize" value="1048576"/>
+    <int name="maxImageWidth" value="2592"/>
+    <string-array name="carrier_certificate_string_array" num="1">
+      <item value="7D7226772D4F6D778FEF53A36BE15AD78D8D9D4BC4CE00C5F2E3216C19480FA0"/>
+    </string-array>
+
+    <string-array name="carrier_data_call_permanent_failure_strings" num="14">
+        <item value="OPERATOR_BARRED"/>
+        <item value="MISSING_UNKNOWN_APN"/>
+        <item value="UNKNOWN_PDP_ADDRESS_TYPE"/>
+        <item value="ACTIVATION_REJECT_GGSN"/>
+        <item value="SERVICE_OPTION_NOT_SUPPORTED"/>
+        <item value="NSAPI_IN_USE"/>
+        <item value="ONLY_IPV4_ALLOWED"/>
+        <item value="ONLY_IPV6_ALLOWED"/>
+        <item value="PROTOCOL_ERRORS"/>
+        <item value="RADIO_POWER_OFF"/>
+        <item value="TETHERED_CALL_ACTIVE"/>
+        <item value="RADIO_NOT_AVAILABLE"/>
+        <item value="UNACCEPTABLE_NETWORK_PARAMETER"/>
+        <item value="SIGNAL_LOST"/>
+    </string-array>
+</carrier_config>
