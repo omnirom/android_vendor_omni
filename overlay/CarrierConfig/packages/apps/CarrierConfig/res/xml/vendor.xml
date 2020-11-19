@@ -2537,12 +2537,6 @@
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="hide_enabled_5g_bool" value="false" />
-        <boolean name="show_wifi_calling_icon_in_status_bar_bool" value="true" />
-        <string name="5g_icon_configuration_string"
-        value="connected_mmwave:5G_Plus,connected:5G" />
-        <string name="5g_icon_display_grace_period_string"
-        value="connected_mmwave,legacy,10;connected,legacy,10;not_restricted_rrc_idle,legacy,10;
-        not_restricted_rrc_con,legacy,10"/>
         <int name="maxImageHeight" value="2112" />
         <int name="maxMessageSize" value="2097152" />
         <int name="maxImageWidth" value="4608" />

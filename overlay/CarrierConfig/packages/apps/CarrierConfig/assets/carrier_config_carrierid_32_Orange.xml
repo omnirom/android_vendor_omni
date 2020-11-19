@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<carrier_config>
+    <boolean name="allow_ussd_requests_via_telephony_manager_bool" value="false"/>
+    <boolean name="show_4g_for_lte_data_icon_bool" value="true"/>
+    <int name="maxImageHeight" value="1944"/>
+    <int name="maxImageWidth" value="2592"/>
+    <int name="maxMessageSize" value="614400"/>
+    <string-array name="carrier_vvm_package_name_string_array" num="1">
+        <item value="com.orange.vvm"/>
+    </string-array>
+</carrier_config>
