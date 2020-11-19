@@ -7,6 +7,7 @@ PRODUCT_PACKAGES += \
     MatLog \
     OmniChange \
     OmniOverlayStub \
+    OmniStoreInstaller \
     omni-overlays \
     OpenDelta \
     ThemePicker \
@@ -23,6 +24,9 @@ else
 PRODUCT_PACKAGES += \
     OmniStoreInstaller
 endif
+
+PRODUCT_PACKAGES += \
+    OpenDelta \
 
 # Additional tools
 PRODUCT_PACKAGES += \
