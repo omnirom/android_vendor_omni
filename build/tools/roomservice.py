@@ -359,7 +359,7 @@ def create_common_dependencies_manifest(dependencies):
 
 def fetch_dependencies(device):
     if device == "emulator":
-        location = "vendor/omni/utils/emulator"
+        location = "vendor/omni/utils/omni_emulator"
     else:
         location = parse_device_from_folder(device)
     if location is None or not os.path.isdir(location):
