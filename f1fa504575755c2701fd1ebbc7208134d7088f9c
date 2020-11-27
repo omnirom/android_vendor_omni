@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e6e499fd_4cd57e4b",
+        "filename": "config/packages.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000026
+      },
+      "writtenOn": "2020-11-27T23:24:16Z",
+      "side": 0,
+      "message": "then you can remove it here also",
+      "revId": "f1fa504575755c2701fd1ebbc7208134d7088f9c",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": true
+    }
+  ]
+}
