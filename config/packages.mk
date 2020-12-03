@@ -21,7 +21,7 @@ PRODUCT_PACKAGES += \
     Phonograph
 else
 PRODUCT_PACKAGES += \
-    OmniStoreInstaller
+    OmniStoreInstallerPrebuilt
 endif
 
 # Additional tools
