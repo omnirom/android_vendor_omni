@@ -1,7 +1,7 @@
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := OmniStoreInstaller
+LOCAL_MODULE := OmniStoreInstallerPrebuilt
 LOCAL_SRC_FILES := OmniStoreInstaller.apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
