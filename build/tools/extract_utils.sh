@@ -54,7 +54,7 @@ trap cleanup 0
 #
 # $1: device name
 # $2: vendor name
-# $3: OMNI root directory
+# $3: Android root directory
 # $4: is common device - optional, default to false
 # $5: cleanup - optional, default to true
 # $6: custom vendor makefile name - optional, default to false
@@ -75,15 +75,15 @@ function setup_vendor() {
         exit 1
     fi
 
-    export OMNI_ROOT="$3"
-    if [ ! -d "$OMNI_ROOT" ]; then
-        echo "\$OMNI_ROOT must be set and valid before including this script!"
+    export ANDROID_ROOT="$3"
+    if [ ! -d "$ANDROID_ROOT" ]; then
+        echo "\$ANDROID_ROOT must be set and valid before including this script!"
         exit 1
     fi
 
     export OUTDIR=vendor/"$VENDOR"/"$DEVICE"
-    if [ ! -d "$OMNI_ROOT/$OUTDIR" ]; then
-        mkdir -p "$OMNI_ROOT/$OUTDIR"
+    if [ ! -d "$ANDROID_ROOT/$OUTDIR" ]; then
+        mkdir -p "$ANDROID_ROOT/$OUTDIR"
     fi
 
     VNDNAME="$6"
@@ -91,11 +91,11 @@ function setup_vendor() {
         VNDNAME="$DEVICE"
     fi
 
-    export PRODUCTMK="$OMNI_ROOT"/"$OUTDIR"/"$VNDNAME"-vendor.mk
-    export ANDROIDBP="$OMNI_ROOT"/"$OUTDIR"/Android.bp
-    export ANDROIDMK="$OMNI_ROOT"/"$OUTDIR"/Android.mk
+    export PRODUCTMK="$ANDROID_ROOT"/"$OUTDIR"/"$VNDNAME"-vendor.mk
+    export ANDROIDBP="$ANDROID_ROOT"/"$OUTDIR"/Android.bp
+    export ANDROIDMK="$ANDROID_ROOT"/"$OUTDIR"/Android.mk
     export OTA_EXTRACTOR="$BINARIES_LOCATION"/ota_extractor
-    export BOARDMK="$OMNI_ROOT"/"$OUTDIR"/BoardConfigVendor.mk
+    export BOARDMK="$ANDROID_ROOT"/"$OUTDIR"/BoardConfigVendor.mk
 
     if [ "$4" == "true" ] || [ "$4" == "1" ]; then
         COMMON=1
@@ -111,7 +111,7 @@ function setup_vendor() {
         VENDOR_RADIO_STATE=0
     fi
 
-    export BINARIES_LOCATION="$OMNI_ROOT"/vendor/omni/build/tools/${HOST}/bin
+    export BINARIES_LOCATION="$ANDROID_ROOT"/vendor/omni/build/tools/${HOST}/bin
 
     export SIMG2IMG="$BINARIES_LOCATION"/simg2img
     export LPUNPACK="$BINARIES_LOCATION"/lpunpack
@@ -1435,16 +1435,16 @@ function oat2dex() {
     local OAT=
 
     if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
-        export BAKSMALIJAR="$OMNI_ROOT"/vendor/omni/build/tools/smali/baksmali.jar
-        export SMALIJAR="$OMNI_ROOT"/vendor/omni/build/tools/smali/smali.jar
+        export BAKSMALIJAR="$ANDROID_ROOT"/vendor/omni/build/tools/smali/baksmali.jar
+        export SMALIJAR="$ANDROID_ROOT"/vendor/omni/build/tools/smali/smali.jar
     fi
 
     if [ -z "$VDEXEXTRACTOR" ]; then
-        export VDEXEXTRACTOR="$OMNI_ROOT"/vendor/omni/build/tools/${HOST}/vdexExtractor
+        export VDEXEXTRACTOR="$ANDROID_ROOT"/vendor/omni/build/tools/${HOST}/vdexExtractor
     fi
 
     if [ -z "$CDEXCONVERTER" ]; then
-        export CDEXCONVERTER="$OMNI_ROOT"/vendor/omni/build/tools/${HOST}/compact_dex_converter
+        export CDEXCONVERTER="$ANDROID_ROOT"/vendor/omni/build/tools/${HOST}/compact_dex_converter
     fi
 
     # Extract existing boot.oats to the temp folder
@@ -1691,7 +1691,7 @@ function extract() {
     local FIXUP_HASHLIST=( ${PRODUCT_COPY_FILES_FIXUP_HASHES[@]} ${PRODUCT_PACKAGES_FIXUP_HASHES[@]} )
     local PRODUCT_COPY_FILES_COUNT=${#PRODUCT_COPY_FILES_LIST[@]}
     local COUNT=${#FILELIST[@]}
-    local OUTPUT_ROOT="$OMNI_ROOT"/"$OUTDIR"/proprietary
+    local OUTPUT_ROOT="$ANDROID_ROOT"/"$OUTDIR"/proprietary
     local OUTPUT_TMP="$EXTRACT_TMP_DIR"/"$OUTDIR"/proprietary
 
     if [ "$SRC" = "adb" ]; then
@@ -1738,7 +1738,7 @@ function extract() {
                 fi
                 if [ -a "$DUMPDIR"/"$PARTITION".new.dat ]; then
                     echo "Converting "$PARTITION".new.dat to "$PARTITION".img"
-                    python "$OMNI_ROOT"/vendor/omni/build/tools/sdat2img.py "$DUMPDIR"/"$PARTITION".transfer.list "$DUMPDIR"/"$PARTITION".new.dat "$DUMPDIR"/"$PARTITION".img 2>&1
+                    python "$ANDROID_ROOT"/vendor/omni/build/tools/sdat2img.py "$DUMPDIR"/"$PARTITION".transfer.list "$DUMPDIR"/"$PARTITION".new.dat "$DUMPDIR"/"$PARTITION".img 2>&1
                     rm -rf "$DUMPDIR"/"$PARTITION".new.dat "$DUMPDIR"/"$PARTITION"
                     mkdir "$DUMPDIR"/"$PARTITION" "$DUMPDIR"/tmp
                     extract_img_data "$DUMPDIR"/"$PARTITION".img "$DUMPDIR"/"$PARTITION"/
@@ -2005,7 +2005,7 @@ function extract2() {
     local FIXUP_HASHLIST=( ${PRODUCT_COPY_FILES_FIXUP_HASHES[@]} ${PRODUCT_PACKAGES_FIXUP_HASHES[@]} )
     local PRODUCT_COPY_FILES_COUNT=${#PRODUCT_COPY_FILES_LIST[@]}
     local COUNT=${#FILELIST[@]}
-    local OUTPUT_ROOT="$OMNI_ROOT"/"$OUTDIR"/proprietary
+    local OUTPUT_ROOT="$ANDROID_ROOT"/"$OUTDIR"/proprietary
     local OUTPUT_TMP="$EXTRACT_TMP_DIR"/"$OUTDIR"/proprietary
 
     if [ "$ADB" = true ]; then
@@ -2199,7 +2199,7 @@ function extract_firmware() {
     local FILELIST=( ${PRODUCT_COPY_FILES_LIST[@]} )
     local COUNT=${#FILELIST[@]}
     local SRC="$2"
-    local OUTPUT_DIR="$OMNI_ROOT"/"$OUTDIR"/radio
+    local OUTPUT_DIR="$ANDROID_ROOT"/"$OUTDIR"/radio
 
     if [ "$VENDOR_RADIO_STATE" -eq "0" ]; then
         echo "Cleaning firmware output directory ($OUTPUT_DIR).."
