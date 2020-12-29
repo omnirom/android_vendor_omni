@@ -1077,6 +1077,28 @@
        <boolean name="carrier_volte_available_bool" value="true" />
        <boolean name="carrier_vt_available_bool" value="true" />
     </carrier_config>
+    <carrier_config mcc="424" mnc="02">
+        <boolean name="support_no_reply_timer_for_cfnry_bool" value="false" />
+        <boolean name="s_config_enable_ut_bool" value="true" />
+        <string-array name="carrier_metered_apn_types_strings" num="3">
+            <item value="default" />
+            <item value="dun" />
+            <item value="supl" />
+        </string-array>
+        <boolean name="s_display_volte_status_hints_bool" value="true" />
+        <boolean name="s_show_volte_icon_in_status_bar_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="424" mnc="03">
+        <boolean name="support_no_reply_timer_for_cfnry_bool" value="false" />
+        <string-array name="carrier_metered_apn_types_strings" num="3">
+            <item value="default" />
+            <item value="dun" />
+            <item value="supl" />
+        </string-array>
+        <boolean name="s_display_volte_status_hints_bool" value="true" />
+        <boolean name="s_enable_apn_switch" value="false" />
+        <boolean name="s_show_volte_icon_in_status_bar_bool" value="true" />
+    </carrier_config>
     <carrier_config mcc="440" mnc="00" />
     <carrier_config mcc="440" mnc="10" />
     <carrier_config mcc="440" mnc="20" />
