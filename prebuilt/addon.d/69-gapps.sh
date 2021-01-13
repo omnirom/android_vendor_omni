@@ -6,9 +6,17 @@
 #
 . /postinstall/tmp/backuptool.functions
 
+if [ -z $backuptool_ab ]; then
+  SYS=$S
+  TMP=/tmp
+else
+  SYS=/postinstall/system
+  TMP=/postinstall/tmp
+fi
+
+
 list_files() {
 cat <<EOF
-app/FaceLock/FaceLock.apk
 app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk
 app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk
 app/GoogleExtShared/GoogleExtShared.apk
@@ -16,7 +24,7 @@ app/GoogleTTS/GoogleTTS.apk
 app/MarkupGoogle/MarkupGoogle.apk
 app/SoundPickerPrebuilt/SoundPickerPrebuilt.apk
 etc/default-permissions/default-permissions.xml
-etc/default-permissions/opengapps-permissions.xml
+etc/default-permissions/opengapps-permissions-q.xml
 etc/g.prop
 etc/permissions/com.google.android.dialer.support.xml
 etc/permissions/com.google.android.maps.xml
@@ -32,21 +40,16 @@ etc/sysconfig/google_exclusives_enable.xml
 framework/com.google.android.dialer.support.jar
 framework/com.google.android.maps.jar
 framework/com.google.android.media.effects.jar
-lib/libfilterpack_facedetect.so
-lib/libfrsdk.so
 lib/libsketchology_native.so
-lib64/libfacenet.so
-lib64/libfilterpack_facedetect.so
-lib64/libfrsdk.so
 lib64/libjni_latinimegoogle.so
 lib64/libsketchology_native.so
 priv-app/CarrierSetup/CarrierSetup.apk
 priv-app/ConfigUpdater/ConfigUpdater.apk
-priv-app/GmsCoreSetupPrebuilt/GmsCoreSetupPrebuilt.apk
 priv-app/GoogleBackupTransport/GoogleBackupTransport.apk
 priv-app/GoogleExtServices/GoogleExtServices.apk
 priv-app/GoogleFeedback/GoogleFeedback.apk
 priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk
+priv-app/GooglePackageInstaller/GooglePackageInstaller.apk
 priv-app/GooglePartnerSetup/GooglePartnerSetup.apk
 priv-app/GoogleRestore/GoogleRestore.apk
 priv-app/GoogleServicesFramework/GoogleServicesFramework.apk
@@ -56,6 +59,7 @@ priv-app/SetupWizard/SetupWizard.apk
 priv-app/Turbo/Turbo.apk
 priv-app/Velvet/Velvet.apk
 priv-app/WellbeingPrebuilt/WellbeingPrebuilt.apk
+product/overlay/WellbeingOverlay.apk
 usr/srec/en-US/APP_NAME.fst
 usr/srec/en-US/APP_NAME.syms
 usr/srec/en-US/CLG.prewalk.fst
@@ -118,156 +122,237 @@ usr/srec/en-US/wordlist.syms
 EOF
 }
 
-list_google() {
-cat <<EOF
-app/GoogleExtShared/GoogleExtShared.apk
-priv-app/GoogleExtServices/GoogleExtServices.apk
-priv-app/GooglePackageInstaller/GooglePackageInstaller.apk
-EOF
+mount_generic() {
+  local device_abpartition=$(getprop ro.build.ab_update)
+  local partitions="$*"
+  if [ -z "$device_abpartition" ]; then
+    # We're on an A only device
+    local partition
+    for partition in $partitions; do
+      if [ "$(getprop ro.boot.dynamic_partitions)" = "true" ]; then
+        mount -o ro -t auto /dev/block/mapper/"$partition" /"$partition" 2> /dev/null
+        blockdev --setrw /dev/block/mapper/"$partition" 2> /dev/null
+        mount -o rw,remount -t auto /dev/block/mapper/"$partition" /"$partition" 2> /dev/null
+      else
+        mount -o ro -t auto /"$partition" 2> /dev/null
+        mount -o rw,remount -t auto /"$partition" 2> /dev/null
+      fi
+    done
+  fi
 }
-list_aosp() {
-cat <<EOF
-/postinstall/system/priv-app/ExtServices
-/postinstall/system/app/ExtShared
-/postinstall/system/priv-app/PackageInstaller
-EOF
-}
+
+# Backup/Restore using /sdcard if the installed GApps size plus a buffer for other addon.d backups (204800=200MB) is larger than /tmp
+installed_gapps_size_kb=$(grep "^installed_gapps_size_kb" $TMP/gapps.prop | cut -d '=' -f 2)
+if [ ! "$installed_gapps_size_kb" ]; then
+  installed_gapps_size_kb="$(cd $SYS; size=0; for n in $(du -ak $(list_files) | cut -f 1); do size=$((size+n)); done; echo "$size")"
+  echo "installed_gapps_size_kb=$installed_gapps_size_kb" >> $TMP/gapps.prop
+fi
+
+free_tmp_size_kb=$(grep "^free_tmp_size_kb" $TMP/gapps.prop | cut -d '=' -f 2)
+if [ ! "$free_tmp_size_kb" ]; then
+  free_tmp_size_kb="$(echo $(df -k $TMP | tail -n 1) | cut -d ' ' -f 4)"
+  echo "free_tmp_size_kb=$free_tmp_size_kb" >> $TMP/gapps.prop
+fi
+
+buffer_size_kb=204800
+if [ $((installed_gapps_size_kb + buffer_size_kb)) -ge "$free_tmp_size_kb" ]; then
+  C=/sdcard/tmp-gapps
+fi
+
+# Get ROM SDK from installed GApps
+rom_build_sdk=$(grep "^rom_build_sdk" $TMP/gapps.prop | cut -d '=' -f 2)
+if [ ! "$rom_build_sdk" ]; then
+  rom_build_sdk="$(cd $SYS; grep "^ro.addon.sdk" etc/g.prop | cut -d '=' -f 2)"
+  echo "rom_build_sdk=$rom_build_sdk" >> $TMP/gapps.prop
+fi
 
 case "$1" in
   backup)
-    if test -f priv-app/GooglePackageInstaller/GooglePackageInstaller.apk ;then
-        GOOGLE=1
-        list_google | while read FILE DUMMY; do
-            backup_file $S/$FILE
-        done
-    fi
-    list_files | while read FILE DUMMY; do
-      backup_file $S/$FILE
+    list_files | while read -r FILE DUMMY; do
+      backup_file "$S"/"$FILE"
     done
+
+    umount /product /vendor 2> /dev/null
   ;;
   restore)
-    list_files | while read FILE REPLACEMENT; do
+    list_files | while read -r FILE REPLACEMENT; do
       R=""
       [ -n "$REPLACEMENT" ] && R="$S/$REPLACEMENT"
-      [ -f "$C/$S/$FILE" ] && restore_file $S/$FILE $R
+      [ -f "$C/$S/$FILE" ] && restore_file "$S"/"$FILE" "$R"
     done
-    if [ "$GOOGLE" -eq "1" ]; then
-    list_google | while read FILE REPLACEMENT; do
-      R=""
-      [ -n "$REPLACEMENT" ] && R="$S/$REPLACEMENT"
-      [ -f "$C/$S/$FILE" ] && restore_file $S/$FILE $R
-    done
-    fi
   ;;
   pre-backup)
+    mount_generic product vendor
   ;;
   post-backup)
     # Stub
   ;;
   pre-restore)
-    if [ "$GOOGLE" -eq "1" ]; then
-        list_aosp | while read FILE DUMMY; do
-        rm -rf $FILE
-       done
-    fi
-    # Remove/postinstall Stock/AOSP apps (from GApps Installer)
-    rm -rf /postinstall/system/app/Provision
-    rm -rf /postinstall/system/priv-app/Provision
+    mount_generic product vendor
 
-    # Remove/postinstall 'other' apps (per installer.data)
-    rm -rf /postinstall/system/app/BookmarkProvider
-    rm -rf /postinstall/system/app/BooksStub
-    rm -rf /postinstall/system/app/CalendarGoogle
-    rm -rf /postinstall/system/app/CloudPrint
-    rm -rf /postinstall/system/app/DeskClockGoogle
-    rm -rf /postinstall/system/app/EditorsDocsStub
-    rm -rf /postinstall/system/app/EditorsSheetsStub
-    rm -rf /postinstall/system/app/EditorsSlidesStub
-    rm -rf /postinstall/system/app/Gmail
-    rm -rf /postinstall/system/app/Gmail2
-    rm -rf /postinstall/system/app/GoogleCalendar
-    rm -rf /postinstall/system/app/GoogleCloudPrint
-    rm -rf /postinstall/system/app/GoogleHangouts
-    rm -rf /postinstall/system/app/GoogleKeep
-    rm -rf /postinstall/system/app/GoogleLatinIme
-    rm -rf /postinstall/system/app/Keep
-    rm -rf /postinstall/system/app/NewsstandStub
-    rm -rf /postinstall/system/app/PartnerBookmarksProvider
-    rm -rf /postinstall/system/app/PrebuiltBugleStub
-    rm -rf /postinstall/system/app/PrebuiltKeepStub
-    rm -rf /postinstall/system/app/QuickSearchBox
-    rm -rf /postinstall/system/app/Vending
-    rm -rf /postinstall/system/priv-app/GmsCore
-    rm -rf /postinstall/system/priv-app/GmsCore_update
-    rm -rf /postinstall/system/priv-app/GoogleHangouts
-    rm -rf /postinstall/system/priv-app/GoogleNow
-    rm -rf /postinstall/system/priv-app/GoogleSearch
-    rm -rf /postinstall/system/priv-app/OneTimeInitializer
-    rm -rf /postinstall/system/priv-app/QuickSearchBox
-    rm -rf /postinstall/system/priv-app/Velvet_update
-    rm -rf /postinstall/system/priv-app/Vending
+    # Remove Stock/AOSP apps (from GApps Installer)
+    rm -rf $SYS/priv-app/ExtServices
+    rm -rf $SYS/product/priv-app/ExtServices
+    rm -rf $SYS/app/ExtShared
+    rm -rf $SYS/product/app/ExtShared
+    rm -rf $SYS/app/PackageInstaller
+    rm -rf $SYS/priv-app/PackageInstaller
+    rm -rf $SYS/priv-app/packageinstaller
+    rm -rf $SYS/product/app/PackageInstaller
+    rm -rf $SYS/product/priv-app/PackageInstaller
+    rm -rf $SYS/product/priv-app/packageinstaller
+    rm -rf $SYS/app/Provision
+    rm -rf $SYS/priv-app/Provision
+    rm -rf $SYS/product/app/Provision
+    rm -rf $SYS/product/priv-app/Provision
 
-    # Remove/postinstall 'priv-app' apps from 'app' (per installer.data)
-    rm -rf /postinstall/system/app/CanvasPackageInstaller
-    rm -rf /postinstall/system/app/ConfigUpdater
-    rm -rf /postinstall/system/app/GoogleBackupTransport
-    rm -rf /postinstall/system/app/GoogleFeedback
-    rm -rf /postinstall/system/app/GoogleLoginService
-    rm -rf /postinstall/system/app/GoogleOneTimeInitializer
-    rm -rf /postinstall/system/app/GooglePartnerSetup
-    rm -rf /postinstall/system/app/GoogleServicesFramework
-    rm -rf /postinstall/system/app/OneTimeInitializer
-    rm -rf /postinstall/system/app/Phonesky
-    rm -rf /postinstall/system/app/PrebuiltGmsCore
-    rm -rf /postinstall/system/app/SetupWizard
-    rm -rf /postinstall/system/app/Velvet
+    # Remove 'other' apps (per installer.data)
+    rm -rf $SYS/app/BookmarkProvider
+    rm -rf $SYS/app/BooksStub
+    rm -rf $SYS/app/CalendarGoogle
+    rm -rf $SYS/app/CloudPrint
+    rm -rf $SYS/app/DeskClockGoogle
+    rm -rf $SYS/app/EditorsDocsStub
+    rm -rf $SYS/app/EditorsSheetsStub
+    rm -rf $SYS/app/EditorsSlidesStub
+    rm -rf $SYS/app/Gmail
+    rm -rf $SYS/app/Gmail2
+    rm -rf $SYS/app/GoogleCalendar
+    rm -rf $SYS/app/GoogleCloudPrint
+    rm -rf $SYS/app/GoogleHangouts
+    rm -rf $SYS/app/GoogleKeep
+    rm -rf $SYS/app/GoogleLatinIme
+    rm -rf $SYS/app/Keep
+    rm -rf $SYS/app/NewsstandStub
+    rm -rf $SYS/app/PartnerBookmarksProvider
+    rm -rf $SYS/app/PrebuiltBugleStub
+    rm -rf $SYS/app/PrebuiltKeepStub
+    rm -rf $SYS/app/QuickSearchBox
+    rm -rf $SYS/app/Vending
+    rm -rf $SYS/priv-app/GmsCore
+    rm -rf $SYS/priv-app/GmsCore_update
+    rm -rf $SYS/priv-app/GoogleHangouts
+    rm -rf $SYS/priv-app/GoogleNow
+    rm -rf $SYS/priv-app/GoogleSearch
+    rm -rf $SYS/priv-app/OneTimeInitializer
+    rm -rf $SYS/priv-app/QuickSearchBox
+    rm -rf $SYS/priv-app/Velvet_update
+    rm -rf $SYS/priv-app/Vending
+    rm -rf $SYS/product/app/BookmarkProvider
+    rm -rf $SYS/product/app/BooksStub
+    rm -rf $SYS/product/app/CalendarGoogle
+    rm -rf $SYS/product/app/CloudPrint
+    rm -rf $SYS/product/app/DeskClockGoogle
+    rm -rf $SYS/product/app/EditorsDocsStub
+    rm -rf $SYS/product/app/EditorsSheetsStub
+    rm -rf $SYS/product/app/EditorsSlidesStub
+    rm -rf $SYS/product/app/Gmail
+    rm -rf $SYS/product/app/Gmail2
+    rm -rf $SYS/product/app/GoogleCalendar
+    rm -rf $SYS/product/app/GoogleCloudPrint
+    rm -rf $SYS/product/app/GoogleHangouts
+    rm -rf $SYS/product/app/GoogleKeep
+    rm -rf $SYS/product/app/GoogleLatinIme
+    rm -rf $SYS/product/app/Keep
+    rm -rf $SYS/product/app/NewsstandStub
+    rm -rf $SYS/product/app/PartnerBookmarksProvider
+    rm -rf $SYS/product/app/PrebuiltBugleStub
+    rm -rf $SYS/product/app/PrebuiltKeepStub
+    rm -rf $SYS/product/app/QuickSearchBox
+    rm -rf $SYS/product/app/Vending
+    rm -rf $SYS/product/priv-app/GmsCore
+    rm -rf $SYS/product/priv-app/GmsCore_update
+    rm -rf $SYS/product/priv-app/GoogleHangouts
+    rm -rf $SYS/product/priv-app/GoogleNow
+    rm -rf $SYS/product/priv-app/GoogleSearch
+    rm -rf $SYS/product/priv-app/OneTimeInitializer
+    rm -rf $SYS/product/priv-app/QuickSearchBox
+    rm -rf $SYS/product/priv-app/Velvet_update
+    rm -rf $SYS/product/priv-app/Vending
 
-    # Remove/postinstall 'required' apps (per installer.data)
-    rm -rf /postinstall/system/app/LatinIME/lib//libjni_keyboarddecoder.so
-    rm -rf /postinstall/system/app/LatinIME/lib//libjni_latinimegoogle.so
-    rm -rf /postinstall/system/lib/libjni_keyboarddecoder.so
-    rm -rf /postinstall/system/lib/libjni_latinimegoogle.so
-    rm -rf /postinstall/system/lib64/libjni_keyboarddecoder.so
-    rm -rf /postinstall/system/lib64/libjni_latinimegoogle.so
+    # Remove 'priv-app' apps from 'app' (per installer.data)
+    rm -rf $SYS/app/CanvasPackageInstaller
+    rm -rf $SYS/app/ConfigUpdater
+    rm -rf $SYS/app/GoogleBackupTransport
+    rm -rf $SYS/app/GoogleFeedback
+    rm -rf $SYS/app/GoogleLoginService
+    rm -rf $SYS/app/GoogleOneTimeInitializer
+    rm -rf $SYS/app/GooglePartnerSetup
+    rm -rf $SYS/app/GoogleServicesFramework
+    rm -rf $SYS/app/OneTimeInitializer
+    rm -rf $SYS/app/Phonesky
+    rm -rf $SYS/app/PrebuiltGmsCore
+    rm -rf $SYS/app/SetupWizard
+    rm -rf $SYS/app/Velvet
+    rm -rf $SYS/product/app/CanvasPackageInstaller
+    rm -rf $SYS/product/app/ConfigUpdater
+    rm -rf $SYS/product/app/GoogleBackupTransport
+    rm -rf $SYS/product/app/GoogleFeedback
+    rm -rf $SYS/product/app/GoogleLoginService
+    rm -rf $SYS/product/app/GoogleOneTimeInitializer
+    rm -rf $SYS/product/app/GooglePartnerSetup
+    rm -rf $SYS/product/app/GoogleServicesFramework
+    rm -rf $SYS/product/app/OneTimeInitializer
+    rm -rf $SYS/product/app/Phonesky
+    rm -rf $SYS/product/app/PrebuiltGmsCore
+    rm -rf $SYS/product/app/SetupWizard
+    rm -rf $SYS/product/app/Velvet
+
+    # Remove 'required' apps (per installer.data)
+    rm -rf $SYS/app/LatinIME/lib//libjni_keyboarddecoder.so
+    rm -rf $SYS/app/LatinIME/lib//libjni_latinimegoogle.so
+    rm -rf $SYS/lib/libjni_keyboarddecoder.so
+    rm -rf $SYS/lib/libjni_latinimegoogle.so
+    rm -rf $SYS/lib64/libjni_keyboarddecoder.so
+    rm -rf $SYS/lib64/libjni_latinimegoogle.so
+    rm -rf $SYS/product/app/LatinIME/lib//libjni_keyboarddecoder.so
+    rm -rf $SYS/product/app/LatinIME/lib//libjni_latinimegoogle.so
+    rm -rf $SYS/product/lib/libjni_keyboarddecoder.so
+    rm -rf $SYS/product/lib/libjni_latinimegoogle.so
+    rm -rf $SYS/product/lib64/libjni_keyboarddecoder.so
+    rm -rf $SYS/product/lib64/libjni_latinimegoogle.so
 
     # Remove 'user requested' apps (from gapps-config)
-    # Stub
+
   ;;
   post-restore)
-    if [ -d "/postinstall" ]; then
-      P="/postinstall/system"
-    else
-      P="/system"
-    fi
-
     # Recreate required symlinks (from GApps Installer)
-    install -d "$P/app/MarkupGoogle/lib/arm64"
-    ln -sfn "$P/lib64/libsketchology_native.so" "$P/app/MarkupGoogle/lib/arm64/libsketchology_native.so"
-    install -d "$P/app/FaceLock/lib/arm64"
-    ln -sfn "$P/lib64/libfacenet.so" "$P/app/FaceLock/lib/arm64/libfacenet.so"
-    install -d "$P/app/LatinIME/lib64/arm64"
-    ln -sfn "$P/lib64/libjni_latinimegoogle.so" "$P/app/LatinIME/lib64/arm64/libjni_latinimegoogle.so"
-    ln -sfn "$P/lib64/libjni_keyboarddecoder.so" "$P/app/LatinIME/lib64/arm64/libjni_keyboarddecoder.so"
+    install -d "$SYS/app/MarkupGoogle/lib/arm64"
+    ln -sfn "$SYS/lib64/libsketchology_native.so" "$SYS/app/MarkupGoogle/lib/arm64/libsketchology_native.so"
+    install -d "$SYS/app/LatinIME/lib64/arm64"
+    ln -sfn "$SYS/product/lib64/libjni_latinimegoogle.so" "$SYS/product/app/LatinIME/lib64/arm64/libjni_latinimegoogle.so"
+    ln -sfn "$SYS/product/lib64/libjni_keyboarddecoder.so" "$SYS/product/app/LatinIME/lib64/arm64/libjni_keyboarddecoder.so"
+    ln -sfn "$SYS/lib64/libjni_latinimegoogle.so" "$SYS/app/LatinIME/lib64/arm64/libjni_latinimegoogle.so"
+    ln -sfn "$SYS/lib64/libjni_keyboarddecoder.so" "$SYS/app/LatinIME/lib64/arm64/libjni_keyboarddecoder.so"
 
     # Apply build.prop changes (from GApps Installer)
-    sed -i "s/ro.error.receiver.system.apps=.*/ro.error.receiver.system.apps=com.google.android.gms/g" /system/system/build.prop
+    sed -i "s/ro.error.receiver.system.apps=.*/ro.error.receiver.system.apps=com.google.android.gms/g" $SYS/build.prop
 
     # Re-pre-ODEX APKs (from GApps Installer)
 
     # Remove any empty folders we may have created during the removal process
-    for i in /system/app /system/priv-app /system/usr/srec; do
+    for i in $SYS/app $SYS/priv-app $SYS/vendor/pittpatt $SYS/usr/srec; do
       if [ -d $i ]; then
-        find $i -type d -exec rmdir -p '{}' \+ 2>/dev/null;
+        find $i -type d -exec rmdir -p '{}' \+ 2>/dev/null
       fi
-    done;
-    for i in $(list_files); do
-      chown root:root "$P/$i"
-      chmod 644 "$P/$i"
-      chmod 755 "$(dirname "$P/$i")"
-        if [ "$API" -ge "26" ]; then # Android 8.0+ uses 0600 for its permission on build.prop
-          chmod 600 /system/build.prop
-        fi
     done
 
+    # Fix ownership/permissions and clean up after backup and restore from /sdcard
+    find $SYS/vendor/pittpatt -type d -exec chown 0:2000 '{}' \; 2>/dev/null # Change pittpatt folders to root:shell per Google Factory Settings
+    for i in $(list_files); do
+      chown root:root "$SYS/$i"
+      chmod 644 "$SYS/$i"
+      chmod 755 "$(dirname "$SYS/$i")" "$(dirname "$SYS/$i")/../"
+      case $i in
+        */overlay/*) chcon -h u:object_r:vendor_overlay_file:s0 "$SYS/$i";;
+      esac
+    done
+
+    umount /product /vendor 2> /dev/null
+
+    if [ "$rom_build_sdk" -ge "26" ]; then # Android 8.0+ uses 0600 for its permission on build.prop
+      chmod 600 "$SYS/build.prop"
+    fi
+    rm -rf /sdcard/tmp-gapps
   ;;
 esac
