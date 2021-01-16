@@ -30,6 +30,7 @@ import re
 import argparse
 import textwrap
 from xml.etree import ElementTree
+from urlparse import urlsplit, urlunsplit
 
 try:
     import requests
@@ -413,7 +414,11 @@ if __name__ == '__main__':
             if args.pull:
                 cmd = ['git pull --no-edit', item['fetch'][method]['url'], item['fetch'][method]['ref']]
             else:
-                cmd = ['git fetch', item['fetch'][method]['url'], item['fetch'][method]['ref']]
+                parsed = list(urlsplit(item['fetch'][method]['url']))
+                alt_parsed = list(urlsplit(args.gerrit))
+                parsed[1] = alt_parsed[1]
+                new_url = urlunsplit(parsed);
+                cmd = ['git fetch', new_url, item['fetch'][method]['ref']]
             if args.quiet:
                 cmd.append('--quiet')
             else:
