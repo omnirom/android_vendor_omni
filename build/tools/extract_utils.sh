@@ -116,8 +116,17 @@ function setup_vendor() {
     export LPUNPACK="$BINARIES_LOCATION"/lpunpack
     export SIGSCAN="$BINARIES_LOCATION"/SigScan
 
+    for version in 0_8 0_9; do
+        export PATCHELF_${version}="$BINARIES_LOCATION"/patchelf-"${version}"
+    done
+
+    if [ -z "$PATCHELF_VERSION" ]; then
+        export PATCHELF_VERSION=0_9
+    fi
+
     if [ -z "$PATCHELF" ]; then
-        export PATCHELF="$OMNI_ROOT"/vendor/omni/build/tools/${HOST}/bin/patchelf
+        local patchelf_variable="PATCHELF_${PATCHELF_VERSION}"
+        export PATCHELF=${!patchelf_variable}
     fi
 }
 
