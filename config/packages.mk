@@ -20,7 +20,7 @@ PRODUCT_PACKAGES += \
     fsck.exfat \
     lsof \
     mke2fs \
-    mount.exfat \
+    mkfs.exfat \
     openvpn \
     tune2fs \
     mkfs.ntfs \
