@@ -35,5 +35,4 @@ allow update_engine system_lib_file:file { create relabelfrom setattr write };
 #allow update_engine vendor_overlay_file:dir { getattr search };
 allow update_engine vendor_overlay_file:file { getattr read };
 allow update_engine linkerconfig_file:dir { getattr };
-allow update_engine bt_firmware_file:dir { getattr search};
 allow update_engine update_engine:capability { kill };
