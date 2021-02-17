@@ -80,7 +80,7 @@ PRODUCT_COPY_FILES += \
 
 # custom omni sounds
 OMNI_PRODUCT_PROPERTIES += \
-    ro.config.ringtone=omni_ringtone1.ogg,omni_ringtone1.ogg \
+    ro.config.ringtone=omni_ringtone1.ogg \
     ro.config.notification_sound=omni_notification1.ogg \
     ro.config.alarm_alert=omni_alarm1.ogg
 
