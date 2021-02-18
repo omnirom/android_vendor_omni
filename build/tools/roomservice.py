@@ -51,8 +51,13 @@ gerrit_url = "gerrit.omnirom.org"
 
 
 def check_repo_exists(git_data, device):
-    re_match = "^android_device_.*_{device}$".format(device=device)
+    if device.count("_") < 2:
+        re_match = "^android_device_.*_{device}$".format(device=device)
+    else:
+        re_match = "^android_device.*_{device}$".format(device=device)
+
     matches = list(filter(lambda x: re.match(re_match, x), git_data))
+
     if len(matches) != 1:
         raise Exception("{device} not found,"
                         "exiting roomservice".format(device=device))
@@ -84,15 +89,27 @@ def search_gerrit_for_device(device):
 
 
 def parse_device_directory(device_url, device):
-    pattern = "^android_device_(?P<vendor>.+)_{}$".format(device)
+    if device.count("_") < 2:
+        pattern = "^android_device_(?P<vendor>.+)_{}$".format(device)
+    else:
+        pattern = "^android_device_{}$".format(device)
+
     match = re.match(pattern, device_url)
 
     if match is None:
         raise Exception("Invalid project name {}".format(device_url))
-    return "device/{vendor}/{device}".format(
-        vendor=match.group('vendor'),
-        device=device,
-    )
+
+    if device.count('_') < 2:
+        return "device/{vendor}/{device}".format(
+            vendor=match.group('vendor'),
+            device=device,
+        )
+    else:
+        vendor = device.split('_')[0]
+        return "device/{vendor}/{device}".format(
+            vendor=vendor,
+            device=device,
+        )
 
 
 # Thank you RaYmAn
