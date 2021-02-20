@@ -1,0 +1,7 @@
+frameworks/av
+frameworks/base
+frameworks/native
+frameworks/opt/telephony
+frameworks/opt/net/wifi
+packages/services/Telephony
+system/bt
