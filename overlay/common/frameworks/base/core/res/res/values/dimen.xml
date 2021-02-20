@@ -18,11 +18,6 @@
 */
 -->
 <resources>
-    <!-- Height of area above QQS where battery/time go -->
-    <!-- 48dp -->
-    <dimen name="quick_qs_offset_height">40dp</dimen>
-    <!-- Total height of QQS (quick_qs_offset_height + 128) -->
-    <dimen name="quick_qs_total_height">168dp</dimen>
 
     <!-- Corner radius of system dialogs -->
     <dimen name="config_dialogCornerRadius">8.0dip</dimen> <!-- default: 2dp -->
