@@ -54,9 +54,6 @@
     <!-- 24dp -->
     <dimen name="qs_tile_margin_vertical">16dp</dimen>
 
-    <!-- 4/13dp -->
-    <dimen name="qs_header_tile_margin_horizontal">13dp</dimen>
-
     <!-- 0dp -->
     <dimen name="qs_paged_tile_layout_padding_bottom">8dp</dimen>
 

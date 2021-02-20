@@ -48,21 +48,10 @@
         <item>/system/framework/oat/arm/services.odex</item>
     </string-array>
 
-    <!-- Controls the WiFi wakeup feature.
-    0 = Not available.
-    1 = Available.
-    -->
-    <integer translatable="false" name="config_wifi_wakeup_available">1</integer>
-
     <!--  Define Google play service package for FRP-->
     <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
     <bool name="config_dozeAlwaysOnDisplayEnabledDefault">false</bool>
-
-    <!-- System font packages (overlay in vendor) -->
-    <!--<string-array name="config_fontPackages" translatable="false">
-        <item>org.omnirom.fonts</item>
-    </string-array> -->
 
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
