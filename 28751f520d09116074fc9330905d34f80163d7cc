@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da6de701_4b2d1a82",
+        "filename": "overlay/common/frameworks/base/core/res/res/values/dimen.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000026
+      },
+      "writtenOn": "2021-02-23T11:27:30Z",
+      "side": 0,
+      "message": "but those values are still used - and making it less height looks better",
+      "revId": "28751f520d09116074fc9330905d34f80163d7cc",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": true
+    }
+  ]
+}
