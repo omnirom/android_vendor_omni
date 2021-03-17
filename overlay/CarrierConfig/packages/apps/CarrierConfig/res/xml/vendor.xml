@@ -2082,8 +2082,148 @@
     <carrier_config mcc="502" mnc="10">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <string-array name="carrier_metered_apn_types_strings" num="3">
+            <item value="default" />
+            <item value="dun" />
+            <item value="supl" />
+        </string-array>
+    </carrier_config>
+    <carrier_config mcc="502" mnc="12">
+        <string-array name="carrier_metered_apn_types_strings" num="3">
+            <item value="default" />
+            <item value="dun" />
+            <item value="supl" />
+        </string-array>
+        <string-array name="s_preferred_network_mode_marshal_string_array" num="5">
+            <item value="11" />
+            <item value="2" />
+            <item value="1" />
+            <item value="0" />
+            <item value="9" />
+        </string-array>
+        <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <string-array name="s_preferred_network_mode_rat_names_string_array" num="6">
+            <item value="2G" />
+            <item value="3G" />
+            <item value="CDMA" />
+            <item value="EvDo" />
+            <item value="4G" />
+            <item value="TDSCDMA" />
+        </string-array>
+        <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="502" mnc="13">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <string-array name="carrier_metered_apn_types_strings" num="3">
+            <item value="default" />
+            <item value="dun" />
+            <item value="supl" />
+        </string-array>
     </carrier_config>
     <carrier_config mcc="502" mnc="16">
+        <string-array name="carrier_metered_apn_types_strings" num="3">
+            <item value="default" />
+            <item value="dun" />
+            <item value="supl" />
+        </string-array>
+        <string-array name="s_preferred_network_mode_marshal_string_array" num="5">
+            <item value="11" />
+            <item value="2" />
+            <item value="1" />
+            <item value="0" />
+            <item value="9" />
+        </string-array>
+        <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <string-array name="s_preferred_network_mode_rat_names_string_array" num="6">
+            <item value="2G" />
+            <item value="3G" />
+            <item value="CDMA" />
+            <item value="EvDo" />
+            <item value="4G" />
+            <item value="TDSCDMA" />
+        </string-array>
+        <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="502" mnc="17">
+        <string-array name="carrier_metered_apn_types_strings" num="3">
+            <item value="default" />
+            <item value="dun" />
+            <item value="supl" />
+        </string-array>
+        <string-array name="s_preferred_network_mode_marshal_string_array" num="5">
+            <item value="11" />
+            <item value="2" />
+            <item value="1" />
+            <item value="0" />
+            <item value="9" />
+        </string-array>
+        <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true" />
+        <string-array name="s_preferred_network_mode_rat_names_string_array" num="6">
+            <item value="2G" />
+            <item value="3G" />
+            <item value="CDMA" />
+            <item value="EvDo" />
+            <item value="4G" />
+            <item value="TDSCDMA" />
+        </string-array>
+        <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="502" mnc="18">
+        <string-array name="carrier_metered_apn_types_strings" num="3">
+            <item value="default" />
+            <item value="dun" />
+            <item value="supl" />
+        </string-array>
+        <string-array name="s_preferred_network_mode_marshal_string_array" num="5">
+            <item value="11" />
+            <item value="2" />
+            <item value="1" />
+            <item value="0" />
+            <item value="9" />
+        </string-array>
+        <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true" />
+        <string-array name="s_preferred_network_mode_rat_names_string_array" num="6">
+            <item value="2G" />
+            <item value="3G" />
+            <item value="CDMA" />
+            <item value="EvDo" />
+            <item value="4G" />
+            <item value="TDSCDMA" />
+        </string-array>
+        <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="502" mnc="19">
+        <string-array name="carrier_metered_apn_types_strings" num="3">
+            <item value="default" />
+            <item value="dun" />
+            <item value="supl" />
+        </string-array>
+        <string-array name="s_preferred_network_mode_marshal_string_array" num="5">
+            <item value="11" />
+            <item value="2" />
+            <item value="1" />
+            <item value="0" />
+            <item value="9" />
+        </string-array>
+        <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true" />
+        <string-array name="s_preferred_network_mode_rat_names_string_array" num="6">
+            <item value="2G" />
+            <item value="3G" />
+            <item value="CDMA" />
+            <item value="EvDo" />
+            <item value="4G" />
+            <item value="TDSCDMA" />
+        </string-array>
+        <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true" />
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
