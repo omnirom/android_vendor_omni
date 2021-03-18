@@ -27,8 +27,6 @@
 
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array name="config_defaultPinnerServiceFiles">
-        <item>/system/framework/oat/arm64/services.odex</item>
-        <item>/system/framework/arm64/boot-framework.oat</item>
         <item>/system/lib64/libRScpp.so</item>
         <item>/system/lib64/libRS.so</item>
         <item>/system/lib64/libRS_internal.so</item>
@@ -37,15 +35,6 @@
         <item>/system/lib64/libRSCpuRef.so</item>
         <item>/system/lib64/libblas.so</item>
         <item>/system_ext/priv-app/SystemUI/SystemUI.apk</item>
-        <item>/system_ext/priv-app/SystemUI/oat/arm64/SystemUI.odex</item>
-    </string-array>
-    <string-array name="config_legacyPinnerServiceFiles">
-        <item>/data/dalvik-cache/arm64/system@framework@boot.oat</item>
-        <item>/data/dalvik-cache/arm/system@framework@boot.oat</item>
-        <item>/data/dalvik-cache/arm64/system@framework@services.jar@classes.dex</item>
-        <item>/data/dalvik-cache/arm/system@framework@services.jar@classes.dex</item>
-        <item>/system/framework/oat/arm64/services.odex</item>
-        <item>/system/framework/oat/arm/services.odex</item>
     </string-array>
 
     <!--  Define Google play service package for FRP-->
