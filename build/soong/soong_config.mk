@@ -4,6 +4,7 @@ _json_contents := $(_json_contents)    "Omnirom":{$(newline)
 
 # See build/core/soong_config.mk for the add_json_* functions you can use here.
 $(call add_json_bool, Healthd_use_battery_info,               $(filter true,$(HEALTHD_USE_BATTERY_INFO)))
+$(call add_json_bool, Healthd_enable_tricolor_led,            $(filter true,$(HEALTHD_ENABLE_TRICOLOR_LED)))
 $(call add_json_bool, Healthd_enable_op_fastchg,              $(filter true,$(HEALTHD_ENABLE_OP_FASTCHG_CHECK)))
 $(call add_json_bool, TargetNeedsHWCOnFirstRef,               $(filter true,$(TARGET_NEEDS_HWC_ONFIRSTREF)))
 $(call add_json_bool, Uses_metadata_as_fde_key,               $(filter true,$(TARGET_USES_METADATA_AS_FDE_KEY)))

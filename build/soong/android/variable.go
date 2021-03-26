@@ -3,6 +3,9 @@ type Product_variables struct {
     Healthd_use_battery_info struct {
         Cflags []string
     }
+    Healthd_enable_tricolor_led struct {
+        Cflags []string
+    }
     Healthd_enable_op_fastchg struct {
         Cflags []string
     }
@@ -37,6 +40,7 @@ type Product_variables struct {
 
 type ProductVariables struct {
     Healthd_use_battery_info                *bool `json:",omitempty"`
+    Healthd_enable_tricolor_led             *bool `json:",omitempty"`
     Healthd_enable_op_fastchg               *bool `json:",omitempty"`
     TargetNeedsHWCOnFirstRef                *bool `json:",omitempty"`
     Uses_metadata_as_fde_key                *bool `json:",omitempty"`
