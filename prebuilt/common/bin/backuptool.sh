@@ -66,7 +66,7 @@ run_stages() {
       if [ $v -ge 3 ]; then
         $script $stage
       else
-        ADDOND_VERSION=2 $script $stage
+        ADDOND_VERSION= $script $stage
       fi
     done
   done
