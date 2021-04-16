@@ -73,4 +73,7 @@
     <dimen name="global_actions_power_dialog_item_height">98dp</dimen>
     <dimen name="global_actions_power_dialog_item_width">90dp</dimen>
 
+    <!-- 3dp -->
+    <dimen name="wide_type_icon_start_padding_qs">1dp</dimen>
+    <dimen name="signal_indicator_to_icon_frame_spacing">1dp</dimen>
 </resources>
