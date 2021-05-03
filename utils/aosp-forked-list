@@ -26,6 +26,7 @@ packages/apps/Dialer
 packages/apps/DocumentsUI
 packages/apps/Messaging
 packages/apps/Nfc
+packages/apps/PermissionController
 packages/apps/PhoneCommon
 packages/apps/Settings
 packages/apps/SettingsIntelligence
