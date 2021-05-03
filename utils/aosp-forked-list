@@ -26,10 +26,12 @@ packages/apps/Dialer
 packages/apps/DocumentsUI
 packages/apps/Messaging
 packages/apps/Nfc
+packages/apps/PermissionController
 packages/apps/PhoneCommon
 packages/apps/Settings
 packages/apps/SettingsIntelligence
 packages/providers/DownloadProvider
+packages/providers/MediaProvider
 packages/services/Telephony
 packages/services/Telecomm
 packages/inputmethods/LatinIME
