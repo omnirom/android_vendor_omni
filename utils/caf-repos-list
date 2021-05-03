@@ -3,5 +3,6 @@ frameworks/base
 frameworks/native
 frameworks/opt/telephony
 frameworks/opt/net/wifi
+packages/apps/Bluetooth
 packages/services/Telephony
 system/bt
