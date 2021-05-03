@@ -18,10 +18,6 @@ echo -e "Enter the username"
 read username
 echo -e "Enter the topic branch name"
 read topicname
-echo -e "Are you an Admin with rights access ?"
-read admin
-
-OPERATION="${admin}"
 
 url="gerrit.omnirom.org"
 port="29418"
@@ -45,16 +41,10 @@ while read path;
     cd $path;
 
     echo " Pushing..."
-
-    if [[ "${OPERATION}" == "yes" ]]; then
-        echo " git push --no-thin ssh://${username}@${url}:${port}/${project} HEAD:refs/heads/${branch}%topic=${topicname}"
-        git push --no-thin ssh://${username}@${url}:${port}/${project} HEAD:refs/heads/${branch}%topic=${topicname}
-    elif [[ "${OPERATION}" == "no" ]]; then
-        echo " git push --no-thin ssh://${username}@${url}:${port}/${project} HEAD:refs/for/${branch}%topic=${topicname}"
-        git push --no-thin ssh://${username}@${url}:${port}/${project} HEAD:refs/for/${branch}%topic=${topicname}
-    fi
+    echo " git push --no-thin ssh://${username}@${url}:${port}/${project} HEAD:refs/heads/${branch}%topic=${topicname}"
+    git push --no-thin ssh://${username}@${url}:${port}/${project} HEAD:refs/heads/${branch}%topic=${topicname}
     echo ""
 
     cd - > /dev/null
 
-done < vendor/omni/utils/aosp-forked-list
+done < vendor/omni/utils/caf-repos-list
