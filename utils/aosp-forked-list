@@ -2,7 +2,6 @@ art
 bionic
 build
 build/soong
-external/e2fsprogs
 external/f2fs-tools
 external/toybox
 external/selinux
@@ -15,9 +14,7 @@ frameworks/opt/net/ims
 hardware/interfaces
 hardware/libhardware
 hardware/libhardware_legacy
-hardware/nxp/nfc
 hardware/qcom/audio
-hardware/qcom/bt
 hardware/qcom/wlan
 packages/apps/Bluetooth
 packages/apps/Contacts
@@ -26,14 +23,15 @@ packages/apps/Dialer
 packages/apps/DocumentsUI
 packages/apps/Messaging
 packages/apps/Nfc
+packages/apps/PermissionController
 packages/apps/PhoneCommon
 packages/apps/Settings
 packages/apps/SettingsIntelligence
 packages/providers/DownloadProvider
+packages/providers/MediaProvider
 packages/services/Telephony
 packages/services/Telecomm
 packages/inputmethods/LatinIME
-system/bpf
 system/bt
 system/extras
 system/libhidl
@@ -42,4 +40,3 @@ system/nfc
 system/sepolicy
 system/update_engine
 system/vold
-system/hardware/interfaces
