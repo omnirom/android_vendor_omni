@@ -25,7 +25,7 @@ OPERATION="${admin}"
 
 url="gerrit.omnirom.org"
 port="29418"
-branch="android-12.0"
+branch="android-11"
 
 cd ../../../
 
@@ -57,4 +57,4 @@ while read path;
 
     cd - > /dev/null
 
-done < vendor/omni/utils/aosp-forked-list
+done < vendor/omni/utils/caf-repos-list
