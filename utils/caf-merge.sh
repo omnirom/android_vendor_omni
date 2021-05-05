@@ -17,6 +17,10 @@
 echo -e "Enter the CAF ref to merge";
 read ref;
 
+branch_name=${ref}"-merge"
+
+branch_current="android-11"
+
 cd ../../../
 
 while read path;
@@ -38,6 +42,14 @@ while read path;
     ret=$(repo sync -d -f --force-sync ${path} 2>&1);
     cd $path;
 
+    if git branch | grep ${branch_name} > /dev/null; then
+        git branch -D ${branch_name} > /dev/null
+    fi
+
+    echo " -> creating branch ${branch_name}";
+    ret=$(git checkout -b ${branch_name} 2>&1);
+    ret=$(repo start ${branch_name});
+
     # make sure that environment is clean
     ret=$(git merge --abort 2>&1);
 
@@ -46,7 +58,13 @@ while read path;
 
     if echo $ret | grep "CONFLICT (content)" > /dev/null ; then
         echo -e " -> \e[33mWARNING!: \e[31mMERGE CONFLICT\e[0m";
+        echo -e " -> please fix the merge conflict before push it.";
     else
+        echo " -> merging squashed commits into ${branch_current} branch";
+        ret=$(git checkout ${branch_current} 2>&1);
+        ret=$(git merge --squash ${branch_name} 2>&1);
+        ret=$(git add . 2>&1);
+        ret=$(git commit --no-edit 2>&1);
         echo -e " -> \e[32mDONE!\e[0m";
     fi
 
