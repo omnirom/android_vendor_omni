@@ -14,7 +14,6 @@ frameworks/opt/net/ims
 hardware/interfaces
 hardware/libhardware
 hardware/libhardware_legacy
-hardware/qcom/audio
 hardware/qcom/wlan
 packages/apps/Bluetooth
 packages/apps/Contacts

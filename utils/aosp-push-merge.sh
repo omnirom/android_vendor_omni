@@ -16,7 +16,7 @@
 #
 echo -e "Enter the username"
 read username
-echo -e "Enter the topic branch name"
+echo -e "Enter the topic branch name (only needed for gerrit)"
 read topicname
 echo -e "Do you want to push on "github" or "gerrit" ?"
 read admin
