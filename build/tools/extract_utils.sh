@@ -1587,7 +1587,11 @@ function extract() {
         fi
 
         if [ "$KEEP" = "1" ]; then
-            printf '    + keeping pinned file with hash %s\n' "${HASH}"
+            if [ "${FIXUP_HASH}" != "x" ]; then
+                printf '    + keeping pinned file with hash %s\n' "${FIXUP_HASH}"
+            else
+                printf '    + keeping pinned file with hash %s\n' "${HASH}"
+            fi
         else
             FOUND=false
             # Try Lineage target first.
