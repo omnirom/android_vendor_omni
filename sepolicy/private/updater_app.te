@@ -17,4 +17,4 @@ allow updater_app ota_package_file:dir create_dir_perms;
 allow updater_app ota_package_file:file create_file_perms;
 
 get_prop(updater_app, default_prop)
-get_prop(updater_app, exported2_default_prop)
+get_prop(updater_app, build_prop)
