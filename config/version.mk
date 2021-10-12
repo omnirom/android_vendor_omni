@@ -25,6 +25,6 @@ else
 endif
 
 # Apply it to build.prop
-OMNI_PRODUCT_PROPERTIES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.modversion=OmniROM-$(ROM_VERSION) \
     ro.omni.version=$(ROM_VERSION)

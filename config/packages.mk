@@ -6,9 +6,7 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     MatLog \
     OmniChange \
-    OmniOverlayStub \
     OmniStoreInstallerPrebuilt \
-    omni-overlays \
     OpenDelta \
     ThemePicker \
     SystemWebView \
@@ -34,6 +32,10 @@ PRODUCT_PACKAGES += \
     vncpasswd \
     OmniRemote
 
+#PRODUCT_PACKAGES += \
+    OmniOverlayStub \
+    omni-overlays
+
 ifeq ($(BOARD_INCLUDE_CMDLINE_TOOLS),true)
 PRODUCT_PACKAGES += \
     htop \
@@ -51,8 +53,8 @@ PRODUCT_PACKAGES += \
 endif
 
 # Telephony extension
-PRODUCT_PACKAGES += telephony-ext
-PRODUCT_BOOT_JARS += telephony-ext
+#PRODUCT_PACKAGES += telephony-ext
+#PRODUCT_BOOT_JARS += telephony-ext
 
 # for fun
 #PRODUCT_PACKAGES += \

@@ -34,5 +34,4 @@
     <!-- Whether to show activity indicators in the status bar -->
     <bool name="config_showActivity">false</bool>
 
-    <integer name="power_menu_max_columns">4</integer>
 </resources>

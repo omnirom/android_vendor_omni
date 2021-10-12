@@ -10,10 +10,10 @@ PRODUCT_COPY_FILES += \
 endif
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
-OMNI_PRODUCT_PROPERTIES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.clientidbase=android-google
 else
-OMNI_PRODUCT_PROPERTIES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
@@ -21,7 +21,7 @@ endif
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # general properties
-OMNI_PRODUCT_PROPERTIES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
@@ -29,16 +29,16 @@ OMNI_PRODUCT_PROPERTIES += \
     persist.sys.disable_rescue=true
 
 # Google assistant
-OMNI_PRODUCT_PROPERTIES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.opa.eligible_device=true
 
 # Tethering - allow without requiring a provisioning app
 # (for devices that check this)
-OMNI_PRODUCT_PROPERTIES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     net.tethering.noprovisioning=true
 
 # Enforce privapp-permissions whitelist
-OMNI_PRODUCT_PROPERTIES += \
+#OMNI_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
 
 PRODUCT_COPY_FILES += \
@@ -79,7 +79,7 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/etc/permissions/omni-power-whitelist.xml:system/etc/sysconfig/omni-power-whitelist.xml
 
 # custom omni sounds
-OMNI_PRODUCT_PROPERTIES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.ringtone=omni_ringtone1.ogg \
     ro.config.notification_sound=omni_notification1.ogg \
     ro.config.alarm_alert=omni_alarm1.ogg
@@ -104,7 +104,7 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/etc/mkshrc:system/etc/mkshrc
 
 # whitelist packages for location providers not in system
-OMNI_PRODUCT_PROPERTIES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.services.whitelist.packagelist=com.google.android.gms
 
 PRODUCT_COPY_FILES += \
