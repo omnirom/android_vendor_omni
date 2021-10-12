@@ -19,15 +19,4 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- 24dp -->
-    <dimen name="qs_header_tooltip_height">18dp</dimen>
-
-    <!-- 48dp -->
-    <dimen name="qs_tile_height_wo_label">54dp</dimen>
-
-    <!-- 2dp -->
-    <dimen name="qs_tile_margin_top">6dp</dimen>
-
-    <dimen name="global_actions_power_dialog_item_height">98dp</dimen>
-    <dimen name="global_actions_power_dialog_item_width">90dp</dimen>
 </resources>
