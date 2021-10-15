@@ -6,5 +6,5 @@
 BOARD_VENDOR_SEPOLICY_DIRS += \
     vendor/omni/sepolicy/common
 
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += vendor/omni/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += vendor/omni/sepolicy/public
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += vendor/omni/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += vendor/omni/sepolicy/public
