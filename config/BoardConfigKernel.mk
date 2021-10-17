@@ -194,6 +194,13 @@ ifneq ($(KERNEL_NO_GCC), true)
 
     KERNEL_MAKE_FLAGS += HOSTLDFLAGS="-L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -fuse-ld=lld"
 
+    ifeq ($(KERNEL_ARCH),arm64)
+        # Add 32-bit GCC to PATH so that arm-linux-androidkernel-as is available for CONFIG_COMPAT_VDSO
+        TOOLS_PATH_OVERRIDE += PATH=$(KERNEL_TOOLCHAIN_arm):$$PATH
+    else
+        TOOLS_PATH_OVERRIDE += PATH=$$PATH
+    endif
+
     # Set the full path to the clang command and LLVM binutils
     KERNEL_MAKE_FLAGS += HOSTAR=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-ar
     KERNEL_MAKE_FLAGS += HOSTCC=$(TARGET_KERNEL_CLANG_PATH)/bin/clang
