@@ -8,8 +8,6 @@ PRODUCT_PACKAGES += \
     OmniChange \
     OmniStoreInstallerPrebuilt \
     OpenDelta \
-    ThemePicker \
-    SystemWebView \
     WallpaperCropper2
 
 # Additional tools
@@ -33,6 +31,8 @@ PRODUCT_PACKAGES += \
     OmniRemote
 
 #PRODUCT_PACKAGES += \
+    SystemWebView \
+    ThemePicker \
     OmniOverlayStub \
     omni-overlays
 
