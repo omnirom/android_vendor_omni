@@ -30,7 +30,7 @@
     </webviewprovider>
 
     <!-- The default WebView implementation -->
-    <webviewprovider description="Omni Chromium" packageName="org.chromium.chrome" availableByDefault="true" />
+    <webviewprovider description="Omni Chromium" packageName="org.chromium.chrome.stable" availableByDefault="true" />
 
     <!-- The default WebView implementation -->
     <webviewprovider description="AOSP WebView" packageName="com.android.webview" availableByDefault="true" />
