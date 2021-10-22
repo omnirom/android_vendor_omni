@@ -28,10 +28,10 @@ PRODUCT_PACKAGES += \
     vim \
     vncflinger \
     vncpasswd \
-    OmniRemote
+    OmniRemote \
+    SystemWebView \
 
 #PRODUCT_PACKAGES += \
-    SystemWebView \
     ThemePicker \
     OmniOverlayStub \
     omni-overlays
