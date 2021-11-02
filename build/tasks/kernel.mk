@@ -354,8 +354,14 @@ endif # FULL_KERNEL_BUILD
 ifeq ($(NEEDS_KERNEL_COPY),true)
 file := $(INSTALLED_KERNEL_TARGET)
 ALL_PREBUILT += $(file)
+
+ifeq ($(BOARD_KERNEL_IMAGE_LZ4),true)
+$(file) : $(KERNEL_BIN)
+	$(LZ4) -f $(KERNEL_BIN) $@
+else
 $(file) : $(KERNEL_BIN) | $(ACP)
 	$(transform-prebuilt-to-target)
+endif
 
 ALL_PREBUILT += $(INSTALLED_KERNEL_TARGET)
 endif
