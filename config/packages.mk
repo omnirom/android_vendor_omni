@@ -5,7 +5,6 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     OmniStyle \
     MatLog \
-    OmniChange \
     OmniStoreInstallerPrebuilt \
     OpenDelta \
     WallpaperCropper2
