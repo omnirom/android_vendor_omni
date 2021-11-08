@@ -113,6 +113,10 @@ PRODUCT_COPY_FILES += \
 # Additional packages
 -include vendor/omni/config/packages.mk
 
+# Set support one-handed mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode=true
+
 # Versioning
 -include vendor/omni/config/version.mk
 
