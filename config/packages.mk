@@ -29,6 +29,7 @@ PRODUCT_PACKAGES += \
     vncpasswd \
     OmniRemote \
     SystemWebView \
+    OmniControl
 
 #PRODUCT_PACKAGES += \
     ThemePicker \
