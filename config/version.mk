@@ -27,4 +27,5 @@ endif
 # Apply it to build.prop
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.modversion=OmniROM-$(ROM_VERSION) \
-    ro.omni.version=$(ROM_VERSION)
+    ro.omni.version=$(ROM_VERSION) \
+    ro.omni.device=$(TARGET_DEVICE)
