@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2016 The Android Open Source Project
 
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
-
-<!-- Colors specific to DeviceDefault themes. These are mostly pass-throughs to enable
-     overlaying new theme colors. -->
 <resources>
-    <color name="primary_device_default">@*android:color/primary_device_default_settings_light</color> <!-- only for ThemePicker! -->
-</resources>
 
+    <color name="system_neutral1_50">#e7ebff</color>
+    <color name="system_neutral1_100">#c4d1e9</color>
+    <color name="system_neutral1_200">#a5b1ce</color>
+    <color name="system_neutral1_300">#8492b3</color>
+    <color name="system_neutral1_400">#6d7c9f</color>
+    <color name="system_neutral1_500">#55678c</color>
+    <color name="system_neutral1_600">#47597b</color>
+    <color name="system_neutral1_700">#374765</color>
+    <color name="system_neutral1_800">#1b2b47</color>
+    <color name="system_neutral1_900">#152238</color>
+
+    <color name="system_neutral2_50">#e7ebff</color>
+    <color name="system_neutral2_100">#c4d1e9</color>
+    <color name="system_neutral2_200">#a5b1ce</color>
+    <color name="system_neutral2_300">#8492b3</color>
+    <color name="system_neutral2_400">#6d7c9f</color>
+    <color name="system_neutral2_500">#55678c</color>
+    <color name="system_neutral2_600">#47597b</color>
+    <color name="system_neutral2_700">#374765</color>
+    <color name="system_neutral2_800">#1b2b47</color>
+    <color name="system_neutral2_900">#152238</color>
+
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="system_accent1_0">#ffffff</color>
+    <color name="system_accent1_10">#a1c729</color>
+    <color name="system_accent1_50">#a1c729</color>
+    <color name="system_accent1_100">#a1c729</color>
+    <color name="system_accent1_200">#a1c729</color>
+    <color name="system_accent1_300">#a1c729</color>
+    <color name="system_accent1_400">#a1c729</color>
+    <color name="system_accent1_500">#a1c729</color>
+    <color name="system_accent1_600">#a1c729</color>
+    <color name="system_accent1_700">#a1c729</color>
+    <color name="system_accent1_800">#a1c729</color>
+    <color name="system_accent1_900">#a1c729</color>
+    <color name="system_accent1_1000">#000000</color>
+
+    <color name="system_accent2_0">#ffffff</color>
+    <color name="system_accent2_10">#a1c729</color>
+    <color name="system_accent2_50">#a1c729</color>
+    <color name="system_accent2_100">#a1c729</color>
+    <color name="system_accent2_200">#a1c729</color>
+    <color name="system_accent2_300">#a1c729</color>
+    <color name="system_accent2_400">#a1c729</color>
+    <color name="system_accent2_500">#a1c729</color>
+    <color name="system_accent2_600">#a1c729</color>
+    <color name="system_accent2_700">#a1c729</color>
+    <color name="system_accent2_800">#a1c729</color>
+    <color name="system_accent2_900">#a1c729</color>
+    <color name="system_accent2_1000">#000000</color>
+
+    <color name="system_accent3_0">#ffffff</color>
+    <color name="system_accent3_10">#a1c729</color>
+    <color name="system_accent3_50">#a1c729</color>
+    <color name="system_accent3_100">#a1c729</color>
+    <color name="system_accent3_200">#a1c729</color>
+    <color name="system_accent3_300">#a1c729</color>
+    <color name="system_accent3_400">#a1c729</color>
+    <color name="system_accent3_500">#a1c729</color>
+    <color name="system_accent3_600">#a1c729</color>
+    <color name="system_accent3_700">#a1c729</color>
+    <color name="system_accent3_800">#a1c729</color>
+    <color name="system_accent3_900">#a1c729</color>
+    <color name="system_accent3_1000">#000000</color>
+</resources>
