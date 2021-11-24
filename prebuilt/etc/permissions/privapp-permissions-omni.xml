@@ -82,5 +82,6 @@
 
     <privapp-permissions package="org.omnirom.control">
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
     </privapp-permissions>
 </permissions>
