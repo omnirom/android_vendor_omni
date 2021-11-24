@@ -18,20 +18,22 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := omni-overlays
 LOCAL_REQUIRED_MODULES := \
 	AccentColorSluttyPinkOverlay \
-	AccentColorBlueMondayOverlay \
 	AccentColorOmniOverlay \
-	AccentColorGoldenShowerOverlay \
-	AccentColorRedDevilOverlay \
-	FontLatoSourceOverlay \
-	FontMuliSourceOverlay \
-	EmptyProductOverlay \
-	IconShapeCircleOverlay
+	AccentColorPurpleOverlay
 
 LOCAL_REQUIRED_MODULES += \
-	PrimaryColorOmniBlackOverlay \
+	EmptyProductOverlay
+
+LOCAL_REQUIRED_MODULES += \
+	IconShapeCircleOverlay \
+	IconShapeSquareOverlay \
+	IconShapeSquircleOverlay \
+	IconShapeTeardropOverlay \
+	IconShapePebbleOverlay
+
+LOCAL_REQUIRED_MODULES += \
 	PrimaryColorDarkBlueOverlay \
-	PrimaryColorDeepBlueOverlay \
-	PrimaryColorDarkGreenOverlay
+	PrimaryColorDarkGrayOverlay
 
 include $(BUILD_PHONY_PACKAGE)
 include $(CLEAR_VARS)

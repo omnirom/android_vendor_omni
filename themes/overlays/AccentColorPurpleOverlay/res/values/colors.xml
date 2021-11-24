@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>    
+    <color name="system_accent1_0">#ffffff</color>
+    <color name="system_accent1_10">#FFFBFF</color>
+    <color name="system_accent1_50">#F5EEFF</color>
+    <color name="system_accent1_100">#E6DEFF</color>
+    <color name="system_accent1_200">#CAC1EA</color>
+    <color name="system_accent1_300">#AEA6CE</color>
+    <color name="system_accent1_400">#938CB1</color>
+    <color name="system_accent1_500">#787296</color>
+    <color name="system_accent1_600">#605A7C</color>
+    <color name="system_accent1_700">#484264</color>
+    <color name="system_accent1_800">#322C4C</color>
+    <color name="system_accent1_900">#1D1736</color>
+    <color name="system_accent1_1000">#000000</color>
+</resources>

@@ -29,12 +29,12 @@ PRODUCT_PACKAGES += \
     vncpasswd \
     OmniRemote \
     SystemWebView \
-    OmniControl
+    OmniControl \
+    omni-overlays
 
 #PRODUCT_PACKAGES += \
     ThemePicker \
     OmniOverlayStub \
-    omni-overlays
 
 ifeq ($(BOARD_INCLUDE_CMDLINE_TOOLS),true)
 PRODUCT_PACKAGES += \
