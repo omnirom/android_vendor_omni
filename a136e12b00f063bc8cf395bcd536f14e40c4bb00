@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b1606148_3066f443",
+        "filename": "overlay/common/packages/apps/Settings/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1002322
+      },
+      "writtenOn": "2021-11-29T13:28:24Z",
+      "side": 1,
+      "message": "it\u0027s already false by default",
+      "revId": "a136e12b00f063bc8cf395bcd536f14e40c4bb00",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": true
+    }
+  ]
+}
