@@ -51,6 +51,8 @@
 #                                                      aarch64-linux-gnu- for arm64
 #                                                      x86_64-linux-gnu- for x86
 #
+#   KERNEL_LTO                         = Optional, force LTO to none / thin / full
+#
 #   NEED_KERNEL_MODULE_ROOT            = Optional, if true, install kernel
 #                                          modules in root instead of vendor
 #   NEED_KERNEL_MODULE_SYSTEM          = Optional, if true, install kernel
@@ -303,6 +305,31 @@ $(KERNEL_OUT):
 $(KERNEL_CONFIG): $(KERNEL_OUT) $(ALL_KERNEL_DEFCONFIG_SRCS)
 	@echo "Building Kernel Config"
 	$(call make-kernel-target,VARIANT_DEFCONFIG=$(VARIANT_DEFCONFIG) SELINUX_DEFCONFIG=$(SELINUX_DEFCONFIG) $(KERNEL_DEFCONFIG))
+	$(hide) if [ "$(KERNEL_LTO)" = "none" ]; then \
+			$(KERNEL_SRC)/scripts/config --file $(1)/.config \
+			-d LTO_CLANG \
+			-e LTO_NONE \
+			-d LTO_CLANG_THIN \
+			-d LTO_CLANG_FULL \
+			-d THINLTO; \
+			$(call make-kernel-target,olddefconfig); \
+		elif [ "$(KERNEL_LTO)" = "thin" ]; then \
+			$(KERNEL_SRC)/scripts/config --file $(1)/.config \
+			-e LTO_CLANG \
+			-d LTO_NONE \
+			-e LTO_CLANG_THIN \
+			-d LTO_CLANG_FULL \
+			-e THINLTO; \
+			$(call make-kernel-target,olddefconfig); \
+		elif [ "$(KERNEL_LTO)" = "full" ]; then \
+			$(KERNEL_SRC)/scripts/config --file $(1)/.config \
+			-e LTO_CLANG \
+			-d LTO_NONE \
+			-d LTO_CLANG_THIN \
+			-e LTO_CLANG_FULL \
+			-d THINLTO; \
+			$(call make-kernel-target,olddefconfig); \
+		fi
 	$(hide) if [ ! -z "$(KERNEL_CONFIG_OVERRIDE)" ]; then \
 			echo "Overriding kernel config with '$(KERNEL_CONFIG_OVERRIDE)'"; \
 			echo $(KERNEL_CONFIG_OVERRIDE) >> $(KERNEL_OUT)/.config; \
