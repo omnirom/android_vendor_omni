@@ -34,4 +34,6 @@
     <!-- Whether to show activity indicators in the status bar -->
     <bool name="config_showActivity">false</bool>
 
+    <!-- Enable the screenshot dismiss button by default -->
+    <bool name="always_show_screenshot_dismiss_button">true</bool>
 </resources>
