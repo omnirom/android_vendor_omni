@@ -387,6 +387,11 @@ function write_blueprint_packages() {
         EXTENSION=${BASENAME##*.}
         PKGNAME=${BASENAME%.*}
 
+        if [ "$CLASS" = "EXECUTABLES" ] && [ "$EXTENSION" != "sh" ]; then
+            PKGNAME="$BASENAME"
+            EXTENSION=""
+        fi
+
         # Allow overriding module name
         STEM=
         for ARG in "${ARGS[@]}"; do
