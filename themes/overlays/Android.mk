@@ -37,6 +37,9 @@ LOCAL_REQUIRED_MODULES += \
 	PrimaryColorDarkBlueOverlay \
 	PrimaryColorDarkGrayOverlay
 
+LOCAL_REQUIRED_MODULES += \
+	QSTileLayoutVerticalOverlay
+
 include $(BUILD_PHONY_PACKAGE)
 include $(CLEAR_VARS)
 
