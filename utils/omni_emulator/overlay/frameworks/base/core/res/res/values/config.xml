@@ -29,9 +29,39 @@
     black in software (to avoid aliasing or emulate a cutout that is not physically existent).
     -->
     <!--<bool name="config_fillMainBuiltInDisplayCutout">true</bool>-->
-    <bool name="config_intrusiveNotificationLed">false</bool>
     <bool name="config_intrusiveBatteryLed">false</bool>
 
-    <integer name="config_screenBrightnessPulse">42</integer>
+    <!-- Control the behavior when the user short presses the power button.
+            0 - Nothing
+            1 - Go to sleep (doze)
+            2 - Really go to sleep (don't doze)
+            3 - Really go to sleep and go home (don't doze)
+            4 - Go to home
+            5 - Dismiss IME if shown. Otherwise go to home
+    -->
+    <integer name="config_shortPressOnPowerBehavior">1</integer>
 
+    <!-- Control the behavior when the user long presses the power button.
+            0 - Nothing
+            1 - Global actions menu
+            2 - Power off (with confirmation)
+            3 - Power off (without confirmation)
+            4 - Go to voice assist
+            5 - Go to assistant (Settings.Secure.ASSISTANT)
+    -->
+    <integer name="config_longPressOnPowerBehavior">1</integer>
+
+    <!-- Control the behavior when the user long presses the power button for a long time.
+            0 - Nothing
+            1 - Global actions menu
+    -->
+    <integer name="config_veryLongPressOnPowerBehavior">0</integer>
+    
+    <!--  Maximum number of supported users -->
+    <integer name="config_multiuserMaximumUsers">4</integer>
+    <!--  Whether Multiuser UI should be shown -->
+    <bool name="config_enableMultiUserUI">true</bool>
+
+    <!-- The maximum number of tiles in the QuickQSPanel -->
+    <integer name="quick_qs_panel_max_columns">2</integer>
 </resources>

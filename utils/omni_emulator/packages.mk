@@ -5,18 +5,36 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     OmniStyle \
     MatLog \
-    OmniChange \
-    OmniOverlayStub \
     OmniStoreInstallerPrebuilt \
-    omni-overlays \
     OpenDelta \
-    ThemePicker \
-    Turbo \
-    SystemWebView \
     WallpaperCropper2
 
+# Additional tools
+PRODUCT_PACKAGES += \
+    e2fsck \
+    fsck.exfat \
+    lsof \
+    mke2fs \
+    mkfs.exfat \
+    openvpn \
+    tune2fs \
+    mkfs.ntfs \
+    mount.ntfs \
+    fsck.ntfs \
+    mkshrc_vendor \
+    toybox_vendor \
+    sh_vendor \
+    vim \
+    vncflinger \
+    vncpasswd \
+    OmniRemote \
+    SystemWebView \
+    OmniControl \
+    omni-overlays
+
 #PRODUCT_PACKAGES += \
-    GoldfishParts
+    ThemePicker \
+    OmniOverlayStub \
 
 ifeq ($(BOARD_INCLUDE_CMDLINE_TOOLS),true)
 PRODUCT_PACKAGES += \
@@ -35,16 +53,8 @@ PRODUCT_PACKAGES += \
 endif
 
 # Telephony extension
-PRODUCT_PACKAGES += telephony-ext
-PRODUCT_BOOT_JARS += telephony-ext
-
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml
+#PRODUCT_PACKAGES += telephony-ext
+#PRODUCT_BOOT_JARS += telephony-ext
 
 # for fun
 #PRODUCT_PACKAGES += \
