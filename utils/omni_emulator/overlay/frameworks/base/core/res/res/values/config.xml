@@ -29,9 +29,11 @@
     black in software (to avoid aliasing or emulate a cutout that is not physically existent).
     -->
     <!--<bool name="config_fillMainBuiltInDisplayCutout">true</bool>-->
-    <bool name="config_intrusiveNotificationLed">false</bool>
     <bool name="config_intrusiveBatteryLed">false</bool>
-
-    <integer name="config_screenBrightnessPulse">42</integer>
+    
+    <!--  Maximum number of supported users -->
+    <integer name="config_multiuserMaximumUsers">4</integer>
+    <!--  Whether Multiuser UI should be shown -->
+    <bool name="config_enableMultiUserUI">true</bool>
 
 </resources>

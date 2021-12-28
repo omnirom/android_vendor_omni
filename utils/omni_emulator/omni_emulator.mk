@@ -4,7 +4,7 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-TARGET_NO_VENDOR_BOOT := true
+PRODUCT_BUILD_VENDOR_BOOT_IMAGE := false
 PRODUCT_QUOTA_PROJID := 1
 PRODUCT_PROPERTY_OVERRIDES += external_storage.projid.enabled=1
 PRODUCT_PROPERTY_OVERRIDES += external_storage.sdcardfs.enabled=0
