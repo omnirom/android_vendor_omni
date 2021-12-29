@@ -3,7 +3,11 @@ build/soong
 external/drm_hwcomposer
 frameworks/base
 frameworks/native
+frameworks/opt/chips
+packages/apps/Contacts
+packages/apps/Dialer
 packages/apps/Launcher3
+packages/apps/Messaging
 packages/apps/Settings
 packages/apps/SettingsIntelligence
 packages/modules/Permission
