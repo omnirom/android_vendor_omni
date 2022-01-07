@@ -13,4 +13,5 @@ packages/apps/SettingsIntelligence
 packages/modules/Permission
 packages/services/Telephony
 system/core
+system/sepolicy
 system/vold
