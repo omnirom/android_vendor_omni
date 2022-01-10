@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://github.com/BBQDroid/BBQLog/blob/master/projects/cm.xml -->
+<!-- Alternative: https://github.com/omnirom/android_device_samsung_i9300/blob/android-4.4/omni.dependencies -->
+<devicesList>
+    <oem name="Asus">
+        <device>
+            <name>ROG Phone 2</name>
+            <code>rog2</code>
+            <repos>
+                <git name="android_device_asus_rog2" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_kernel_asus_rog2" />
+            </repos>
+        </device>
+        <device>
+            <name>Zenfone 6 2019</name>
+            <code>zenfone6</code>
+            <repos>
+                <git name="android_device_asus_zenfone6" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_kernel_asus_sm8150" />
+            </repos>
+        </device>
+    </oem>
+    <oem name="Acer">
+    </oem>
+    <oem name="Elephone">
+    </oem>
+    <oem name="Nextbit">
+        <device>
+            <name>Nextbit Robin</name>
+            <code>ether</code>
+            <repos>
+                <git name="android_device_nextbit_ether" />
+                <git name="android_kernel_nextbit_msm8992" />
+                <git name="android_hardware_qcom_display-caf-msm8992" />
+                <git name="android_hardware_qcom_audio-caf-msm8992" />
+                <git name="android_hardware_qcom_media-caf-msm8992" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_external_ant-wireless_antradio-library" />
+                <git name="android_external_ant-wireless_ant_native" />
+            </repos>
+        </device>
+    </oem>
+    <oem name="Google">
+    </oem>
+    <oem name="HTC">
+    </oem>
+    <oem name="Huawei">
+        <device>
+            <name>Honor View 10</name>
+            <code>berkeley</code>
+            <repos>
+                <git name="android_device_huawei_berkeley" />
+            </repos>
+        </device>
+    </oem>
+    <oem name="Leeco">
+        <device>
+            <name>Leeco LeMax 2</name>
+            <code>x2</code>
+            <repos>
+                <git name="android_device_leeco_x2" />
+                <git name="android_device_leeco_msm8996-common" />
+                <git name="android_kernel_leeco_msm8996" />
+                <git name="android_hardware_qcom_display-caf-msm8996" />
+                <git name="android_hardware_qcom_audio-caf-msm8996" />
+                <git name="android_hardware_qcom_media-caf-msm8996" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_vendor_qcom_opensource_dpm" />
+                <git name="android_external_ant-wireless_antradio-library" />
+                <git name="android_external_ant-wireless_ant_service" />
+                <git name="android_external_ant-wireless_ant_native" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+            </repos>
+        </device>
+    </oem>
+    <oem name="LG">
+        <device>
+            <name>Nexus 5X</name>
+            <code>bullhead</code>
+            <repos>
+                <git name="android_device_lge_bullhead" />
+                <git name="android_kernel_lge_bullhead" />
+                <git name="android_hardware_qcom_gps" />
+            </repos>
+        </device>
+    </oem>
+    <oem name="Motorola">
+        <device>
+            <name>Moto G4 (Plus)</name>
+            <code>athene</code>
+            <repos>
+                <git name="android_device_motorola_athene" />
+                <git name="android_kernel_motorola_msm8952" />
+                <git name="android_hardware_qcom_display-caf-msm8952" />
+                <git name="android_hardware_qcom_audio-caf-msm8952" />
+                <git name="android_hardware_qcom_media-caf-msm8952" />
+                <git name="android_packages_apps_FMRadio" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_external_libnfnetlink" />
+                <git name="android_external_libnetfilter_conntrack" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_system_qcom" />
+                <git name="android_external_bson" />
+                <git name="android_hardware_qcom_fm" />
+                <git name="android_hardware_qcom_gps" />
+            </repos>
+        </device>
+        <device>
+            <name>Moto G5</name>
+            <code>cedric</code>
+            <repos>
+                <git name="android_device_motorola_cedric" />
+                <git name="android_kernel_motorola_msm8937" />
+                <git name="android_hardware_qcom_display-caf-msm8996" />
+                <git name="android_hardware_qcom_audio-caf-msm8996" />
+                <git name="android_hardware_qcom_media-caf-msm8996" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_packages_apps_FMRadio" />
+                <git name="android_hardware_qcom_fm" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="android_hardware_qcom_wlan-caf" />
+            </repos>
+        </device>
+        <device>
+            <name>Moto G5 Plus</name>
+            <code>potter</code>
+            <repos>
+                <git name="android_device_motorola_potter" />
+                <git name="android_kernel_motorola_msm8953" />
+                <git name="android_hardware_qcom_display-caf-msm8996" />
+                <git name="android_hardware_qcom_audio-caf-msm8996" />
+                <git name="android_hardware_qcom_media-caf-msm8996" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_device_qcom_caf-sepolicy" />
+            </repos>
+        </device>
+        <device>
+            <name>Moto g 5G Plus</name>
+            <code>nairo</code>
+            <repos>
+                <git name="android_device_motorola_dynamic_common" />
+                <git name="android_device_motorola_sm7250_common" />
+                <git name="android_device_motorola_nairo" />
+                <git name="android_vendor_qcom_opensource_packages_apps_Bluetooth" />
+                <git name="android_vendor_qcom_opensource_bluetooth-commonsys-intf" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_packages_apps_MotoActions" />
+                <git name="android_device_qcom_caf-sepolicy" />
+            </repos>
+        </device>
+        <device>
+            <name>Moto g8/g fast</name>
+            <code>motorola_sm6125_common</code>
+            <repos>
+                <git name="android_device_motorola_dynamic_common" />
+                <git name="android_device_motorola_sm6125_common" />
+                <git name="android_kernel_motorola_sm6125" />
+                <git name="android_vendor_qcom_opensource_packages_apps_Bluetooth" />
+                <git name="android_vendor_qcom_opensource_bluetooth-commonsys-intf" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_packages_apps_MotoActions" />
+                <git name="android_device_qcom_caf-sepolicy" />
+            </repos>
+        </device>
+        <device>
+            <name>Moto g pro/g stylus</name>
+            <code>motorola_sm6125_common</code>
+            <repos>
+                <git name="android_device_motorola_dynamic_common" />
+                <git name="android_device_motorola_sm6125_common" />
+                <git name="android_kernel_motorola_sm6125" />
+                <git name="android_vendor_qcom_opensource_packages_apps_Bluetooth" />
+                <git name="android_vendor_qcom_opensource_bluetooth-commonsys-intf" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_packages_apps_MotoActions" />
+                <git name="android_device_qcom_caf-sepolicy" />
+            </repos>
+        </device>
+        <device>
+            <name>Moto g8 power/g power</name>
+            <code>motorola_sm6125_common</code>
+            <repos>
+                <git name="android_device_motorola_dynamic_common" />
+                <git name="android_device_motorola_sm6125_common" />
+                <git name="android_kernel_motorola_sm6125" />
+                <git name="android_vendor_qcom_opensource_packages_apps_Bluetooth" />
+                <git name="android_vendor_qcom_opensource_bluetooth-commonsys-intf" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_packages_apps_MotoActions" />
+                <git name="android_device_qcom_caf-sepolicy" />
+            </repos>
+        </device>
+        <device>
+            <name>Moto One Fusion+</name>
+            <code>liber</code>
+            <repos>
+                <git name="android_device_motorola_dynamic_common" />
+                <git name="android_device_motorola_sm6150_common" />
+                <git name="android_device_motorola_liber" />
+                <git name="android_kernel_motorola_sm6150" />
+                <git name="android_vendor_qcom_opensource_packages_apps_Bluetooth" />
+                <git name="android_vendor_qcom_opensource_bluetooth-commonsys-intf" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_packages_apps_MotoActions" />
+                <git name="android_device_qcom_caf-sepolicy" />
+            </repos>
+        </device>
+        <device>
+            <name>Moto One Hyper</name>
+            <code>def</code>
+            <repos>
+                <git name="android_device_motorola_def" />
+                <git name="android_kernel_motorola_sm6150" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+            </repos>
+        </device>
+        <device>
+            <name>Moto Z</name>
+            <code>griffin</code>
+            <repos>
+                <git name="android_device_motorola_griffin" />
+                <git name="android_kernel_motorola_msm8996" />
+                <git name="android_hardware_qcom_display-caf-msm8996" />
+                <git name="android_hardware_qcom_audio-caf-msm8996" />
+                <git name="android_hardware_qcom_media-caf-msm8996" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_external_bson" />
+            </repos>
+        </device>
+    </oem>
+    <oem name="Nubia">
+        <device>
+            <name>Nubia Red Magic</name>
+            <code>nx609j</code>
+            <repos>
+                <git name="android_device_nubia_nx609j" />
+                <git name="android_kernel_nubia_nx609j" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+            </repos>
+        </device>
+    </oem>
+    <oem name="Samsung">
+        <device>
+            <name>Galaxy Tab S2 9.7 Wi-Fi (2016)</name>
+            <code>gts210vewifi</code>
+            <repos>
+                <git name="android_device_samsung_msm8976-common" />
+                <git name="android_device_samsung_gts210vewifi" />
+                <git name="android_hardware_qcom_display-caf-msm8952" />
+                <git name="android_hardware_qcom_audio-caf-msm8952" />
+                <git name="android_hardware_qcom_media-caf-msm8952" />
+                <git name="android_kernel_samsung_msm8976" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_external_libnfnetlink" />
+                <git name="android_external_libnetfilter_conntrack" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_external_ant-wireless_antradio-library" />
+                <git name="android_external_ant-wireless_ant_service" />
+                <git name="android_external_ant-wireless_ant_native" />
+                <git name="android_external_ant-android_hardware_sony_timekeep" />
+                <git name="android_external_ant-android_hardware_qcom_gps" />
+            </repos>
+        </device>
+    </oem>
+    <oem name="Sony">
+        <device>
+            <name>Xperia X</name>
+            <code>suzu</code>
+            <repos>
+                <git name="android_device_sony_suzu" />
+                <git name="android_device_sony_loire-common" />
+                <git name="android_device_sony_common" />
+                <git name="android_device_sony_sepolicy" />
+                <git name="android_hardware_sony_bluetooth" />
+                <git name="android_hardware_sony_camera" />
+                <git name="android_hardware_sony_cash" />
+                <git name="android_hardware_sony_dataservices" />
+                <git name="android_hardware_sony_audio" />
+                <git name="android_hardware_sony_bootctrl" />
+                <git name="android_hardware_sony_display" />
+                <git name="android_hardware_sony_display-sde" />
+                <git name="android_hardware_sony_gps" />
+                <git name="android_hardware_sony_media" />
+                <git name="android_hardware_sony_fingerprint" />
+                <git name="android_hardware_sony_location" />
+                <git name="android_hardware_sony_macaddrsetup" />
+                <git name="android_hardware_sony_qcrilam" />
+                <git name="android_hardware_sony_timekeep" />
+                <git name="android_hardware_sony_transpower" />
+                <git name="android_kernel_sony_msm" />
+                <git name="android_packages_apps_ExtendedSettings" />
+            </repos>
+        </device>
+        <device>
+            <name>Xperia X Compact</name>
+            <code>kugo</code>
+            <repos>
+                <git name="android_device_sony_kugo" />
+                <git name="android_device_sony_loire-common" />
+                <git name="android_device_sony_common" />
+                <git name="android_device_sony_sepolicy" />
+                <git name="android_hardware_sony_bluetooth" />
+                <git name="android_hardware_sony_camera" />
+                <git name="android_hardware_sony_cash" />
+                <git name="android_hardware_sony_dataservices" />
+                <git name="android_hardware_sony_audio" />
+                <git name="android_hardware_sony_bootctrl" />
+                <git name="android_hardware_sony_display" />
+                <git name="android_hardware_sony_display-sde" />
+                <git name="android_hardware_sony_gps" />
+                <git name="android_hardware_sony_media" />
+                <git name="android_hardware_sony_fingerprint" />
+                <git name="android_hardware_sony_location" />
+                <git name="android_hardware_sony_macaddrsetup" />
+                <git name="android_hardware_sony_qcrilam" />
+                <git name="android_hardware_sony_timekeep" />
+                <git name="android_hardware_sony_transpower" />
+                <git name="android_kernel_sony_msm" />
+                <git name="android_packages_apps_ExtendedSettings" />
+            </repos>
+        </device>
+        <device>
+            <name>Xperia XA2 Plus</name>
+            <code>voyager</code>
+            <repos>
+                <git name="android_device_sony_voyager" />
+                <git name="android_device_sony_nile-common" />
+                <git name="android_hardware_sony_macaddrsetup" />
+                <git name="android_kernel_sony_sdm660" />
+                <git name="android_hardware_qcom_media-caf-sdm660" />
+                <git name="android_hardware_qcom_audio-caf-sdm660" />
+                <git name="android_hardware_qcom_display-caf-sdm660" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="android_packages_apps_OmniDisplayManager" />
+            </repos>
+        </device>
+        <device>
+            <name>Xperia XZ</name>
+            <code>kagura</code>
+            <repos>
+                <git name="android_device_sony_kagura" />
+                <git name="android_device_sony_tone-common" />
+                <git name="android_device_sony_common" />
+                <git name="android_device_sony_sepolicy" />
+                <git name="android_hardware_sony_bluetooth" />
+                <git name="android_hardware_sony_camera" />
+                <git name="android_hardware_sony_cash" />
+                <git name="android_hardware_sony_dataservices" />
+                <git name="android_hardware_sony_audio" />
+                <git name="android_hardware_sony_bootctrl" />
+                <git name="android_hardware_sony_display" />
+                <git name="android_hardware_sony_display-sde" />
+                <git name="android_hardware_sony_gps" />
+                <git name="android_hardware_sony_media" />
+                <git name="android_hardware_sony_fingerprint" />
+                <git name="android_hardware_sony_location" />
+                <git name="android_hardware_sony_macaddrsetup" />
+                <git name="android_hardware_sony_qcrilam" />
+                <git name="android_hardware_sony_timekeep" />
+                <git name="android_hardware_sony_transpower" />
+                <git name="android_kernel_sony_msm" />
+                <git name="android_packages_apps_ExtendedSettings" />
+            </repos>
+        </device>
+        <device>
+            <name>Xperia XZs</name>
+            <code>keyaki</code>
+            <repos>
+                <git name="android_device_sony_keyaki" />
+                <git name="android_device_sony_tone-common" />
+                <git name="android_device_sony_common" />
+                <git name="android_device_sony_sepolicy" />
+                <git name="android_hardware_sony_bluetooth" />
+                <git name="android_hardware_sony_camera" />
+                <git name="android_hardware_sony_cash" />
+                <git name="android_hardware_sony_dataservices" />
+                <git name="android_hardware_sony_audio" />
+                <git name="android_hardware_sony_bootctrl" />
+                <git name="android_hardware_sony_display" />
+                <git name="android_hardware_sony_display-sde" />
+                <git name="android_hardware_sony_gps" />
+                <git name="android_hardware_sony_media" />
+                <git name="android_hardware_sony_fingerprint" />
+                <git name="android_hardware_sony_location" />
+                <git name="android_hardware_sony_macaddrsetup" />
+                <git name="android_hardware_sony_qcrilam" />
+                <git name="android_hardware_sony_timekeep" />
+                <git name="android_hardware_sony_transpower" />
+                <git name="android_kernel_sony_msm" />
+                <git name="android_packages_apps_ExtendedSettings" />
+            </repos>
+        </device>
+    </oem>
+    <oem name="Oppo">
+        <device>
+            <name>Oneplus One</name>
+            <code>find7op</code>
+            <repos>
+                <git name="android_device_oppo_find7op" />
+                <git name="android_kernel_oneplus_msm8974" />
+                <git name="android_hardware_qcom_display-caf-msm8974" />
+                <git name="android_hardware_qcom_media-caf-msm8974" />
+                <git name="android_hardware_qcom_audio-caf-msm8974" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_external_ant-wireless_antradio-library" />
+                <git name="android_external_ant-wireless_ant_service" />
+                <git name="android_external_ant-wireless_ant_native" />
+            </repos>
+        </device>
+    </oem>
+    <oem name="Xiaomi">
+        <device>
+            <name>Redmi Note 5 Pro</name>
+            <code>whyred</code>
+            <repos>
+                <git name="android_device_xiaomi_whyred" />
+                <git name="android_kernel_xiaomi_sdm660" />
+            </repos>
+        </device>
+        <device>
+            <name>Redmi Note 4</name>
+            <code>mido</code>
+            <repos>
+                <git name="android_hardware_qcom_display-caf-msm8996" />
+                <git name="android_hardware_qcom_audio-caf-msm8996" />
+                <git name="android_hardware_qcom_media-caf-msm8996" />
+                <git name="android_kernel_xiaomi_msm8953" />
+                <git name="android_device_xiaomi_mido" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_device_qcom_sepolicy_vndr" />
+                <git name="android_external_ant-wireless_antradio-library" />
+                <git name="android_vendor_qcom_opensource_packages_apps_Bluetooth" />
+                <git name="android_vendor_qcom_opensource_bluetooth-commonsys-intf" />
+                <git name="android_external_json-c" />
+            </repos>
+        </device>
+        <device>
+            <name>Redmi 5 Plus</name>
+            <code>vince</code>
+            <repos>
+                <git name="android_hardware_qcom_audio-caf-msm8996" />
+                <git name="android_hardware_qcom_display-caf-msm8996" />
+                <git name="android_hardware_qcom_media-caf-msm8996" />
+                <git name="android_device_xiaomi_vince" />
+                <git name="android_kernel_xiaomi_vince" />
+                <git name="android_packages_apps_FMRadio" />
+                <git name="android_hardware_qcom_fm" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_external_ant-wireless_antradio-library" />
+                <git name="android_external_ant-wireless_ant_service" />
+                <git name="android_external_ant-wireless_ant_native" />
+            </repos>
+        </device>
+        <device>
+            <name>Mi 5</name>
+            <code>gemini</code>
+            <repos>
+                <git name="android_hardware_qcom_display-caf-msm8996" />
+                <git name="android_hardware_qcom_audio-caf-msm8996" />
+                <git name="android_hardware_qcom_media-caf-msm8996" />
+                <git name="android_kernel_xiaomi_msm8996" />
+                <git name="android_device_xiaomi_gemini" />
+                <git name="android_device_xiaomi_msm8996-common" />
+                <git name="android_vendor_nxp-nfc_opensource_libnfc-nci" />
+                <git name="android_vendor_nxp-nfc_opensource_Nfc" />
+                <git name="android_vendor_nxp-nfc_opensource_frameworks" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_external_libnfnetlink" />
+                <git name="android_external_libnetfilter_conntrack" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_external_ant-wireless_antradio-library" />
+                <git name="android_external_ant-wireless_ant_service" />
+                <git name="android_external_ant-wireless_ant_native" />
+            </repos>
+        </device>
+        <device>
+            <name>Mi Mix 2</name>
+            <code>chiron</code>
+            <repos>
+                <git name="android_device_xiaomi_chiron" />
+                <git name="android_hardware_qcom_display-caf-msm8998" />
+                <git name="android_hardware_qcom_audio-caf-msm8998" />
+                <git name="android_hardware_qcom_media-caf-msm8998" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_dpm" />
+                <git name="android_external_ant-wireless_antradio-library" />
+                <git name="android_external_ant-wireless_ant_service" />
+                <git name="android_external_ant-wireless_ant_native" />
+                <git name="android_kernel_xiaomi_msm8998" />
+                <git name="android_device_xiaomi_msm8998-common" />
+            </repos>
+        </device>
+        <device>
+            <name>Mi 6</name>
+            <code>sagit</code>
+            <repos>
+                <git name="android_device_xiaomi_sagit" />
+                <git name="android_hardware_qcom_display-caf-msm8998" />
+                <git name="android_hardware_qcom_audio-caf-msm8998" />
+                <git name="android_hardware_qcom_media-caf-msm8998" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_dpm" />
+                <git name="android_external_ant-wireless_antradio-library" />
+                <git name="android_external_ant-wireless_ant_service" />
+                <git name="android_external_ant-wireless_ant_native" />
+                <git name="android_kernel_xiaomi_msm8998" />
+                <git name="android_device_xiaomi_msm8998-common" />
+            </repos>
+        </device>
+        <device>
+            <name>Redmi Note 3</name>
+            <code>kenzo</code>
+            <repos>
+                <git name="android_hardware_qcom_display-caf-msm8952" />
+                <git name="android_hardware_qcom_audio-caf-msm8952" />
+                <git name="android_hardware_qcom_media-caf-msm8952" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_external_ant-wireless_antradio-library" />
+                <git name="android_external_ant-wireless_ant_service" />
+                <git name="android_external_ant-wireless_ant_native" />
+                <git name="android_packages_apps_FMRadio" />
+                <git name="android_hardware_qcom_fm" />
+                <git name="android_kernel_xiaomi_msm8956" />
+                <git name="android_device_xiaomi_kenzo" />
+                <git name="android_device_xiaomi_msm8956-common" />
+            </repos>
+        </device>
+        <device>
+            <name>Pocophone F1</name>
+            <code>beryllium</code>
+            <repos>
+                <git name="android_device_xiaomi_beryllium" />
+                <git name="android_kernel_xiaomi_sdm845" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+            </repos>
+        </device>
+        <device>
+            <name>Mi Pad 4 (WiFi)</name>
+            <code>clover</code>
+            <repos>
+                <git name="android_hardware_qcom_display-caf-sdm660" />
+                <git name="android_hardware_qcom_audio-caf-sdm660" />
+                <git name="android_hardware_qcom_media-caf-sdm660" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_kernel_xiaomi_clover" />
+                <git name="android_device_xiaomi_clover" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+            </repos>
+        </device>
+        <device>
+            <name>Mi 9T Pro</name>
+            <code>raphael</code>
+            <repos>
+                <git name="android_device_xiaomi_raphael" />
+                <git name="android_kernel_xiaomi_raphael" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+            </repos>
+        </device>
+        <device>
+            <name>Redmi Note 10 Pro</name>
+            <code>sweet</code>
+            <repos>
+                <git name="android_device_xiaomi_sweet" />
+                <git name="android_kernel_xiaomi_sweet" />
+                <git name="android_device_qcom_caf-sepolicy" />
+            </repos>
+        </device>
+    </oem>
+    <oem name="OnePlus">
+        <device>
+            <name>OnePlus 3</name>
+            <code>oneplus3</code>
+            <repos>
+                <git name="android_device_oneplus_oneplus3" />
+                <git name="android_hardware_qcom_display-caf-msm8996" />
+                <git name="android_hardware_qcom_audio-caf-msm8996" />
+                <git name="android_hardware_qcom_media-caf-msm8996" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_external_libnfnetlink" />
+                <git name="android_external_libnetfilter_conntrack" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_external_ant-wireless_antradio-library" />
+                <git name="android_external_ant-wireless_ant_service" />
+                <git name="android_external_ant-wireless_ant_native" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="android_kernel_oneplus_msm8996" />
+            </repos>
+        </device>
+        <device>
+            <name>OnePlus 5</name>
+            <code>oneplus5</code>
+            <repos>
+                <git name="android_device_oneplus_oneplus5" />
+                <git name="android_hardware_qcom_display-caf-msm8998" />
+                <git name="android_hardware_qcom_audio-caf-msm8998" />
+                <git name="android_hardware_qcom_media-caf-msm8998" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_external_libnfnetlink" />
+                <git name="android_external_libnetfilter_conntrack" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_nxp-nfc_opensource_frameworks" />
+                <git name="android_vendor_nxp-nfc_opensource_libnfc-nci" />
+                <git name="android_external_ant-wireless_antradio-library" />
+                <git name="android_external_ant-wireless_ant_service" />
+                <git name="android_external_ant-wireless_ant_native" />
+                <git name="android_kernel_oneplus_msm8998" />
+                <git name="android_external_json-c" />
+            </repos>
+        </device>
+        <device>
+            <name>OnePlus 5T</name>
+            <code>oneplus5t</code>
+            <repos>
+                <git name="android_device_oneplus_oneplus5" />
+                <git name="android_device_oneplus_oneplus5t" />
+                <git name="android_hardware_qcom_display-caf-msm8998" />
+                <git name="android_hardware_qcom_audio-caf-msm8998" />
+                <git name="android_hardware_qcom_media-caf-msm8998" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_external_libnfnetlink" />
+                <git name="android_external_libnetfilter_conntrack" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_nxp-nfc_opensource_frameworks" />
+                <git name="android_vendor_nxp-nfc_opensource_libnfc-nci" />
+                <git name="android_external_ant-wireless_antradio-library" />
+                <git name="android_external_ant-wireless_ant_service" />
+                <git name="android_external_ant-wireless_ant_native" />
+                <git name="android_kernel_oneplus_msm8998" />
+                <git name="android_external_json-c" />
+            </repos>
+        </device>
+        <device>
+            <name>OnePlus 6</name>
+            <code>oneplus6</code>
+            <repos>
+                <git name="android_device_oneplus_oneplus6" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_kernel_oneplus_sdm845" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+            </repos>
+        </device>
+        <device>
+            <name>OnePlus 6T</name>
+            <code>oneplus6t</code>
+            <repos>
+                <git name="android_device_oneplus_oneplus6t" />
+                <git name="android_device_oneplus_oneplus6" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_kernel_oneplus_sdm845" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+            </repos>
+        </device>
+        <device>
+            <name>OnePlus 7 Pro</name>
+            <code>oneplus7pro</code>
+            <repos>
+                <git name="android_device_oneplus_oneplus7pro" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_kernel_oneplus_sm8150" />
+            </repos>
+        </device>
+        <device>
+            <name>OnePlus 7T</name>
+            <code>oneplus7t</code>
+            <repos>
+                <git name="android_device_oneplus_oneplus7t" />
+                <git name="android_device_oneplus_oneplus7pro" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_kernel_oneplus_sm8150" />
+            </repos>
+        </device>
+        <device>
+            <name>OnePlus 7T Pro</name>
+            <code>oneplus7tpro</code>
+            <repos>
+                <git name="android_device_oneplus_oneplus7tpro" />
+                <git name="android_device_oneplus_oneplus7pro" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_kernel_oneplus_sm8150" />
+            </repos>
+        </device>
+
+    </oem>
+    <oem name="Nokia">
+        <device>
+            <name>Nokia 6.1</name>
+            <code>PL2</code>
+            <repos>
+                <git name="android_device_nokia_PL2" />
+                <git name="android_device_nokia_sdm660-common" />"
+                <git name="android_kernel_nokia_sdm660" />
+            </repos>
+        </device>
+    </oem>
+    <oem name="Raspberry">
+        <device>
+            <name>Raspberry Pi 4</name>
+            <code>rpi4</code>
+            <repos>
+                <git name="android_device_brcm_rpi4" />
+                <git name="android_kernel_brcm_arpi" />
+                <git name="android_hardware_arpi" />
+                <git name="android_external_gbm_gralloc" />
+                <git name="android_external_libgpiod" />
+                <git name="proprietary_vendor_brcm" />
+                <git name="android_packages_apps_DeviceRegistration" />
+            </repos>
+        </device>
+    </oem>
+    <oem name="Khadas">
+        <device>
+            <name>Khadas VIM3</name>
+            <code>yukawa</code>
+            <repos>
+                <git name="android_device_amlogic_yukawa" />
+                <git name="android_kernel_amlogic_yukawa" />
+                <git name="android_packages_apps_DeviceRegistration" />
+            </repos>
+        </device>
+    </oem>
+</devicesList>
