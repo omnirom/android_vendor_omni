@@ -4,6 +4,7 @@ external/drm_hwcomposer
 frameworks/base
 frameworks/native
 frameworks/opt/chips
+hardware/interfaces
 packages/apps/Contacts
 packages/apps/Dialer
 packages/apps/Launcher3
@@ -13,5 +14,6 @@ packages/apps/SettingsIntelligence
 packages/modules/Permission
 packages/services/Telephony
 system/core
+system/security
 system/sepolicy
 system/vold
