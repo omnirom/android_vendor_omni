@@ -24,8 +24,11 @@ else
     ROM_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
 endif
 
+ROM_BRANCH := android-12.0
+
 # Apply it to build.prop
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.modversion=OmniROM-$(ROM_VERSION) \
     ro.omni.version=$(ROM_VERSION) \
-    ro.omni.device=$(TARGET_PRODUCT_SHORT)
+    ro.omni.device=$(TARGET_PRODUCT_SHORT) \
+    ro.omni.branch=$(ROM_BRANCH)
