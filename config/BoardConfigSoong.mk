@@ -31,7 +31,7 @@ SOONG_CONFIG_NAMESPACES += omniGlobalVars
 SOONG_CONFIG_omniGlobalVars += \
     target_create_device_symlinks \
     target_init_vendor_lib \
-    target_surfaceflinger_fod_lib \
+    target_surfaceflinger_udfps_lib \
     healthd_use_battery_info \
     healthd_enable_op_fastchg \
     targetNeedsHWCOnFirstRef \
@@ -61,8 +61,8 @@ SOONG_CONFIG_omniGlobalVars_target_create_device_symlinks := $(TARGET_CREATE_DEV
 
 # Set default values
 TARGET_INIT_VENDOR_LIB ?= vendor_init
-TARGET_SURFACEFLINGER_FOD_LIB ?= surfaceflinger_fod_lib
+TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 
 # Soong value variables
 SOONG_CONFIG_omniGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
-SOONG_CONFIG_omniGlobalVars_target_surfaceflinger_fod_lib := $(TARGET_SURFACEFLINGER_FOD_LIB)
+SOONG_CONFIG_omniGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_SURFACEFLINGER_UDFPS_LIB)
