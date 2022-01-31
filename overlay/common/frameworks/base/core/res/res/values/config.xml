@@ -37,9 +37,6 @@
         <item>/system_ext/priv-app/SystemUI/SystemUI.apk</item>
     </string-array>
 
-    <!--  Define Google play service package for FRP-->
-    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
-
     <bool name="config_dozeAlwaysOnDisplayEnabledDefault">false</bool>
 
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
@@ -53,34 +50,6 @@
 
     <!-- The duration in which a recent task is considered in session and should be visible. -->
     <integer name="config_activeTaskDurationHours">12</integer>
-
-        <!-- The package name for the default wellbeing app.
-         This package must be trusted, as it has the permissions to control other applications
-         on the device.
-         Example: "com.android.wellbeing"
-     -->
-    <string name="config_defaultWellbeingPackage">com.google.android.apps.wellbeing</string>
-
-    <!-- The component name for the system-wide captions manager service.
-         This service must be trusted, as the system binds to it and keeps it running.
-         Example: "com.android.captions/.SystemCaptionsManagerService"
-    -->
-    <string name="config_defaultSystemCaptionsManagerService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService</string>
-
-    <!-- The component name for the system-wide captions service.
-         This service must be trusted, as it controls part of the UI of the volume bar.
-         Example: "com.android.captions/.SystemCaptionsService"
-    -->
-    <string name="config_defaultSystemCaptionsService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.CaptionsService</string>
-
-    <!-- The package name for the default system textclassifier service.
-         This service must be trusted, as it can be activated without explicit consent of the user.
-         Example: "com.android.textclassifier"
-         If no textclassifier service with the specified name exists on the device (or if this is
-         set to empty string), a default textclassifier will be loaded in the calling app's process.
-         See android.view.textclassifier.TextClassificationManager.
-    -->
-    <string name="config_defaultTextClassifierPackage">com.google.android.as</string>
 
     <!-- Indicates that connected MAC randomization is supported on this device -->
     <bool translatable="false" name="config_wifi_connected_mac_randomization_supported">true</bool>
