@@ -1,6 +1,7 @@
 build
 build/soong
 external/drm_hwcomposer
+frameworks/av
 frameworks/base
 frameworks/native
 frameworks/opt/chips
