@@ -113,6 +113,7 @@ function setup_vendor() {
     export BINARIES_LOCATION="$OMNI_ROOT"/vendor/omni/build/tools/${HOST}/bin
 
     export SIMG2IMG="$BINARIES_LOCATION"/simg2img
+    export LPUNPACK="$BINARIES_LOCATION"/lpunpack
 
     if [ -z "$PATCHELF" ]; then
         export PATCHELF="$OMNI_ROOT"/vendor/omni/build/tools/${HOST}/bin/patchelf
@@ -1709,6 +1710,26 @@ function extract() {
                 fi
             done
         fi
+
+        SRC="$DUMPDIR"
+    fi
+
+    if [ -d "$SRC" ] && [ -f "$SRC"/super.img ]; then
+        DUMPDIR="$TMPDIR"/super_dump
+        mkdir -p "$DUMPDIR"
+
+        echo "Unpacking super.img"
+        "$SIMG2IMG" "$SRC"/super.img "$DUMPDIR"/super.raw
+
+        for PARTITION in "system" "odm" "product" "system_ext" "vendor"
+        do
+            echo "Preparing "$PARTITION""
+            if "$LPUNPACK" -p "$PARTITION"_a "$DUMPDIR"/super.raw "$DUMPDIR" ; then
+                mv "$DUMPDIR"/"$PARTITION"_a.img "$DUMPDIR"/"$PARTITION".img
+            else
+                "$LPUNPACK" -p "$PARTITION" "$DUMPDIR"/super.raw "$DUMPDIR"
+            fi
+        done
 
         SRC="$DUMPDIR"
     fi
