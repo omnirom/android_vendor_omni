@@ -1,0 +1,5 @@
+<resources>
+
+    <color name="settingslib_track_on_color">@color/settingslib_switch_track_on</color>
+
+</resources>
