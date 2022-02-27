@@ -9,6 +9,13 @@
         <item>com.android.location.fused</item>
     </string-array>
 
+    <string-array name="config_locationExtraPackageNames" translatable="false">
+        <!-- DejaVuLocationService -->
+        <item>org.fitchfamily.android.dejavu</item>
+        <!-- MozillaNlpBackend -->
+        <item>org.microg.nlp.backend.ichnaea</item>
+    </string-array>
+
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
     <!-- Control whether Night display is available. This should only be enabled on devices
