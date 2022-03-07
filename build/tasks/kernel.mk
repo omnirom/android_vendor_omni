@@ -29,7 +29,7 @@
 #                                          Same as TARGET_KERNEL_CONFIG, but paths are specified
 #                                          instead of filenames.
 #
-#   TARGET_KERNEL_CLANG_COMPILE        = Compile kernel with clang, defaults to false
+#   TARGET_KERNEL_CLANG_COMPILE        = Compile kernel with clang, defaults to true
 #
 #   BOARD_KERNEL_IMAGE_NAME            = Built image name
 #                                          for ARM use: zImage
@@ -280,7 +280,7 @@ endif
 
 # Add host bin out dir to path
 PATH_OVERRIDE := PATH=$(KERNEL_BUILD_OUT_PREFIX)$(HOST_OUT_EXECUTABLES):$$PATH
-ifeq ($(TARGET_KERNEL_CLANG_COMPILE),true)
+ifneq ($(TARGET_KERNEL_CLANG_COMPILE),false)
     ifeq ($(KERNEL_ARCH),arm64)
         KERNEL_CLANG_TRIPLE ?= CLANG_TRIPLE=aarch64-linux-gnu-
     else ifeq ($(KERNEL_ARCH),arm)
