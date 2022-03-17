@@ -110,6 +110,10 @@ function setup_vendor() {
         VENDOR_RADIO_STATE=0
     fi
 
+    export BINARIES_LOCATION="$OMNI_ROOT"/vendor/omni/build/tools/${HOST}/bin
+
+    export SIMG2IMG="$BINARIES_LOCATION"/simg2img
+
     if [ -z "$PATCHELF" ]; then
         export PATCHELF="$OMNI_ROOT"/vendor/omni/build/tools/${HOST}/bin/patchelf
     fi
@@ -1721,7 +1725,7 @@ function extract() {
                 if [[ $(file -b "$IMAGE") == Linux* ]]; then
                     extract_img_data "$IMAGE" "$DUMPDIR"/"$PARTITION"
                 elif [[ $(file -b "$IMAGE") == Android* ]]; then
-                    simg2img "$IMAGE" "$DUMPDIR"/"$PARTITION".raw
+                    "$SIMG2IMG" "$IMAGE" "$DUMPDIR"/"$PARTITION".raw
                     extract_img_data "$DUMPDIR"/"$PARTITION".raw "$DUMPDIR"/"$PARTITION"/
                 else
                     echo "Unsupported "$IMAGE""
@@ -2220,7 +2224,7 @@ function generate_prop_list_from_image() {
     if [[ $(file -b "$image_file") == Linux* ]]; then
         extract_img_data "$image_file" "$image_dir"
     elif [[ $(file -b "$image_file") == Android* ]]; then
-        simg2img "$image_file" "$image_dir"/"$(basename "$image_file").raw"
+        "$SIMG2IMG" "$image_file" "$image_dir"/"$(basename "$image_file").raw"
         extract_img_data "$image_dir"/"$(basename "$image_file").raw" "$image_dir"
         rm "$image_dir"/"$(basename "$image_file").raw"
     else
