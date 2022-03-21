@@ -12,7 +12,6 @@ packages/apps/Launcher3
 packages/apps/Messaging
 packages/apps/Settings
 packages/apps/SettingsIntelligence
-packages/modules/Permission
 packages/services/Telecomm
 packages/services/Telephony
 system/core
