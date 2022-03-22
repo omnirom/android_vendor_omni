@@ -25,7 +25,7 @@ OPERATION="${admin}"
 
 url="gerrit.omnirom.org"
 port="29418"
-branch="android-12.0"
+branch="android-12.1"
 
 cd ../../../
 
