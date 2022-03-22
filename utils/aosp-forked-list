@@ -17,4 +17,5 @@ packages/services/Telephony
 system/core
 system/security
 system/sepolicy
+system/update_engine
 system/vold
