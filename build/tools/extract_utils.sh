@@ -114,13 +114,10 @@ function setup_vendor() {
 
     export SIMG2IMG="$BINARIES_LOCATION"/simg2img
     export LPUNPACK="$BINARIES_LOCATION"/lpunpack
+    export SIGSCAN="$BINARIES_LOCATION"/SigScan
 
     if [ -z "$PATCHELF" ]; then
         export PATCHELF="$OMNI_ROOT"/vendor/omni/build/tools/${HOST}/bin/patchelf
-    fi
-
-    if [ -z "$SIGSCAN" ]; then
-        export SIGSCAN="$OMNI_ROOT"/vendor/omni/build/tools/${HOST}/bin/SigScan
     fi
 }
 
