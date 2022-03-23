@@ -106,6 +106,10 @@ function setup_vendor() {
     if [ -z "$PATCHELF" ]; then
         export PATCHELF="$OMNI_ROOT"/vendor/omni/build/tools/${HOST}/bin/patchelf
     fi
+
+    if [ -z "$SIGSCAN" ]; then
+        export SIGSCAN="$OMNI_ROOT"/vendor/omni/build/tools/${HOST}/bin/SigScan
+    fi
 }
 
 # Helper functions for parsing a spec.
