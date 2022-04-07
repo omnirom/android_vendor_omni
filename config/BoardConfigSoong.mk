@@ -14,10 +14,6 @@ EXPORT_TO_SOONG := \
 
 SOONG_CONFIG_NAMESPACES += omniromVarsPlugin
 
-ifeq ($(ROM_BUILDTYPE),GAPPS)
-PRODUCT_SOONG_NAMESPACES += vendor/gapps
-endif
-
 SOONG_CONFIG_omniromVarsPlugin :=
 
 define addVar
