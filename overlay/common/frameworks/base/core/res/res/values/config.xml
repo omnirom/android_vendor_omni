@@ -33,6 +33,8 @@
         <item>org.fitchfamily.android.dejavu</item>
         <!-- MozillaNlpBackend -->
         <item>org.microg.nlp.backend.ichnaea</item>
+        <!-- TeleService -->
+        <item>com.android.phone</item>
     </string-array>
 
     <bool name="config_cellBroadcastAppLinks">true</bool>
