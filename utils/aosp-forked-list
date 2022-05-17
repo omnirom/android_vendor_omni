@@ -8,6 +8,7 @@ frameworks/opt/chips
 hardware/interfaces
 packages/apps/Contacts
 packages/apps/Dialer
+packages/apps/EmergencyInfo
 packages/apps/Launcher3
 packages/apps/Messaging
 packages/apps/Settings
