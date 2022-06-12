@@ -289,8 +289,6 @@ $(KERNEL_CONFIG): $(KERNEL_OUT) $(ALL_KERNEL_DEFCONFIG_SRCS)
 			echo $(KERNEL_CONFIG_OVERRIDE) >> $(KERNEL_OUT)/.config; \
 			$(call make-kernel-target,oldconfig); \
 		fi
-	# Create defconfig build artifact
-	$(call make-kernel-target,savedefconfig)
 	$(hide) if [ ! -z "$(KERNEL_ADDITIONAL_CONFIG)" ]; then \
 			echo "Using additional config '$(KERNEL_ADDITIONAL_CONFIG)'"; \
 			$(KERNEL_SRC)/scripts/kconfig/merge_config.sh -m -O $(KERNEL_OUT) $(KERNEL_OUT)/.config $(KERNEL_SRC)/arch/$(KERNEL_ARCH)/configs/$(KERNEL_ADDITIONAL_CONFIG); \
@@ -334,6 +332,7 @@ kerneltags: $(KERNEL_CONFIG)
 
 kernelsavedefconfig: $(KERNEL_OUT)
 	$(call make-kernel-config,$(KERNEL_OUT),$(BASE_KERNEL_DEFCONFIG))
+	$(call make-kernel-target,savedefconfig)
 	cp $(KERNEL_OUT)/defconfig $(BASE_KERNEL_DEFCONFIG_SRC)
 
 alldefconfig: $(KERNEL_OUT)
