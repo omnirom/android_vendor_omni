@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "afedbd4e_ed26b781",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002322
+      },
+      "writtenOn": "2022-06-23T14:07:02Z",
+      "side": 1,
+      "message": "all bringup-extract_utils topic are good",
+      "revId": "685e1ac575987a4e96f36cdb726eb20b458c49a2",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55"
+    }
+  ]
+}
