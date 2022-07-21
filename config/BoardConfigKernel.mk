@@ -28,6 +28,11 @@
 #
 #   TARGET_KERNEL_CLANG_COMPILE        = Compile kernel with clang, defaults to false
 #
+#   TARGET_KERNEL_EXT_MODULE_ROOT      = Optional, the external modules root directory
+#                                          Defaults to empty
+#   TARGET_KERNEL_EXT_MODULES          = Optional, the external modules we are
+#                                          building. Defaults to empty
+#
 #   KERNEL_TOOLCHAIN_PREFIX            = Overrides TARGET_KERNEL_CROSS_COMPILE_PREFIX,
 #                                          Set this var in shell to override
 #                                          toolchain specified in BoardConfig.mk
@@ -128,6 +133,10 @@ endif
 ifeq (true,$(filter true, $(TARGET_NEEDS_DTBOIMAGE) $(BOARD_KERNEL_SEPARATED_DTBO)))
 BOARD_PREBUILT_DTBOIMAGE ?= $(TARGET_OUT_INTERMEDIATES)/DTBO_OBJ/arch/$(KERNEL_ARCH)/boot/dtbo.img
 endif
+
+# Set no external modules by default
+TARGET_KERNEL_EXT_MODULE_ROOT ?=
+TARGET_KERNEL_EXT_MODULES ?=
 
 # Set use the full path to the make command
 KERNEL_MAKE_CMD := $(BUILD_TOP)/prebuilts/build-tools/$(HOST_PREBUILT_TAG)/bin/make
