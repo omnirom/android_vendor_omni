@@ -16,6 +16,23 @@
       "message": "This plugin only for Gapps is ok for you ? ",
       "revId": "04b4f3cfb334a62c39536b82d1058c38dd425a55",
       "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0401d91_dcfcbf71",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000026
+      },
+      "writtenOn": "2022-07-22T23:00:02Z",
+      "side": 1,
+      "message": "I dont use it anyway - so fine for me if it works",
+      "revId": "04b4f3cfb334a62c39536b82d1058c38dd425a55",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55"
     }
   ]
 }
