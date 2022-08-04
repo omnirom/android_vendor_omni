@@ -86,8 +86,8 @@ endif
 # Clear this first to prevent accidental poisoning from env
 KERNEL_MAKE_FLAGS :=
 
-# Add back threads, ninja cuts this to $(nproc)/2
-KERNEL_MAKE_FLAGS += -j$(shell nproc --all)
+# Add back threads, ninja cuts this to $(getconf _NPROCESSORS_ONLN)/2
+KERNEL_MAKE_FLAGS += -j$(shell getconf _NPROCESSORS_ONLN)
 
 # 5.10+ can fully compile without gcc
 ifeq (,$(filter 5.10, $(TARGET_KERNEL_VERSION)))
