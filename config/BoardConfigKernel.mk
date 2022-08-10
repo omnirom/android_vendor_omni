@@ -35,6 +35,8 @@
 #                                        Defaults to empty
 #   TARGET_KERNEL_DTBO                 = Name of the kernel Makefile target that
 #                                        generates dtbo.img. Defaults to dtbo.img
+#   TARGET_KERNEL_DTB                  = Name of the kernel Makefile target that
+#                                        generates the *.dtb targets. Defaults to dtbs
 #
 #   TARGET_KERNEL_EXT_MODULE_ROOT      = Optional, the external modules root directory
 #                                          Defaults to empty
@@ -150,6 +152,9 @@ TARGET_KERNEL_DTBO_PREFIX ?=
 TARGET_KERNEL_DTBO ?= dtbo.img
 BOARD_PREBUILT_DTBOIMAGE ?= $(TARGET_OUT_INTERMEDIATES)/DTBO_OBJ/arch/$(KERNEL_ARCH)/boot/$(TARGET_KERNEL_DTBO_PREFIX)$(TARGET_KERNEL_DTBO)
 endif
+
+# Set the default dtb target
+TARGET_KERNEL_DTB ?= dtbs
 
 # Set no external modules by default
 TARGET_KERNEL_EXT_MODULE_ROOT ?=
