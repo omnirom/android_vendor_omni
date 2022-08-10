@@ -31,6 +31,9 @@
 #                                        makefile. Can be overriden in device trees
 #                                        in the event of prebuilt kernel.
 #
+#   TARGET_KERNEL_DTBO                 = Name of the kernel Makefile target that
+#                                        generates dtbo.img. Defaults to dtbo.img
+#
 #   TARGET_KERNEL_EXT_MODULE_ROOT      = Optional, the external modules root directory
 #                                          Defaults to empty
 #   TARGET_KERNEL_EXT_MODULES          = Optional, the external modules we are
@@ -141,7 +144,8 @@ endif
 
 # Set DTBO image locations so the build system knows to build them
 ifeq (true,$(filter true, $(TARGET_NEEDS_DTBOIMAGE) $(BOARD_KERNEL_SEPARATED_DTBO)))
-BOARD_PREBUILT_DTBOIMAGE ?= $(TARGET_OUT_INTERMEDIATES)/DTBO_OBJ/arch/$(KERNEL_ARCH)/boot/dtbo.img
+TARGET_KERNEL_DTBO ?= dtbo.img
+BOARD_PREBUILT_DTBOIMAGE ?= $(TARGET_OUT_INTERMEDIATES)/DTBO_OBJ/arch/$(KERNEL_ARCH)/boot/$(TARGET_KERNEL_DTBO)
 endif
 
 # Set no external modules by default
