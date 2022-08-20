@@ -24,7 +24,7 @@ OPERATION="${squash}"
 
 branch_name=${ref}"-merge"
 
-branch_current="android-12.1"
+branch_current="android-13.0"
 
 cd ../../../
 

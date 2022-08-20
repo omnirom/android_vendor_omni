@@ -24,7 +24,7 @@ else
     ROM_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
 endif
 
-ROM_BRANCH := android-12.1
+ROM_BRANCH := android-13.0
 
 # Apply it to build.prop
 PRODUCT_PRODUCT_PROPERTIES += \
