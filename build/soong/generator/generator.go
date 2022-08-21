@@ -147,7 +147,7 @@ func (g *Module) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 	if len(g.properties.Tools) > 0 {
 		ctx.VisitDirectDepsBlueprint(func(module blueprint.Module) {
 			switch ctx.OtherModuleDependencyTag(module) {
-			case android.SourceDepTag:
+			//case android.SourceDepTag:
 				// Nothing to do
 			case hostToolDepTag:
 				tool := ctx.OtherModuleName(module)
