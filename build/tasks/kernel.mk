@@ -373,7 +373,7 @@ ALL_PREBUILT += $(file)
 
 ifeq ($(BOARD_KERNEL_IMAGE_LZ4),true)
 $(file) : $(KERNEL_BIN)
-	$(LZ4) -f $(KERNEL_BIN) $@
+	$(LZ4) -9 -f $(KERNEL_BIN) $@
 else
 $(file) : $(KERNEL_BIN) | $(ACP)
 	$(transform-prebuilt-to-target)
