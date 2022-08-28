@@ -36,3 +36,5 @@ allow update_engine system_lib_file:file { create relabelfrom setattr write };
 allow update_engine vendor_overlay_file:file { getattr read };
 allow update_engine linkerconfig_file:dir { getattr };
 allow update_engine update_engine:capability { kill };
+allow update_engine fuse:file r_file_perms;
+binder_call(update_engine, platform_app)
