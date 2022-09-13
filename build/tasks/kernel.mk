@@ -62,6 +62,7 @@
 #   NEED_KERNEL_MODULE_VENDOR_OVERLAY  = Optional, if true, install kernel
 #                                          modules in vendor overlay instead of vendor
 
+ifneq ($(TARGET_USES_KERNEL_PLATFORM),true)
 ifneq ($(TARGET_NO_KERNEL),true)
 ifneq ($(TARGET_NO_KERNEL_OVERRIDE),true)
 
@@ -411,3 +412,4 @@ dtbimage: $(INSTALLED_DTBIMAGE_TARGET)
 
 endif # TARGET_NO_KERNEL_OVERRIDE
 endif # TARGET_NO_KERNEL
+endif # TARGET_USES_KERNEL_PLATFORM
