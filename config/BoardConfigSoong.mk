@@ -28,6 +28,7 @@ SOONG_CONFIG_omniGlobalVars += \
     target_create_device_symlinks \
     target_init_vendor_lib \
     target_surfaceflinger_udfps_lib \
+    gralloc_handle_has_reserved_size \
     healthd_use_battery_info \
     healthd_enable_op_fastchg \
     targetNeedsHWCOnFirstRef \
@@ -46,6 +47,7 @@ SOONG_CONFIG_omniQcomVars += \
 SOONG_CONFIG_omniQcomVars_healthd_enable_tricolor_led := $(HEALTHD_ENABLE_TRICOLOR_LED)
 SOONG_CONFIG_omniQcomVars_supports_hw_fde := $(TARGET_HW_DISK_ENCRYPTION)
 SOONG_CONFIG_omniQcomVars_supports_hw_fde_perf := $(TARGET_HW_DISK_ENCRYPTION_PERF)
+SOONG_CONFIG_omniGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_omniGlobalVars_healthd_use_battery_info := $(HEALTHD_USE_BATTERY_INFO)
 SOONG_CONFIG_omniGlobalVars_healthd_enable_op_fastchg := $(HEALTHD_ENABLE_OP_FASTCHG_CHECK)
 SOONG_CONFIG_omniGlobalVars_targetNeedsHWCOnFirstRef := $(TARGET_NEEDS_HWC_ONFIRSTREF)
@@ -58,6 +60,7 @@ SOONG_CONFIG_omniGlobalVars_target_create_device_symlinks := $(TARGET_CREATE_DEV
 # Set default values
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 
 # Soong value variables
 SOONG_CONFIG_omniGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
