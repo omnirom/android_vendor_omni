@@ -41,7 +41,6 @@
         <permission name="android.permission.REBOOT"/>
         <permission name="android.permission.RECOVERY"/>
         <permission name="android.permission.MANAGE_USERS"/>
-        <permission name="android.permission.BROADCAST_STICKY"/>
     </privapp-permissions>
 
     <privapp-permissions package="org.omnirom.logcat">
@@ -83,5 +82,11 @@
     <privapp-permissions package="org.omnirom.control">
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="org.omnirom.omniota">
+        <permission name="android.permission.ACCESS_CACHE_FILESYSTEM"/>
+        <permission name="android.permission.REBOOT"/>
+        <permission name="android.permission.RECOVERY"/>
     </privapp-permissions>
 </permissions>
