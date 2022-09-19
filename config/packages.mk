@@ -6,8 +6,8 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     MatLog \
     OmniStoreInstallerPrebuilt \
-    OpenDelta \
-    WallpaperCropper2
+    WallpaperCropper2 \
+    OmniOta
 
 # Additional tools
 PRODUCT_PACKAGES += \
