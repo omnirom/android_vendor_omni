@@ -3,11 +3,11 @@ PRODUCT_PACKAGES += \
     MonthCalendarWidget \
     OmniSwitch \
     OmniJaws \
-    OmniStyle \
     MatLog \
     OmniStoreInstallerPrebuilt \
     WallpaperCropper2 \
-    OmniOta
+    OmniOta \
+    OmniWallpaper
 
 # Additional tools
 PRODUCT_PACKAGES += \
