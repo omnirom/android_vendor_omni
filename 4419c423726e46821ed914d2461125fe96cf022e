@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15c4cb4d_670b3acb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002322
+      },
+      "writtenOn": "2022-09-29T22:15:17Z",
+      "side": 1,
+      "message": "an eg how to use:\n\nhttps://gerrit.omnirom.org/c/android_device_asus_rog3/+/42396",
+      "revId": "4419c423726e46821ed914d2461125fe96cf022e",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55"
+    }
+  ]
+}
