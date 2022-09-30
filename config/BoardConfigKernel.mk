@@ -65,9 +65,9 @@ endif
 
 TARGET_KERNEL_ARCH := $(strip $(TARGET_KERNEL_ARCH))
 ifeq ($(TARGET_KERNEL_ARCH),)
-KERNEL_ARCH := $(TARGET_ARCH)
+    KERNEL_ARCH := $(TARGET_ARCH)
 else
-KERNEL_ARCH := $(TARGET_KERNEL_ARCH)
+    KERNEL_ARCH := $(TARGET_KERNEL_ARCH)
 endif
 
 ifneq ($(TARGET_KERNEL_CLANG_VERSION),)
@@ -95,16 +95,16 @@ KERNEL_TOOLCHAIN_PREFIX_x86 := x86_64-linux-android-
 
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(strip $(TARGET_KERNEL_CROSS_COMPILE_PREFIX))
 ifneq ($(TARGET_KERNEL_CROSS_COMPILE_PREFIX),)
-KERNEL_TOOLCHAIN_PREFIX ?= $(TARGET_KERNEL_CROSS_COMPILE_PREFIX)
+    KERNEL_TOOLCHAIN_PREFIX ?= $(TARGET_KERNEL_CROSS_COMPILE_PREFIX)
 else
-KERNEL_TOOLCHAIN ?= $(KERNEL_TOOLCHAIN_$(KERNEL_ARCH))
-KERNEL_TOOLCHAIN_PREFIX ?= $(KERNEL_TOOLCHAIN_PREFIX_$(KERNEL_ARCH))
+    KERNEL_TOOLCHAIN ?= $(KERNEL_TOOLCHAIN_$(KERNEL_ARCH))
+    KERNEL_TOOLCHAIN_PREFIX ?= $(KERNEL_TOOLCHAIN_PREFIX_$(KERNEL_ARCH))
 endif
 
 ifeq ($(KERNEL_TOOLCHAIN),)
-KERNEL_TOOLCHAIN_PATH := $(KERNEL_TOOLCHAIN_PREFIX)
+    KERNEL_TOOLCHAIN_PATH := $(KERNEL_TOOLCHAIN_PREFIX)
 else
-KERNEL_TOOLCHAIN_PATH := $(KERNEL_TOOLCHAIN)/$(KERNEL_TOOLCHAIN_PREFIX)
+    KERNEL_TOOLCHAIN_PATH := $(KERNEL_TOOLCHAIN)/$(KERNEL_TOOLCHAIN_PREFIX)
 endif
 
 # We need to add GCC toolchain to the path no matter what
@@ -126,8 +126,8 @@ endif
 
 # Needed for CONFIG_COMPAT_VDSO, safe to set for all arm64 builds
 ifeq ($(KERNEL_ARCH),arm64)
-   KERNEL_CROSS_COMPILE += CROSS_COMPILE_ARM32="$(KERNEL_TOOLCHAIN_arm)/$(KERNEL_TOOLCHAIN_PREFIX_arm)"
-   KERNEL_CROSS_COMPILE += CROSS_COMPILE_COMPAT="$(KERNEL_TOOLCHAIN_arm)/$(KERNEL_TOOLCHAIN_PREFIX_arm)"
+    KERNEL_CROSS_COMPILE += CROSS_COMPILE_ARM32="$(KERNEL_TOOLCHAIN_arm)/$(KERNEL_TOOLCHAIN_PREFIX_arm)"
+    KERNEL_CROSS_COMPILE += CROSS_COMPILE_COMPAT="$(KERNEL_TOOLCHAIN_arm)/$(KERNEL_TOOLCHAIN_PREFIX_arm)"
 endif
 
 # Clear this first to prevent accidental poisoning from env
@@ -137,28 +137,28 @@ KERNEL_MAKE_FLAGS :=
 KERNEL_MAKE_FLAGS += -j$(shell nproc --all)
 
 ifeq ($(TARGET_KERNEL_CLANG_COMPILE),false)
-  ifeq ($(KERNEL_ARCH),arm)
-    # Avoid "Unknown symbol _GLOBAL_OFFSET_TABLE_" errors
-    KERNEL_MAKE_FLAGS += CFLAGS_MODULE="-fno-pic"
-  endif
+    ifeq ($(KERNEL_ARCH),arm)
+        # Avoid "Unknown symbol _GLOBAL_OFFSET_TABLE_" errors
+        KERNEL_MAKE_FLAGS += CFLAGS_MODULE="-fno-pic"
+    endif
 
-  ifeq ($(KERNEL_ARCH),arm64)
-    # Avoid "unsupported RELA relocation: 311" errors (R_AARCH64_ADR_GOT_PAGE)
-    KERNEL_MAKE_FLAGS += CFLAGS_MODULE="-fno-pic"
-  endif
+    ifeq ($(KERNEL_ARCH),arm64)
+        # Avoid "unsupported RELA relocation: 311" errors (R_AARCH64_ADR_GOT_PAGE)
+        KERNEL_MAKE_FLAGS += CFLAGS_MODULE="-fno-pic"
+    endif
 endif
 
 ifeq ($(HOST_OS),darwin)
-  KERNEL_MAKE_FLAGS += HOSTCFLAGS="-I$(BUILD_TOP)/external/elfutils/libelf -I/usr/local/opt/openssl/include " HOSTLDFLAGS="-L/usr/local/opt/openssl/lib -fuse-ld=lld"
+    KERNEL_MAKE_FLAGS += HOSTCFLAGS="-I$(BUILD_TOP)/external/elfutils/libelf -I/usr/local/opt/openssl/include " HOSTLDFLAGS="-L/usr/local/opt/openssl/lib -fuse-ld=lld"
 else
-  KERNEL_MAKE_FLAGS += HOSTLDFLAGS="-L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -fuse-ld=lld"
+    KERNEL_MAKE_FLAGS += HOSTLDFLAGS="-L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -fuse-ld=lld"
 endif
 
 # Set DTBO image locations so the build system knows to build them
 ifeq (true,$(filter true, $(TARGET_NEEDS_DTBOIMAGE) $(BOARD_KERNEL_SEPARATED_DTBO)))
-TARGET_KERNEL_DTBO_PREFIX ?=
-TARGET_KERNEL_DTBO ?= dtbo.img
-BOARD_PREBUILT_DTBOIMAGE ?= $(TARGET_OUT_INTERMEDIATES)/DTBO_OBJ/arch/$(KERNEL_ARCH)/boot/$(TARGET_KERNEL_DTBO_PREFIX)$(TARGET_KERNEL_DTBO)
+    TARGET_KERNEL_DTBO_PREFIX ?=
+    TARGET_KERNEL_DTBO ?= dtbo.img
+    BOARD_PREBUILT_DTBOIMAGE ?= $(TARGET_OUT_INTERMEDIATES)/DTBO_OBJ/arch/$(KERNEL_ARCH)/boot/$(TARGET_KERNEL_DTBO_PREFIX)$(TARGET_KERNEL_DTBO)
 endif
 
 # Set the default dtb target
@@ -177,11 +177,11 @@ KERNEL_MAKE_FLAGS += HOSTCXX=$(TARGET_KERNEL_CLANG_PATH)/bin/clang++
 
 # Use LLVM's substitutes for GNU binutils
 ifneq ($(TARGET_KERNEL_CLANG_COMPILE), false)
-ifneq ($(TARGET_KERNEL_LLVM_BINUTILS), false)
-    KERNEL_MAKE_FLAGS += LLVM=1 LLVM_IAS=1
-    KERNEL_MAKE_FLAGS += LD=$(CLANG_PREBUILTS)/bin/ld.lld
-    KERNEL_MAKE_FLAGS += AR=$(CLANG_PREBUILTS)/bin/llvm-ar
-endif
+    ifneq ($(TARGET_KERNEL_LLVM_BINUTILS), false)
+        KERNEL_MAKE_FLAGS += LLVM=1 LLVM_IAS=1
+        KERNEL_MAKE_FLAGS += LD=$(CLANG_PREBUILTS)/bin/ld.lld
+        KERNEL_MAKE_FLAGS += AR=$(CLANG_PREBUILTS)/bin/llvm-ar
+    endif
 endif
 
 # Since Linux 4.16, flex and bison are required
@@ -198,7 +198,7 @@ KERNEL_MAKE_FLAGS += PAHOLE=$(BUILD_TOP)/prebuilts/kernel-build-tools/linux-x86/
 OUT_DIR_PREFIX := $(shell echo $(OUT_DIR) | sed -e 's|/target/.*$$||g')
 KERNEL_BUILD_OUT_PREFIX :=
 ifeq ($(OUT_DIR_PREFIX),out)
-KERNEL_BUILD_OUT_PREFIX := $(BUILD_TOP)/
+    KERNEL_BUILD_OUT_PREFIX := $(BUILD_TOP)/
 endif
 
 ifneq ($(TARGET_KERNEL_PLATFORM_TARGET),)
