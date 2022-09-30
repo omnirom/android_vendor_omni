@@ -75,6 +75,20 @@ KERNEL_PATCHLEVEL := $(shell grep -s "^PATCHLEVEL = " $(TARGET_KERNEL_SOURCE)/Ma
 TARGET_KERNEL_VERSION ?= $(shell echo $(KERNEL_VERSION)"."$(KERNEL_PATCHLEVEL))
 
 CLANG_PREBUILTS := $(BUILD_TOP)/prebuilts/clang/host/$(HOST_PREBUILT_TAG)/$(LLVM_PREBUILTS_VERSION)
+
+ifneq ($(USE_CCACHE),)
+    ifneq ($(CCACHE_EXEC),)
+        # Android 10+ deprecates use of a build ccache. Only system installed ones are now allowed
+        CCACHE_BIN := $(CCACHE_EXEC)
+    endif
+endif
+
+# Clear this first to prevent accidental poisoning from env
+KERNEL_MAKE_FLAGS :=
+
+# Add back threads, ninja cuts this to $(nproc)/2
+KERNEL_MAKE_FLAGS += -j$(shell nproc --all)
+
 GCC_PREBUILTS := $(BUILD_TOP)/prebuilts/gcc/$(HOST_PREBUILT_TAG)
 # arm64 toolchain
 KERNEL_TOOLCHAIN_arm64 := $(GCC_PREBUILTS)/aarch64/aarch64-linux-android-4.9/bin
@@ -104,13 +118,6 @@ endif
 # for tools like `as`
 KERNEL_TOOLCHAIN_PATH_gcc := $(KERNEL_TOOLCHAIN_$(KERNEL_ARCH))
 
-ifneq ($(USE_CCACHE),)
-    ifneq ($(CCACHE_EXEC),)
-        # Android 10+ deprecates use of a build ccache. Only system installed ones are now allowed
-        CCACHE_BIN := $(CCACHE_EXEC)
-    endif
-endif
-
 ifneq ($(TARGET_KERNEL_CLANG_COMPILE),false)
     KERNEL_CROSS_COMPILE := CROSS_COMPILE="$(KERNEL_TOOLCHAIN_PATH)"
 else
@@ -122,12 +129,6 @@ ifeq ($(KERNEL_ARCH),arm64)
     KERNEL_CROSS_COMPILE += CROSS_COMPILE_ARM32="$(KERNEL_TOOLCHAIN_arm)/$(KERNEL_TOOLCHAIN_PREFIX_arm)"
     KERNEL_CROSS_COMPILE += CROSS_COMPILE_COMPAT="$(KERNEL_TOOLCHAIN_arm)/$(KERNEL_TOOLCHAIN_PREFIX_arm)"
 endif
-
-# Clear this first to prevent accidental poisoning from env
-KERNEL_MAKE_FLAGS :=
-
-# Add back threads, ninja cuts this to $(nproc)/2
-KERNEL_MAKE_FLAGS += -j$(shell nproc --all)
 
 ifeq ($(TARGET_KERNEL_CLANG_COMPILE),false)
     ifeq ($(KERNEL_ARCH),arm)
@@ -147,6 +148,16 @@ else
     KERNEL_MAKE_FLAGS += HOSTLDFLAGS="-L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -fuse-ld=lld"
 endif
 
+# Set the full path to the clang command and LLVM binutils
+KERNEL_MAKE_FLAGS += HOSTCC=$(CLANG_PREBUILTS)/bin/clang
+KERNEL_MAKE_FLAGS += HOSTCXX=$(CLANG_PREBUILTS)/bin/clang++
+ifneq ($(TARGET_KERNEL_CLANG_COMPILE), false)
+    ifneq ($(TARGET_KERNEL_LLVM_BINUTILS), false)
+        KERNEL_MAKE_FLAGS += LD=$(CLANG_PREBUILTS)/bin/ld.lld
+        KERNEL_MAKE_FLAGS += AR=$(CLANG_PREBUILTS)/bin/llvm-ar
+    endif
+endif
+
 # Set DTBO image locations so the build system knows to build them
 ifeq (true,$(filter true, $(TARGET_NEEDS_DTBOIMAGE) $(BOARD_KERNEL_SEPARATED_DTBO)))
     TARGET_KERNEL_DTBO_PREFIX ?=
@@ -164,16 +175,10 @@ TARGET_KERNEL_EXT_MODULES ?=
 # Set use the full path to the make command
 KERNEL_MAKE_CMD := $(BUILD_TOP)/prebuilts/build-tools/$(HOST_PREBUILT_TAG)/bin/make
 
-# Set the full path to the clang command
-KERNEL_MAKE_FLAGS += HOSTCC=$(CLANG_PREBUILTS)/bin/clang
-KERNEL_MAKE_FLAGS += HOSTCXX=$(CLANG_PREBUILTS)/bin/clang++
-
 # Use LLVM's substitutes for GNU binutils
 ifneq ($(TARGET_KERNEL_CLANG_COMPILE), false)
     ifneq ($(TARGET_KERNEL_LLVM_BINUTILS), false)
         KERNEL_MAKE_FLAGS += LLVM=1 LLVM_IAS=1
-        KERNEL_MAKE_FLAGS += LD=$(CLANG_PREBUILTS)/bin/ld.lld
-        KERNEL_MAKE_FLAGS += AR=$(CLANG_PREBUILTS)/bin/llvm-ar
     endif
 endif
 
