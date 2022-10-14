@@ -197,14 +197,14 @@ soong_config_module_type {
     module_type: "cc_defaults",
     config_namespace: "omniGlobalVars",
     bool_variables: ["gralloc_handle_has_reserved_size"],
-    properties: ["cflags"],
+    properties: ["export_cflags"],
 }
 
 gralloc_handle_reserved_size {
     name: "gralloc_handle_has_reserved_size_defaults",
     soong_config_variables: {
         gralloc_handle_has_reserved_size: {
-            cflags: ["-DGRALLOC_HANDLE_HAS_RESERVED_SIZE"],
+            export_cflags: ["-DGRALLOC_HANDLE_HAS_RESERVED_SIZE"],
         },
     },
 }
