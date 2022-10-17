@@ -36,21 +36,6 @@
         <permission name="android.permission.REBOOT"/>
     </privapp-permissions>
 
-    <privapp-permissions package="eu.chainfire.opendelta">
-        <permission name="android.permission.ACCESS_CACHE_FILESYSTEM"/>
-        <permission name="android.permission.REBOOT"/>
-        <permission name="android.permission.RECOVERY"/>
-        <permission name="android.permission.MANAGE_USERS"/>
-    </privapp-permissions>
-
-    <privapp-permissions package="org.omnirom.logcat">
-        <permission name="android.permission.READ_LOGS"/>
-    </privapp-permissions>
-
-    <privapp-permissions package="org.omnirom.omnistyle">
-        <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
-    </privapp-permissions>
-
     <privapp-permissions package="org.omnirom.omniswitch">
         <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
         <permission name="android.permission.FORCE_STOP_PACKAGES"/>
@@ -60,12 +45,6 @@
         <permission name="android.permission.REAL_GET_TASKS"/>
         <permission name="android.permission.START_TASKS_FROM_RECENTS"/>
         <permission name="android.permission.STOP_APP_SWITCHES"/>
-    </privapp-permissions>
-
-    <privapp-permissions package="org.omnirom.omnibrain">
-        <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
-        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
-        <permission name="android.permission.REAL_GET_TASKS"/>
     </privapp-permissions>
 
     <privapp-permissions package="org.omnirom.snap">
