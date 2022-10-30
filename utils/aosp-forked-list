@@ -11,6 +11,7 @@ packages/apps/Launcher3
 packages/apps/Messaging
 packages/apps/Settings
 packages/apps/SettingsIntelligence
+packages/modules/Wifi
 packages/services/Telephony
 system/libhidl
 system/security
