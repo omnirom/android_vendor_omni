@@ -1,7 +1,4 @@
 allow platform_app kernel:system syslog_read;
 
-# Allow FOD HAL service to be found
-hal_client_domain(platform_app, hal_omni_fod)
-
 allow platform_app update_engine_service:service_manager find;
 binder_call(platform_app, update_engine)

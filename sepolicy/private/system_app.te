@@ -1,7 +1,5 @@
 #selinux status
 allow system_app selinuxfs:file r_file_perms;
 
-allow system_app vncflinger_exec:file { r_file_perms execute execute_no_trans map };
-
 # uinput
 allow system_app uhid_device:chr_file rw_file_perms;

@@ -8,6 +8,3 @@
 
 /system/bin/fsck\.ntfs                            u:object_r:fsck_exec:s0
 /system/bin/mkfs\.exfat                           u:object_r:fsck_exec:s0
-
-/system/bin/vncflinger                             u:object_r:vncflinger_exec:s0
-/system/bin/vncpasswd                             u:object_r:vncflinger_exec:s0
