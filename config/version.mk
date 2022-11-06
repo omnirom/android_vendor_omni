@@ -19,9 +19,9 @@ include vendor/microg/microg.mk
     microg
 endif
 ifeq ($(ROM_BUILDTIME_UTC),y)
-    ROM_VERSION := $(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
+    ROM_VERSION := $(PLATFORM_VERSION)-$(shell date -u +%Y%m%d%H%M)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
 else
-    ROM_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
+    ROM_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d%H%M)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
 endif
 
 ROM_BRANCH := android-13.0
