@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3d445598_5ac878b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002322
+      },
+      "writtenOn": "2022-11-10T17:51:59Z",
+      "side": 1,
+      "message": "before \n$(shell date +%Y%m%d%H%M) was changed, regenerating...\n\nafter , gone :)",
+      "revId": "97c507440734f15fc5da9b3191f263142d091485",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55"
+    }
+  ]
+}
