@@ -8,8 +8,10 @@
             <code>rog2</code>
             <repos>
                 <git name="android_device_asus_rog2" />
+                <git name="android_device_asus_sm8150-common" />
                 <git name="android_device_qcom_caf-sepolicy" />
-                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_device_qcom_sepolicy_vndr" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
                 <git name="android_kernel_asus_rog2" />
             </repos>
         </device>
@@ -18,10 +20,46 @@
             <code>zenfone6</code>
             <repos>
                 <git name="android_device_asus_zenfone6" />
+                <git name="android_device_asus_sm8150-common" />
                 <git name="android_device_qcom_caf-sepolicy" />
-                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_device_qcom_sepolicy_vndr" />
                 <git name="android_vendor_qcom_opensource_fm-commonsys" />
                 <git name="android_kernel_asus_sm8150" />
+            </repos>
+        </device>
+        <device>
+            <name>ROG Phone 3</name>
+            <code>rog3</code>
+            <repos>
+                <git name="android_device_asus_rog3" />
+                <git name="android_device_asus_sm8250-common" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_device_qcom_sepolicy_vndr" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_kernel_asus_rog3" />
+            </repos>
+        </device>
+        <device>
+            <name>Zenfone 7</name>
+            <code>zenfone7</code>
+            <repos>
+                <git name="android_device_asus_zenfone7" />
+                <git name="android_device_asus_sm8250-common" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_device_qcom_sepolicy_vndr" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_kernel_asus_sm8250" />
+            </repos>
+        </device>
+        <device>
+            <name>Zenfone 8</name>
+            <code>zenfone8</code>
+            <repos>
+                <git name="android_device_asus_zenfone8" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_device_qcom_sepolicy_vndr" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_kernel_asus_sm8350" />
             </repos>
         </device>
     </oem>
