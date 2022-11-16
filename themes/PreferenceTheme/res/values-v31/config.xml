@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="home_settings_icon_space_reserved">false</bool>
+    <bool name="home_settings_config_allow_divider">false</bool>
+</resources>
