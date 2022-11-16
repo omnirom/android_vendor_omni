@@ -1,0 +1,10 @@
+How to use:
+
+add OmniPreferenceTheme as static_lib in Android.bp
+
+add to style/theme:
+...
+        <item name="preferenceTheme">@style/Omni.PreferenceTheme</item>
+        <item name="android:switchStyle">@style/Omni.SwitchStyle</item>
+        <item name="android:textAppearanceListItem">@style/Omni.PreferenceTitle</item>
+...
