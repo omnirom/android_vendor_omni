@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Omni.PreferenceTheme" parent="@style/PreferenceThemeOverlay">
+        <item name="preferenceCategoryStyle">@style/Omni.CategoryStyle</item>
+        <item name="preferenceCategoryTitleTextAppearance">@style/Omni.CategoryTitle</item>
+        <item name="preferenceScreenStyle">@style/Omni.PreferenceScreenStyle</item>
+        <item name="preferenceStyle">@style/Omni.PreferenceStyle</item>
+        <item name="switchPreferenceStyle">@style/Omni.SwitchPreferenceStyle</item>
+        <item name="dropdownPreferenceStyle">@style/Omni.DropDownPreferenceStyle</item>
+        <item name="dialogPreferenceStyle">@style/Omni.DialogPreferenceStyle</item>
+    </style>
+
+    <style name="Omni.CategoryStyle" parent="@style/Preference.Category.Material">
+        <item name="iconSpaceReserved">@bool/home_settings_icon_space_reserved</item>
+    </style>
+
+    <style name="Omni.PreferenceStyle" parent="@style/Preference.Material">
+        <item name="iconSpaceReserved">@bool/home_settings_icon_space_reserved</item>
+    </style>
+
+    <style name="Omni.PreferenceScreenStyle"
+        parent="@style/Preference.PreferenceScreen.Material">
+        <item name="iconSpaceReserved">@bool/home_settings_icon_space_reserved</item>
+    </style>
+
+    <style name="Omni.SwitchPreferenceStyle"
+        parent="@style/Preference.SwitchPreference.Material">
+        <item name="iconSpaceReserved">@bool/home_settings_icon_space_reserved</item>
+    </style>
+
+    <style name="Omni.DropDownPreferenceStyle"
+        parent="@style/Preference.DropDown.Material">
+        <item name="iconSpaceReserved">@bool/home_settings_icon_space_reserved</item>
+    </style>
+
+    <style name="Omni.DialogPreferenceStyle"
+        parent="@style/Preference.DialogPreference.Material">
+        <item name="iconSpaceReserved">@bool/home_settings_icon_space_reserved</item>
+    </style>
+
+    <style name="Omni.SwitchStyle"
+        parent="@android:style/Widget.Material.CompoundButton.Switch">
+        <item name="android:switchMinWidth">52dp</item>
+        <item name="android:thumb">@drawable/home_settings_switch_thumb</item>
+        <item name="android:track">@drawable/home_settings_switch_track</item>
+    </style>
+
+    <style name="Omni.PreferenceTitle"
+        parent="@style/TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">@dimen/pref_title_text_size</item>
+    </style>
+
+    <style name="Omni.CategoryTitle" parent="@android:style/TextAppearance.Material.Body2">
+    </style>
+</resources>
