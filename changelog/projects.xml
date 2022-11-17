@@ -85,6 +85,14 @@
         </device>
     </oem>
     <oem name="Google">
+        <device>
+            <name>Pixel 6</name>
+            <code>oriole</code>
+            <repos>
+                <git name="android_device_google_raviole" />
+                <git name="android_device_google_gs101" />
+            </repos>
+        </device>
     </oem>
     <oem name="HTC">
     </oem>
