@@ -9,6 +9,7 @@
         <item name="dropdownPreferenceStyle">@style/Omni.DropDownPreferenceStyle</item>
         <item name="dialogPreferenceStyle">@style/Omni.DialogPreferenceStyle</item>
         <item name="editTextPreferenceStyle">@style/Omni.EditTextPreferenceStyle</item>
+        <item name="checkBoxPreferenceStyle">@style/Omni.CheckboxPreferenceStyle</item>
     </style>
 
     <style name="Omni.CategoryStyle" parent="@style/Preference.Category.Material">
@@ -31,6 +32,11 @@
         <item name="iconSpaceReserved">@bool/home_settings_icon_space_reserved</item>
     </style>
 
+    <style name="Omni.CheckboxPreferenceStyle"
+        parent="@style/Preference.CheckBoxPreference.Material">
+        <item name="iconSpaceReserved">@bool/home_settings_icon_space_reserved</item>
+    </style>
+
     <style name="Omni.DropDownPreferenceStyle"
         parent="@style/Preference.DropDown.Material">
         <item name="iconSpaceReserved">@bool/home_settings_icon_space_reserved</item>
@@ -42,7 +48,7 @@
     </style>
 
     <style name="Omni.EditTextPreferenceStyle"
-        parent="@style/Preference.DialogPreference.EditTextPreference">
+        parent="@style/Preference.DialogPreference.EditTextPreference.Material">
         <item name="iconSpaceReserved">@bool/home_settings_icon_space_reserved</item>
         <item name="allowDividerAbove">@bool/home_settings_config_allow_divider</item>
         <item name="allowDividerBelow">@bool/home_settings_config_allow_divider</item>
