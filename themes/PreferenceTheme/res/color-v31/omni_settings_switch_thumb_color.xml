@@ -15,15 +15,13 @@
   limitations under the License.
 -->
 
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:top="4dp"
-        android:left="4dp"
-        android:right="4dp"
-        android:bottom="4dp">
-        <shape android:shape="oval" >
-            <size android:height="20dp" android:width="20dp" />
-            <solid android:color="@color/home_settings_switch_thumb_color" />
-        </shape>
-    </item>
-</layer-list>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Disabled status of thumb -->
+    <item android:state_enabled="false"
+        android:color="@color/omni_settings_thumb_disabled_color" />
+    <!-- Toggle off status of thumb -->
+    <item android:state_checked="false"
+        android:color="@color/omni_settings_thumb_off_color" />
+    <!-- Enabled or toggle on status of thumb -->
+    <item android:color="@color/omni_settings_state_on_color" />
+</selector>
