@@ -21,6 +21,6 @@
     android:width="52dp"
     android:height="28dp">
 
-    <solid android:color="@color/home_settings_switch_track_color" />
+    <solid android:color="@color/omni_settings_switch_track_color" />
     <corners android:radius="35dp" />
 </shape>
