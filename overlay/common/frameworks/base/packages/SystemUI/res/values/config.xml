@@ -42,4 +42,8 @@
 
     <!-- Charging ripple -->
     <bool name="flag_charging_ripple">true</bool>
+
+    <!-- Notifications are sized to match the width of two (of 4) qs tiles in landscape. -->
+    <bool name="config_skinnyNotifsInLandscape">false</bool>
+
 </resources>
