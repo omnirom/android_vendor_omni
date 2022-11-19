@@ -23,6 +23,9 @@
     <dimen name="config_buttonCornerRadius">4.0dip</dimen> <!-- default: 2dp -->
     <dimen name="config_progressBarCornerRadius">1000.0dip</dimen> <!-- default: 0 -->
 
+    <!-- The amount to scale fullscreen snapshots for Overview and snapshot starting windows. -->
+    <dimen name="config_highResTaskSnapshotScale">0.8</dimen> <!-- default: 1.0 -->
+
     <!-- influences if we can split screen onloy by half or third -->
     <!-- 220dp -->
     <dimen name="default_minimal_size_resizable_task">200dp</dimen>
