@@ -89,6 +89,7 @@
             <name>Pixel 6</name>
             <code>oriole</code>
             <repos>
+                <git name="android_device_google_oriole" />
                 <git name="android_device_google_raviole" />
                 <git name="android_device_google_gs101" />
             </repos>
