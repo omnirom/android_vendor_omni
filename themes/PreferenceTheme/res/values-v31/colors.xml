@@ -2,18 +2,15 @@
 <resources>    
     <color name="omni_settings_state_on_color">@android:color/system_accent1_100</color>
 
-    <!-- Material next state off color-->
-    <color name="omni_settings_state_off_color">@android:color/system_accent2_100</color>
-
     <!-- Material next thumb disable color-->
     <color name="omni_settings_thumb_disabled_color">@android:color/system_neutral2_100</color>
 
     <!-- Material next thumb off color-->
-    <color name="omni_settings_thumb_off_color">@android:color/system_neutral2_300</color>
+    <color name="omni_settings_thumb_off_color">@android:color/system_neutral2_100</color>
 
     <!-- Material next track on color-->
-    <color name="omni_settings_track_on_color">@android:color/system_accent1_600</color>
+    <color name="omni_settings_track_on_color">@android:color/system_accent2_500</color>
 
     <!-- Material next track off color-->
-    <color name="omni_settings_track_off_color">@color/omni_settings_switch_track_off</color>
+    <color name="omni_settings_track_off_color">@android:color/system_neutral2_500</color>
 </resources>
