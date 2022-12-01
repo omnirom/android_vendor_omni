@@ -2,4 +2,6 @@
 
     <color name="settingslib_track_on_color">@color/settingslib_switch_track_on</color>
 
+    <color name="settingslib_thumb_off_color">@android:color/system_neutral2_100</color>
+
 </resources>
