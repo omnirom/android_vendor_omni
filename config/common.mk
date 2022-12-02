@@ -65,6 +65,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/etc/sysconfig/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml
 
+# bg excemption whitelist
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/etc/sysconfig/omniota.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/omniota.xml
+
 # Init script file with omni extras
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/etc/init.local.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.omni.rc
