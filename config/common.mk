@@ -79,8 +79,10 @@ PRODUCT_COPY_FILES += \
 
 #permissions
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/etc/permissions/privapp-permissions-omni.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-omni.xml \
-    vendor/omni/prebuilt/etc/permissions/omni-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/omni-power-whitelist.xml
+    vendor/omni/prebuilt/etc/permissions/privapp-permissions-omni.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-omni.xml
+
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/etc/permissions/privapp-permissions-omni-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-omni-ext.xml
 
 # custom omni sounds
 PRODUCT_PRODUCT_PROPERTIES += \
