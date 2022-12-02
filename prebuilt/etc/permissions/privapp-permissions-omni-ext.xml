@@ -11,11 +11,6 @@
         <permission name="android.permission.STOP_APP_SWITCHES"/>
     </privapp-permissions>
 
-    <privapp-permissions package="org.omnirom.control">
-        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
-        <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
-    </privapp-permissions>
-
     <privapp-permissions package="org.omnirom.omniota">
         <permission name="android.permission.ACCESS_CACHE_FILESYSTEM"/>
         <permission name="android.permission.REBOOT"/>
