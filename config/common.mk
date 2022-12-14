@@ -134,3 +134,10 @@ endif
 
 # Add our overlays
 DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/common
+
+# RRO Overlay
+PRODUCT_PACKAGES += \
+    FrameworksResOmni \
+    SettingsLibThemeOverlayOmni \
+    SettingsProviderOverlayOmni \
+    SystemUIOverlayOmni
