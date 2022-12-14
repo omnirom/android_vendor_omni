@@ -90,4 +90,5 @@
     <bool name="config_supportsCamToggle">true</bool>
 
     <bool name="config_buttonTextAllCaps">false</bool>
+
 </resources>
