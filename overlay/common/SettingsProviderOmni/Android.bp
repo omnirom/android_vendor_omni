@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "SettingsProviderOverlayOmni",
+    sdk_version: "current",
+    product_specific: true,
+}
