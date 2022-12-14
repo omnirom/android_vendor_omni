@@ -90,4 +90,7 @@
     <bool name="config_supportsCamToggle">true</bool>
 
     <bool name="config_buttonTextAllCaps">false</bool>
+    
+    <string name="config_clockFontFamily" translatable="false">sans-serif</string>
+
 </resources>
