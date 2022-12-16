@@ -24,4 +24,5 @@ PRODUCT_PACKAGES := \
     Muli-SemiBold.ttf \
     Muli-SemiBoldItalic.ttf \
     Muli-Bold.ttf \
-    Muli-BoldItalic.ttf
+    Muli-BoldItalic.ttf \
+    GoogleSansClock-Regular.ttf

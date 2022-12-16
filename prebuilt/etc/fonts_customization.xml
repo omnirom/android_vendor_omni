@@ -22,4 +22,7 @@
     </family>
     <alias name="muli-semi-bold" to="muli" weight="600" />
     <alias name="muli-bold" to="muli" weight="700" />
+    <family customizationType="new-named-family" name="google-sans-clock">
+        <font>GoogleSansClock-Regular.ttf</font>
+    </family>
 </fonts-modification>
