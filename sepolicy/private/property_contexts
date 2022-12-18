@@ -1,0 +1,2 @@
+# Allow health service to read healthloop prop
+sys.health.healthloop.disable      u:object_r:healthloop_prop:s0
