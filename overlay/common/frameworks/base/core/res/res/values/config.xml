@@ -56,7 +56,7 @@
     <bool name="config_windowIsRound">true</bool>
 
     <!-- The duration in which a recent task is considered in session and should be visible. -->
-    <integer name="config_activeTaskDurationHours">12</integer>
+    <integer name="config_activeTaskDurationHours">24</integer>
 
     <!-- Indicates that connected MAC randomization is supported on this device -->
     <bool translatable="false" name="config_wifi_connected_mac_randomization_supported">true</bool>
