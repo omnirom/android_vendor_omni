@@ -639,6 +639,10 @@
                 <git name="android_device_xiaomi_sweet" />
                 <git name="android_kernel_xiaomi_sweet" />
                 <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_device_qcom_sepolicy_vndr" />
+                <git name="android_vendor_qcom_opensource_interfaces" />
+                <git name="android_vendor_codeaurora_telephony" />
+                <git name="android_hardware_qcom_wlan" />
             </repos>
         </device>
     </oem>
