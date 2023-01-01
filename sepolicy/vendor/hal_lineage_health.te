@@ -1,0 +1,5 @@
+# HwBinder IPC from client to server
+binder_call(hal_lineage_health_client, hal_lineage_health_server)
+
+add_service(hal_lineage_health_server, hal_lineage_health_service)
+allow hal_lineage_health_client hal_lineage_health_service:service_manager find;

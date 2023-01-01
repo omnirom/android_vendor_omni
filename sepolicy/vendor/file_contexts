@@ -1,0 +1,2 @@
+# Health HAL
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.health-service\.default     u:object_r:hal_lineage_health_default_exec:s0
