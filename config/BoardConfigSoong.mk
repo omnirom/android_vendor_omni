@@ -25,6 +25,7 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
 
 SOONG_CONFIG_NAMESPACES += omniGlobalVars
 SOONG_CONFIG_omniGlobalVars += \
+    additional_gralloc_10_usage_bits \
     target_create_device_symlinks \
     target_init_vendor_lib \
     target_surfaceflinger_udfps_lib \
@@ -58,10 +59,12 @@ SOONG_CONFIG_omniGlobalVars_target_enforce_ab_ota_partition_list := $(TARGET_ENF
 SOONG_CONFIG_omniGlobalVars_target_create_device_symlinks := $(TARGET_CREATE_DEVICE_SYMLINKS)
 
 # Set default values
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 
 # Soong value variables
+SOONG_CONFIG_omniGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
 SOONG_CONFIG_omniGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
 SOONG_CONFIG_omniGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_SURFACEFLINGER_UDFPS_LIB)
