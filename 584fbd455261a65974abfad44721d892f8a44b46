@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a508dee_41fa0e9e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000026
+      },
+      "writtenOn": "2023-01-29T16:02:34Z",
+      "side": 1,
+      "message": "real fix https://gerrit.omnirom.org/c/android_frameworks_base/+/43304",
+      "revId": "584fbd455261a65974abfad44721d892f8a44b46",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55"
+    }
+  ]
+}
