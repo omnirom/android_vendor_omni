@@ -5,6 +5,7 @@ frameworks/av
 frameworks/base
 frameworks/native
 hardware/interfaces
+hardware/libhardware
 packages/apps/Contacts
 packages/apps/Dialer
 packages/apps/Launcher3
