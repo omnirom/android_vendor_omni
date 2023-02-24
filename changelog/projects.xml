@@ -94,6 +94,15 @@
                 <git name="android_device_google_gs101" />
             </repos>
         </device>
+        <device>
+            <name>Pixel 6 Pro</name>
+            <code>raven</code>
+            <repos>
+                <git name="android_device_google_raven" />
+                <git name="android_device_google_raviole" />
+                <git name="android_device_google_gs101" />
+            </repos>
+        </device>
     </oem>
     <oem name="HTC">
     </oem>
