@@ -12,6 +12,7 @@ packages/apps/Launcher3
 packages/apps/Messaging
 packages/apps/Settings
 packages/apps/SettingsIntelligence
+packages/inputmethods/LatinIME
 packages/modules/Wifi
 packages/services/Telephony
 system/libhidl
