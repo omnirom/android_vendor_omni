@@ -2191,7 +2191,11 @@ function extract_firmware() {
         if [ ! -d "$OUTPUT_DIR" ]; then
             mkdir -p "$OUTPUT_DIR"
         fi
-        cp "$SRC/$SRC_FILE" "$OUTPUT_DIR/$DST_FILE"
+        if [ -f "$SRC/$SRC_FILE" ]; then
+            cp "$SRC/$SRC_FILE" "$OUTPUT_DIR/$DST_FILE"
+        else
+            cp "$SRC/$DST_FILE" "$OUTPUT_DIR/$DST_FILE"
+        fi
         chmod 644 "$OUTPUT_DIR/$DST_FILE"
     done
 }
