@@ -3,11 +3,11 @@ PRODUCT_PACKAGES += \
     MonthCalendarWidget \
     OmniSwitch \
     OmniJaws \
-    OmniStyle \
     MatLog \
     OmniStoreInstallerPrebuilt \
-    OpenDelta \
-    WallpaperCropper2
+    WallpaperCropper2 \
+    OmniOta \
+    OmniWallpaper
 
 # Additional tools
 PRODUCT_PACKAGES += \
@@ -51,6 +51,10 @@ PRODUCT_PACKAGES += \
     ssh-keygen \
     start-ssh
 endif
+
+# Config
+PRODUCT_PACKAGES += \
+    SimpleDeviceConfig
 
 # Telephony extension
 #PRODUCT_PACKAGES += telephony-ext
