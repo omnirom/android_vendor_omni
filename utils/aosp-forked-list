@@ -4,6 +4,7 @@ external/drm_hwcomposer
 frameworks/av
 frameworks/base
 frameworks/native
+frameworks/opt/Telephony
 hardware/interfaces
 hardware/libhardware
 packages/apps/Contacts
