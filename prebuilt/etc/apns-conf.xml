@@ -3078,6 +3078,23 @@ Oneplus modification history ex. [Patch#ID][Date][Jira#ID][MCC/MNC][Owner email]
   />
   <!-- VENDOR_EDIT end Patch#0561 [2018-09-19] -->
 
+  <apn carrier="Fastweb"
+      mcc="222"
+      mnc="08"
+      apn="apn.fastweb.it"
+      proxy=""
+      port=""
+      user=""
+      password=""
+      mmsc="http://mms.fastweb.it/mms/wapenc"
+      mmsproxy="85.18.189.217"
+      mmsport="8080"
+      mvno_type="spn"
+      mvno_match_data="FASTWEB"
+      authtype="2"
+      type="default,supl,mms"
+  />
+
   <!-- VENDOR_EDIT start Patch#0620 [2020-09-22]-->
   <apn carrier="MMS Vodafone"
       mcc="222"
