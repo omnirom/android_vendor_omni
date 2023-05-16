@@ -30,6 +30,7 @@ SOONG_CONFIG_omniGlobalVars += \
     target_create_device_symlinks \
     target_init_vendor_lib \
     target_surfaceflinger_udfps_lib \
+    gralloc_handle_has_custom_content_md_reserved_size \
     gralloc_handle_has_reserved_size \
     healthd_use_battery_info \
     healthd_enable_op_fastchg \
@@ -54,6 +55,7 @@ SOONG_CONFIG_omniQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_E
 SOONG_CONFIG_omniQcomVars_supports_hw_fde := $(TARGET_HW_DISK_ENCRYPTION)
 SOONG_CONFIG_omniQcomVars_supports_hw_fde_perf := $(TARGET_HW_DISK_ENCRYPTION_PERF)
 SOONG_CONFIG_omniGlobalVars_aapt_version_code := $(shell date -u +%Y%m%d)
+SOONG_CONFIG_omniGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
 SOONG_CONFIG_omniGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_omniGlobalVars_healthd_use_battery_info := $(HEALTHD_USE_BATTERY_INFO)
 SOONG_CONFIG_omniGlobalVars_healthd_enable_op_fastchg := $(HEALTHD_ENABLE_OP_FASTCHG_CHECK)
@@ -72,6 +74,7 @@ TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
 endif
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
+TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE ?= false
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 
 SOONG_CONFIG_omniGlobalVars_launcher3Gapps ?= false
