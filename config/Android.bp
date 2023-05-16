@@ -224,6 +224,23 @@ enable_tricolor_led {
 }
 
 soong_config_module_type {
+    name: "extended_compress_format",
+    module_type: "cc_defaults",
+    config_namespace: "omniQcomVars",
+    bool_variables: ["supports_extended_compress_format"],
+    properties: ["cflags"],
+}
+
+extended_compress_format {
+    name: "extended_compress_format_defaults",
+    soong_config_variables: {
+        supports_extended_compress_format: {
+            cflags: ["-DENABLE_EXTENDED_COMPRESS_FORMAT"],
+        },
+    },
+}
+
+soong_config_module_type {
     name: "vold_hw_fde",
     module_type: "cc_defaults",
     config_namespace: "omniQcomVars",

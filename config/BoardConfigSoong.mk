@@ -41,11 +41,13 @@ SOONG_CONFIG_omniGlobalVars += \
 SOONG_CONFIG_NAMESPACES += omniQcomVars
 SOONG_CONFIG_omniQcomVars += \
     healthd_enable_tricolor_led \
+    supports_extended_compress_format \
     supports_hw_fde \
     supports_hw_fde_perf
 
 # Soong bool variables
 SOONG_CONFIG_omniQcomVars_healthd_enable_tricolor_led := $(HEALTHD_ENABLE_TRICOLOR_LED)
+SOONG_CONFIG_omniQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_omniQcomVars_supports_hw_fde := $(TARGET_HW_DISK_ENCRYPTION)
 SOONG_CONFIG_omniQcomVars_supports_hw_fde_perf := $(TARGET_HW_DISK_ENCRYPTION_PERF)
 SOONG_CONFIG_omniGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
