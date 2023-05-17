@@ -1,0 +1,2 @@
+# FM Radio app properties
+set_prop(vendor_init, vendor_fm_radio_app_prop);
