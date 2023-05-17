@@ -1,0 +1,2 @@
+# FM Radio app
+get_prop(system_app, vendor_fm_radio_app_prop);
