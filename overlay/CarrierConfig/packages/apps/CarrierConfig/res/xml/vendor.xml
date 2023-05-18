@@ -1105,6 +1105,18 @@
         <boolean name="s_enable_apn_switch" value="false" />
         <boolean name="s_show_volte_icon_in_status_bar_bool" value="true" />
     </carrier_config>
+    <carrier_config mcc="425" mnc="01">
+        <boolean name="carrier_volte_available_bool" value="false" />
+    </carrier_config>
+    <carrier_config mcc="425" mnc="02">
+        <boolean name="carrier_volte_available_bool" value="false" />
+    </carrier_config>
+    <carrier_config mcc="425" mnc="03">
+        <boolean name="carrier_volte_available_bool" value="false" />
+    </carrier_config>
+    <carrier_config mcc="425" mnc="07">
+        <boolean name="carrier_volte_available_bool" value="false" />
+    </carrier_config>
     <carrier_config mcc="440" mnc="00" />
     <carrier_config mcc="440" mnc="10" />
     <carrier_config mcc="440" mnc="20" />
