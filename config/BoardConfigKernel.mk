@@ -46,6 +46,9 @@
 #   TARGET_KERNEL_NO_GCC               = Fully compile the kernel without GCC.
 #                                        Defaults to false
 #
+#   TARGET_KERNEL_VERSION              = Reported kernel version in top level kernel
+#                                        makefile. Can be overriden in device trees
+#
 #   KERNEL_TOOLCHAIN_PREFIX            = Overrides TARGET_KERNEL_CROSS_COMPILE_PREFIX,
 #                                          Set this var in shell to override
 #                                          toolchain specified in BoardConfig.mk
@@ -79,7 +82,7 @@ TARGET_KERNEL_CLANG_PATH ?= $(BUILD_TOP)/prebuilts/clang/host/$(HOST_PREBUILT_TA
 
 KERNEL_VERSION := $(shell grep -s "^VERSION = " $(TARGET_KERNEL_SOURCE)/Makefile | awk '{ print $$3 }')
 KERNEL_PATCHLEVEL := $(shell grep -s "^PATCHLEVEL = " $(TARGET_KERNEL_SOURCE)/Makefile | awk '{ print $$3 }')
-
+TARGET_KERNEL_VERSION ?= $(shell echo $(KERNEL_VERSION)"."$(KERNEL_PATCHLEVEL))
 
 # 5.10+ can fully compile without GCC by default
 ifeq ($(shell expr $(KERNEL_VERSION) \>= 5), 1)
