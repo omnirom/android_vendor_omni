@@ -1882,7 +1882,8 @@ function generate_prop_list_from_image() {
     local output_list="$2"
     local output_list_tmp="$TMPDIR/_proprietary-blobs.txt"
     local -n skipped_files="$3"
-    local partition="$4"
+    local component="$4"
+    local partition="$component"
 
     mkdir -p "$image_dir"
 
@@ -1896,8 +1897,17 @@ function generate_prop_list_from_image() {
         echo "Unsupported "$image_file""
     fi
 
+    if [ -z "$component" ]; then
+        partition="vendor"
+    elif [[ "$component" == "carriersettings" ]]; then
+        partition="product"
+    fi
+
     find "$image_dir" -not -type d | sed "s#^$image_dir/##" | while read -r FILE
     do
+        if [[ "$component" == "carriersettings" ]] && ! prefix_match_file "etc/CarrierSettings" "$FILE" ; then
+            continue
+        fi
         # Skip VENDOR_SKIP_FILES since it will be re-generated at build time
         if array_contains "$FILE" "${VENDOR_SKIP_FILES[@]}"; then
             continue
@@ -1906,11 +1916,7 @@ function generate_prop_list_from_image() {
         if array_contains "$FILE" "${skipped_files[@]}"; then
             continue
         fi
-        if [ -z "$partition" ]; then
-            echo "vendor/$FILE" >> "$output_list_tmp"
-        else
-            echo "$partition/$FILE" >> "$output_list_tmp"
-        fi
+        echo "$partition/$FILE" >> "$output_list_tmp"
     done
 
     # Sort merged file with all lists
