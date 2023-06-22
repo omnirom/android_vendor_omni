@@ -20,5 +20,8 @@
         <!-- Enable the new and advanced Privacy Hub -->
         <item>privacy/safety_center_is_enabled=true</item>
 
+        <!-- Separate Ring and Notification volume -->
+        <item>systemui/volume_separate_notification=true</item>
+
     </string-array>
 </resources>
