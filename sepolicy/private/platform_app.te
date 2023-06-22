@@ -2,3 +2,6 @@ allow platform_app kernel:system syslog_read;
 
 allow platform_app update_engine_service:service_manager find;
 binder_call(platform_app, update_engine)
+
+# Allow platform_app (SystemUi tile) to find nfc_service
+allow platform_app nfc_service:service_manager find;
