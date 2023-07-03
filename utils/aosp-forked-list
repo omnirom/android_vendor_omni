@@ -18,6 +18,7 @@ packages/modules/Bluetooth
 packages/modules/Wifi
 packages/services/Telephony
 system/libhidl
+system/timezone
 system/security
 system/sepolicy
 system/update_engine
