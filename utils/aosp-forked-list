@@ -16,6 +16,7 @@ packages/apps/SettingsIntelligence
 packages/inputmethods/LatinIME
 packages/modules/Bluetooth
 packages/modules/Wifi
+packages/services/Telecomm
 packages/services/Telephony
 system/libhidl
 system/timezone
