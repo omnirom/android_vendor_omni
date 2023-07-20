@@ -42,7 +42,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
 
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/bin/clean_cache.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/clean_cache.sh
+    vendor/omni/prebuilt/common/bin/clean_cache.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/clean_cache.sh
 
 # Backup Tool
 ifeq ($(AB_OTA_UPDATER),true)
@@ -56,9 +56,10 @@ PRODUCT_COPY_FILES += \
 endif
 else
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/bin/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool.sh \
-    vendor/omni/prebuilt/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool.functions \
-    vendor/omni/prebuilt/bin/blacklist:$(TARGET_COPY_OUT_SYSTEM)/addon.d/blacklist
+    vendor/omni/prebuilt/common/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
+    vendor/omni/prebuilt/common/bin/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool.sh \
+    vendor/omni/prebuilt/common/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool.functions \
+    vendor/omni/prebuilt/common/bin/blacklist:$(TARGET_COPY_OUT_SYSTEM)/addon.d/blacklist
 endif
 
 # Backup Services whitelist
