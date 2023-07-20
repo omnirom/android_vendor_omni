@@ -50,10 +50,6 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
     vendor/omni/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
     vendor/omni/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
-ifeq ($(filter $(ROM_BUILDTYPE), GAPPS MICROG),)
-PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/addon.d/69-gapps.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/69-gapps.sh
-endif
 else
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/common/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
