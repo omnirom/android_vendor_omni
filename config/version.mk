@@ -44,3 +44,5 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.omni.version=$(ROM_VERSION) \
     ro.omni.device=$(TARGET_PRODUCT_SHORT) \
     ro.omni.branch=$(ROM_BRANCH)
+
+PRODUCT_SYSTEM_PROPERTIES += ro.omni.version=$(ROM_VERSION)
