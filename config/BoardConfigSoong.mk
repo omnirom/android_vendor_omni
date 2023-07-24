@@ -33,6 +33,8 @@ SOONG_CONFIG_omniGlobalVars += \
     gralloc_handle_has_reserved_size \
     healthd_use_battery_info \
     healthd_enable_op_fastchg \
+    launcher3Gapps \
+    launcher3Mock \
     targetNeedsHWCOnFirstRef \
     uses_metadata_as_fde_key \
     target_use_sdclang \
@@ -72,7 +74,16 @@ TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 
+SOONG_CONFIG_omniGlobalVars_launcher3Gapps ?= false
+SOONG_CONFIG_omniGlobalVars_launcher3Mock ?= false
+
 # Soong value variables
 SOONG_CONFIG_omniGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
 SOONG_CONFIG_omniGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
 SOONG_CONFIG_omniGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_SURFACEFLINGER_UDFPS_LIB)
+
+ifeq ($(ROM_BUILDTYPE),GAPPS)
+    SOONG_CONFIG_omniGlobalVars_launcher3Gapps := true
+else
+    SOONG_CONFIG_omniGlobalVars_launcher3Mock := true
+endif

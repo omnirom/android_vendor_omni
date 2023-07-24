@@ -129,6 +129,14 @@ PRODUCT_PACKAGES += \
     QuickAccessWallet
 endif
 
+ifeq ($(ROM_BUILDTYPE),GAPPS)
+LOCAL_STATIC_ANDROID_LIBRARIES := \
+    Launcher3QuickStepLibGoogle
+else
+LOCAL_STATIC_ANDROID_LIBRARIES := \
+    Launcher3QuickStepLibMock
+endif
+
 # Versioning
 -include vendor/omni/config/version.mk
 
