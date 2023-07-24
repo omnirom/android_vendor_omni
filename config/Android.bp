@@ -1,5 +1,28 @@
 // Omni soong configs
 soong_config_module_type {
+    name: "omni_launcher3",
+    module_type: "java_defaults",
+    config_namespace: "omniGlobalVars",
+    bool_variables: [
+        "launcher3Gapps",
+        "launcher3Mock",
+    ],
+    properties: ["static_libs"],
+}
+
+omni_launcher3 {
+    name: "omni_launcher3_defaults",
+    soong_config_variables: {
+        launcher3Gapps: {
+            static_libs: ["Launcher3QuickStepLibGoogle"],
+        },
+        launcher3Mock: {
+            static_libs: ["Launcher3QuickStepLibMock"],
+        },
+    },
+}
+
+soong_config_module_type {
     name: "aapt_version_code",
     module_type: "java_defaults",
     config_namespace: "omniGlobalVars",
