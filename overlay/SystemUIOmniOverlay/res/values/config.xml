@@ -22,6 +22,7 @@
 
     <!-- SystemUI Plugins that can be loaded on user builds. -->
     <string-array name="config_pluginAllowlist" translatable="false">
+        <item>com.android.systemui</item>
         <item>com.android.systemui.plugin.globalactions.wallet</item>
     </string-array>
 
