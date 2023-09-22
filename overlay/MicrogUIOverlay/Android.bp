@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "MicrogUIOverlay",
+    theme: "MicrogUIOverlay",
+    product_specific: true,
+}
