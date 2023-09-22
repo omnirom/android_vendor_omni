@@ -1,0 +1,9 @@
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+runtime_resource_overlay {
+    name: "MicrogUIOverlay",
+    theme: "MicrogUIOverlay",
+    product_specific: true,
+}
