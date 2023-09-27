@@ -16,6 +16,23 @@
       "message": "Good for you too ?",
       "revId": "520dfe0827b3e8e5316808185609afb2af7b9bbc",
       "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49e5d3c3_5988c0cd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000026
+      },
+      "writtenOn": "2023-09-27T06:55:25Z",
+      "side": 1,
+      "message": "Sure ",
+      "revId": "520dfe0827b3e8e5316808185609afb2af7b9bbc",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55"
     }
   ]
 }
