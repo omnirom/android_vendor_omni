@@ -36,7 +36,7 @@ else
     endif
 endif
 
-ROM_BRANCH := android-13.0
+ROM_BRANCH := android-14.0
 
 # Apply it to build.prop
 PRODUCT_PRODUCT_PROPERTIES += \
