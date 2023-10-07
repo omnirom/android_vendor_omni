@@ -4,8 +4,8 @@
 
 # Configuration
 PREFIX=android_
-BRANCH=android-13.0
-SOURCE=android-13.0.0_r<INSERT_CORRECT_TAG>
+BRANCH=android-14.0
+SOURCE=android-14.0.0_r<INSERT_CORRECT_TAG>
 USERNAME=<INSERT USER>
 TOKEN=<INSERT TOKEN>
 MANIFEST=android/default.xml
