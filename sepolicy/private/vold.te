@@ -1,4 +1,4 @@
 #============= vold ==============
 allow vold block_device:blk_file { getattr };
 allow vold fsck_exec:lnk_file read;
-
+allow vold mkfs_exec:file rx_file_perms;
