@@ -1,2 +1,2 @@
-allow shell otapreopt_chroot_exec:file getattr;
-allow shell kernel:system syslog_read;
+#allow shell otapreopt_chroot_exec:file getattr;
+#allow shell kernel:system syslog_read;
