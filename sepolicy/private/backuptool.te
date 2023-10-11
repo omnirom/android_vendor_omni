@@ -1,9 +1,9 @@
-type backuptool, domain, coredomain;
+#type backuptool, domain, coredomain;
 
-permissive backuptool;
+#permissive backuptool;
 
-neverallow {
-    domain
-    -recovery
-    -update_engine
-} backuptool:process transition;
+#neverallow {
+#    domain
+#    -recovery
+#    -update_engine
+#} backuptool:process transition;
