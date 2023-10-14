@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6980e67_93dae2f8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002322
+      },
+      "writtenOn": "2023-10-14T10:20:04Z",
+      "side": 1,
+      "message": "i\u0027ve removed system/core for the moment, impossible to push to github....\nAnd added new repos (all already pushed)",
+      "revId": "8686a4b2bc904b50b2539479c12ba0c9fbeba11b",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55"
+    }
+  ]
+}
