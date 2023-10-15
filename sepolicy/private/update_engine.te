@@ -42,3 +42,24 @@
 
 # Allow transition to backuptool domain
 #domain_trans(update_engine, otapreopt_chroot_exec, backuptool)
+
+#binder_call(update_engine, omniota_app)
+
+r_dir_file(update_engine, fuse)
+r_dir_file(update_engine, mnt_user_file)
+#r_dir_file(update_engine, storage_file)
+
+#allow update_engine otadexopt_service:service_manager find;
+
+# Allow transition to backuptool domain
+domain_trans(update_engine, otapreopt_chroot_exec, backuptool)
+
+allow update_engine mnt_user_file:lnk_file read;
+####################################################
+# Allow update_engine to call the callback function provided by omniota_app
+binder_call(update_engine, omniota_app)
+binder_call(update_engine, platform_app)
+
+allow update_engine self:process { setexec };
+
+allow update_engine otadexopt_service:service_manager find;

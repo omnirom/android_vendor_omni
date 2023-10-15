@@ -1,0 +1,29 @@
+type omniota_app, domain, coredomain;
+
+app_domain(omniota_app)
+net_domain(omniota_app)
+
+binder_call(omniota_app, update_engine)
+
+allow omniota_app app_api_service:service_manager find;
+allow omniota_app system_api_service:service_manager find;
+allow omniota_app update_engine_service:service_manager find;
+
+allow omniota_app ota_package_file:dir create_dir_perms;
+allow omniota_app ota_package_file:file create_file_perms;
+
+r_dir_file(omniota_app, fuse)
+r_dir_file(omniota_app, mnt_user_file)
+#r_dir_file(omniota_app, storage_file)
+
+# Allow transition to backuptool domain
+#domain_trans(omniota_app, otapreopt_chroot_exec, backuptool)
+
+allow omniota_app mnt_user_file:lnk_file read;
+####################################################
+# Allow omniota_app to call the callback function provided by omniota_app
+binder_call(omniota_app, platform_app)
+
+allow omniota_app self:process { setexec };
+
+allow omniota_app otadexopt_service:service_manager find;
