@@ -1,0 +1,4 @@
+type omnirom_logcat_app, domain, coredomain;
+
+app_domain(omnirom_logcat_app)
+net_domain(omnirom_logcat_app)
