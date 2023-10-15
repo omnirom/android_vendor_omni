@@ -1,0 +1,4 @@
+type omniota_app, domain, coredomain;
+
+app_domain(omniota_app)
+net_domain(omniota_app)

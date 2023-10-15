@@ -1,0 +1,5 @@
+# Matlog
+user=_app isPrivApp=true seinfo=platform name=org.omnirom.logcat domain=omnirom_logcat_app type=app_data_file levelFrom=all
+
+# OmniOta
+user=_app isPrivApp=true seinfo=platform name=org.omnirom.omniota domain=omniota_app type=app_data_file levelFrom=all
