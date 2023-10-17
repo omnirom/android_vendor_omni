@@ -53,7 +53,7 @@ PRODUCT_PACKAGES += \
 endif
 
 # Config
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     SimpleDeviceConfig
 
 ifeq ($(ROM_BUILDTYPE),MICROG)
