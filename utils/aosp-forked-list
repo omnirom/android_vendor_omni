@@ -6,8 +6,14 @@ frameworks/base
 frameworks/native
 hardware/interfaces
 hardware/libhardware
+packages/apps/Contacts
+packages/apps/Dialer
+packages/apps/Launcher3
+packages/apps/Messaging
 packages/apps/Settings
 packages/apps/SettingsIntelligence
+packages/inputmethods/LatinIME
+packages/services/Telecomm
 packages/services/Telephony
 system/libhidl
 system/security
