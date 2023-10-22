@@ -35,7 +35,7 @@
     <bool name="config_showActivity">false</bool>
 
     <!-- Enable the screenshot dismiss button by default -->
-    <bool name="always_show_screenshot_dismiss_button">true</bool>
+    <bool name="always_show_screenshot_dismiss_button">false</bool>
 
     <!-- The maximum number of tiles in the QuickQSPanel -->
     <integer name="quick_qs_panel_max_tiles">2</integer>
