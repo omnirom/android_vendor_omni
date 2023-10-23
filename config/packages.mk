@@ -1,3 +1,8 @@
+# OmniRom Platform Library
+PRODUCT_PACKAGES += \
+    omnirom-res \
+    OmniLib
+
 # Additional apps
 PRODUCT_PACKAGES += \
     MonthCalendarWidget \
