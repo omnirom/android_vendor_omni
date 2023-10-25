@@ -1,7 +1,7 @@
 # Omni Extras
 
 on init
-    export TERMINFO /system/etc/terminfo
+    export TERMINFO /system_ext/etc/terminfo
     export TERM linux
 
 on boot
