@@ -514,16 +514,16 @@ $(TARGET_PREBUILT_INT_KERNEL): $(KERNEL_CONFIG) $(DEPMOD) $(DTC) $(KERNEL_MODULE
 				[ -n "$$err" ] && exit 1; \
 			) \
 			filtered_modules=""; \
-			$(if $(BOARD_SYSTEM_KERNEL_MODULES),\
-				gki_modules=$$(for m in $(BOARD_SYSTEM_KERNEL_MODULES); do \
+			$(if $(SYSTEM_KERNEL_MODULES),\
+				gki_modules=$$(for m in $(SYSTEM_KERNEL_MODULES); do \
 					p=$$(echo $$all_modules | tr ' ' '\n' | grep /$$m); \
-					if [ -n "$$p" ]; then echo $$p; else echo "ERROR: $$m from BOARD_SYSTEM_KERNEL_MODULES was not found" 1>&2 && exit 1; fi; \
+					if [ -n "$$p" ]; then echo $$p; else echo "ERROR: $$m from SYSTEM_KERNEL_MODULES was not found" 1>&2 && exit 1; fi; \
 				done); \
 				[ $$? -ne 0 ] && exit 1; \
 				($(call build-image-kernel-modules-omnirom,$$gki_modules,$(SYSTEM_KERNEL_MODULES_OUT),$(SYSTEM_KERNEL_MODULE_MOUNTPOINT)/,$(SYSTEM_KERNEL_DEPMOD_STAGING_DIR),$(SYSTEM_KERNEL_MODULES_LOAD),$(GKI_SUFFIX),$(SYSTEM_KERNEL_MODULES_PARTITION_FILE_LIST),)) || exit "$$?"; \
 				filtered_modules=$$(for n in $$all_modules; do \
 					module_name=$$(basename $$n); \
-					if [[ ! "$(BOARD_SYSTEM_KERNEL_MODULES)" =~ "$$module_name" ]]; then echo $$n; fi; \
+					if [[ ! "$(SYSTEM_KERNEL_MODULES)" =~ "$$module_name" ]]; then echo $$n; fi; \
 				done); \
 				($(call build-image-kernel-modules-omnirom,$$filtered_modules,$(KERNEL_MODULES_OUT),$(KERNEL_MODULE_MOUNTPOINT)/,$(KERNEL_DEPMOD_STAGING_DIR),$(BOARD_VENDOR_KERNEL_MODULES_LOAD),,$(KERNEL_MODULES_PARTITION_FILE_LIST),$(SYSTEM_KERNEL_DEPMOD_STAGING_DIR)/lib/modules/0.0/$(SYSTEM_KERNEL_MODULE_MOUNTPOINT))) || exit "$$?"; \
 				if grep -q 'CONFIG_MODULE_SIG_FORMAT=y' $(KERNEL_CONFIG); then \
