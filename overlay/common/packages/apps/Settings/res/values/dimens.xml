@@ -18,4 +18,7 @@
     <!-- was <dimen name="homepage_preference_min_height">88sp</dimen>
     but it makes no sense at all to use sp (scaled by user prefs font size) for that -->
     <dimen name="homepage_preference_min_height">48dp</dimen>
+
+    <!-- Fingerprint -->
+    <dimen name="udfps_lottie_translate_y">-500dp</dimen>
 </resources>
