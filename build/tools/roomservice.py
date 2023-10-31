@@ -47,7 +47,7 @@ local_manifest_dir = ".repo/local_manifests"
 # change this to your name on github (or equivalent hosting)
 android_team = "omnirom"
 # url to gerrit repository
-gerrit_url = "gerrit.omnirom.org"
+gerrit_url = "maxwen.ddns.net"
 
 
 def check_repo_exists(git_data, device):
