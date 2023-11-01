@@ -3,6 +3,7 @@ build
 build/soong
 external/drm_hwcomposer
 external/wpa_supplicant_8
+frameworks/av
 frameworks/base
 frameworks/native
 hardware/interfaces
