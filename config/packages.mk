@@ -61,10 +61,10 @@ endif
 #PRODUCT_PACKAGES += \
     SimpleDeviceConfig
 
-ifeq ($(ROM_BUILDTYPE),MICROG)
-PRODUCT_PACKAGES += \
-    MicrogUIOverlay
-endif
+#ifeq ($(ROM_BUILDTYPE),MICROG)
+#PRODUCT_PACKAGES += \
+#    MicrogUIOverlay
+#endif
 
 # Telephony extension
 #PRODUCT_PACKAGES += telephony-ext
