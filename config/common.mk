@@ -44,6 +44,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
 
 # Backup Tool
+ifeq ($(ROM_BUILDTYPE),WEEKLY)
 ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
@@ -54,6 +55,7 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/common/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
     vendor/omni/prebuilt/common/bin/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool.sh \
     vendor/omni/prebuilt/common/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool.functions
+endif
 endif
 
 # Backup Services whitelist
