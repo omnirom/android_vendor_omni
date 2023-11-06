@@ -44,17 +44,17 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
 
 # Backup Tool
-#ifeq ($(AB_OTA_UPDATER),true)
-#PRODUCT_COPY_FILES += \
+ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
+PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
     vendor/omni/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
     vendor/omni/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
-#else
-#PRODUCT_COPY_FILES += \
+else
+PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/common/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
     vendor/omni/prebuilt/common/bin/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool.sh \
     vendor/omni/prebuilt/common/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool.functions
-#endif
+endif
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
