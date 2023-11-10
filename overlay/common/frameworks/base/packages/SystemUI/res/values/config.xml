@@ -58,4 +58,6 @@
         <item>@*android:string/status_bar_volume</item>
         <item>@*android:string/status_bar_call_strength</item>
     </string-array>
+    
+    <bool name="custom_lockscreen_shortcuts_enabled">true</bool>
 </resources>
