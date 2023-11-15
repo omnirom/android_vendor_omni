@@ -23,6 +23,25 @@ omni_launcher3 {
 }
 
 soong_config_module_type {
+    name: "omni_weekly_build",
+    module_type: "cc_defaults",
+    config_namespace: "omniGlobalVars",
+    bool_variables: [
+        "useWeekly",
+    ],
+    properties: ["export_cflags"],
+}
+
+omni_weekly_build {
+    name: "omni_weekly_build_defaults",
+    soong_config_variables: {
+        useWeekly: {
+            export_cflags: ["-DUSE_WEEKLY_BUILD"],
+        },
+    },
+}
+
+soong_config_module_type {
     name: "aapt_version_code",
     module_type: "java_defaults",
     config_namespace: "omniGlobalVars",
