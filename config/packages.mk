@@ -10,7 +10,6 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     MatLog \
     OmniStoreInstallerPrebuilt \
-    WallpaperCropper2 \
     OmniOta \
     OmniWallpaper
 
