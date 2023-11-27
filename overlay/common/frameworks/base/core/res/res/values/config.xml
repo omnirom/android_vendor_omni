@@ -32,18 +32,6 @@
 
     <bool name="config_enableAutoPowerModes">true</bool>
 
-    <!-- Default list of files pinned by the Pinner Service -->
-    <string-array name="config_defaultPinnerServiceFiles">
-        <item>/system/lib64/libRScpp.so</item>
-        <item>/system/lib64/libRS.so</item>
-        <item>/system/lib64/libRS_internal.so</item>
-        <item>/system/lib64/libbcinfo.so</item>
-        <item>/system/lib64/libRSDriver.so</item>
-        <item>/system/lib64/libRSCpuRef.so</item>
-        <item>/system/lib64/libblas.so</item>
-        <item>/system_ext/priv-app/SystemUI/SystemUI.apk</item>
-    </string-array>
-
     <bool name="config_dozeAlwaysOnDisplayEnabledDefault">false</bool>
 
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
