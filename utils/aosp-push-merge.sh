@@ -47,11 +47,11 @@ while read path;
     echo " Pushing..."
 
     if [[ "${OPERATION}" == "github" ]]; then
-        echo " git push --no-thin ssh://${username}@${url}:${port}/${project} HEAD:refs/heads/${branch}"
-        git push --no-thin ssh://${username}@${url}:${port}/${project} HEAD:refs/heads/${branch}
+        echo " git push --no-thin -o skip-validation ssh://${username}@${url}:${port}/${project} HEAD:refs/heads/${branch}"
+        git push --no-thin -o skip-validation ssh://${username}@${url}:${port}/${project} HEAD:refs/heads/${branch}
     elif [[ "${OPERATION}" == "gerrit" ]]; then
-        echo " git push --no-thin ssh://${username}@${url}:${port}/${project} HEAD:refs/for/${branch}%topic=${topicname}"
-        git push --no-thin ssh://${username}@${url}:${port}/${project} HEAD:refs/for/${branch}%topic=${topicname}
+        echo " git push --no-thin -o skip-validation ssh://${username}@${url}:${port}/${project} HEAD:refs/for/${branch}%topic=${topicname}"
+        git push --no-thin -o skip-validation ssh://${username}@${url}:${port}/${project} HEAD:refs/for/${branch}%topic=${topicname}
     fi
     echo ""
 
