@@ -1,7 +1,11 @@
 # Versioning of the ROM
 
 ifndef ROM_BUILDTYPE
-    ROM_BUILDTYPE := HOMEMADE
+    ROM_BUILDTYPE := WEEKLY
+endif
+
+ifndef ROM_BUILDTIME_UTC
+    ROM_BUILDTIME_UTC := y
 endif
 
 ifndef ROM_BUILDTIME_WITH_TIME
