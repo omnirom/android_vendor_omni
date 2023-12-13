@@ -1721,7 +1721,11 @@ function extract() {
 
             # Extract A/B OTA
             if [ -a "$DUMPDIR"/payload.bin ]; then
-                "$OTA_EXTRACTOR" --payload "$DUMPDIR"/payload.bin --output_dir "$DUMPDIR" --partitions "system","odm","product","system_ext","vendor" 2>&1
+                for PARTITION in "system" "odm" "product" "system_ext" "vendor"
+                do
+                    "$OTA_EXTRACTOR" --payload "$DUMPDIR"/payload.bin --output_dir "$DUMPDIR" --partitions "$PARTITION" &2>&1
+                done
+                wait
             fi
 
             for PARTITION in "system" "odm" "product" "system_ext" "vendor"
