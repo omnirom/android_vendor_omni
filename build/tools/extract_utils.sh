@@ -94,6 +94,7 @@ function setup_vendor() {
     export PRODUCTMK="$OMNI_ROOT"/"$OUTDIR"/"$VNDNAME"-vendor.mk
     export ANDROIDBP="$OMNI_ROOT"/"$OUTDIR"/Android.bp
     export ANDROIDMK="$OMNI_ROOT"/"$OUTDIR"/Android.mk
+    export OTA_EXTRACTOR="$BINARIES_LOCATION"/ota_extractor
     export BOARDMK="$OMNI_ROOT"/"$OUTDIR"/BoardConfigVendor.mk
 
     if [ "$4" == "true" ] || [ "$4" == "1" ]; then
@@ -1720,7 +1721,7 @@ function extract() {
 
             # Extract A/B OTA
             if [ -a "$DUMPDIR"/payload.bin ]; then
-                python3 "$ANDROID_ROOT"/tools/extract-utils/extract_ota.py "$DUMPDIR"/payload.bin -o "$DUMPDIR" -p "system" "odm" "product" "system_ext" "vendor" 2>&1
+                "$OTA_EXTRACTOR" --payload "$DUMPDIR"/payload.bin --output_dir "$DUMPDIR" --partitions "system","odm","product","system_ext","vendor" 2>&1
             fi
 
             for PARTITION in "system" "odm" "product" "system_ext" "vendor"
@@ -2219,7 +2220,7 @@ function extract_firmware() {
         if [ -f "$SRC" ] && [ "${SRC##*.}" == "zip" ]; then
             # Extract A/B OTA
             if [ -a "$DUMPDIR"/payload.bin ]; then
-                python3 "$ANDROID_ROOT"/tools/extract-utils/extract_ota.py "$DUMPDIR"/payload.bin -o "$DUMPDIR" -p $(basename "${DST_FILE%.*}") 2>&1
+                "$OTA_EXTRACTOR" --payload "$DUMPDIR"/payload.bin --output_dir "$DUMPDIR" --partitions $(basename "${DST_FILE%.*}") 2>&1
                 if [ -f "$DUMPDIR/$(basename $DST_FILE)" ]; then
                     COPY_FILE="$DUMPDIR/$(basename $DST_FILE)"
                 fi
