@@ -6,6 +6,7 @@ external/wpa_supplicant_8
 frameworks/av
 frameworks/base
 frameworks/native
+frameworks/opt/telephony
 hardware/interfaces
 hardware/libhardware
 packages/apps/Contacts
