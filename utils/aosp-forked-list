@@ -2,6 +2,7 @@ bionic
 build
 build/soong
 external/drm_hwcomposer
+external/tinycompress
 external/wpa_supplicant_8
 frameworks/av
 frameworks/base
