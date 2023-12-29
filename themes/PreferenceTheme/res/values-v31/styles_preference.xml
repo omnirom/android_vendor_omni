@@ -62,7 +62,7 @@
     </style>
 
     <style name="Omni.PreferenceTitle"
-        parent="@style/TextAppearance.Material3.BodyMedium">
+        parent="@android:style/TextAppearance.Material.Medium">
         <item name="android:textSize">@dimen/omni_pref_title_text_size</item>
     </style>
 
