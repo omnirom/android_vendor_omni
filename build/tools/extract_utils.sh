@@ -2227,6 +2227,10 @@ function extract_firmware() {
             else
                 cp "$SRC/$DST_FILE" "$OUTPUT_DIR/$DST_FILE"
             fi
+            if [[ $(file -b "$COPY_FILE") == Android* ]]; then
+                "$SIMG2IMG" "$COPY_FILE" "$SRC"/"$(basename "$COPY_FILE").raw"
+                COPY_FILE="$SRC"/"$(basename "$COPY_FILE").raw"
+            fi
         fi
         chmod 644 "$OUTPUT_DIR/$DST_FILE"
     done
