@@ -1,6 +1,4 @@
 // Omni soong configs
-soong_namespace {
-}
 
 bootstrap_go_package {
     name: "soong-omnirom-generator",
