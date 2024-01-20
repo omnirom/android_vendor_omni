@@ -341,8 +341,8 @@ def create_dependency_manifest(dependencies):
                 manifest = append_to_manifest(project)
                 write_to_manifest(manifest)
                 projects.append(target_path)
-#    if len(projects) > 0:
-#        os.system("repo sync --force-sync --no-clone-bundle %s" % " ".join(projects))
+    if len(projects) > 0:
+        os.system("repo sync --force-sync --no-clone-bundle %s" % " ".join(projects))
 
 
 def create_common_dependencies_manifest(dependencies):
@@ -410,9 +410,9 @@ def fetch_device(device):
             manifest = append_to_manifest(project)
             write_to_manifest(manifest)
         # In case a project was written to manifest, but never synced
-#        if project is not None or not check_target_exists(device_dir):
-#            print("syncing the device config")
-#            os.system('repo sync --force-sync --no-clone-bundle %s' % device_dir)
+        if project is not None or not check_target_exists(device_dir):
+            print("syncing the device config")
+            os.system('repo sync --force-sync --no-clone-bundle %s' % device_dir)
 
 
 if __name__ == '__main__':
