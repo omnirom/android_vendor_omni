@@ -6,7 +6,8 @@ EXPORT_TO_SOONG := \
     KERNEL_MAKE_CMD \
     KERNEL_MAKE_FLAGS \
     TARGET_KERNEL_CONFIG \
-    TARGET_KERNEL_SOURCE
+    TARGET_KERNEL_SOURCE \
+    KERNEL_CLANG_TRIPLE
 
 # Setup SOONG_CONFIG_* vars to export the vars listed above.
 # Documentation here:
