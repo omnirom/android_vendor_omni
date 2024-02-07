@@ -9554,12 +9554,12 @@ Oneplus modification history ex. [Patch#ID][Date][Jira#ID][MCC/MNC][Owner email]
   apn="sp.koodo.com"
   mcc="302"
   mnc="220"
-  proxy="74.49.0.18"
-  port="80"
-  mmsproxy="74.49.0.18"
-  mmsport="80"
+  protocol="IPV4"
+  roaming_protocol="IPV4"
+  mmsproxy="mmscproxy.mobility.ca"
+  mmsport="8799"
   mmsc="http://aliasredirect.net/proxy/koodo/mmsc"
-  type="default,supl,mms"
+  type="*"
  />
 
 <apn carrier="Public Mobile"
