@@ -24,15 +24,7 @@ import os.path
 import re
 from xml.etree import ElementTree as ES
 # Use the urllib importer from the Cyanogenmod roomservice
-try:
-    # For python3
-    import urllib.request
-except ImportError:
-    # For python2
-    import imp
-    import urllib2
-    urllib = imp.new_module('urllib')
-    urllib.request = urllib2
+import urllib.request
 
 # Config
 # set this to the default remote to use in repo
