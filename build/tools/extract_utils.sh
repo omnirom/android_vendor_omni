@@ -484,6 +484,9 @@ function write_blueprint_packages() {
             printf '\tdex_preopt: {\n'
             printf '\t\tenabled: false,\n'
             printf '\t},\n'
+            if [ "$DIRNAME" != "." ] && [[ "$DIRNAME" == */* ]]; then
+                printf '\trelative_install_path: "%s",\n' "$DIRNAME"
+            fi
         fi
         if [ "$CLASS" = "SHARED_LIBRARIES" ] || [ "$CLASS" = "EXECUTABLES" ] ; then
             if [ "$DIRNAME" != "." ]; then
