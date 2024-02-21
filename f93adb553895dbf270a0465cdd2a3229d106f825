@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c40729aa_ef4224dd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000001
+      },
+      "writtenOn": "2024-02-21T16:00:49Z",
+      "side": 1,
+      "message": "default is 3,3,4 - right? never ever had so many so no idea how it looks :)",
+      "revId": "f93adb553895dbf270a0465cdd2a3229d106f825",
+      "serverId": "ed425d63-8d31-4f40-b4e0-dc35cc52d350"
+    }
+  ]
+}
