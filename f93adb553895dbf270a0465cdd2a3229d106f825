@@ -34,6 +34,24 @@
       "parentUuid": "c40729aa_ef4224dd",
       "revId": "f93adb553895dbf270a0465cdd2a3229d106f825",
       "serverId": "ed425d63-8d31-4f40-b4e0-dc35cc52d350"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71099bde_24fa4848",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-02-22T10:45:21Z",
+      "side": 1,
+      "message": "then max_notif_static_icons may be 7 then no ?",
+      "parentUuid": "27c70ce8_0f78d4ec",
+      "revId": "f93adb553895dbf270a0465cdd2a3229d106f825",
+      "serverId": "ed425d63-8d31-4f40-b4e0-dc35cc52d350"
     }
   ]
 }
