@@ -23,6 +23,7 @@ PRODUCT_PACKAGES_HASHES=()
 PRODUCT_PACKAGES_FIXUP_HASHES=()
 PRODUCT_SYMLINKS_LIST=()
 PACKAGE_LIST=()
+REQUIRED_PACKAGES_LIST=
 VENDOR_STATE=-1
 VENDOR_RADIO_STATE=-1
 COMMON=-1
@@ -373,6 +374,7 @@ function write_blueprint_packages() {
     local PKGNAME=
     local SRC=
     local OVERRIDEPKG=
+    local REQUIREDPKG=
 
     for P in "${FILELIST[@]}"; do
         FILE=$(target_file "$P")
@@ -449,6 +451,10 @@ function write_blueprint_packages() {
                     OVERRIDEPKG=${ARG#*=}
                     OVERRIDEPKG=${OVERRIDEPKG//,/\", \"}
                     printf '\toverrides: ["%s"],\n' "$OVERRIDEPKG"
+                elif [[ "$ARG" =~ "REQUIRED" ]]; then
+                    REQUIREDPKG=${ARG#*=}
+                    REQUIRED_PACKAGES_LIST+="$REQUIREDPKG,"
+                    printf '\trequired: ["%s"],\n' "${REQUIREDPKG//,/\", \"}"
                 elif [[ "$ARG" =~ "SYMLINK" ]]; then
                     continue
                 elif [ ! -z "$ARG" ]; then
@@ -1074,11 +1080,21 @@ function write_package_definition() {
 
     printf '\n%s\n' "PRODUCT_PACKAGES += \\"
     for (( i=1; i<PACKAGE_COUNT+1; i++ )); do
+        local SKIP=false
         local LINEEND=" \\"
         if [ "$i" -eq "$PACKAGE_COUNT" ]; then
             LINEEND=""
         fi
-        printf '    %s%s\n' "${PACKAGE_LIST[$i-1]}" "$LINEEND"
+        for PKG in $(tr "," "\n" <<< "$REQUIRED_PACKAGES_LIST"); do
+            if [[ $PKG == "${PACKAGE_LIST[$i - 1]}" ]]; then
+                SKIP=true
+                break
+            fi
+        done
+        # Skip adding of the package to product makefile if it's in the required list
+        if [[ $SKIP == false ]]; then
+            printf '    %s%s\n' "${PACKAGE_LIST[$i - 1]}" "$LINEEND" >> "$PRODUCTMK"
+        fi
     done
 }
 
