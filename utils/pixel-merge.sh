@@ -60,8 +60,8 @@ while read path;
     # make sure that environment is clean
     ret=$(git merge --abort 2>&1);
 
-    echo " -> Merging remote: https://android.googlesource.com/platform/$aosp_project ${ref}";
-    ret=$(git pull https://android.googlesource.com/platform/$aosp_project ${ref} 2>&1);
+    echo " -> Merging remote: https://android.googlesource.com/$aosp_project ${ref}";
+    ret=$(git pull https://android.googlesource.com/$aosp_project ${ref} 2>&1);
 
     if echo $ret | grep "CONFLICT (content)" > /dev/null ; then
         echo -e " -> \e[33mWARNING!: \e[31mMERGE CONFLICT\e[0m";
