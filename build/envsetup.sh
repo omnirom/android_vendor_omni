@@ -27,7 +27,8 @@ function brunch()
 function breakfast()
 {
     target=$1
-    local variant=$2
+    local release=$2
+    local variant=$3
 
     if [ $# -eq 0 ]; then
         # No arguments, so let's have the full menu
@@ -42,7 +43,7 @@ function breakfast()
             if [ -z "$variant" ]; then
                 variant="user"
             fi
-            lunch omni_$target-$variant
+            lunch omni_$target-$release-$variant
         fi
     fi
     return $?
