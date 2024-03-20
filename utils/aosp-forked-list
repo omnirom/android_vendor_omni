@@ -17,6 +17,7 @@ packages/apps/Messaging
 packages/apps/Settings
 packages/apps/SettingsIntelligence
 packages/inputmethods/LatinIME
+packages/modules/Connectivity
 packages/services/Telecomm
 packages/services/Telephony
 system/libhidl
