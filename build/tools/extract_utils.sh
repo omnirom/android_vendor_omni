@@ -811,10 +811,10 @@ function write_symlink_packages() {
 
     for LINE in "${PRODUCT_SYMLINKS_LIST[@]}"; do
         FILE=$(src_file "$LINE")
-        if [[ "$LINE" =~ '/lib/' ]]; then
-            ARCH="32"
-        elif [[ "$LINE" =~ '/lib64/' ]]; then
+        if [[ "$LINE" =~ '/lib64/' || "$LINE" =~ '/lib/arm64/' ]]; then
             ARCH="64"
+        elif [[ "$LINE" =~ '/lib/' ]]; then
+            ARCH="32"
         fi
         BASENAME=$(basename "$FILE")
         ARGS=$(target_args "$LINE")
