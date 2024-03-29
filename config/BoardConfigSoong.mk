@@ -68,11 +68,7 @@ SOONG_CONFIG_omniGlobalVars_target_enforce_ab_ota_partition_list := $(TARGET_ENF
 SOONG_CONFIG_omniGlobalVars_target_create_device_symlinks := $(TARGET_CREATE_DEVICE_SYMLINKS)
 
 # Set default values
-ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := (1 << 13) | (1 << 21) | (1 << 27)
-else
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
-endif
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE ?= false
