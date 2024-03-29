@@ -89,3 +89,5 @@ $(call set-device-specific-path,WLAN,wlan,hardware/qcom-caf/wlan)
 # Wlan Qcom Guard
 PRODUCT_CFI_INCLUDE_PATHS += \
     hardware/qcom-caf/wlan/qcwcn/wpa_supplicant_8_lib
+
+PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/wlan
