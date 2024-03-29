@@ -3,3 +3,7 @@ include vendor/omni/config/BoardConfigKernel.mk
 endif
 
 include vendor/omni/config/BoardConfigSoong.mk
+
+ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
+include vendor/omni/config/BoardConfigQcom.mk
+endif
