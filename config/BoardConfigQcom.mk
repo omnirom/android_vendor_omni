@@ -77,6 +77,9 @@ MSM_VIDC_TARGET_LIST := \
 # Gralloc Usage Bits
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := (1 << 13) | (1 << 21) | (1 << 27)
 
+# Wlan AOSP guard
+TARGET_USES_HARDWARE_QCOM_WLAN := false
+
 # Wlan Qcom Guard
 PRODUCT_CFI_INCLUDE_PATHS += \
     hardware/qcom-caf/wlan/qcwcn/wpa_supplicant_8_lib
