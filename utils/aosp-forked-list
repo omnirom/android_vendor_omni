@@ -20,6 +20,7 @@ packages/inputmethods/LatinIME
 packages/modules/Connectivity
 packages/services/Telecomm
 packages/services/Telephony
+system/bpf
 system/libhidl
 system/security
 system/sepolicy
