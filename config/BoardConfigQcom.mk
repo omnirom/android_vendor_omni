@@ -85,3 +85,7 @@ PRODUCT_CFI_INCLUDE_PATHS += \
     hardware/qcom-caf/wlan/qcwcn/wpa_supplicant_8_lib
 
 PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/wlan
+
+SOONG_CONFIG_omniQcomVars += \
+    qcom_display_headers_namespace
+SOONG_CONFIG_omniQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
