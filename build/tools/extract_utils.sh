@@ -1537,11 +1537,11 @@ function oat2dex() {
     fi
 
     if [ -z "$VDEXEXTRACTOR" ]; then
-        export VDEXEXTRACTOR="$ANDROID_ROOT"/vendor/omni/build/tools/${HOST}/vdexExtractor
+        export VDEXEXTRACTOR="$BINARIES_LOCATION"/vdexExtractor
     fi
 
     if [ -z "$CDEXCONVERTER" ]; then
-        export CDEXCONVERTER="$ANDROID_ROOT"/vendor/omni/build/tools/${HOST}/compact_dex_converter
+        export CDEXCONVERTER="$BINARIES_LOCATION"/compact_dex_converter
     fi
 
     # Extract existing boot.oats to the temp folder
