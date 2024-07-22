@@ -363,7 +363,8 @@ define build-image-kernel-modules-omnirom
         for MODULE in $(1); do \
             BASENAME=$$(basename $$MODULE); \
             echo lib/modules$(6)/"$$BASENAME" >> "$(7)"; \
-        done \
+        done; \
+        sort -u "$(7)" -o "$(7)"; \
     fi;
 endef
 
