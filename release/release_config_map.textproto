@@ -1,0 +1,4 @@
+release_config {
+    name: "ap3a"
+    flag_value_files: "build_config/ap3a.textproto"
+}
