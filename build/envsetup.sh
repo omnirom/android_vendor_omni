@@ -12,6 +12,29 @@ Additional OmniROM functions:
 EOF
 }
 
+# check to see if the supplied product is one we can build
+function check_product()
+{
+    local T=$(gettop)
+    if [ ! "$T" ]; then
+        echo "Couldn't locate the top of the tree. Try setting TOP." >&2
+        return
+    fi
+    if (echo -n $1 | grep -q -e "^omni_") ; then
+        CUSTOM_BUILD=$(echo -n $1 | sed -e 's/^omni_//g')
+    else
+        CUSTOM_BUILD=
+    fi
+    export CUSTOM_BUILD
+        TARGET_PRODUCT=$1 \
+        TARGET_RELEASE=$2 \
+        TARGET_BUILD_VARIANT= \
+        TARGET_BUILD_TYPE= \
+        TARGET_BUILD_APPS= \
+        get_build_var TARGET_DEVICE > /dev/null
+    # hide successful answers, but allow the errors to show
+}
+
 function brunch()
 {
     breakfast $*
