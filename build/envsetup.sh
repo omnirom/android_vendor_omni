@@ -31,7 +31,7 @@ function check_product()
         TARGET_BUILD_VARIANT= \
         TARGET_BUILD_TYPE= \
         TARGET_BUILD_APPS= \
-        get_build_var TARGET_DEVICE > /dev/null
+        _get_build_var_cached TARGET_DEVICE > /dev/null
     # hide successful answers, but allow the errors to show
 }
 
@@ -75,8 +75,8 @@ function breakfast()
 alias bib=breakfast
 
 function fixup_common_out_dir() {
-    common_out_dir=$(get_build_var OUT_DIR)/target/common
-    target_device=$(get_build_var TARGET_DEVICE)
+    common_out_dir=$(_get_build_var_cached OUT_DIR)/target/common
+    target_device=$(_get_build_var_cached TARGET_DEVICE)
     if [ ! -z $ANDROID_FIXUP_COMMON_OUT ]; then
         if [ -d ${common_out_dir} ] && [ ! -L ${common_out_dir} ]; then
             mv ${common_out_dir} ${common_out_dir}-${target_device}
