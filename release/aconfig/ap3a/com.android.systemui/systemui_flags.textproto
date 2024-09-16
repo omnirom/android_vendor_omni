@@ -4,10 +4,3 @@ flag_value {
   state: ENABLED
   permission: READ_ONLY
 }
-
-flag_value {
-  package: "com.android.systemui"
-  name: "new_volume_panel"
-  state: ENABLED
-  permission: READ_ONLY
-}
