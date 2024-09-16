@@ -13,7 +13,7 @@
 // limitations under the License.
 
 aconfig_values {
-  name: "aconfig-values-ap2a-com.android.settingslib.flags-all",
+  name: "aconfig-values-ap3a-com.android.settingslib.flags-all",
   package: "com.android.settingslib.flags",
   srcs: [
     "*.textproto",
