@@ -18,9 +18,11 @@ packages/apps/Settings
 packages/apps/SettingsIntelligence
 packages/inputmethods/LatinIME
 packages/modules/Connectivity
+packages/services/Mms
 packages/services/Telecomm
 packages/services/Telephony
 system/bpf
+system/core
 system/libhidl
 system/security
 system/sepolicy
