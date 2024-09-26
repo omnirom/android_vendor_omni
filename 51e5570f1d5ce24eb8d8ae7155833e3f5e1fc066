@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7afa3c26_0e45e9ef",
+        "filename": "config/BoardConfigKernel.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-09-26T22:57:37Z",
+      "side": 0,
+      "message": "We can probably just drop this no ?\nit\u0027s already set by aosp, no need to be override\nhttps://cs.android.com/android/platform/superproject/main/+/main:build/soong/scripts/get_clang_version.py;l\u003d24?q\u003dLLVM_PREBUILTS_VERSION",
+      "revId": "51e5570f1d5ce24eb8d8ae7155833e3f5e1fc066",
+      "serverId": "ed425d63-8d31-4f40-b4e0-dc35cc52d350"
+    }
+  ]
+}
