@@ -118,4 +118,4 @@ endif
 -include vendor/omni/config/version.mk
 
 # Add our overlays
-DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
