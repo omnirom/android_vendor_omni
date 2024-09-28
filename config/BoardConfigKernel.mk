@@ -42,6 +42,8 @@
 #   TARGET_KERNEL_EXT_MODULES          = Optional, the external modules we are
 #                                          building. Defaults to empty
 #
+#   TARGET_KERNEL_LIBC_SYSROOT_USE     = libc sysroot to use, defaults to "host" for 6.11+
+#
 #   TARGET_KERNEL_LLVM_BINUTILS        = Use LLVM binutils, defaults to true
 #   TARGET_KERNEL_NO_GCC               = Fully compile the kernel without GCC.
 #                                        Defaults to false
@@ -92,6 +94,19 @@ ifneq ($(KERNEL_VERSION),)
         ifeq ($(shell expr $(KERNEL_PATCHLEVEL) \>= 10), 1)
             TARGET_KERNEL_NO_GCC ?= true
         endif
+    endif
+endif
+
+# 6.11+ can no longer use aosp glibc sysroot headers (too old)
+ifneq ($(KERNEL_VERSION),)
+    ifeq ($(shell expr $(KERNEL_VERSION) \< 6), 1)
+        # empty
+    else ifeq ($(KERNEL_VERSION), 6)
+        ifeq ($(shell expr $(KERNEL_PATCHLEVEL) \>= 11), 1)
+            TARGET_KERNEL_LIBC_SYSROOT_USE ?= host
+        endif
+    else
+        TARGET_KERNEL_LIBC_SYSROOT_USE ?= host
     endif
 endif
 
@@ -175,8 +190,14 @@ ifneq ($(KERNEL_NO_GCC), true)
         endif
     endif
 else
-    KERNEL_MAKE_FLAGS += HOSTCFLAGS="--sysroot=$(BUILD_TOP)/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8/sysroot -I$(BUILD_TOP)/prebuilts/kernel-build-tools/linux-x86/include"
-    KERNEL_MAKE_FLAGS += HOSTLDFLAGS="--sysroot=$(BUILD_TOP)/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8/sysroot -Wl,-rpath,$(BUILD_TOP)/prebuilts/kernel-build-tools/linux-x86/lib64 -L $(BUILD_TOP)/prebuilts/kernel-build-tools/linux-x86/lib64 -fuse-ld=lld --rtlib=compiler-rt"
+    ifeq ($(TARGET_KERNEL_LIBC_SYSROOT_USE), host)
+        KERNEL_HOST_C_LD_FLAGS_SYSROOT :=
+    else
+        KERNEL_HOST_C_LD_FLAGS_SYSROOT := --sysroot=$(BUILD_TOP)/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8/sysroot
+    endif
+
+    KERNEL_MAKE_FLAGS += HOSTCFLAGS="$(KERNEL_HOST_C_LD_FLAGS_SYSROOT) -I$(BUILD_TOP)/prebuilts/kernel-build-tools/linux-x86/include"
+    KERNEL_MAKE_FLAGS += HOSTLDFLAGS="$(KERNEL_HOST_C_LD_FLAGS_SYSROOT) -Wl,-rpath,$(BUILD_TOP)/prebuilts/kernel-build-tools/linux-x86/lib64 -L $(BUILD_TOP)/prebuilts/kernel-build-tools/linux-x86/lib64 -fuse-ld=lld --rtlib=compiler-rt"
 
 endif
 
