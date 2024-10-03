@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f71e761a_360adbf3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-10-03T02:29:02Z",
+      "side": 1,
+      "message": "can you test this instead ?\nhttps://gerrit.omnirom.org/c/android_vendor_omni/+/1456",
+      "revId": "0bd12f7177475ff16a9d07752dce7eeab8e36ed1",
+      "serverId": "ed425d63-8d31-4f40-b4e0-dc35cc52d350"
+    }
+  ]
+}
