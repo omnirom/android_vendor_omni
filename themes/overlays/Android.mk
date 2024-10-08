@@ -24,9 +24,6 @@ LOCAL_MODULE := omni-overlays
 	AccentColorOrangeOverlay
 
 LOCAL_REQUIRED_MODULES += \
-	EmptyProductOverlay
-
-LOCAL_REQUIRED_MODULES += \
 	IconShapeCircleOverlay \
 	IconShapeSquareOverlay \
 	IconShapeSquircleOverlay \
