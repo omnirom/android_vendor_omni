@@ -12,6 +12,9 @@ Additional OmniROM functions:
 EOF
 }
 
+CLANG_VERSION=$(build/soong/scripts/get_clang_version.py)
+export LLVM_PREBUILTS_VERSION="${CLANG_VERSION}"
+
 # check to see if the supplied product is one we can build
 function check_product()
 {
