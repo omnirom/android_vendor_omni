@@ -22,4 +22,9 @@
     <color name="system_neutral2_700">#2e2e30</color>
     <color name="system_neutral2_800">#1f1f20</color>
     <color name="system_neutral2_900">#101011</color>
+
+    <color name="system_surface_container_dark">#101011</color>
+    <color name="system_surface_container_high_dark">#101011</color>
+    <color name="system_surface_dim_dark">#101011</color>
+
 </resources>
