@@ -42,26 +42,6 @@ omni_weekly_build {
 }
 
 soong_config_module_type {
-    name: "aapt_version_code",
-    module_type: "java_defaults",
-    config_namespace: "omniGlobalVars",
-    value_variables: ["aapt_version_code"],
-    properties: ["aaptflags"],
-}
-
-aapt_version_code {
-    name: "aapt_version_code_defaults",
-    soong_config_variables: {
-        aapt_version_code: {
-            aaptflags: [
-                "--version-code",
-                "%s",
-            ],
-        },
-    },
-}
-
-soong_config_module_type {
     name: "power_libperfmgr",
     module_type: "cc_defaults",
     config_namespace: "omniGlobalVars",
