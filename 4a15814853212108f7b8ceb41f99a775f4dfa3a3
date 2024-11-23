@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "68dd1194_e3602f44",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000001
+      },
+      "writtenOn": "2024-11-23T19:09:41Z",
+      "side": 1,
+      "message": "now settings like way more \"blue\" then OmniControl :)",
+      "revId": "4a15814853212108f7b8ceb41f99a775f4dfa3a3",
+      "serverId": "ed425d63-8d31-4f40-b4e0-dc35cc52d350"
+    }
+  ]
+}
