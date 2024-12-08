@@ -44,7 +44,7 @@ while read path;
 
     rm -fr $path;
     echo " -> repo sync ${path}";
-    ret=$(repo sync -d -f --force-sync ${path} 2>&1);
+    ret=$(repo sync -d --force-sync ${path} 2>&1);
     cd $path;
 
     if [[ "${OPERATION}" == "yes" ]]; then
@@ -57,13 +57,15 @@ while read path;
         ret=$(repo start ${branch_name});
     fi
 
-    # make sure that environment is clean
-    ret=$(git merge --abort 2>&1);
+    if [[ -n "$(git status --porcelain)" ]]; then
+        # make sure that environment is clean
+        ret=$(git merge --abort 2>&1);
+    fi
 
     echo " -> Merging remote: https://android.googlesource.com/platform/$aosp_project ${ref}";
     ret=$(git pull https://android.googlesource.com/platform/$aosp_project ${ref} 2>&1);
 
-    if echo $ret | grep "CONFLICT (content)" > /dev/null ; then
+    if [[ -n "$(git status --porcelain)" ]]; then
         echo -e " -> \e[33mWARNING!: \e[31mMERGE CONFLICT\e[0m";
         echo -e " -> please fix the merge conflict before push it.";
     else
