@@ -17,7 +17,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := omni-overlays
 
-#LOCAL_REQUIRED_MODULES := \
+LOCAL_REQUIRED_MODULES += \
 	AccentColorSluttyPinkOverlay \
 	AccentColorOmniOverlay \
 	AccentColorPurpleOverlay \
