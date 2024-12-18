@@ -24,6 +24,10 @@ LOCAL_MODULE := omni-overlays
 	AccentColorOrangeOverlay
 
 LOCAL_REQUIRED_MODULES += \
+	FontLatoSourceOverlay \
+	FontMuliSourceOverlay
+
+LOCAL_REQUIRED_MODULES += \
 	IconShapeCircleOverlay \
 	IconShapeSquareOverlay \
 	IconShapeSquircleOverlay \
