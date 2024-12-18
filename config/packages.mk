@@ -13,7 +13,9 @@ PRODUCT_PACKAGES += \
     OmniOta \
     OmniWallpaper \
     OmniRemote \
-    OmniControl
+    OmniControl \
+    ThemePicker \
+    ThemesStub
 
 # Additional tools
 PRODUCT_PACKAGES += \
