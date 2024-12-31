@@ -18,7 +18,6 @@ aconfig_value_set {
     values: [
         "aconfig-values-ap3a-com.android.launcher3.flags-all",
         "aconfig-values-ap4a-com.android.settings.flags-all",
-        "aconfig-values-ap4a-com.android.settingslib.flags-all",
         "aconfig-values-ap4a-com.android.systemui.flags-all",
     ],
 }
