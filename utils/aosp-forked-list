@@ -18,6 +18,7 @@ packages/apps/Settings
 packages/apps/SettingsIntelligence
 packages/inputmethods/LatinIME
 packages/modules/Connectivity
+packages/modules/ThemePicker
 packages/modules/Virtualization
 packages/services/Mms
 packages/services/Telecomm
