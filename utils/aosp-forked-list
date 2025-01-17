@@ -15,9 +15,9 @@ packages/apps/Launcher3
 packages/apps/Messaging
 packages/apps/Settings
 packages/apps/SettingsIntelligence
+packages/apps/ThemePicker
 packages/inputmethods/LatinIME
 packages/modules/Connectivity
-packages/modules/ThemePicker
 packages/modules/Virtualization
 packages/services/Mms
 packages/services/Telecomm
