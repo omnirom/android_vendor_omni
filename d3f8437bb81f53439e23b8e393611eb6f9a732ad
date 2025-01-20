@@ -16,6 +16,24 @@
       "message": "OMNI_TARGET_PACKAGE need to be replaced by call get-omni-target-package too",
       "revId": "d3f8437bb81f53439e23b8e393611eb6f9a732ad",
       "serverId": "ed425d63-8d31-4f40-b4e0-dc35cc52d350"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69c86abc_c6015d66",
+        "filename": "build/tasks/cookies.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000001
+      },
+      "writtenOn": "2025-01-20T11:28:51Z",
+      "side": 1,
+      "message": "true - thx",
+      "parentUuid": "8ed80def_3369adb3",
+      "revId": "d3f8437bb81f53439e23b8e393611eb6f9a732ad",
+      "serverId": "ed425d63-8d31-4f40-b4e0-dc35cc52d350"
     }
   ]
 }
