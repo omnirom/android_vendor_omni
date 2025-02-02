@@ -91,7 +91,13 @@ DTBS_OUT := $(DTB_OUT)/out
 endif
 KERNEL_CONFIG := $(KERNEL_OUT)/.config
 KERNEL_RELEASE := $(KERNEL_OUT)/include/config/kernel.release
-GKI_SUFFIX := $(shell echo android$(PLATFORM_VERSION)-$(TARGET_KERNEL_VERSION))
+ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
+ifeq ($(shell expr $(TARGET_KERNEL_VERSION) \>= 5.15), 1)
+ifeq ($(shell expr $(TARGET_KERNEL_VERSION) \<= 6.1), 1)
+GKI_SUFFIX := /$(shell echo android$(PLATFORM_VERSION)-$(TARGET_KERNEL_VERSION))
+endif
+endif
+endif
 
 ifeq ($(KERNEL_ARCH),x86_64)
 KERNEL_DEFCONFIG_ARCH := x86
@@ -396,7 +402,7 @@ $(TARGET_PREBUILT_INT_KERNEL): $(KERNEL_CONFIG) $(DEPMOD) $(DTC)
 					if [ -n "$$p" ]; then echo $$p; else echo "ERROR: $$m from BOARD_SYSTEM_KERNEL_MODULES was not found" 1>&2 && exit 1; fi; \
 				done); \
 				[ $$? -ne 0 ] && exit 1; \
-				($(call build-image-kernel-modules-omnirom,$$gki_modules,$(SYSTEM_KERNEL_MODULES_OUT),$(SYSTEM_KERNEL_MODULE_MOUNTPOINT)/,$(SYSTEM_KERNEL_DEPMOD_STAGING_DIR),$(BOARD_SYSTEM_KERNEL_MODULES_LOAD),/$(GKI_SUFFIX))) || exit "$$?"; \
+				($(call build-image-kernel-modules-omnirom,$$gki_modules,$(SYSTEM_KERNEL_MODULES_OUT),$(SYSTEM_KERNEL_MODULE_MOUNTPOINT)/,$(SYSTEM_KERNEL_DEPMOD_STAGING_DIR),$(BOARD_SYSTEM_KERNEL_MODULES_LOAD),$(GKI_SUFFIX),$(SYSTEM_KERNEL_MODULES_PARTITION_FILE_LIST),)) || exit "$$?"; \
 				filtered_modules=$$(for n in $$all_modules; do \
 					module_name=$$(basename $$n); \
 					if [[ ! "$(BOARD_SYSTEM_KERNEL_MODULES)" =~ "$$module_name" ]]; then echo $$n; fi; \
