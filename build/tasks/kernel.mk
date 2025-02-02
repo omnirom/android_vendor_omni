@@ -352,7 +352,6 @@ define build-image-kernel-modules-omnirom
       exit 1; \
     fi
     rm -f $(4)/depmod_stderr
-    if [ -n "$(8)" ]; then sed -i "/^$$(basename $(8))/d" $(4)/lib/modules/0.0/modules.dep; fi
     sed -e 's/\(.*modules.*\):/\/\1:/g' -e 's/ \([^ ]*modules[^ ]*\)/ \/\1/g' $(4)/lib/modules/0.0/modules.dep > $(2)/lib/modules$(6)/modules.dep
     cp $(4)/lib/modules/0.0/modules.softdep $(2)/lib/modules$(6)
     cp $(4)/lib/modules/0.0/modules.alias $(2)/lib/modules$(6)
