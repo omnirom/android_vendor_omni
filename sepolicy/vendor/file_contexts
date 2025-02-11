@@ -1,3 +1,6 @@
+# Fingerprint HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.lineage u:object_r:hal_fingerprint_default_exec:s0
+
 # Health HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.health-service\.batteryless u:object_r:hal_health_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.health-service\.default     u:object_r:hal_lineage_health_default_exec:s0
