@@ -27,7 +27,7 @@ soong_config_module_type {
     module_type: "cc_defaults",
     config_namespace: "omniGlobalVars",
     bool_variables: [
-        "useWeekly",
+        "useWeeklyBuild",
     ],
     properties: ["export_cflags"],
 }
@@ -35,7 +35,7 @@ soong_config_module_type {
 omni_weekly_build {
     name: "omni_weekly_build_defaults",
     soong_config_variables: {
-        useWeekly: {
+        useWeeklyBuild: {
             export_cflags: ["-DUSE_WEEKLY_BUILD"],
         },
     },

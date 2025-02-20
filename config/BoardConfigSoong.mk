@@ -46,7 +46,7 @@ SOONG_CONFIG_omniGlobalVars += \
     launcher3Mock \
     targetNeedsHWCOnFirstRef \
     uses_metadata_as_fde_key \
-    useWeekly \
+    useWeeklyBuild \
     target_use_sdclang \
     target_camera_needs_client_info \
     target_enforce_ab_ota_partition_list
@@ -104,7 +104,7 @@ TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT ?= false
 
 SOONG_CONFIG_omniGlobalVars_launcher3Gapps ?= false
 SOONG_CONFIG_omniGlobalVars_launcher3Mock ?= false
-SOONG_CONFIG_omniGlobalVars_useWeekly ?= false
+SOONG_CONFIG_omniGlobalVars_useWeeklyBuild ?= false
 
 # Soong value variables
 SOONG_CONFIG_omniGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
@@ -133,5 +133,5 @@ else
 endif
 
 ifeq ($(ROM_BUILDTYPE),WEEKLY)
-    SOONG_CONFIG_omniGlobalVars_useWeekly := true
+    SOONG_CONFIG_omniGlobalVars_useWeeklyBuild := true
 endif
