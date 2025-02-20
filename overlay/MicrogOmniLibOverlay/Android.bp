@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "MicrogOmniLibOverlay",
+    theme: "MicrogOmniLibOverlay",
+    product_specific: true,
+}

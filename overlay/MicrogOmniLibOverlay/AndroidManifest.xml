@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="omnirom.platform.overlay.org"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <application android:hasCode="false"/>
+
+    <overlay android:isStatic="true"
+             android:priority="140"
+             android:targetPackage="omnirom.platform"/>
+</manifest>

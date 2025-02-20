@@ -130,3 +130,8 @@ PRODUCT_BROKEN_SUBOPTIMAL_ORDER_OF_SYSTEM_SERVER_JARS := true
 
 # Add our overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
+
+ifeq ($(ROM_BUILDTYPE),MICROG)
+PRODUCT_PACKAGES += \
+    MicrogOmniLibOverlay
+endif
