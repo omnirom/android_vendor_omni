@@ -104,6 +104,10 @@ PRODUCT_COPY_FILES += \
 # Additional packages
 -include vendor/omni/config/packages.mk
 
+# FRP
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/common/bin/wipe-frp.sh:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/wipe-frp
+
 # Health
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/etc/permissions/org.lineageos.health.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/org.lineageos.health.xml
