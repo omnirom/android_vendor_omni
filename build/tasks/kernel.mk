@@ -67,6 +67,8 @@
 #   TARGET_KERNEL_PLATFORM_TARGET      = Optional, enables building an external kernel
 #                                          platform tree, this specifies the base target name
 #
+#   TARGET_PREBUILT_KERNEL_HEADERS     = Optional, if this is set, don't warn about prebuilt
+#                                          kernel because headers should match
 #   TARGET_MERGE_DTBS_WILDCARD         = Optional, limits the .dtb files used to generate the
 #
 
@@ -149,13 +151,15 @@ ifeq "$(wildcard $(KERNEL_SRC) )" ""
         TARGET_PREBUILT_INT_KERNEL := $(KERNEL_OUT)/$(BOARD_KERNEL_IMAGE_NAME)
         KERNEL_BIN := $(TARGET_PREBUILT_INT_KERNEL)
     else ifneq ($(HAS_PREBUILT_KERNEL),)
-        $(warning ***************************************************************)
-        $(warning * Using prebuilt kernel binary instead of source              *)
-        $(warning * THIS IS DEPRECATED, AND WILL BE DISCONTINUED                *)
-        $(warning * Please configure your device to download the kernel         *)
-        $(warning * source repository to $(KERNEL_SRC))
-        $(warning * for more information                                        *)
-        $(warning ***************************************************************)
+        ifeq ($(TARGET_PREBUILT_KERNEL_HEADERS),)
+            $(warning ***************************************************************)
+            $(warning * Using prebuilt kernel binary instead of source              *)
+            $(warning * THIS IS DEPRECATED, AND IS NOT ADVISED.                     *)
+            $(warning * Please configure your device to download the kernel         *)
+            $(warning * source repository to $(KERNEL_SRC))
+            $(warning * for more information                                        *)
+            $(warning ***************************************************************)
+        endif
         FULL_KERNEL_BUILD := false
         KERNEL_BIN := $(TARGET_PREBUILT_KERNEL)
     else
