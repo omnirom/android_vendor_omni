@@ -26,7 +26,6 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
 SOONG_CONFIG_NAMESPACES += omniGlobalVars
 SOONG_CONFIG_omniGlobalVars += \
     additional_gralloc_10_usage_bits \
-    camera_override_format_from_reserved \
     healthd_use_battery_info \
     healthd_enable_op_fastchg \
     launcher3Gapps \
@@ -48,7 +47,6 @@ SOONG_CONFIG_omniQcomVars += \
 SOONG_CONFIG_omniQcomVars_healthd_enable_tricolor_led := $(HEALTHD_ENABLE_TRICOLOR_LED)
 SOONG_CONFIG_omniQcomVars_supports_hw_fde := $(TARGET_HW_DISK_ENCRYPTION)
 SOONG_CONFIG_omniQcomVars_supports_hw_fde_perf := $(TARGET_HW_DISK_ENCRYPTION_PERF)
-SOONG_CONFIG_omniGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
 SOONG_CONFIG_omniGlobalVars_healthd_use_battery_info := $(HEALTHD_USE_BATTERY_INFO)
 SOONG_CONFIG_omniGlobalVars_healthd_enable_op_fastchg := $(HEALTHD_ENABLE_OP_FASTCHG_CHECK)
 SOONG_CONFIG_omniGlobalVars_targetNeedsHWCOnFirstRef := $(TARGET_NEEDS_HWC_ONFIRSTREF)
@@ -59,7 +57,6 @@ SOONG_CONFIG_omniGlobalVars_target_enforce_ab_ota_partition_list := $(TARGET_ENF
 
 # Set default values
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
-TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED ?= false
 
 SOONG_CONFIG_omniGlobalVars_launcher3Gapps ?= false
 SOONG_CONFIG_omniGlobalVars_launcher3Mock ?= false
@@ -76,6 +73,11 @@ endif
 
 ifeq ($(ROM_BUILDTYPE),WEEKLY)
     SOONG_CONFIG_omniGlobalVars_useWeeklyBuild := true
+endif
+
+# Camera
+ifneq ($(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED),)
+    $(error TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED is deprecated, please migrate to soong_config_set,camera,override_format_from_reserved)
 endif
 
 # Lineage Health HAL
