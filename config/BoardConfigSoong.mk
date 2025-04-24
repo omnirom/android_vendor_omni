@@ -27,8 +27,6 @@ SOONG_CONFIG_NAMESPACES += omniGlobalVars
 SOONG_CONFIG_omniGlobalVars += \
     additional_gralloc_10_usage_bits \
     camera_override_format_from_reserved \
-    target_create_device_symlinks \
-    target_init_vendor_lib \
     healthd_use_battery_info \
     healthd_enable_op_fastchg \
     launcher3Gapps \
@@ -58,11 +56,9 @@ SOONG_CONFIG_omniGlobalVars_uses_metadata_as_fde_key := $(TARGET_USES_METADATA_A
 SOONG_CONFIG_omniGlobalVars_target_use_sdclang := $(TARGET_USE_SDCLANG)
 SOONG_CONFIG_omniGlobalVars_target_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_omniGlobalVars_target_enforce_ab_ota_partition_list := $(TARGET_ENFORCE_AB_OTA_PARTITION_LIST)
-SOONG_CONFIG_omniGlobalVars_target_create_device_symlinks := $(TARGET_CREATE_DEVICE_SYMLINKS)
 
 # Set default values
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
-TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED ?= false
 
 SOONG_CONFIG_omniGlobalVars_launcher3Gapps ?= false
@@ -71,7 +67,6 @@ SOONG_CONFIG_omniGlobalVars_useWeeklyBuild ?= false
 
 # Soong value variables
 SOONG_CONFIG_omniGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
-SOONG_CONFIG_omniGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
 
 ifeq ($(ROM_BUILDTYPE),GAPPS)
     SOONG_CONFIG_omniGlobalVars_launcher3Gapps := true
@@ -112,4 +107,13 @@ endif
 # Surfaceflinger
 ifneq ($(TARGET_SURFACEFLINGER_UDFPS_LIB),)
     $(error TARGET_SURFACEFLINGER_UDFPS_LIB is deprecated, please migrate to soong_config_set,surfaceflinger,udfps_lib)
+endif
+
+# Vendor init
+ifneq ($(TARGET_INIT_VENDOR_LIB),)
+    $(error TARGET_INIT_VENDOR_LIB is deprecated, please migrate to soong_config_set,libinit,vendor_init_lib)
+endif
+
+ifneq ($(TARGET_CREATE_DEVICE_SYMLINKS),)
+    $(error TARGET_CREATE_DEVICE_SYMLINKS is deprecated, please migrate to soong_config_set,libinit,vendor_init_device_symlinks)
 endif

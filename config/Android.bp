@@ -42,30 +42,6 @@ omni_weekly_build {
 }
 
 soong_config_module_type {
-    name: "vendor_init",
-    module_type: "cc_defaults",
-    config_namespace: "omniGlobalVars",
-    value_variables: ["target_init_vendor_lib"],
-    bool_variables: ["target_create_device_symlinks"],
-    properties: [
-        "cflags",
-        "whole_static_libs",
-    ],
-}
-
-vendor_init {
-    name: "vendor_init_defaults",
-    soong_config_variables: {
-        target_init_vendor_lib: {
-            whole_static_libs: ["%s"],
-        },
-        target_create_device_symlinks: {
-            cflags: ["-DTARGET_CREATE_DEVICE_SYMLINKS"],
-        },
-    },
-}
-
-soong_config_module_type {
     name: "use_sdclang",
     module_type: "cc_defaults",
     config_namespace: "omniGlobalVars",
