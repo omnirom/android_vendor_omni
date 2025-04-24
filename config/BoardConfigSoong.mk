@@ -29,7 +29,6 @@ SOONG_CONFIG_omniGlobalVars += \
     camera_override_format_from_reserved \
     target_create_device_symlinks \
     target_init_vendor_lib \
-    target_power_libperfmgr_mode_extension_lib \
     healthd_use_battery_info \
     healthd_enable_op_fastchg \
     launcher3Gapps \
@@ -64,7 +63,6 @@ SOONG_CONFIG_omniGlobalVars_target_create_device_symlinks := $(TARGET_CREATE_DEV
 # Set default values
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
 TARGET_INIT_VENDOR_LIB ?= vendor_init
-TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB ?= libperfmgr-ext
 TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED ?= false
 
 SOONG_CONFIG_omniGlobalVars_launcher3Gapps ?= false
@@ -74,7 +72,6 @@ SOONG_CONFIG_omniGlobalVars_useWeeklyBuild ?= false
 # Soong value variables
 SOONG_CONFIG_omniGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
 SOONG_CONFIG_omniGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
-SOONG_CONFIG_omniGlobalVars_target_power_libperfmgr_mode_extension_lib := $(TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB)
 
 ifeq ($(ROM_BUILDTYPE),GAPPS)
     SOONG_CONFIG_omniGlobalVars_launcher3Gapps := true
