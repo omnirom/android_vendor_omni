@@ -30,7 +30,6 @@ SOONG_CONFIG_omniGlobalVars += \
     target_create_device_symlinks \
     target_init_vendor_lib \
     target_power_libperfmgr_mode_extension_lib \
-    target_surfaceflinger_udfps_lib \
     healthd_use_battery_info \
     healthd_enable_op_fastchg \
     launcher3Gapps \
@@ -66,7 +65,6 @@ SOONG_CONFIG_omniGlobalVars_target_create_device_symlinks := $(TARGET_CREATE_DEV
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB ?= libperfmgr-ext
-TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED ?= false
 
 SOONG_CONFIG_omniGlobalVars_launcher3Gapps ?= false
@@ -77,7 +75,6 @@ SOONG_CONFIG_omniGlobalVars_useWeeklyBuild ?= false
 SOONG_CONFIG_omniGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
 SOONG_CONFIG_omniGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
 SOONG_CONFIG_omniGlobalVars_target_power_libperfmgr_mode_extension_lib := $(TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB)
-SOONG_CONFIG_omniGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_SURFACEFLINGER_UDFPS_LIB)
 
 ifeq ($(ROM_BUILDTYPE),GAPPS)
     SOONG_CONFIG_omniGlobalVars_launcher3Gapps := true
@@ -113,4 +110,9 @@ ifneq ($(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_LIMIT),)
 endif
 ifneq ($(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE),)
     $(error TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE is deprecated, please migrate to soong_config_set,lineage_health,charging_control_supports_toggle)
+endif
+
+# Surfaceflinger
+ifneq ($(TARGET_SURFACEFLINGER_UDFPS_LIB),)
+    $(error TARGET_SURFACEFLINGER_UDFPS_LIB is deprecated, please migrate to soong_config_set,surfaceflinger,udfps_lib)
 endif
