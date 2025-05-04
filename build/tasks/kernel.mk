@@ -71,6 +71,9 @@
 #                                          kernel because headers should match
 #   TARGET_MERGE_DTBS_WILDCARD         = Optional, limits the .dtb files used to generate the
 #
+#   TARGET_DTB_LIST_WILDCARD           = Optional, limits the .dtb files used to generate the
+#                                          final DTB image when NOT using QCOM's merge_dtbs
+# 
 
 ifneq ($(TARGET_USES_KERNEL_PLATFORM),true)
 ifneq ($(TARGET_NO_KERNEL),true)
@@ -88,7 +91,7 @@ SELINUX_DEFCONFIG := $(TARGET_KERNEL_SELINUX_CONFIG)
 TARGET_KERNEL_MIXED_MODE ?= true
 # dtb generation - optional
 TARGET_MERGE_DTBS_WILDCARD ?= *
-
+TARGET_DTB_LIST_WILDCARD ?= *
 ## Internal variables
 DTC := $(HOST_OUT_EXECUTABLES)/dtc
 KERNEL_OUT := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ
@@ -555,7 +558,9 @@ ifeq ($(BOARD_USES_QCOM_MERGE_DTBS_SCRIPT),true)
 	PATH=$(abspath $(HOST_OUT_EXECUTABLES)):$${PATH} python3 $(BUILD_TOP)/vendor/omni/build/tools/merge_dtbs.py --base $(DTBS_BASE) --techpack $(DTB_OUT)/arch/$(KERNEL_ARCH)/boot/dts/vendor/qcom --out $(DTBS_OUT)
 	cat $(shell find $(DTBS_OUT) -type f -name "${TARGET_MERGE_DTBS_WILDCARD}.dtb" | sort) > $@
 else
-	cat $(shell find $(DTB_OUT)/arch/$(KERNEL_ARCH)/boot/dts -type f -name "*.dtb" | sort) > $@
+	@rm -f $@
+	$(foreach dtb,$(TARGET_DTB_LIST_WILDCARD),\
+		cat `find $(DTB_OUT)/arch/$(KERNEL_ARCH)/boot/dts/$(dir $(dtb)) -type f -name "$(notdir $(dtb)).dtb" | sort` >> $@;)
 endif # BOARD_USES_QCOM_MERGE_DTBS_SCRIPT
 	$(hide) touch -c $(DTB_OUT)
 endif # !TARGET_WANTS_EMPTY_DTB
