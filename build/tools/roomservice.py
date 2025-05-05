@@ -40,8 +40,8 @@ local_manifest_dir = ".repo/local_manifests"
 android_team = "omnirom"
 # url to gerrit repository
 gerrit_url = "gerrit.omnirom.org"
+# url to github api
 github_url = "api.github.com"
-
 
 def check_repo_exists(git_data, device):
     if device.count("_") < 2:
