@@ -26,6 +26,7 @@ from xml.etree import ElementTree as ES
 # Use the urllib importer from the Cyanogenmod roomservice
 import urllib.request
 
+
 # Config
 # set this to the default remote to use in repo
 default_rem = "omnirom2"
@@ -40,8 +41,8 @@ local_manifest_dir = ".repo/local_manifests"
 android_team = "omnirom"
 # url to gerrit repository
 gerrit_url = "gerrit.omnirom.org"
+# url to github api
 github_url = "api.github.com"
-
 
 def check_repo_exists(git_data, device):
     if device.count("_") < 2:
