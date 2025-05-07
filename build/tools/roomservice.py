@@ -26,6 +26,7 @@ from xml.etree import ElementTree as ES
 # Use the urllib importer from the Cyanogenmod roomservice
 import urllib.request
 
+
 # Config
 # set this to the default remote to use in repo
 default_rem = "omnirom2"
