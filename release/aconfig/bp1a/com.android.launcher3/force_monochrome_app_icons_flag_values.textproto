@@ -2,5 +2,5 @@ flag_value {
   package: "com.android.launcher3"
   name: "force_monochrome_app_icons"
   state: ENABLED
-  permission: READ_WRITE
+  permission: READ_ONLY
 }
