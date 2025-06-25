@@ -40,7 +40,7 @@ else
     endif
 endif
 
-ROM_BRANCH := android-15
+ROM_BRANCH := android-16
 
 # Apply it to build.prop
 PRODUCT_PRODUCT_PROPERTIES += \
