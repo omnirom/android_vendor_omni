@@ -13,7 +13,7 @@
 ##
 USERNAME=<INSERT USER>
 TOKEN=<INSERT TOKEN>
-BRANCH=android-15
+BRANCH=android-16
 GERRIT=gerrit.omnirom.org
 GITHUB_ORG=omnirom
 
