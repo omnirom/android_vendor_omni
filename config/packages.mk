@@ -36,8 +36,6 @@ PRODUCT_PACKAGES += \
     mkshrc_vendor \
     toybox_vendor \
     sh_vendor \
-    vim \
-    vncflinger \
     vncpasswd \
     SystemWebView \
     omni-overlays
