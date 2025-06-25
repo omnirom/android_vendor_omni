@@ -1,4 +1,3 @@
-//
 // Copyright 2024 Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,12 +11,10 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
-
 aconfig_values {
-    name: "aconfig-values-bp1a-com.android.systemui.flags-all",
-    package: "com.android.systemui",
-    srcs: [
-        "*.textproto",
-    ],
+  name: "aconfig-values-bp2a-com.android.settings.flags-all",
+  package: "com.android.settings.flags",
+  srcs: [
+    "*_flag_values.textproto",
+  ]
 }
