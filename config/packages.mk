@@ -46,5 +46,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig
 
+# MicroG SystemUI overlay
+ifeq ($(ROM_BUILDTYPE),MICROG)
+PRODUCT_PACKAGES += \
+    MicroGSystemUIOverlay
+endif
+
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
 $(call inherit-product-if-exists, vendor/omni/prebuilt/fonts/fonts.mk)
