@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.security"
+  name: "frp_enforcement"
+  state: DISABLED
+  permission: READ_ONLY
+}
