@@ -19,12 +19,10 @@ SOONG_CONFIG_NAMESPACES += omniGlobalVars
 SOONG_CONFIG_omniGlobalVars += \
     launcher3Gapps \
     launcher3Mock \
-    targetNeedsHWCOnFirstRef \
     useWeeklyBuild \
     target_enforce_ab_ota_partition_list
 
 # Soong bool variables
-SOONG_CONFIG_omniGlobalVars_targetNeedsHWCOnFirstRef := $(TARGET_NEEDS_HWC_ONFIRSTREF)
 SOONG_CONFIG_omniGlobalVars_target_enforce_ab_ota_partition_list := $(TARGET_ENFORCE_AB_OTA_PARTITION_LIST)
 
 # Set default values

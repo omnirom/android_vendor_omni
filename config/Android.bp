@@ -59,20 +59,3 @@ enforce_ab_ota_partition_list {
         },
     },
 }
-
-soong_config_module_type {
-    name: "needsHWCOnFirstRef",
-    module_type: "cc_defaults",
-    config_namespace: "omniGlobalVars",
-    bool_variables: ["targetNeedsHWCOnFirstRef"],
-    properties: ["cppflags"],
-}
-
-needsHWCOnFirstRef {
-    name: "needsHWCOnFirstRef_defaults",
-    soong_config_variables: {
-        targetNeedsHWCOnFirstRef: {
-            cppflags: ["-DTARGET_NEEDS_HWC_ONFIRSTREF"],
-        },
-    },
-}
