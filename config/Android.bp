@@ -42,25 +42,6 @@ omni_weekly_build {
 }
 
 soong_config_module_type {
-    name: "camera_client_info",
-    module_type: "cc_defaults",
-    config_namespace: "omniGlobalVars",
-    bool_variables: ["target_camera_needs_client_info"],
-    properties: [
-        "cppflags",
-    ],
-}
-
-camera_client_info {
-    name: "camera_client_info_defaults",
-    soong_config_variables: {
-        target_camera_needs_client_info: {
-            cppflags: ["-DTARGET_CAMERA_NEEDS_CLIENT_INFO"],
-        },
-    },
-}
-
-soong_config_module_type {
     name: "enforce_ab_ota_partition_list",
     module_type: "cc_defaults",
     config_namespace: "omniGlobalVars",

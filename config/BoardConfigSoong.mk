@@ -23,7 +23,6 @@ SOONG_CONFIG_omniGlobalVars += \
     launcher3Mock \
     targetNeedsHWCOnFirstRef \
     useWeeklyBuild \
-    target_camera_needs_client_info \
     target_enforce_ab_ota_partition_list
 
 SOONG_CONFIG_NAMESPACES += omniQcomVars
@@ -35,7 +34,6 @@ SOONG_CONFIG_omniQcomVars_healthd_enable_tricolor_led := $(HEALTHD_ENABLE_TRICOL
 SOONG_CONFIG_omniGlobalVars_healthd_use_battery_info := $(HEALTHD_USE_BATTERY_INFO)
 SOONG_CONFIG_omniGlobalVars_healthd_enable_op_fastchg := $(HEALTHD_ENABLE_OP_FASTCHG_CHECK)
 SOONG_CONFIG_omniGlobalVars_targetNeedsHWCOnFirstRef := $(TARGET_NEEDS_HWC_ONFIRSTREF)
-SOONG_CONFIG_omniGlobalVars_target_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_omniGlobalVars_target_enforce_ab_ota_partition_list := $(TARGET_ENFORCE_AB_OTA_PARTITION_LIST)
 
 # Set default values
@@ -57,6 +55,10 @@ endif
 # Camera
 ifneq ($(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED),)
     $(error TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED is deprecated, please migrate to soong_config_set,camera,override_format_from_reserved)
+endif
+
+ifneq ($(TARGET_CAMERA_NEEDS_CLIENT_INFO),)
+    $(error TARGET_CAMERA_NEEDS_CLIENT_INFO is deprecated, please migrate to soong_config_set,camera,camera_needs_client_info)
 endif
 
 # Libui
