@@ -17,7 +17,6 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call add_soong_config_var,omniromVarsPlu
 
 SOONG_CONFIG_NAMESPACES += omniGlobalVars
 SOONG_CONFIG_omniGlobalVars += \
-    healthd_enable_op_fastchg \
     launcher3Gapps \
     launcher3Mock \
     targetNeedsHWCOnFirstRef \
@@ -25,7 +24,6 @@ SOONG_CONFIG_omniGlobalVars += \
     target_enforce_ab_ota_partition_list
 
 # Soong bool variables
-SOONG_CONFIG_omniGlobalVars_healthd_enable_op_fastchg := $(HEALTHD_ENABLE_OP_FASTCHG_CHECK)
 SOONG_CONFIG_omniGlobalVars_targetNeedsHWCOnFirstRef := $(TARGET_NEEDS_HWC_ONFIRSTREF)
 SOONG_CONFIG_omniGlobalVars_target_enforce_ab_ota_partition_list := $(TARGET_ENFORCE_AB_OTA_PARTITION_LIST)
 

@@ -61,23 +61,6 @@ enforce_ab_ota_partition_list {
 }
 
 soong_config_module_type {
-    name: "enable_op_fastchg",
-    module_type: "cc_defaults",
-    config_namespace: "omniGlobalVars",
-    bool_variables: ["healthd_enable_op_fastchg"],
-    properties: ["cflags"],
-}
-
-enable_op_fastchg {
-    name: "enable_op_fastchg_defaults",
-    soong_config_variables: {
-        healthd_enable_op_fastchg: {
-            cflags: ["-DHEALTHD_ENABLE_OP_FASTCHG_CHECK"],
-        },
-    },
-}
-
-soong_config_module_type {
     name: "needsHWCOnFirstRef",
     module_type: "cc_defaults",
     config_namespace: "omniGlobalVars",
