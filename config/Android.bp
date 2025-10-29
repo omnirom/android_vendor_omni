@@ -93,21 +93,3 @@ needsHWCOnFirstRef {
         },
     },
 }
-
-// QCOM specific config modules
-soong_config_module_type {
-    name: "enable_tricolor_led",
-    module_type: "cc_defaults",
-    config_namespace: "omniQcomVars",
-    bool_variables: ["healthd_enable_tricolor_led"],
-    properties: ["cflags"],
-}
-
-enable_tricolor_led {
-    name: "enable_tricolor_led_defaults",
-    soong_config_variables: {
-        healthd_enable_tricolor_led: {
-            cflags: ["-DHEALTHD_ENABLE_TRICOLOR_LED"],
-        },
-    },
-}

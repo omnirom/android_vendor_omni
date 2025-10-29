@@ -24,12 +24,7 @@ SOONG_CONFIG_omniGlobalVars += \
     useWeeklyBuild \
     target_enforce_ab_ota_partition_list
 
-SOONG_CONFIG_NAMESPACES += omniQcomVars
-SOONG_CONFIG_omniQcomVars += \
-    healthd_enable_tricolor_led
-
 # Soong bool variables
-SOONG_CONFIG_omniQcomVars_healthd_enable_tricolor_led := $(HEALTHD_ENABLE_TRICOLOR_LED)
 SOONG_CONFIG_omniGlobalVars_healthd_enable_op_fastchg := $(HEALTHD_ENABLE_OP_FASTCHG_CHECK)
 SOONG_CONFIG_omniGlobalVars_targetNeedsHWCOnFirstRef := $(TARGET_NEEDS_HWC_ONFIRSTREF)
 SOONG_CONFIG_omniGlobalVars_target_enforce_ab_ota_partition_list := $(TARGET_ENFORCE_AB_OTA_PARTITION_LIST)
