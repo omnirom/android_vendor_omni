@@ -151,25 +151,6 @@ needsHWCOnFirstRef {
 
 // QCOM specific config modules
 soong_config_module_type {
-    name: "metadata_fde_key",
-    module_type: "cc_defaults",
-    config_namespace: "omniQcomVars",
-    bool_variables: ["uses_metadata_as_fde_key"],
-    properties: [
-        "cppflags",
-    ],
-}
-
-metadata_fde_key {
-    name: "metadata_fde_key_defaults",
-    soong_config_variables: {
-        uses_metadata_as_fde_key: {
-            cppflags: ["-DTARGET_USES_METADATA_AS_FDE_KEY"],
-        },
-    },
-}
-
-soong_config_module_type {
     name: "enable_tricolor_led",
     module_type: "cc_defaults",
     config_namespace: "omniQcomVars",
@@ -182,50 +163,6 @@ enable_tricolor_led {
     soong_config_variables: {
         healthd_enable_tricolor_led: {
             cflags: ["-DHEALTHD_ENABLE_TRICOLOR_LED"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "vold_hw_fde",
-    module_type: "cc_defaults",
-    config_namespace: "omniQcomVars",
-    bool_variables: ["supports_hw_fde"],
-    properties: [
-        "cflags",
-        "header_libs",
-        "shared_libs",
-    ],
-}
-
-vold_hw_fde {
-    name: "vold_hw_fde_defaults",
-    soong_config_variables: {
-        supports_hw_fde: {
-            cflags: ["-DCONFIG_HW_DISK_ENCRYPTION"],
-            header_libs: ["libcryptfs_hw_headers"],
-            shared_libs: ["libcryptfs_hw"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "vold_hw_fde_perf",
-    module_type: "cc_defaults",
-    config_namespace: "omniQcomVars",
-    bool_variables: ["supports_hw_fde_perf"],
-    properties: [
-        "cflags",
-        "shared_libs",
-    ],
-}
-
-vold_hw_fde_perf {
-    name: "vold_hw_fde_perf_defaults",
-    soong_config_variables: {
-        supports_hw_fde_perf: {
-            cflags: ["-DCONFIG_HW_DISK_ENCRYPT_PERF"],
-            shared_libs: ["libcryptfs_hw"],
         },
     },
 }
