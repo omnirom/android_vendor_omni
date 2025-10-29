@@ -78,23 +78,6 @@ enable_op_fastchg {
 }
 
 soong_config_module_type {
-    name: "use_battery_info",
-    module_type: "cc_defaults",
-    config_namespace: "omniGlobalVars",
-    bool_variables: ["healthd_use_battery_info"],
-    properties: ["cflags"],
-}
-
-use_battery_info {
-    name: "use_battery_info_defaults",
-    soong_config_variables: {
-        healthd_use_battery_info: {
-            cflags: ["-DHEALTHD_USE_BATTERY_INFO"],
-        },
-    },
-}
-
-soong_config_module_type {
     name: "needsHWCOnFirstRef",
     module_type: "cc_defaults",
     config_namespace: "omniGlobalVars",
