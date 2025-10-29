@@ -17,20 +17,16 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call add_soong_config_var,omniromVarsPlu
 
 SOONG_CONFIG_NAMESPACES += omniGlobalVars
 SOONG_CONFIG_omniGlobalVars += \
-    launcher3Gapps \
-    launcher3Mock \
     useWeeklyBuild
 
 # Set default values
-SOONG_CONFIG_omniGlobalVars_launcher3Gapps ?= false
-SOONG_CONFIG_omniGlobalVars_launcher3Mock ?= false
 SOONG_CONFIG_omniGlobalVars_useWeeklyBuild ?= false
 
 # Soong value variables
 ifeq ($(ROM_BUILDTYPE),GAPPS)
-    SOONG_CONFIG_omniGlobalVars_launcher3Gapps := true
+    $(call soong_config_set,launcher3,launcher3_quickstep_lib,Launcher3QuickStepLibGoogle)
 else
-    SOONG_CONFIG_omniGlobalVars_launcher3Mock := true
+    $(call soong_config_set,launcher3,launcher3_quickstep_lib,Launcher3QuickStepLibMock)
 endif
 
 ifeq ($(ROM_BUILDTYPE),WEEKLY)
