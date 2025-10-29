@@ -42,25 +42,6 @@ omni_weekly_build {
 }
 
 soong_config_module_type {
-    name: "use_sdclang",
-    module_type: "cc_defaults",
-    config_namespace: "omniGlobalVars",
-    bool_variables: ["target_use_sdclang"],
-    properties: [
-        "cppflags",
-    ],
-}
-
-use_sdclang {
-    name: "use_sdclang_defaults",
-    soong_config_variables: {
-        target_use_sdclang: {
-            cppflags: ["-DTARGET_USE_SDCLANG"],
-        },
-    },
-}
-
-soong_config_module_type {
     name: "camera_client_info",
     module_type: "cc_defaults",
     config_namespace: "omniGlobalVars",
