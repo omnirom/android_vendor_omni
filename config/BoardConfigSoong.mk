@@ -15,13 +15,6 @@ EXPORT_TO_SOONG := \
 $(call add_soong_config_namespace,omniromVarsPlugin)
 $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call add_soong_config_var,omniromVarsPlugin,$(v))))
 
-SOONG_CONFIG_NAMESPACES += omniGlobalVars
-SOONG_CONFIG_omniGlobalVars += \
-    useWeeklyBuild
-
-# Set default values
-SOONG_CONFIG_omniGlobalVars_useWeeklyBuild ?= false
-
 # Soong value variables
 ifeq ($(ROM_BUILDTYPE),GAPPS)
     $(call soong_config_set,launcher3,launcher3_quickstep_lib,Launcher3QuickStepLibGoogle)
@@ -30,7 +23,7 @@ else
 endif
 
 ifeq ($(ROM_BUILDTYPE),WEEKLY)
-    SOONG_CONFIG_omniGlobalVars_useWeeklyBuild := true
+    $(call soong_config_set,weekly_build,use_weekly_build,true)
 endif
 
 # Camera
