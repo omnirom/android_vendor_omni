@@ -40,22 +40,3 @@ omni_weekly_build {
         },
     },
 }
-
-soong_config_module_type {
-    name: "enforce_ab_ota_partition_list",
-    module_type: "cc_defaults",
-    config_namespace: "omniGlobalVars",
-    bool_variables: ["target_enforce_ab_ota_partition_list"],
-    properties: [
-        "cppflags",
-    ],
-}
-
-enforce_ab_ota_partition_list {
-    name: "enforce_ab_ota_partition_list_defaults",
-    soong_config_variables: {
-        target_enforce_ab_ota_partition_list: {
-            cppflags: ["-DTARGET_ENFORCE_AB_OTA_PARTITION_LIST"],
-        },
-    },
-}
