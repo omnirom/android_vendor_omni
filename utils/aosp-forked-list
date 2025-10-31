@@ -8,6 +8,7 @@ frameworks/av
 frameworks/base
 frameworks/native
 frameworks/opt/telephony
+hardware/google/pixel
 hardware/interfaces
 hardware/libhardware
 packages/apps/Contacts
