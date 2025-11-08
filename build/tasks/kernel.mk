@@ -319,6 +319,18 @@ define make-kbuild-module-target
 $(PATH_OVERRIDE) $(KERNEL_MAKE_CMD) $(KERNEL_MAKE_FLAGS) -C $(BUILD_TOP)/$(KERNEL_SRC) M=$(2)/$(1) O=$(KERNEL_BUILD_OUT_PREFIX)$(KERNEL_OUT) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) $(KERNEL_CLANG_TRIPLE) $(KERNEL_CC) $(3)
 endef
 
+# Generate kernel .config from a given defconfig
+# $(1): Output path (The value passed to O=)
+# $(2): The defconfig to process (just the filename, no need for full path to file)
+define make-kernel-config
+	$(call internal-make-kernel-target,$(1),VARIANT_DEFCONFIG=$(VARIANT_DEFCONFIG) SELINUX_DEFCONFIG=$(SELINUX_DEFCONFIG) $(2))
+	$(hide) if [ ! -z "$(KERNEL_CONFIG_OVERRIDE)" ]; then \
+			echo "Overriding kernel config with '$(KERNEL_CONFIG_OVERRIDE)'"; \
+			echo $(KERNEL_CONFIG_OVERRIDE) >> $(1)/.config; \
+			$(call make-kernel-target,oldconfig); \
+		fi
+endef
+
 # Make a kernel target
 # $(1): The kernel target to build (eg. defconfig, modules, modules_install)
 define make-kernel-target
