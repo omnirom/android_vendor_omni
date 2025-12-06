@@ -27,16 +27,16 @@ ifeq ($(ROM_BUILDTYPE),GAPPS)
 endif
 
 ifeq ($(ROM_BUILDTYPE),WEEKLY)
-    $(call soong_config_set,weekly_build,use_weekly_build,true)
+    $(call soong_config_set_bool,weekly_build,use_weekly_build,true)
 endif
 
 # Camera
 ifneq ($(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED),)
-    $(error TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED is deprecated, please migrate to soong_config_set,camera,override_format_from_reserved)
+    $(error TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED is deprecated, please migrate to soong_config_set_bool,camera,override_format_from_reserved)
 endif
 
 ifneq ($(TARGET_CAMERA_NEEDS_CLIENT_INFO),)
-    $(error TARGET_CAMERA_NEEDS_CLIENT_INFO is deprecated, please migrate to soong_config_set,camera,camera_needs_client_info)
+    $(error TARGET_CAMERA_NEEDS_CLIENT_INFO is deprecated, please migrate to soong_config_set_bool,camera,camera_needs_client_info)
 endif
 
 # Libui
@@ -58,16 +58,16 @@ ifneq ($(TARGET_HEALTH_CHARGING_CONTROL_CHARGING_DISABLED),)
     $(error TARGET_HEALTH_CHARGING_CONTROL_CHARGING_DISABLED is deprecated, please migrate to soong_config_set,lineage_health,charging_control_charging_disabled)
 endif
 ifneq ($(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS),)
-    $(error TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS is deprecated, please migrate to soong_config_set,lineage_health,charging_control_supports_bypass)
+    $(error TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS is deprecated, please migrate to soong_config_set_bool,lineage_health,charging_control_supports_bypass)
 endif
 ifneq ($(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE),)
-    $(error TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE is deprecated, please migrate to soong_config_set,lineage_health,charging_control_supports_deadline)
+    $(error TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE is deprecated, please migrate to soong_config_set_bool,lineage_health,charging_control_supports_deadline)
 endif
 ifneq ($(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_LIMIT),)
-    $(error TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_LIMIT is deprecated, please migrate to soong_config_set,lineage_health,charging_control_supports_limit)
+    $(error TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_LIMIT is deprecated, please migrate to soong_config_set_bool,lineage_health,charging_control_supports_limit)
 endif
 ifneq ($(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE),)
-    $(error TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE is deprecated, please migrate to soong_config_set,lineage_health,charging_control_supports_toggle)
+    $(error TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE is deprecated, please migrate to soong_config_set_bool,lineage_health,charging_control_supports_toggle)
 endif
 
 # Surfaceflinger
@@ -81,5 +81,5 @@ ifneq ($(TARGET_INIT_VENDOR_LIB),)
 endif
 
 ifneq ($(TARGET_CREATE_DEVICE_SYMLINKS),)
-    $(error TARGET_CREATE_DEVICE_SYMLINKS is deprecated, please migrate to soong_config_set,libinit,vendor_init_device_symlinks)
+    $(error TARGET_CREATE_DEVICE_SYMLINKS is deprecated, please migrate to soong_config_set_bool,libinit,vendor_init_device_symlinks)
 endif
