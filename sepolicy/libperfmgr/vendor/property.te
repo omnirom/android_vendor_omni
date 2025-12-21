@@ -1,2 +1,2 @@
 # Power HAL
-vendor_public_prop(vendor_power_prop);
+vendor_public_prop(vendor_power_prop)
