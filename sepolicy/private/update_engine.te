@@ -7,7 +7,7 @@ allow update_engine self:process { setexec };
 
 allow update_engine labeledfs:filesystem { mount unmount };
 
-allow update_engine { otapreopt_chroot_exec toolbox_exec }:file rx_file_perms;
+#allow update_engine { otapreopt_chroot_exec toolbox_exec }:file rx_file_perms;
 
 allow update_engine labeledfs:filesystem mount;
 allow update_engine rootfs:file { rx_file_perms relabelfrom rename setattr unlink };
@@ -41,4 +41,4 @@ allow update_engine otadexopt_service:service_manager find;
 binder_call(update_engine, platform_app)
 
 # Allow transition to backuptool domain
-domain_trans(update_engine, otapreopt_chroot_exec, backuptool)
+#domain_trans(update_engine, otapreopt_chroot_exec, backuptool)
