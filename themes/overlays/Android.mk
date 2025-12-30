@@ -28,39 +28,6 @@ LOCAL_REQUIRED_MODULES += \
 	FontMuliSourceOverlay
 
 LOCAL_REQUIRED_MODULES += \
-	IconPackCircularAndroidOverlay \
-	IconPackCircularLauncherOverlay \
-	IconPackCircularSettingsOverlay \
-	IconPackCircularSystemUIOverlay \
-	IconPackFilledAndroidOverlay \
-	IconPackFilledLauncherOverlay \
-	IconPackFilledSettingsOverlay \
-	IconPackFilledSystemUIOverlay \
-	IconPackKaiAndroidOverlay \
-	IconPackKaiLauncherOverlay \
-	IconPackKaiSettingsOverlay \
-	IconPackKaiSystemUIOverlay \
-	IconPackRoundedAndroidOverlay \
-	IconPackRoundedLauncherOverlay \
-	IconPackRoundedSettingsOverlay \
-	IconPackRoundedSystemUIOverlay \
-	IconPackSamAndroidOverlay \
-	IconPackSamLauncherOverlay \
-	IconPackSamSettingsOverlay \
-	IconPackSamSystemUIOverlay \
-	IconPackVictorAndroidOverlay \
-	IconPackVictorLauncherOverlay \
-	IconPackVictorSettingsOverlay \
-	IconPackVictorSystemUIOverlay
-
-LOCAL_REQUIRED_MODULES += \
-	IconShapeCircleOverlay \
-	IconShapeSquareOverlay \
-	IconShapeSquircleOverlay \
-	IconShapeTeardropOverlay \
-	IconShapePebbleOverlay
-
-LOCAL_REQUIRED_MODULES += \
 	PrimaryColorDarkBlueOverlay \
 	PrimaryColorDarkGrayOverlay
 
