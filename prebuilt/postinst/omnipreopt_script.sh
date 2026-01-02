@@ -16,13 +16,14 @@
 # limitations under the License.
 #
 
-# This script will run as a postinstall step to drive otapreopt.
+# This script runs as a postinstall step to drive Pre-reboot Dexopt. During Pre-reboot Dexopt, the
+# new version of this code is run. See system/extras/postinst/postinst.sh for some docs.
 
 TARGET_SLOT="$1"
 STATUS_FD="$2"
 
-# Maximum number of packages/steps.
-MAXIMUM_PACKAGES=1000
+# "1" if the script is triggered by the `UpdateEngine.triggerPostinstall` API. Empty otherwise.
+TRIGGERED_BY_API="$3"
 
 # First ensure the system is booted. This is to work around issues when cmd would
 # infinitely loop trying to get a service manager (which will never come up in that
@@ -31,11 +32,10 @@ BOOT_PROPERTY_NAME="dev.bootcomplete"
 
 BOOT_COMPLETE=$(getprop $BOOT_PROPERTY_NAME)
 if [ "$BOOT_COMPLETE" != "1" ] ; then
-  echo "Error: boot-complete not detected."
+  echo "$0: Error: boot-complete not detected."
   # We must return 0 to not block sideload.
   exit 0
 fi
-
 
 # Compute target slot suffix.
 # TODO: Once bootctl is not restricted, we should query from there. Or get this from
@@ -45,20 +45,29 @@ if [ "$TARGET_SLOT" = "0" ] ; then
 elif [ "$TARGET_SLOT" = "1" ] ; then
   TARGET_SLOT_SUFFIX="_b"
 else
-  echo "Unknown target slot $TARGET_SLOT"
+  echo "$0: Unknown target slot $TARGET_SLOT"
   exit 1
 fi
 
+# A source that infinitely emits arbitrary lines.
+# When connected to STDIN of another process, this source keeps STDIN open until
+# the consumer process closes STDIN or this script dies.
+# In practice, the pm command keeps consuming STDIN, so we don't need to worry
+# about running out of buffer space.
+function infinite_source {
+  while echo .; do
+    sleep 1
+  done
+}
 
-PREPARE=$(cmd otadexopt prepare)
-# Note: Ignore preparation failures. Step and done will fail and exit this.
-#       This is necessary to support suspends - the OTA service will keep
-#       the state around for us.
-
-PROGRESS=$(cmd otadexopt progress)
-print -u${STATUS_FD} "global_progress $PROGRESS"
-
-print -u${STATUS_FD} "global_progress 1.0"
-cmd otadexopt cleanup
-
-exit 0
+if [[ "$TRIGGERED_BY_API" = "1" ]]; then
+  # During OTA installation, the script is called the first time, and
+  # `TRIGGERED_BY_API` can never be "1". `TRIGGERED_BY_API` being "1" means this
+  # is the second call to this script, through the
+  # `UpdateEngine.triggerPostinstall` API.
+  # When we reach here, it means Pre-reboot Dexopt is enabled in asynchronous
+  # mode and the job scheduler determined that it's the time to run the job.
+  # Start Pre-reboot Dexopt now and wait for it to finish.
+  infinite_source | pm art on-ota-staged --start
+  exit $?
+fi
