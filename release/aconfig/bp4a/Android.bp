@@ -17,7 +17,6 @@ aconfig_value_set {
     name: "aconfig_value_set-omnirom-bp4a",
     values: [
         "aconfig-values-bp4a-com.android.launcher3.flags-all",
-        "aconfig-values-bp4a-com.android.settings.flags-all",
         "aconfig-values-bp4a-com.android.systemui.flags-all",
     ],
 }
