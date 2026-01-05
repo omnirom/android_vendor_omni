@@ -23,7 +23,6 @@ packages/apps/ThemePicker
 packages/inputmethods/LatinIME
 packages/modules/Connectivity
 packages/modules/UprobeStats
-packages/modules/Virtualization
 packages/services/Mms
 packages/services/Telecomm
 packages/services/Telephony
