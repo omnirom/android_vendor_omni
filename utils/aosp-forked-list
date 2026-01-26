@@ -20,6 +20,7 @@ packages/apps/Messaging
 packages/apps/Settings
 packages/apps/SettingsIntelligence
 packages/apps/ThemePicker
+packages/apps/WallpaperPicker2
 packages/inputmethods/LatinIME
 packages/modules/Connectivity
 packages/modules/UprobeStats
