@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d00e91e8_d6193872",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2026-02-09T18:08:42Z",
+      "side": 1,
+      "message": "ofc, i\u0027ve the SOONG_ONLY\u003dfalse property ...",
+      "revId": "7ab4967fa325e4135342f0999fd0cfd6c26a1cf7",
+      "serverId": "a6c39fa0-88d7-4027-9994-d2d73832020e"
+    }
+  ]
+}
