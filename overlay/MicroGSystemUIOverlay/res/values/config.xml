@@ -5,14 +5,9 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- The default tiles to display in QuickSettings -->
-    <string name="quick_settings_tiles_default" translatable="false">
-        internet,bt,flashlight,dnd,alarm,airplane,controls,rotation,battery,cast,screenrecord,mictoggle,cameratoggle,custom(com.android.permissioncontroller/.permission.service.v33.SafetyCenterQsTileService)
-    </string>
-
-    <!-- Tiles native to System UI. Order should match "quick_settings_tiles_default" -->
-    <string name="quick_settings_tiles_stock" translatable="false">
-        internet,bt,flashlight,dnd,modes_dnd,alarm,airplane,controls,rotation,battery,cast,screenrecord,mictoggle,cameratoggle,location,hotspot,inversion,saver,dark,work,night,reverse,reduce_brightness,qr_code_scanner,onehanded,color_correction,dream,font_scaling,record_issue,hearing_devices,notes,desktopeffects
+    <!-- The default tiles to display in QuickSettings with the new UI -->
+    <string name="quick_settings_tiles_new_default" translatable="false">
+        internet,bt,dnd,cast,flashlight,airplane,rotation,alarm,controls,screenrecord,battery
     </string>
 
 </resources>
